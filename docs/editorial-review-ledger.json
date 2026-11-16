@@ -591,6 +591,126 @@
       "reviewer": null,
       "reviewedAt": null,
       "reviewFocus": "Confirm fixed/variable cost and break-even assumptions remain explicit."
+    },
+    {
+      "id": "T-R-01",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Independently compare the central idea with the whole passage and ensure all other options distort or omit key qualifications."
+    },
+    {
+      "id": "T-R-02",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify that the intended inference follows from the passage alone without importing background facts or overstating causality."
+    },
+    {
+      "id": "T-R-03",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check the author's actual purpose and ensure every distractor mischaracterizes or overstates the stated comparison."
+    },
+    {
+      "id": "T-R-04",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Independently compare the central idea with the whole passage and ensure all other options distort or omit key qualifications."
+    },
+    {
+      "id": "T-R-05",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Identify exact evidence supporting the chosen option and challenge alternative options for rival explanations or overclaiming."
+    },
+    {
+      "id": "T-R-06",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify that the intended inference follows from the passage alone without importing background facts or overstating causality."
+    },
+    {
+      "id": "G-R-01",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Independently compare the central idea with the whole passage and ensure all other options distort or omit key qualifications."
+    },
+    {
+      "id": "G-R-02",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify that the intended inference follows from the passage alone without importing background facts or overstating causality."
+    },
+    {
+      "id": "G-R-03",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check the author's actual purpose and ensure every distractor mischaracterizes or overstates the stated comparison."
+    },
+    {
+      "id": "G-R-04",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Independently compare the central idea with the whole passage and ensure all other options distort or omit key qualifications."
+    },
+    {
+      "id": "G-R-05",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify that the intended inference follows from the passage alone without importing background facts or overstating causality."
+    },
+    {
+      "id": "G-R-06",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Identify exact evidence supporting the chosen option and challenge alternative options for rival explanations or overclaiming."
     }
   ]
 }

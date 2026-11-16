@@ -62,3 +62,6 @@
 /* Voluntary, external link to a structured original-question issue report. */
 .question-feedback-link{display:inline-block;color:var(--primary);font-weight:700;font-size:12px;text-decoration:underline;text-underline-offset:3px;margin-top:17px}
 .question-feedback-link:hover{text-decoration-thickness:2px}
+
+/* Original reading exercises in a legible, responsive passage block */
+.reading-passage{white-space:pre-line;line-height:1.85;font-size:clamp(15px,1.9vw,17px);padding:clamp(16px,3vw,24px);background:#f8f9fc;border:1px solid var(--line);border-left:4px solid var(--primary);border-radius:14px;overflow-wrap:break-word;max-width:100%;color:var(--ink)}

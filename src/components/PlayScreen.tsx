@@ -14,7 +14,7 @@ const LABELS:{fr:string[];en:string[]}={
   fr:['(1) seule suffit','(2) seule suffit','Les deux ensemble uniquement','Chacune suffit seule','Aucune, même ensemble'],
   en:['Statement (1) alone','Statement (2) alone','Both statements together only','Either statement alone','Neither, even together']
 };
-const titles:Record<Game,string>={'code-logic':'Code Logic','argument-lab':'Argument Lab','enough-info':'Enough Info?','quant-lab':'Quant Lab'};
+const titles:Record<Game,string>={'code-logic':'Code Logic','argument-lab':'Argument Lab','enough-info':'Enough Info?','quant-lab':'Quant Lab','reading-lab':'Reading Lab'};
 const answerLetter=(q:Question)=>q.game==='enough-info'?q.correctAnswer:String.fromCharCode(65+Number(q.correctAnswer));
 const mmss=(s:number)=>`${String(Math.floor(Math.max(0,s)/60)).padStart(2,'0')}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
 export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{locale:Locale;game:Game|'mixed';bank:Question[];forceExam?:boolean;reviewOnly?:boolean}){
@@ -127,7 +127,7 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
         <span className="timer" role="timer" aria-label={fr?'Chronomètre':'Timer'}>{mmss(mode==='exam'?duration-seconds:seconds)}</span></div>
       <div className="progress-bar" role="progressbar" aria-label={fr?'Progression des questions':'Question progress'} aria-valuenow={attempts.length} aria-valuemin={0} aria-valuemax={max}><span style={{width:`${Math.min(100,100*attempts.length/max)}%`}}/></div>
       <h1 id="question-title">{current.content[locale].prompt}</h1>
-      {current.content[locale].context&&<p className="context">{current.content[locale].context}</p>}
+      {current.content[locale].context&&<p className={current.game==='reading-lab'?'context reading-passage':'context'}>{current.content[locale].context}</p>}
       {current.content[locale].statements?.map((s,i)=><div className="statement" key={i}><span>({i+1})</span> {s}</div>)}
       <div className="answer-list" role="group" aria-label={fr?'Choix de réponse':'Answer choices'}>
         {(current.game==='enough-info'?['A','B','C','D','E']:current.content[locale].choices??[]).map((choice,i)=>{

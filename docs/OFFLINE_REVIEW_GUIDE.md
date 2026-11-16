@@ -2,7 +2,7 @@
 
 ## Goal
 
-Let an independent reviewer examine all **58 original pilot questions** in French and English without installing Node.js, logging into the app, or publishing the website. The packet is one standalone HTML file.
+Let an independent reviewer examine all **70 original pilot questions** in French and English without installing Node.js, logging into the app, or publishing the website. The packet is one standalone HTML file.
 
 ## Obtain the file
 

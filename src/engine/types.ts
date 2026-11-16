@@ -1,6 +1,6 @@
 export type Locale = 'fr'|'en';
 export type Exam = 'tage'|'gmat';
-export type Game = 'code-logic'|'argument-lab'|'enough-info'|'quant-lab';
+export type Game = 'code-logic'|'argument-lab'|'enough-info'|'quant-lab'|'reading-lab';
 export type Level = 1|2|3|4|5;
 export interface QuestionText {
   prompt: string;

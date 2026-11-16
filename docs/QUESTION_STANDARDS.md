@@ -25,7 +25,7 @@ A three-step explanation is a **teaching aid**, not evidence of official examina
 
 Every `code-logic` question now requires three original stages in FR and EN: identify a candidate rule, verify it against the examples, then explain the selected option. The same reusable `ReasoningBreakdown` interface shows the method only after an answer, or after the timed session ends.
 
-**All 58 pilot items have structured steps, but none is independently certified as exam-equivalent or editorially approved.** Reviewers must still challenge possible alternative patterns, inconsistent illustrations, and the uniqueness of the answer.
+**All 70 pilot items have structured steps, but none is independently certified as exam-equivalent or editorially approved.** Reviewers must still challenge possible alternative patterns, inconsistent illustrations, and the uniqueness of the answer.
 
 ## Quant Lab editorial checklist
 
@@ -34,3 +34,6 @@ For `quant-lab` items use IDs `T-C-XX` (TAGE MAGE Calcul) or `G-Q-XX` (GMAT Quan
 ## Mandatory review ledger
 
 Each question ID must also appear **exactly once** in `docs/editorial-review-ledger.json` with a matching answer key and review focus. Source status `reviewed` requires a corresponding `approved` decision, accountable reviewer and date; and vice versa. A CI pass does not imply reviewer approval. Follow `docs/EDITORIAL_REVIEW_PROTOCOL.md`. A new question with no ledger entry must fail CI rather than silently bypass the editorial gate.
+
+## Reading Lab
+Questions `T-R-XX` / `G-R-XX` need an original passage at least 350 characters long in each locale, five unique options, a uniquely passage-supported key, a hint and three detailed bilingual correction stages. Independent reviewers must test every distractor.

@@ -9,6 +9,8 @@ export function ReasoningBreakdown({text,locale,game}:{text:QuestionText;locale:
       ? (fr?["Analyser l'argument",'Évaluer les preuves','Conclure']:['Analyze the argument','Evaluate the evidence','Draw the conclusion'])
       : game==='quant-lab'
         ? (fr?['Identifier les données','Calculer','Vérifier la réponse']:['Identify the data','Calculate','Verify the answer'])
+        : game==='reading-lab'
+          ? (fr?['Repérer le passage clé','Comparer les choix','Justifier la réponse']:['Locate the key passage','Compare the options','Justify the answer'])
         : (fr?['Observer la règle','Vérifier','Conclure']:['Identify the rule','Verify','Conclude']);
   return <section className="reasoning-breakdown" aria-label={fr?'Correction étape par étape':'Step-by-step explanation'}>
     <h3>{fr?'Méthode de résolution':'Step-by-step reasoning'}</h3>

@@ -112,3 +112,10 @@
 - [x] Upload the workbook from green CI as a limited-retention GitHub Actions artifact, not a public site deployment
 - [x] Test full review coverage, source HTML escaping, absence of network requests and stale-ledger failure
 - [ ] Have real independent reviewers test the workbook and assess the source questions; log evidence before approving content
+
+## XYZ — Reading Lab synchronized with source of truth
+- [x] Preserve the latest editorial ledger, offline review pack and corrected G-A-09 wording
+- [x] Add Reading Lab (12 original FR/EN questions) and 12 pending editorial records
+- [x] Expand offline review workbook and browser QA to 70 questions
+- [ ] Squash merge only after successful GitHub checks and branch protections
+- [ ] Publish website only with a separate explicit release decision

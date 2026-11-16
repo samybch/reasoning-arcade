@@ -9,7 +9,8 @@ const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string
   {id:'code-logic',name:'Code Logic',symbol:'⌘',description:{fr:'Trouve la règle cachée dans les nombres et les figures.',en:'Find the hidden rule behind numbers and patterns.'}},
   {id:'argument-lab',name:'Argument Lab',symbol:'◇',description:{fr:'Identifie hypothèses, conclusions et failles de raisonnement.',en:'Find assumptions, conclusions and flawed arguments.'}},
   {id:'enough-info',name:'Enough Info?',symbol:'∑',description:{fr:'Décide si deux informations suffisent à répondre.',en:'Decide if two statements contain enough information.'}},
-  {id:'quant-lab',name:'Quant Lab',symbol:'%',description:{fr:'Résous des problèmes de calcul, de proportion et d’algèbre.',en:'Solve quantitative, rate, algebra and ratio challenges.'}}
+  {id:'quant-lab',name:'Quant Lab',symbol:'%',description:{fr:'Résous des problèmes de calcul, de proportion et d’algèbre.',en:'Solve quantitative, rate, algebra and ratio challenges.'}},
+  {id:'reading-lab',name:'Reading Lab',symbol:'¶',description:{fr:'Lis un texte et repère l’idée principale, les indices et les conclusions.',en:'Read a passage and analyze its central idea, evidence and inferences.'}}
 ];
 export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;questionCount:number;questionIds:string[]}){
   const [exam,setExam]=useState<Exam>('tage');
@@ -37,7 +38,11 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
     'algebra':{fr:'Algèbre',en:'Algebra'},
     'geometry':{fr:'Géométrie',en:'Geometry'},
     'probability':{fr:'Probabilités',en:'Probability'},
-    'weighted-averages':{fr:'Moyennes pondérées',en:'Weighted averages'}
+    'weighted-averages':{fr:'Moyennes pondérées',en:'Weighted averages'},
+    'main-idea':{fr:'Idée principale',en:'Main idea'},
+    'inference':{fr:'Inférences',en:'Inference'},
+    'evidence':{fr:'Analyse des preuves',en:'Evidence analysis'},
+    'author-purpose':{fr:'Intention de l’auteur',en:'Author’s purpose'}
   };
   const knownQuestionIds=new Set(questionIds);
   const reviewCount=pendingReviewIds.filter(id=>knownQuestionIds.has(id)&&id.startsWith(exam==='tage'?'T-':'G-')).length;

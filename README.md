@@ -6,12 +6,12 @@
 
 ## Features
 
-- TAGE MAGE: Code Logic, Argument Lab, Enough Info?, **Quant Lab (Calcul)**
-- GMAT: Argument Lab, Enough Info?, **Quant Lab (Quantitative Reasoning)**; Code Logic is not presented as a GMAT exam section
+- TAGE MAGE: Code Logic, Argument Lab, Enough Info?, **Quant Lab (Calcul)**, **Reading Lab (Compréhension de textes)**
+- GMAT: Argument Lab, Enough Info?, **Quant Lab (Quantitative Reasoning)**, **Reading Lab (Reading Comprehension)**; Code Logic is not presented as a GMAT exam section
 - Game mode with local adaptive per-skill progression, hints and immediate explanation
 - Timed mini-tests with results and deferred correction
 - Static responsive Next.js React interface, with proper French and English routes
-- 58 original pilot questions in both FR and EN, **not editorially approved for release**
+- 70 original pilot questions in both FR and EN, **not editorially approved for release**
 - Community submissions via GitHub issues and PRs, subject to checks and human review
 
 ## Source structure
@@ -70,7 +70,7 @@ Players may revisit mistakes from either exam pathway with **Review my mistakes 
 
 ## Detailed pedagogical corrections
 
-All **58 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough Info? and 12 Quant Lab—include three original, bilingual steps explaining the reasoning. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 58 remain `pilot` content: the presence of steps is not independent editorial approval.
+All **70 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough Info?, 12 Quant Lab and 12 Reading Lab—include three original, bilingual steps explaining the reasoning. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 70 remain `pilot` content: the presence of steps is not independent editorial approval.
 
 **Quant Lab** includes 12 original pilot word problems with five choices, bilingual hints and three-stage corrections. This extends skill practice into TAGE MAGE Calcul and current GMAT Quantitative Reasoning but does not constitute a complete exam simulation.
 
@@ -82,12 +82,15 @@ All **58 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough 
 
 ## Editorial review and realistic pilot timing (XYZ)
 
-Each of the **58 pilot questions** now has a distinct pending-review record in [the editorial review ledger](docs/editorial-review-ledger.json), with a targeted point for human scrutiny. See [the independent review procedure](docs/EDITORIAL_REVIEW_PROTOCOL.md) for bilingual checks, numerical counterexamples and approval rules. Machine checks do **not** replace independent review.
+Each of the **70 pilot questions** now has a distinct pending-review record in [the editorial review ledger](docs/editorial-review-ledger.json), with a targeted point for human scrutiny. See [the independent review procedure](docs/EDITORIAL_REVIEW_PROTOCOL.md) for bilingual checks, numerical counterexamples and approval rules. Machine checks do **not** replace independent review.
 
 Timed mini-tests use the sum of the selected questions' **estimated pilot solving times**, rather than imposing the same 80-second allowance for all puzzles. Those estimates have not been calibrated to official TAGE MAGE or GMAT section durations.
 
 ## Offline bilingual review (no installation or public website)
 
-After the `CI / test` job succeeds, open that GitHub Actions run and download the `reasoning-arcade-offline-review` artifact. Unzip it and open `reasoning-arcade-editorial-review.html` in a browser. This **self-contained HTML file** displays all 58 pilot questions side by side in FR/EN. It hides answer keys until the reviewer expands each solution, records preliminary observations, and exports/imports a local JSON feedback file. **No JavaScript packages, account on the reviewing computer, network connection or hosted site are required to open it.** Alternatively, run `npm run build:review-pack` on a developer machine.
+After the `CI / test` job succeeds, open that GitHub Actions run and download the `reasoning-arcade-offline-review` artifact. Unzip it and open `reasoning-arcade-editorial-review.html` in a browser. This **self-contained HTML file** displays all 70 pilot questions side by side in FR/EN. It hides answer keys until the reviewer expands each solution, records preliminary observations, and exports/imports a local JSON feedback file. **No JavaScript packages, account on the reviewing computer, network connection or hosted site are required to open it.** Alternatively, run `npm run build:review-pack` on a developer machine.
 
 The export contains review findings only, **not** independent approvals. See [the offline review guide](docs/OFFLINE_REVIEW_GUIDE.md) and [the editorial protocol](docs/EDITORIAL_REVIEW_PROTOCOL.md). The original public-source licensing remains unchanged; this is a QA worksheet, not a public release.
+
+## Reading Lab
+Four original FR/EN passages support 12 pilot questions on main idea, evidence, inference and author purpose. They are included in the 70-question offline editorial workbook; none is independently approved.

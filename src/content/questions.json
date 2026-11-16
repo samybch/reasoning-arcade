@@ -2768,5 +2768,593 @@
         ]
       }
     }
+  },
+  {
+    "id": "T-R-01",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "main-idea",
+    "difficulty": 2,
+    "estimatedSeconds": 120,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une bibliothèque municipale a prolongé ses horaires de deux heures le jeudi pendant un semestre. À la fin de l'essai, les inscriptions avaient augmenté de 12 %, tandis que les visites du jeudi soir progressaient nettement. Certains élus y voient la preuve que l'ouverture tardive attire de nouveaux lecteurs. Toutefois, un campus universitaire a ouvert à proximité au début de la même période, ce qui a pu faire croître les inscriptions indépendamment des horaires. Les bibliothécaires observent aussi que les visites en journée ont légèrement diminué : une partie des usagers semble simplement venir plus tard. Le directeur refuse donc de conclure, sur ces seuls chiffres, que l'essai a accru la fréquentation totale. Il propose de comparer les évolutions avec celles d'une bibliothèque voisine restée aux horaires habituels, puis de distinguer nouveaux inscrits, déplacement des visites et coût de fonctionnement.",
+        "prompt": "Quelle est l'idée centrale du texte ?",
+        "choices": [
+          "Les bibliothèques doivent fermer plus tôt pour réduire les coûts.",
+          "L'ouverture d'un campus empêche toute mesure de fréquentation.",
+          "Les résultats de l'essai ne suffisent pas à attribuer la hausse des inscriptions aux horaires prolongés.",
+          "Les visites du jeudi soir ont diminué malgré les nouveaux horaires.",
+          "Le directeur souhaite supprimer toutes les ouvertures tardives."
+        ],
+        "explanation": "Le directeur distingue la coïncidence temporelle d'une relation causale prouvée : plusieurs explications restent possibles.",
+        "hint": "Repère la réserve exprimée par le directeur après l'annonce des résultats.",
+        "reviewSteps": [
+          "Identifie d'abord les deux observations : inscriptions en hausse et visites du soir plus nombreuses.",
+          "Relève ensuite la présence du nouveau campus et le possible déplacement des visites en journée.",
+          "La synthèse fidèle est que ces chiffres, seuls, ne démontrent pas un effet causal des horaires prolongés."
+        ]
+      },
+      "en": {
+        "context": "A municipal library extended its Thursday opening hours by two hours for one semester. By the end of the trial, registrations had risen by 12%, while Thursday evening visits increased markedly. Some elected officials took this as proof that late opening attracts new readers. However, a university campus opened nearby at the start of the same period and may have raised registrations independently of opening hours. Librarians also noted a slight decline in daytime visits: some patrons may simply have shifted their visit to later hours. The director therefore refused to infer from those figures alone that the trial increased total attendance. Instead, the director proposed comparing trends with a nearby library that had kept its usual hours, and separately tracking new registrations, shifted visits and operating costs.",
+        "prompt": "What is the passage's central idea?",
+        "choices": [
+          "Libraries should close earlier to lower their costs.",
+          "The opening of a campus makes attendance impossible to measure.",
+          "The trial does not by itself establish that longer hours caused the rise in registrations.",
+          "Thursday evening visits declined despite the extended hours.",
+          "The director wants all late openings to end."
+        ],
+        "explanation": "The director distinguishes a simultaneous increase from a demonstrated causal relationship because alternative explanations remain.",
+        "hint": "Find the director's reservation after the apparent improvement is described.",
+        "reviewSteps": [
+          "First identify the observations: more registrations and an increase in evening visits.",
+          "Then note the new campus and the possibility that existing users merely shifted visiting times.",
+          "A faithful summary is that the numbers alone cannot establish that longer hours caused the rise."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-R-02",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "inference",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une bibliothèque municipale a prolongé ses horaires de deux heures le jeudi pendant un semestre. À la fin de l'essai, les inscriptions avaient augmenté de 12 %, tandis que les visites du jeudi soir progressaient nettement. Certains élus y voient la preuve que l'ouverture tardive attire de nouveaux lecteurs. Toutefois, un campus universitaire a ouvert à proximité au début de la même période, ce qui a pu faire croître les inscriptions indépendamment des horaires. Les bibliothécaires observent aussi que les visites en journée ont légèrement diminué : une partie des usagers semble simplement venir plus tard. Le directeur refuse donc de conclure, sur ces seuls chiffres, que l'essai a accru la fréquentation totale. Il propose de comparer les évolutions avec celles d'une bibliothèque voisine restée aux horaires habituels, puis de distinguer nouveaux inscrits, déplacement des visites et coût de fonctionnement.",
+        "prompt": "Quelle conclusion est directement étayée par le texte ?",
+        "choices": [
+          "La hausse de 12 % mesure exactement les nouveaux lecteurs attirés par l'essai.",
+          "Les visites de journée ont augmenté autant que celles du soir.",
+          "Les coûts du jeudi soir ont diminué pendant le semestre.",
+          "Une partie des visites du soir pourrait correspondre à des visites auparavant effectuées en journée.",
+          "Le campus voisin n'a eu aucune influence sur les inscriptions."
+        ],
+        "explanation": "Une légère baisse des visites de jour accompagne la hausse des visites tardives : un déplacement d'horaires est possible, sans être démontré.",
+        "hint": "Privilégie une conclusion formulée comme possibilité, non comme certitude.",
+        "reviewSteps": [
+          "Le texte constate davantage de visites le soir, mais légèrement moins durant la journée.",
+          "Ces deux évolutions sont compatibles avec un déplacement de fréquentation, et non seulement avec de nouvelles visites.",
+          "L'inférence prudente est que certains usagers pourraient avoir changé leurs horaires. Aucun chiffre précis ne le démontre."
+        ]
+      },
+      "en": {
+        "context": "A municipal library extended its Thursday opening hours by two hours for one semester. By the end of the trial, registrations had risen by 12%, while Thursday evening visits increased markedly. Some elected officials took this as proof that late opening attracts new readers. However, a university campus opened nearby at the start of the same period and may have raised registrations independently of opening hours. Librarians also noted a slight decline in daytime visits: some patrons may simply have shifted their visit to later hours. The director therefore refused to infer from those figures alone that the trial increased total attendance. Instead, the director proposed comparing trends with a nearby library that had kept its usual hours, and separately tracking new registrations, shifted visits and operating costs.",
+        "prompt": "Which conclusion is directly supported by the passage?",
+        "choices": [
+          "The 12% rise measures exactly how many readers the trial attracted.",
+          "Daytime visits rose by as much as evening visits.",
+          "Thursday evening operating costs fell during the trial.",
+          "Some evening visits may have replaced visits formerly made during the day.",
+          "The nearby campus had no influence on registrations."
+        ],
+        "explanation": "The slight decline in daytime visits alongside increased evening use makes a shift in visiting times plausible, though unproven.",
+        "hint": "Prefer a cautious possibility rather than a confident causal assertion.",
+        "reviewSteps": [
+          "The passage reports rising evening visits but slightly falling daytime visits.",
+          "The two trends are consistent with some patrons changing when they visit, rather than with only new visits.",
+          "The careful inference is that some visitors may have shifted their schedules; no exact count is established."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-R-03",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "author-purpose",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une bibliothèque municipale a prolongé ses horaires de deux heures le jeudi pendant un semestre. À la fin de l'essai, les inscriptions avaient augmenté de 12 %, tandis que les visites du jeudi soir progressaient nettement. Certains élus y voient la preuve que l'ouverture tardive attire de nouveaux lecteurs. Toutefois, un campus universitaire a ouvert à proximité au début de la même période, ce qui a pu faire croître les inscriptions indépendamment des horaires. Les bibliothécaires observent aussi que les visites en journée ont légèrement diminué : une partie des usagers semble simplement venir plus tard. Le directeur refuse donc de conclure, sur ces seuls chiffres, que l'essai a accru la fréquentation totale. Il propose de comparer les évolutions avec celles d'une bibliothèque voisine restée aux horaires habituels, puis de distinguer nouveaux inscrits, déplacement des visites et coût de fonctionnement.",
+        "prompt": "Pourquoi le directeur propose-t-il de comparer avec une autre bibliothèque ?",
+        "choices": [
+          "Pour prouver que tous les étudiants utilisent la même bibliothèque.",
+          "Pour disposer d'un point de comparaison permettant de mieux isoler les effets des horaires prolongés.",
+          "Pour remplacer les horaires étendus par les horaires de la bibliothèque voisine.",
+          "Pour rendre le prix des abonnements identique dans les deux établissements.",
+          "Pour éviter de mesurer les coûts de fonctionnement."
+        ],
+        "explanation": "Un établissement non modifié peut aider à repérer les évolutions générales, indépendantes de l'essai d'ouverture tardive.",
+        "hint": "Demande-toi ce qu'apporte un site comparable sans changement d'horaires.",
+        "reviewSteps": [
+          "Le directeur cherche à savoir quelle part de la variation vient spécifiquement de l'essai.",
+          "Une bibliothèque restée à ses horaires habituels permet d'observer des changements qui auraient pu se produire sans cette mesure.",
+          "La comparaison sert donc à mieux séparer l'effet potentiel des horaires des autres facteurs. Elle ne prouve rien automatiquement."
+        ]
+      },
+      "en": {
+        "context": "A municipal library extended its Thursday opening hours by two hours for one semester. By the end of the trial, registrations had risen by 12%, while Thursday evening visits increased markedly. Some elected officials took this as proof that late opening attracts new readers. However, a university campus opened nearby at the start of the same period and may have raised registrations independently of opening hours. Librarians also noted a slight decline in daytime visits: some patrons may simply have shifted their visit to later hours. The director therefore refused to infer from those figures alone that the trial increased total attendance. Instead, the director proposed comparing trends with a nearby library that had kept its usual hours, and separately tracking new registrations, shifted visits and operating costs.",
+        "prompt": "Why does the director propose comparing the trial library with another library?",
+        "choices": [
+          "To prove that all students use the same library.",
+          "To provide a comparison that helps isolate the impact of extended hours.",
+          "To replace the new hours with the other library's schedule.",
+          "To make subscription fees identical at both sites.",
+          "To avoid measuring additional operating costs."
+        ],
+        "explanation": "An unchanged comparison site may help reveal general trends that are independent of the extended-hours trial.",
+        "hint": "Ask what a comparable site without changed hours can reveal.",
+        "reviewSteps": [
+          "The director wants to determine which part of the observed trend was caused specifically by the trial.",
+          "A library with unchanged opening hours could exhibit changes that would have happened even without the trial.",
+          "The comparison therefore helps separate possible effects of the extended schedule from other influences."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-R-04",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "main-idea",
+    "difficulty": 2,
+    "estimatedSeconds": 120,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une ville a installé un bassin de rétention et planté des arbres le long d'une avenue sujette aux ruissellements. Après ces travaux, le volume d'eau atteignant certains avaloirs lors de fortes pluies a diminué de 14 %. La mairie présente ce résultat comme un succès de la végétalisation. Une ingénieure rappelle toutefois que le bassin et les plantations ont été mis en place simultanément : la baisse observée ne permet pas de mesurer la contribution propre des arbres. Une association réplique que cette incertitude ne prouve nullement l'inutilité de la végétalisation, qui peut aussi apporter de l'ombre et abaisser les températures locales. Pour décider des prochains aménagements, l'ingénieure recommande d'étudier des rues comparables, de mesurer les précipitations et d'introduire les dispositifs séparément lorsque cela est possible. Le débat porte ainsi moins sur l'existence d'un bénéfice que sur la façon d'attribuer précisément les résultats.",
+        "prompt": "Quelle affirmation résume le mieux le désaccord présenté ?",
+        "choices": [
+          "Une baisse du ruissellement a été observée, mais son attribution précise aux plantations reste incertaine.",
+          "La végétalisation n'a aucun effet possible sur la température.",
+          "Les ingénieurs affirment que le bassin de rétention est inutile.",
+          "Les associations souhaitent interdire toute nouvelle plantation.",
+          "Les précipitations ont nécessairement baissé de 14 %."
+        ],
+        "explanation": "La baisse est constatée, mais deux interventions simultanées empêchent de mesurer leur contribution respective.",
+        "hint": "Sépare le résultat observé de l'explication causale proposée.",
+        "reviewSteps": [
+          "La mairie relève une diminution de l'eau atteignant certains avaloirs après les travaux.",
+          "Le bassin et les arbres ont été ajoutés au même moment, empêchant de connaître leur part individuelle.",
+          "Le passage défend une attribution prudente, sans conclure que les plantations sont sans intérêt."
+        ]
+      },
+      "en": {
+        "context": "A city built a stormwater retention basin and planted trees along an avenue prone to runoff. Afterward, the amount of water reaching certain drains during heavy rain fell by 14%. City officials presented this as evidence of successful tree planting. An engineer pointed out, however, that the basin and the planting had been installed simultaneously: the observed decrease could not isolate the trees' contribution. A local association responded that this uncertainty did not prove the planting was useless; trees might also provide shade and reduce local temperatures. Before planning further projects, the engineer recommended studying comparable streets, measuring rainfall and introducing interventions separately when feasible. The disagreement was therefore less about whether benefits might exist than about how reliably the observed results could be attributed to each intervention.",
+        "prompt": "Which statement best summarizes the disagreement?",
+        "choices": [
+          "Runoff fell, but the exact share attributable to tree planting remains uncertain.",
+          "Tree planting cannot have any effect on temperature.",
+          "Engineers claim that the retention basin is useless.",
+          "Local associations want to prohibit future tree planting.",
+          "Rainfall necessarily fell by 14%."
+        ],
+        "explanation": "The reduction was observed, but two simultaneous interventions prevent the individual effects from being identified.",
+        "hint": "Separate the recorded result from the proposed causal explanation.",
+        "reviewSteps": [
+          "The city recorded less water reaching certain drains after the project.",
+          "Both the basin and the trees were installed at the same time, obscuring each one's contribution.",
+          "The passage supports cautious attribution rather than the conclusion that planting has no value."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-R-05",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "evidence",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une ville a installé un bassin de rétention et planté des arbres le long d'une avenue sujette aux ruissellements. Après ces travaux, le volume d'eau atteignant certains avaloirs lors de fortes pluies a diminué de 14 %. La mairie présente ce résultat comme un succès de la végétalisation. Une ingénieure rappelle toutefois que le bassin et les plantations ont été mis en place simultanément : la baisse observée ne permet pas de mesurer la contribution propre des arbres. Une association réplique que cette incertitude ne prouve nullement l'inutilité de la végétalisation, qui peut aussi apporter de l'ombre et abaisser les températures locales. Pour décider des prochains aménagements, l'ingénieure recommande d'étudier des rues comparables, de mesurer les précipitations et d'introduire les dispositifs séparément lorsque cela est possible. Le débat porte ainsi moins sur l'existence d'un bénéfice que sur la façon d'attribuer précisément les résultats.",
+        "prompt": "Quelle information affaiblirait le plus l'affirmation selon laquelle les arbres expliquent seuls la baisse ?",
+        "choices": [
+          "Les plantations apportent davantage d'ombre en été.",
+          "L'avenue comporte plusieurs carrefours fréquentés.",
+          "La ville a utilisé différentes essences pour ses plantations.",
+          "La hausse des températures encourage la végétalisation.",
+          "Une rue similaire dotée seulement d'un bassin de rétention a connu une baisse comparable du ruissellement."
+        ],
+        "explanation": "Si un bassin seul produit une réduction comparable, il devient difficile de soutenir que les arbres sont l'unique cause observée.",
+        "hint": "Cherche une observation qui fournit une explication alternative mesurable.",
+        "reviewSteps": [
+          "L'affirmation examinée attribue toute la réduction à la seule plantation des arbres.",
+          "Un résultat comparable sur une rue sans nouvelles plantations montrerait que le bassin peut suffire à expliquer une forte baisse.",
+          "Ce contre-exemple affaiblit la thèse d'une cause exclusivement végétale sans prétendre démontrer l'inutilité des arbres."
+        ]
+      },
+      "en": {
+        "context": "A city built a stormwater retention basin and planted trees along an avenue prone to runoff. Afterward, the amount of water reaching certain drains during heavy rain fell by 14%. City officials presented this as evidence of successful tree planting. An engineer pointed out, however, that the basin and the planting had been installed simultaneously: the observed decrease could not isolate the trees' contribution. A local association responded that this uncertainty did not prove the planting was useless; trees might also provide shade and reduce local temperatures. Before planning further projects, the engineer recommended studying comparable streets, measuring rainfall and introducing interventions separately when feasible. The disagreement was therefore less about whether benefits might exist than about how reliably the observed results could be attributed to each intervention.",
+        "prompt": "Which evidence would most weaken the claim that trees alone caused the reduction?",
+        "choices": [
+          "The new trees provide extra shade in summer.",
+          "The avenue contains several busy intersections.",
+          "The city planted several different tree species.",
+          "Higher temperatures create a reason to plant more trees.",
+          "A similar street with only a retention basin experienced a comparable decline in runoff."
+        ],
+        "explanation": "A similar reduction under a basin-only intervention undermines the claim that tree planting must explain all of the observed change.",
+        "hint": "Look for measurable evidence of a competing causal mechanism.",
+        "reviewSteps": [
+          "The strong claim assigns the entire reduction to tree planting alone.",
+          "A comparable street with a basin but no new trees shows a different intervention can produce a similar result.",
+          "That observation weakens exclusive attribution without claiming that the trees offer no benefit."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-R-06",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "inference",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une ville a installé un bassin de rétention et planté des arbres le long d'une avenue sujette aux ruissellements. Après ces travaux, le volume d'eau atteignant certains avaloirs lors de fortes pluies a diminué de 14 %. La mairie présente ce résultat comme un succès de la végétalisation. Une ingénieure rappelle toutefois que le bassin et les plantations ont été mis en place simultanément : la baisse observée ne permet pas de mesurer la contribution propre des arbres. Une association réplique que cette incertitude ne prouve nullement l'inutilité de la végétalisation, qui peut aussi apporter de l'ombre et abaisser les températures locales. Pour décider des prochains aménagements, l'ingénieure recommande d'étudier des rues comparables, de mesurer les précipitations et d'introduire les dispositifs séparément lorsque cela est possible. Le débat porte ainsi moins sur l'existence d'un bénéfice que sur la façon d'attribuer précisément les résultats.",
+        "prompt": "Quelle distinction logique l'association met-elle en avant ?",
+        "choices": [
+          "Un effet incertain est forcément nul.",
+          "Un effet mesuré est nécessairement dû à la première intervention.",
+          "Ne pas pouvoir prouver une contribution précise ne signifie pas prouver l'absence de tout bénéfice.",
+          "Une amélioration de l'ombre prouve mécaniquement une baisse du ruissellement.",
+          "La comparaison entre rues ne peut apporter aucune information utile."
+        ],
+        "explanation": "L'association distingue l'absence de preuve isolée d'une absence prouvée de bénéfice, en mentionnant notamment l'ombre.",
+        "hint": "Repère la différence entre « non démontré » et « démontré faux ».",
+        "reviewSteps": [
+          "L'ingénieure dit que les deux dispositifs simultanés empêchent une attribution chiffrée précise.",
+          "L'association répond qu'une mesure isolée non disponible ne permet pas de conclure à l'inefficacité des arbres.",
+          "La distinction attendue porte sur le manque de preuve d'un effet quantifié, différent d'une preuve de son inexistence."
+        ]
+      },
+      "en": {
+        "context": "A city built a stormwater retention basin and planted trees along an avenue prone to runoff. Afterward, the amount of water reaching certain drains during heavy rain fell by 14%. City officials presented this as evidence of successful tree planting. An engineer pointed out, however, that the basin and the planting had been installed simultaneously: the observed decrease could not isolate the trees' contribution. A local association responded that this uncertainty did not prove the planting was useless; trees might also provide shade and reduce local temperatures. Before planning further projects, the engineer recommended studying comparable streets, measuring rainfall and introducing interventions separately when feasible. The disagreement was therefore less about whether benefits might exist than about how reliably the observed results could be attributed to each intervention.",
+        "prompt": "What logical distinction does the local association emphasize?",
+        "choices": [
+          "An uncertain effect is necessarily zero.",
+          "Any measured effect must be caused by the first intervention.",
+          "Failure to isolate a precise contribution does not prove the absence of every benefit.",
+          "Extra shade proves that runoff must fall.",
+          "Comparing different streets cannot provide useful evidence."
+        ],
+        "explanation": "The association distinguishes missing proof of a quantified effect from proof that planting has no benefits, citing shade as one possibility.",
+        "hint": "Notice the difference between not being proven and being proven false.",
+        "reviewSteps": [
+          "The engineer says simultaneous changes prevent a precise causal allocation.",
+          "The association notes that missing isolated evidence cannot justify treating trees as ineffective.",
+          "The correct distinction is between lacking proof of one measured contribution and proving there is no benefit at all."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-01",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "main-idea",
+    "difficulty": 2,
+    "estimatedSeconds": 120,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Plusieurs industriels ont installé des capteurs destinés à détecter les pannes avant qu'elles n'interrompent la production. Dans une étude pilote portant sur huit usines, les arrêts enregistrés ont diminué de 18 % après l'installation. Le fournisseur estime que cette baisse démontre l'efficacité prédictive de son système. Pourtant, les usines ont aussi formé leurs équipes de maintenance et remplacé certains composants vieillissants pendant la même période. Les établissements volontaires sortaient en outre d'une phase de pannes exceptionnellement fréquentes : une amélioration aurait pu survenir sans intervention. Des ingénieurs rapportent néanmoins que plusieurs alertes ont permis de changer des pièces défectueuses à temps. Une évaluatrice indépendante propose de déployer progressivement la technologie sur des lignes comparables, en mesurant ensemble les coûts de maintenance et les arrêts imprévus. Cette démarche permettrait de distinguer l'utilité réelle de l'outil des effets des changements simultanés.",
+        "prompt": "Quelle est l'idée principale du passage ?",
+        "choices": [
+          "Les capteurs ont éliminé toutes les pannes dans les huit usines.",
+          "La formation du personnel rend les capteurs nécessairement inutiles.",
+          "Les économies annoncées sont toutes fictives.",
+          "Le système peut être utile, mais une évaluation mieux contrôlée est nécessaire pour mesurer son effet propre.",
+          "Les industriels ne devraient jamais investir dans la maintenance prédictive."
+        ],
+        "explanation": "Le texte reconnaît des alertes utiles tout en montrant que la baisse des arrêts ne démontre pas à elle seule l'effet causal des capteurs.",
+        "hint": "Cherche une synthèse qui conserve à la fois les bénéfices possibles et les limites de l'étude.",
+        "reviewSteps": [
+          "Des ingénieurs signalent que plusieurs alertes ont permis d'agir avant la panne.",
+          "Mais les formations, remplacements de composants et biais de sélection ont également pu réduire les arrêts.",
+          "Le propos central recommande donc une évaluation comparative avant de généraliser le déploiement."
+        ]
+      },
+      "en": {
+        "context": "Several manufacturers have installed sensors intended to identify equipment failures before they interrupt production. In an eight-factory pilot, recorded downtime fell by 18% after the sensors were introduced. The supplier describes this result as evidence that its predictive system reduces failures. Yet during the same months, the factories also trained their maintenance staff and replaced some ageing components. Moreover, the participating sites had volunteered after experiencing unusually high breakdown rates; some improvement might have occurred even without intervention. Engineers still reported that several sensor alerts helped them replace defective parts in time, so the system may have practical value. An independent reviewer recommends a staged rollout in which comparable production lines receive the technology at different times, with maintenance costs and unplanned downtime measured together. Such a design could distinguish a useful early-warning tool from a system whose apparent savings depend on other simultaneous changes.",
+        "prompt": "What is the passage's central idea?",
+        "choices": [
+          "Sensors eliminated every failure in all eight plants.",
+          "Training necessarily makes predictive sensors useless.",
+          "All reported savings are fictitious.",
+          "The system may be useful, but a better-controlled evaluation is needed to isolate its effect.",
+          "Manufacturers should never invest in predictive maintenance."
+        ],
+        "explanation": "The passage acknowledges useful alerts but cautions that reduced downtime alone does not isolate the sensors' causal contribution.",
+        "hint": "Look for an answer balancing the potential benefits against the study's limits.",
+        "reviewSteps": [
+          "Engineers reported several alerts that helped them act before a failure occurred.",
+          "However, training, component replacement and selection effects might also explain lower downtime.",
+          "The central recommendation is to evaluate the system comparatively before scaling deployment."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-02",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "inference",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Plusieurs industriels ont installé des capteurs destinés à détecter les pannes avant qu'elles n'interrompent la production. Dans une étude pilote portant sur huit usines, les arrêts enregistrés ont diminué de 18 % après l'installation. Le fournisseur estime que cette baisse démontre l'efficacité prédictive de son système. Pourtant, les usines ont aussi formé leurs équipes de maintenance et remplacé certains composants vieillissants pendant la même période. Les établissements volontaires sortaient en outre d'une phase de pannes exceptionnellement fréquentes : une amélioration aurait pu survenir sans intervention. Des ingénieurs rapportent néanmoins que plusieurs alertes ont permis de changer des pièces défectueuses à temps. Une évaluatrice indépendante propose de déployer progressivement la technologie sur des lignes comparables, en mesurant ensemble les coûts de maintenance et les arrêts imprévus. Cette démarche permettrait de distinguer l'utilité réelle de l'outil des effets des changements simultanés.",
+        "prompt": "Pourquoi la baisse de 18 % ne suffit-elle pas à mesurer les économies imputables aux capteurs ?",
+        "choices": [
+          "Le texte indique que la production a totalement cessé.",
+          "Plusieurs changements simultanés et la sélection des usines rendent l'attribution causale incertaine.",
+          "Toutes les alertes se sont révélées erronées.",
+          "Les huit usines avaient des machines neuves avant l'essai.",
+          "Le fournisseur a déjà réalisé une étude randomisée concluante."
+        ],
+        "explanation": "Les usines ont reçu plusieurs interventions et avaient récemment connu beaucoup de pannes, ce qui complique l'interprétation du résultat.",
+        "hint": "Vérifie si le passage décrit une seule intervention ou plusieurs.",
+        "reviewSteps": [
+          "La baisse observée coïncide avec l'installation des capteurs, mais aussi avec une formation et des remplacements.",
+          "Les sites volontaires sortaient d'une période de pannes inhabituelles, pouvant entraîner un retour vers une situation ordinaire.",
+          "Ces facteurs interdisent d'attribuer précisément les 18 % de baisse aux seuls capteurs."
+        ]
+      },
+      "en": {
+        "context": "Several manufacturers have installed sensors intended to identify equipment failures before they interrupt production. In an eight-factory pilot, recorded downtime fell by 18% after the sensors were introduced. The supplier describes this result as evidence that its predictive system reduces failures. Yet during the same months, the factories also trained their maintenance staff and replaced some ageing components. Moreover, the participating sites had volunteered after experiencing unusually high breakdown rates; some improvement might have occurred even without intervention. Engineers still reported that several sensor alerts helped them replace defective parts in time, so the system may have practical value. An independent reviewer recommends a staged rollout in which comparable production lines receive the technology at different times, with maintenance costs and unplanned downtime measured together. Such a design could distinguish a useful early-warning tool from a system whose apparent savings depend on other simultaneous changes.",
+        "prompt": "Why is the 18% reduction insufficient to quantify savings caused by the sensors?",
+        "choices": [
+          "The passage says production stopped entirely.",
+          "Simultaneous changes and selection of the plants make causal attribution uncertain.",
+          "Every sensor alert turned out to be false.",
+          "All eight factories had new equipment before the trial.",
+          "The supplier already conducted a conclusive randomized study."
+        ],
+        "explanation": "Several interventions occurred at the same time, and volunteer sites had previously experienced unusual failures; both complicate causal inference.",
+        "hint": "Check whether only one intervention took place during the pilot.",
+        "reviewSteps": [
+          "The reduction happened alongside sensor deployment, staff training and component replacement.",
+          "The volunteer plants had high recent failure rates, so some return toward typical levels was also possible.",
+          "These factors prevent attributing the entire observed 18% decline to the sensors alone."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-03",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "author-purpose",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Plusieurs industriels ont installé des capteurs destinés à détecter les pannes avant qu'elles n'interrompent la production. Dans une étude pilote portant sur huit usines, les arrêts enregistrés ont diminué de 18 % après l'installation. Le fournisseur estime que cette baisse démontre l'efficacité prédictive de son système. Pourtant, les usines ont aussi formé leurs équipes de maintenance et remplacé certains composants vieillissants pendant la même période. Les établissements volontaires sortaient en outre d'une phase de pannes exceptionnellement fréquentes : une amélioration aurait pu survenir sans intervention. Des ingénieurs rapportent néanmoins que plusieurs alertes ont permis de changer des pièces défectueuses à temps. Une évaluatrice indépendante propose de déployer progressivement la technologie sur des lignes comparables, en mesurant ensemble les coûts de maintenance et les arrêts imprévus. Cette démarche permettrait de distinguer l'utilité réelle de l'outil des effets des changements simultanés.",
+        "prompt": "Quel est le rôle du déploiement progressif recommandé par l'évaluatrice ?",
+        "choices": [
+          "Prouver que toutes les usines ont un taux de panne identique.",
+          "Éviter toute mesure des coûts de maintenance.",
+          "Comparer des lignes semblables équipées à des moments différents pour mieux isoler l'effet du système.",
+          "Supprimer la formation du personnel partout.",
+          "Remplacer immédiatement la totalité des équipements."
+        ],
+        "explanation": "Le calendrier différencié de déploiement vise à fournir un point de comparaison plus utile pour la causalité.",
+        "hint": "Demande-toi pourquoi l'évaluatrice souhaite des lignes comparables et des dates différentes.",
+        "reviewSteps": [
+          "Les autres changements rendent difficile l'analyse d'une simple comparaison avant/après.",
+          "Équiper des lignes semblables à des moments différents peut aider à distinguer une tendance générale d'un effet spécifique.",
+          "Le but est de mesurer le bénéfice incrémental du système, y compris les coûts associés."
+        ]
+      },
+      "en": {
+        "context": "Several manufacturers have installed sensors intended to identify equipment failures before they interrupt production. In an eight-factory pilot, recorded downtime fell by 18% after the sensors were introduced. The supplier describes this result as evidence that its predictive system reduces failures. Yet during the same months, the factories also trained their maintenance staff and replaced some ageing components. Moreover, the participating sites had volunteered after experiencing unusually high breakdown rates; some improvement might have occurred even without intervention. Engineers still reported that several sensor alerts helped them replace defective parts in time, so the system may have practical value. An independent reviewer recommends a staged rollout in which comparable production lines receive the technology at different times, with maintenance costs and unplanned downtime measured together. Such a design could distinguish a useful early-warning tool from a system whose apparent savings depend on other simultaneous changes.",
+        "prompt": "What is the role of the reviewer’s proposed staged rollout?",
+        "choices": [
+          "To prove that all plants have identical failure rates.",
+          "To avoid measuring maintenance costs.",
+          "To compare similar lines fitted at different times and better isolate the system's effect.",
+          "To eliminate worker training everywhere.",
+          "To replace all equipment immediately."
+        ],
+        "explanation": "A rollout with different adoption dates offers a more informative comparison for causal evaluation.",
+        "hint": "Ask why similar production lines should adopt the system at different times.",
+        "reviewSteps": [
+          "Concurrent upgrades and training undermine a simple before-and-after comparison.",
+          "Rolling out across comparable lines at different dates can help separate general trends from system effects.",
+          "The reviewer wants a more credible estimate of incremental benefits alongside related costs."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-04",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "main-idea",
+    "difficulty": 2,
+    "estimatedSeconds": 120,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une réserve côtière a renforcé les restrictions de pêche dans une baie et constaté une hausse de 25 % de la population suivie de poissons de récif en trois ans. Les partisans de la mesure y voient la preuve de son efficacité. Toutefois, le rapport mentionne aussi une hausse de 10 % dans une baie voisine où les nouvelles restrictions ne s'appliquaient pas. Pendant la même période, des mesures antipollution en amont ont amélioré la qualité de l'eau dans toute la région. L'équipe de suivi estime que l'augmentation plus forte dans la baie réglementée est compatible avec un effet positif des règles de pêche, mais qu'on ne saurait leur attribuer à elles seules l'ensemble des 25 %. Des pêcheurs craignent des pertes de revenus immédiates, tandis que des associations évoquent une reconstitution durable des populations. L'équipe recommande de poursuivre les comparaisons sur plusieurs saisons, avec les captures, l'état des habitats et le respect des règles, avant d'étendre la zone.",
+        "prompt": "Quelle est la conclusion centrale du rapport de suivi ?",
+        "choices": [
+          "Les restrictions pourraient avoir contribué au rétablissement, mais d'autres changements empêchent de leur attribuer tout le gain.",
+          "La baie voisine a subi une diminution de 10 % des poissons.",
+          "Les nouvelles restrictions ont déjà été supprimées.",
+          "La qualité de l'eau s'est dégradée dans toute la région.",
+          "L'équipe recommande une extension immédiate sans nouvelle mesure."
+        ],
+        "explanation": "La hausse plus forte dans la baie réglementée est compatible avec un effet favorable, mais l'amélioration régionale de l'eau joue également.",
+        "hint": "Distingue l'effet potentiel des restrictions de l'ensemble des facteurs contemporains.",
+        "reviewSteps": [
+          "La baie réglementée a enregistré une hausse de 25 %, supérieure aux 10 % de la zone voisine.",
+          "Les deux zones ont bénéficié d'une eau plus propre, indépendamment des restrictions de pêche.",
+          "L'équipe juge les règles possiblement utiles, tout en refusant de leur attribuer la totalité des gains."
+        ]
+      },
+      "en": {
+        "context": "A coastal reserve introduced tighter fishing restrictions in a bay and reported a 25% increase in a monitored reef-fish population over three years. Supporters of the restrictions argued that the figures showed the policy was working. The report, however, also noted a 10% increase in a neighboring bay without the new restrictions. During the same period, upstream pollution controls improved water quality across the region. The monitoring team concluded that the restricted bay's stronger increase was consistent with a positive effect of the fishing rules, but that the total 25% gain could not be credited to those rules alone. Local fishers worried about immediate income losses, while conservation groups emphasized possible long-term recovery. The team proposed continuing comparisons across several seasons, including catches, habitat conditions and compliance data, before deciding whether to expand the restriction zone.",
+        "prompt": "What is the monitoring team's central conclusion?",
+        "choices": [
+          "Fishing restrictions may have helped recovery, but other changes prevent attributing the entire increase to them.",
+          "The neighboring bay lost 10% of its reef fish.",
+          "The new fishing restrictions have already been withdrawn.",
+          "Water quality deteriorated across the entire region.",
+          "The team recommended immediate expansion without more measurements."
+        ],
+        "explanation": "The larger increase in the restricted bay is consistent with a beneficial policy effect, but regional water-quality improvements also matter.",
+        "hint": "Distinguish a possible policy contribution from all concurrent influences.",
+        "reviewSteps": [
+          "The restricted bay gained 25%, while the neighboring comparison bay gained 10%.",
+          "Both bays benefited from cleaner regional water, irrespective of the new fishing rules.",
+          "The team sees a possible effect of restrictions without crediting them with the whole rise."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-05",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "inference",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une réserve côtière a renforcé les restrictions de pêche dans une baie et constaté une hausse de 25 % de la population suivie de poissons de récif en trois ans. Les partisans de la mesure y voient la preuve de son efficacité. Toutefois, le rapport mentionne aussi une hausse de 10 % dans une baie voisine où les nouvelles restrictions ne s'appliquaient pas. Pendant la même période, des mesures antipollution en amont ont amélioré la qualité de l'eau dans toute la région. L'équipe de suivi estime que l'augmentation plus forte dans la baie réglementée est compatible avec un effet positif des règles de pêche, mais qu'on ne saurait leur attribuer à elles seules l'ensemble des 25 %. Des pêcheurs craignent des pertes de revenus immédiates, tandis que des associations évoquent une reconstitution durable des populations. L'équipe recommande de poursuivre les comparaisons sur plusieurs saisons, avec les captures, l'état des habitats et le respect des règles, avant d'étendre la zone.",
+        "prompt": "Quelle inférence est étayée par l'augmentation observée dans la baie voisine ?",
+        "choices": [
+          "Les mesures de pêche sont inutiles dans toutes les zones.",
+          "La hausse de 25 % est entièrement due aux restrictions.",
+          "La population de la baie réglementée a baissé avant de remonter.",
+          "Toutes les différences entre les deux baies s'expliquent par le tourisme.",
+          "Des facteurs qui ne sont pas propres aux nouvelles restrictions ont pu favoriser une hausse des poissons."
+        ],
+        "explanation": "Une baie sans les nouvelles règles connaît aussi une hausse; des influences communes, comme la qualité de l'eau, ont donc pu jouer.",
+        "hint": "Repère les changements communs aux deux zones.",
+        "reviewSteps": [
+          "La baie voisine n'a pas reçu les nouvelles restrictions, mais sa population suivie a quand même augmenté.",
+          "La qualité de l'eau s'est améliorée à l'échelle régionale pendant les mêmes années.",
+          "Il est donc raisonnable d'envisager des facteurs communs favorables, sans nier un effet additionnel possible des restrictions."
+        ]
+      },
+      "en": {
+        "context": "A coastal reserve introduced tighter fishing restrictions in a bay and reported a 25% increase in a monitored reef-fish population over three years. Supporters of the restrictions argued that the figures showed the policy was working. The report, however, also noted a 10% increase in a neighboring bay without the new restrictions. During the same period, upstream pollution controls improved water quality across the region. The monitoring team concluded that the restricted bay's stronger increase was consistent with a positive effect of the fishing rules, but that the total 25% gain could not be credited to those rules alone. Local fishers worried about immediate income losses, while conservation groups emphasized possible long-term recovery. The team proposed continuing comparisons across several seasons, including catches, habitat conditions and compliance data, before deciding whether to expand the restriction zone.",
+        "prompt": "What inference is supported by the increase in the neighboring bay?",
+        "choices": [
+          "Fishing rules are useless in every location.",
+          "The restricted bay's entire 25% increase was caused by the policy.",
+          "The restricted bay's population first fell and then recovered.",
+          "Tourism explains every difference between the two bays.",
+          "Factors other than the new restrictions may have supported fish population growth."
+        ],
+        "explanation": "The neighboring bay also improved without the new rules, which supports the possibility of wider influences such as cleaner regional water.",
+        "hint": "Identify changes that could have affected both bays.",
+        "reviewSteps": [
+          "The neighboring bay had no new restrictions yet still experienced population growth.",
+          "Water quality improved throughout the region during the same period.",
+          "Shared favorable factors are therefore plausible, even if restrictions also had an additional effect."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-06",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "evidence",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Une réserve côtière a renforcé les restrictions de pêche dans une baie et constaté une hausse de 25 % de la population suivie de poissons de récif en trois ans. Les partisans de la mesure y voient la preuve de son efficacité. Toutefois, le rapport mentionne aussi une hausse de 10 % dans une baie voisine où les nouvelles restrictions ne s'appliquaient pas. Pendant la même période, des mesures antipollution en amont ont amélioré la qualité de l'eau dans toute la région. L'équipe de suivi estime que l'augmentation plus forte dans la baie réglementée est compatible avec un effet positif des règles de pêche, mais qu'on ne saurait leur attribuer à elles seules l'ensemble des 25 %. Des pêcheurs craignent des pertes de revenus immédiates, tandis que des associations évoquent une reconstitution durable des populations. L'équipe recommande de poursuivre les comparaisons sur plusieurs saisons, avec les captures, l'état des habitats et le respect des règles, avant d'étendre la zone.",
+        "prompt": "Quel complément de données renforcerait le plus l'évaluation de l'effet des restrictions ?",
+        "choices": [
+          "Une enquête portant uniquement sur la popularité des noms des poissons.",
+          "Une estimation des ventes de matériel de pêche à l'échelle mondiale.",
+          "Des séries comparables sur plusieurs saisons, incluant l'état des habitats, les captures et le respect des règles dans les deux zones.",
+          "Le nombre de visiteurs des restaurants d'une ville éloignée.",
+          "Une liste d'opinions sans dates sur les bénéfices écologiques."
+        ],
+        "explanation": "Des comparaisons longitudinales tenant compte des habitats, des captures et du respect des règles aideraient à distinguer l'effet de la politique.",
+        "hint": "Cherche des observations répétées qui permettent de contrôler les différences entre zones.",
+        "reviewSteps": [
+          "Le rapport compare déjà deux baies, mais l'amélioration régionale de l'eau reste une explication concurrente.",
+          "Des séries saisonnières sur l'habitat, l'effort de pêche et l'application des règles enrichiraient cette comparaison.",
+          "De telles données faciliteraient une attribution plus crédible, sans promettre une preuve automatique."
+        ]
+      },
+      "en": {
+        "context": "A coastal reserve introduced tighter fishing restrictions in a bay and reported a 25% increase in a monitored reef-fish population over three years. Supporters of the restrictions argued that the figures showed the policy was working. The report, however, also noted a 10% increase in a neighboring bay without the new restrictions. During the same period, upstream pollution controls improved water quality across the region. The monitoring team concluded that the restricted bay's stronger increase was consistent with a positive effect of the fishing rules, but that the total 25% gain could not be credited to those rules alone. Local fishers worried about immediate income losses, while conservation groups emphasized possible long-term recovery. The team proposed continuing comparisons across several seasons, including catches, habitat conditions and compliance data, before deciding whether to expand the restriction zone.",
+        "prompt": "What additional evidence would best strengthen an assessment of the restrictions?",
+        "choices": [
+          "A survey of the popularity of fish names alone.",
+          "A worldwide estimate of fishing equipment sales.",
+          "Comparable data over several seasons on habitats, catches and compliance in both bays.",
+          "The number of restaurant visitors in a distant city.",
+          "A collection of undated opinions about ecological benefits."
+        ],
+        "explanation": "Longitudinal comparisons accounting for habitats, catches and compliance would help separate policy effects from competing causes.",
+        "hint": "Look for repeated measurements that permit a more informative comparison between sites.",
+        "reviewSteps": [
+          "The report compares two bays, but regional water-quality gains remain a competing influence.",
+          "Seasonal data on habitat, fishing activity and rule compliance would improve this comparison.",
+          "Such evidence could support stronger causal inference without guaranteeing perfect attribution."
+        ]
+      }
+    }
   }
 ]

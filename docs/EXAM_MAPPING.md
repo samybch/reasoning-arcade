@@ -10,6 +10,7 @@ Reference sites for later editorial verification:
 | Argument Lab | Reasoning and argumentation-related skills | Critical Reasoning-related skills |
 | Enough Info? | Conditions minimales-related skills | Data Sufficiency-related skills |
 | Quant Lab | Arithmetic, geometry and algebra-related skills from Calcul | Algebra and arithmetic Problem Solving-related skills in Quantitative Reasoning |
+| Reading Lab | Comprehension of written text and supported inferences | Verbal Reading Comprehension reasoning skills |
 
 The current preview is a **learning experiment**, not an official simulation. Some questions are elementary and not indicative of official test difficulty. Review exact answer conventions for both exams before calling anything exam-like. No score equivalence, affiliation or endorsement is claimed.
 
@@ -49,3 +50,6 @@ FNEGE describes Calcul as word problems using elementary arithmetic, geometry an
 - GMAC: https://www.mba.com/exams/gmat-exam/about/exam-content
 
 Current catalog total: **58 bilingual pilot questions**. The GMAT quantitative path and TAGE Calcul path are now partially covered; the remaining gaps shown on the bilingual coverage page still need development.
+
+## Reading Lab addition (2026-11-16)
+Original pilot items `T-R-01..06` and `G-R-01..06` use four original bilingual passages, with three questions per passage. The bank now has 70 original FR/EN pilot exercises. No exam-fidelity claim or independent calibration. Official syllabus: https://www.tagemage.fr/page/sous-tests and https://www.mba.com/exams/gmat-exam/about/exam-content.
