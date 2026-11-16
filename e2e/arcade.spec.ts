@@ -97,7 +97,7 @@ test('localized privacy notice explains local browser progress and reset',async(
 
 test('home displays the current catalog count, including new original pilot exercises',async({page})=>{
   await page.goto(PREFIX+'/fr/');
-  await expect(page.locator('.hero-stats')).toContainText('46');
+  await expect(page.locator('.hero-stats')).toContainText('58');
 });
 test('320px mobile viewport supports French and English game navigation without overflow',async({page})=>{
   await page.setViewportSize({width:320,height:700});
@@ -112,12 +112,12 @@ test('320px mobile viewport supports French and English game navigation without 
 test('coverage pages accurately disclose covered and missing sections in both languages',async({page})=>{
   await page.goto(PREFIX+'/fr/coverage/');
   await expect(page.getByRole('heading',{name:'Couverture actuelle des examens'})).toBeVisible();
-  await expect(page.getByText('46 exercices pilotes')).toBeVisible();
+  await expect(page.getByText('58 exercices pilotes')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
   await expect(page.getByText('Non couvert').first()).toBeVisible();
   await page.goto(PREFIX+'/en/coverage/');
   await expect(page.getByRole('heading',{name:'Current exam coverage'})).toBeVisible();
-  await expect(page.getByText('46 pilot exercises')).toBeVisible();
+  await expect(page.getByText('58 pilot exercises')).toBeVisible();
 });
 test('new navigation remains usable at 320px without horizontal overflow',async({page})=>{
   await page.setViewportSize({width:320,height:640});
@@ -265,4 +265,44 @@ test('timed Code Logic mini-test keeps solution steps hidden until the results',
   await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
   await expect(page.locator('.reasoning-breakdown')).toHaveCount(5);
   await expect(page.getByText('Identify the rule').first()).toBeVisible();
+});
+
+test('Quant Lab is offered on both tracks with five answers and detailed feedback',async({page})=>{
+  await page.goto(PREFIX+'/fr/');
+  await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
+  await expect(page.locator('.hero-stats')).toContainText('4 jeux');
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/fr/play/quant-lab/?exam=tage&mode=game');
+  await expect(page.locator('#question-title')).toBeVisible();
+  await expect(page.locator('.answer-list button')).toHaveCount(5);
+  await page.locator('.answer-list button').first().click();
+  await page.getByRole('button',{name:/Valider/}).click();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+});
+test('GMAT Quant Lab completes a five-question timed practice session',async({page})=>{
+  await page.goto(PREFIX+'/en/play/quant-lab/?exam=gmat&mode=exam');
+  await expect(page.locator('#question-title')).toBeVisible();
+  for(let i=0;i<5;i++){
+    await page.locator('.answer-list button').first().click();
+    await page.getByRole('button',{name:/Submit/}).click();
+  }
+  await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
+  await expect(page.locator('.result-card')).toContainText('5 attempted');
+});
+test('quantitative exercises remain usable at 320px in French and English',async({page})=>{
+  await page.setViewportSize({width:320,height:680});
+  for(const suffix of ['/fr/play/quant-lab/?exam=tage&mode=game','/en/play/quant-lab/?exam=gmat&mode=game']){
+    await page.goto(PREFIX+suffix);
+    await expect(page.locator('#question-title')).toBeVisible();
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth),suffix).toBeLessThanOrEqual(1);
+  }
+});
+test('coverage now lists six quantitative pilots for each track',async({page})=>{
+  await page.goto(PREFIX+'/fr/coverage/');
+  await expect(page.getByText('Calcul',{exact:true})).toBeVisible();
+  await expect(page.getByText('58 exercices pilotes')).toBeVisible();
+  await page.goto(PREFIX+'/en/coverage/');
+  await expect(page.getByText('58 pilot exercises')).toBeVisible();
+  await expect(page.locator('.coverage-row')).toHaveCount(14);
 });
