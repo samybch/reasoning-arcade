@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {recordAttempt,nextQuestion,nextReviewQuestion,buildExamQueue,grade,EMPTY_PROGRESS,skillKey} from '../src/engine/adaptive.ts';
+import {recordAttempt,nextQuestion,nextReviewQuestion,buildExamQueue,queueUnansweredForReview,grade,EMPTY_PROGRESS,skillKey} from '../src/engine/adaptive.ts';
 import {readFileSync} from 'node:fs';
 
 const bank=JSON.parse(readFileSync(new URL('../src/content/questions.json',import.meta.url),'utf8'));
@@ -98,4 +98,43 @@ test('review queue is bounded, unique and skips deleted question IDs',()=>{
   const stale={...EMPTY_PROGRESS,pendingReviewIds:['T-L-999','T-A-01']};
   assert.equal(nextReviewQuestion(bank,stale,'tage',[]).id,'T-A-01');
   assert.equal(nextReviewQuestion(bank,stale,'tage',['T-A-01']),null);
+});
+
+test('mixed mini-test samples every available game, including Quant Lab',()=>{
+  const expected={tage:['argument-lab','code-logic','enough-info','quant-lab'],gmat:['argument-lab','enough-info','quant-lab']};
+  for(const exam of ['tage','gmat']){
+    for(const variant of [0,1,2,3,8]){
+      const chosen=buildExamQueue(bank,exam,'mixed',6,variant);
+      assert.equal(chosen.length,6,`${exam}/variant${variant}`);
+      assert.equal(new Set(chosen.map(q=>q.id)).size,6,'no duplicates');
+      assert.deepEqual([...new Set(chosen.map(q=>q.game))].sort(),expected[exam],`${exam}/variant${variant} must cover all available games`);
+      assert.deepEqual(buildExamQueue(bank,exam,'mixed',6,variant).map(q=>q.id),chosen.map(q=>q.id),'stable selection');
+    }
+  }
+});
+test('mixed queue degrades gracefully if the bank has missing or exhausted games',()=>{
+  const tiny=bank.filter(q=>q.exam==='gmat'&&q.game==='quant-lab').slice(0,2);
+  const chosen=buildExamQueue(tiny,'gmat','mixed',6,1);
+  assert.equal(chosen.length,2);
+  assert.equal(new Set(chosen.map(q=>q.id)).size,2);
+  assert.deepEqual(buildExamQueue(tiny,'gmat','mixed',0),[]);
+});
+test('timed unanswered questions enter revision without creating fake attempts',()=>{
+  const first=bank.find(q=>q.id==='T-C-01');
+  const second=bank.find(q=>q.id==='T-C-02');
+  const initial={...EMPTY_PROGRESS,skills:{},totalAnswered:3,totalCorrect:2,pendingReviewIds:['T-L-01']};
+  const queued=queueUnansweredForReview(initial,[first,second]);
+  assert.deepEqual(queued.pendingReviewIds,['T-L-01','T-C-01','T-C-02']);
+  assert.equal(queued.totalAnswered,3,'unanswered questions must not inflate attempt totals');
+  assert.equal(queued.totalCorrect,2);
+  assert.deepEqual(queued.skills,{});
+  assert.deepEqual(queueUnansweredForReview(queued,[first]).pendingReviewIds,queued.pendingReviewIds,'idempotent');
+  assert.equal(nextReviewQuestion(bank,queued,'tage',['T-L-01']).id,'T-C-01');
+  assert.equal(queueUnansweredForReview(queued,[]),queued,'empty timeout is a no-op');
+});
+test('timed unanswered queue preserves the same size bound as manual mistakes',()=>{
+  const full=bank.slice(0,28);
+  const updated=queueUnansweredForReview(EMPTY_PROGRESS,full);
+  assert.equal(updated.pendingReviewIds.length,24);
+  assert.equal(new Set(updated.pendingReviewIds).size,24);
 });

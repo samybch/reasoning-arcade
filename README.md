@@ -73,3 +73,9 @@ Players may revisit mistakes from either exam pathway with **Review my mistakes 
 All **58 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough Info? and 12 Quant Lab—include three original, bilingual steps explaining the reasoning. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 58 remain `pilot` content: the presence of steps is not independent editorial approval.
 
 **Quant Lab** includes 12 original pilot word problems with five choices, bilingual hints and three-stage corrections. This extends skill practice into TAGE MAGE Calcul and current GMAT Quantitative Reasoning but does not constitute a complete exam simulation.
+
+## Practice quality and persistence (XYZ)
+
+- Mixed six-question mini-tests sample all question-game categories currently available in the chosen exam track (four for TAGE MAGE; three for GMAT), without implying an official section weighting or scoring method.
+- Browser progress keeps a bounded history for every question ID, including the new `T-C-xx` and `G-Q-xx` Quant Lab identifiers, across page reloads.
+- When the mini-test time limit expires, unanswered question IDs are added to the **local revision queue**, without counting them as attempted answers. The existing progress storage format (`v1`) is unchanged.

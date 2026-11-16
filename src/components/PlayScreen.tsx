@@ -2,7 +2,7 @@
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import {ArcadeShell} from './ArcadeShell';
-import {buildExamQueue,grade,nextQuestion,nextReviewQuestion,recordAttempt} from '../engine/adaptive';
+import {buildExamQueue,grade,nextQuestion,nextReviewQuestion,queueUnansweredForReview,recordAttempt} from '../engine/adaptive';
 import {loadProgress,saveProgress} from '../engine/storage';
 import {elapsedSeconds,timeExpired} from '../engine/timing';
 import type {Attempt,Exam,Game,Locale,Progress,Question} from '../engine/types';
@@ -64,13 +64,19 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
   const duration=queue.length*80;
   useEffect(()=>{
     if(mode==='exam'&&ready&&!finished&&queue.length&&seconds>=duration){
+      if(progress){
+        const updated=queueUnansweredForReview(progress,queue.slice(attempts.length));
+        setProgress(updated);saveProgress(updated);
+      }
       setExpired(true);setFinished(true);setCurrent(null);
     }
-  },[mode,ready,finished,queue.length,seconds,duration]);
+  },[mode,ready,finished,queue,seconds,duration,progress,attempts]);
   function submit(){
     if(selected===null||!current||revealed||finished||!progress)return;
     // Prevent late submissions even if the tab was backgrounded and its interval throttled.
     if(mode==='exam'&&timeExpired(sessionStartedMs.current,performance.now(),duration)){
+      const updated=queueUnansweredForReview(progress,queue.slice(attempts.length));
+      setProgress(updated);saveProgress(updated);
       setSeconds(duration);setExpired(true);setFinished(true);setCurrent(null);
       return;
     }
