@@ -224,3 +224,23 @@ test('long Argument Lab reasoning fits 320px screens',async({page})=>{
   await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth)).toBeLessThanOrEqual(1);
 });
+
+test('Code Logic stages are revealed after submitting, in French',async({page})=>{
+  await page.goto(PREFIX+'/fr/play/code-logic/?exam=tage&mode=game');
+  await expect(page.locator('.reasoning-breakdown')).toHaveCount(0);
+  await page.locator('.answer-list button').first().click();
+  await page.getByRole('button',{name:/Valider/}).click();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+  await expect(page.getByText('Observer la règle')).toBeVisible();
+});
+test('timed Code Logic mini-test keeps solution steps hidden until the results',async({page})=>{
+  await page.goto(PREFIX+'/en/play/code-logic/?exam=tage&mode=exam');
+  for(let i=0;i<5;i++){
+    await expect(page.locator('.reasoning-breakdown')).toHaveCount(0);
+    await page.locator('.answer-list button').first().click();
+    await page.getByRole('button',{name:/Submit/}).click();
+  }
+  await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
+  await expect(page.locator('.reasoning-breakdown')).toHaveCount(5);
+  await expect(page.getByText('Identify the rule').first()).toBeVisible();
+});
