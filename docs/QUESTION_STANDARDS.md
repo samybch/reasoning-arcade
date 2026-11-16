@@ -20,3 +20,9 @@ The standard A–E logic is documented by [GMAC's official sample questions](htt
 All `argument-lab` items now also require three bilingual `reviewSteps`: identify the claim or logical premise; examine the relevant evidence, assumption or alternative explanation; and state why the selected answer follows without overclaiming certainty. The headings adapt to the game, using the same reusable React component as sufficiency explanations.
 
 A three-step explanation is a **teaching aid**, not evidence of official examination fidelity or independently certified correctness. Human editorial validation remains mandatory.
+
+## Code Logic correction requirements
+
+Every `code-logic` question now requires three original stages in FR and EN: identify a candidate rule, verify it against the examples, then explain the selected option. The same reusable `ReasoningBreakdown` interface shows the method only after an answer, or after the timed session ends.
+
+**All 46 pilot items have structured steps, but none is independently certified as exam-equivalent or editorially approved.** Reviewers must still challenge possible alternative patterns, inconsistent illustrations, and the uniqueness of the answer.
