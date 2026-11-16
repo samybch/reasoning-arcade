@@ -6,6 +6,7 @@ import {buildExamQueue,grade,nextQuestion,nextReviewQuestion,recordAttempt} from
 import {loadProgress,saveProgress} from '../engine/storage';
 import {elapsedSeconds,timeExpired} from '../engine/timing';
 import type {Attempt,Exam,Game,Locale,Progress,Question} from '../engine/types';
+import {ReasoningBreakdown} from './ReasoningBreakdown';
 
 type Mode='game'|'exam'|'review';
 const LABELS:{fr:string[];en:string[]}={
@@ -13,6 +14,7 @@ const LABELS:{fr:string[];en:string[]}={
   en:['Statement (1) alone','Statement (2) alone','Both statements together only','Either statement alone','Neither, even together']
 };
 const titles:Record<Game,string>={'code-logic':'Code Logic','argument-lab':'Argument Lab','enough-info':'Enough Info?'};
+const answerLetter=(q:Question)=>q.game==='enough-info'?q.correctAnswer:String.fromCharCode(65+Number(q.correctAnswer));
 const mmss=(s:number)=>`${String(Math.floor(Math.max(0,s)/60)).padStart(2,'0')}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
 export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{locale:Locale;game:Game|'mixed';bank:Question[];forceExam?:boolean;reviewOnly?:boolean}){
   const fr=locale==='fr';
@@ -102,10 +104,12 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
       <p className="note">{fr?'Ce résultat n’est pas un score officiel.':'This result is not an official exam score.'}</p>
       <div className="review"><h2>{fr?'Corrections':'Review'}</h2>
         {expired&&queue.length>attempts.length&&<p className="warning">{fr?'Questions non répondues :':'Unanswered questions:'} {queue.length-attempts.length}</p>}
-        {attempts.map((a,i)=>{const q=bank.find(v=>v.id===a.questionId);return q?<article key={q.id} className="review-item"><strong>{a.correct?'✓':'×'} {i+1}. {q.content[locale].prompt}</strong><p>{q.content[locale].explanation}</p></article>:null})}
+        {attempts.map((a,i)=>{const q=bank.find(v=>v.id===a.questionId);return q?<article key={q.id} className="review-item"><strong>{a.correct?'✓':'×'} {i+1}. {q.content[locale].prompt}</strong><p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q)}</p><p>{q.content[locale].explanation}</p><ReasoningBreakdown text={q.content[locale]} locale={locale}/></article>:null})}
         {expired&&queue.slice(attempts.length).map(q=><article key={q.id} className="review-item">
           <strong>{fr?'Non répondu':'Unanswered'} — {q.content[locale].prompt}</strong>
+          <p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q)}</p>
           <p>{q.content[locale].explanation}</p>
+          <ReasoningBreakdown text={q.content[locale]} locale={locale}/>
         </article>)}
       </div><div className="actions"><button type="button" className="button primary" onClick={()=>setRound(v=>v+1)}>{fr?'Rejouer':'Try again'} ↻</button><Link className="button secondary" href={`/${locale}/`}>{fr?'Accueil':'Home'}</Link></div>
     </section>:!current?<section className="quiz-card"><h1>{mode==='review'?(fr?'Aucune erreur à revoir pour ce parcours':'No mistakes to review in this track'):(fr?'Aucun exercice disponible':'No exercises available')}</h1><Link href={`/${locale}/`}>{fr?'Accueil':'Home'}</Link></section>:
@@ -129,7 +133,10 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
       </div>
       {mode!=='exam'&&!revealed&&<button className="hint-button" type="button" aria-expanded={hint} onClick={()=>setHint(v=>!v)}>{fr?'Afficher un indice':'Show a hint'} ✧</button>}
       {hint&&mode!=='exam'&&!revealed&&<div className="hint" role="note">{current.content[locale].hint}</div>}
-      {revealed&&<div role="status" className={selected===current.correctAnswer?'feedback good':'feedback bad'}><strong>{selected===current.correctAnswer?(fr?'Bonne réponse':'Correct'):(fr?'À retravailler':'Keep practicing')}</strong><p>{current.content[locale].explanation}</p></div>}
+      {revealed&&<div role="status" className={selected===current.correctAnswer?'feedback good':'feedback bad'}><strong>{selected===current.correctAnswer?(fr?'Bonne réponse':'Correct'):(fr?'À retravailler':'Keep practicing')}</strong>
+        <p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(current)}</p>
+        <p>{current.content[locale].explanation}</p>
+        <ReasoningBreakdown text={current.content[locale]} locale={locale}/></div>}
       <div className="quiz-footer"><span className="small-muted">{fr?'Les progrès restent sur cet appareil.':'Progress stays on this device.'}</span>
         {mode!=='exam'&&revealed?<button type="button" className="button primary" onClick={advance}>{attempts.length>=max?(fr?'Terminer':'Finish'):(fr?'Suivante':'Next')} →</button>:
           <button type="button" className="button primary" disabled={selected===null} onClick={submit}>{fr?'Valider':'Submit'} →</button>}</div>
