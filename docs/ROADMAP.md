@@ -105,3 +105,10 @@
 - [ ] Secure independent FR/EN mathematical, linguistic and pedagogy sign-off for all 58 exercises
 - [ ] Run controlled, opt-in browser usability review and log non-sensitive issues only
 - [ ] Keep GitHub Pages untriggered until explicit owner GO plus legal and accessibility gates
+
+## XYZ — No-install human QA infrastructure (2026-11-16)
+- [x] Generate a self-contained offline HTML review workbook for all 58 bilingual pilot exercises
+- [x] Include independent-solve-first corrections, local issue notes, JSON export/import and catalog hash mismatch detection
+- [x] Upload the workbook from green CI as a limited-retention GitHub Actions artifact, not a public site deployment
+- [x] Test full review coverage, source HTML escaping, absence of network requests and stale-ledger failure
+- [ ] Have real independent reviewers test the workbook and assess the source questions; log evidence before approving content
