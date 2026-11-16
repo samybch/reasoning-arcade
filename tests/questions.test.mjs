@@ -64,3 +64,22 @@ test('missing bilingual reasoning stages fail schema validation',()=>{
   }:q);
   assert.ok(validateQuestions(bad).some(e=>e.includes('G-D-14')&&e.includes('review steps')));
 });
+
+test('every Argument Lab pilot item has three detailed FR/EN teaching stages',()=>{
+  const items=QUESTIONS.filter(q=>q.game==='argument-lab');
+  assert.equal(items.length,12);
+  for(const q of items){
+    for(const lang of ['fr','en']){
+      const stages=q.content[lang].reviewSteps;
+      assert.ok(Array.isArray(stages),q.id+' '+lang);
+      assert.equal(stages.length,3,q.id+' '+lang);
+      assert.ok(stages.every(step=>typeof step==='string'&&step.trim().length>=40),q.id+' '+lang);
+    }
+  }
+});
+test('missing Argument Lab review stages fail bilingual schema validation',()=>{
+  const corrupted=QUESTIONS.map(q=>q.id==='G-A-10'?{
+    ...q,content:{...q.content,en:{...q.content.en,reviewSteps:undefined}}
+  }:q);
+  assert.ok(validateQuestions(corrupted).some(error=>error.includes('G-A-10')&&error.includes('review steps')));
+});
