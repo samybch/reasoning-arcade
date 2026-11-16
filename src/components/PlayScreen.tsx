@@ -39,7 +39,7 @@ export function PlayScreen({locale,game,bank,forceExam=false}:{locale:Locale;gam
   useEffect(()=>{
     if(!ready)return;
     const p=loadProgress();
-    const fixed=mode==='exam'?buildExamQueue(bank,exam,game,sessionSize):[];
+    const fixed=mode==='exam'?buildExamQueue(bank,exam,game,sessionSize,Math.floor(p.totalAnswered/sessionSize)+round):[];
     setProgress(p);setQueue(fixed);setCurrent(mode==='exam'?fixed[0]??null:nextQuestion(bank,p,exam,game,[]));
     setAttempts([]);setSelected(null);setRevealed(false);setHint(false);setSeconds(0);setFinished(false);setExpired(false);
   },[ready,round,exam,mode,game,bank,sessionSize]);

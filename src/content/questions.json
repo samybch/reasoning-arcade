@@ -1270,5 +1270,353 @@
         "hint": "Test (1) and (2) separately before combining them."
       }
     }
+  },
+  {
+    "id": "T-L-13",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "spatial-categorization",
+    "difficulty": 2,
+    "estimatedSeconds": 100,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle figure possède la même propriété que celles des deux groupes ?",
+        "context": "Triangle équilatéral, carré, pentagone régulier · hexagone régulier, octogone régulier, décagone régulier",
+        "choices": [
+          "Rectangle non carré",
+          "Triangle rectangle non équilatéral",
+          "Heptagone régulier",
+          "Trapèze irrégulier",
+          "Ellipse"
+        ],
+        "explanation": "Chaque figure citée est un polygone régulier : ses côtés et ses angles sont tous égaux. Parmi les propositions, seul l'heptagone régulier répond à cette définition.",
+        "hint": "Vérifie à la fois l'égalité des côtés et celle des angles."
+      },
+      "en": {
+        "prompt": "Which shape shares the property common to both groups?",
+        "context": "Equilateral triangle, square, regular pentagon · regular hexagon, regular octagon, regular decagon",
+        "choices": [
+          "Non-square rectangle",
+          "Non-equilateral right triangle",
+          "Regular heptagon",
+          "Irregular trapezoid",
+          "Ellipse"
+        ],
+        "explanation": "Every listed figure is a regular polygon: all sides and all angles are equal. Only a regular heptagon among the options fits.",
+        "hint": "Check equality of both sides and angles."
+      }
+    }
+  },
+  {
+    "id": "T-L-14",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 4,
+    "estimatedSeconds": 135,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre partage la propriété commune aux deux groupes ?",
+        "context": "4, 9, 25 · 49, 121, 169",
+        "choices": [
+          "15",
+          "27",
+          "64",
+          "100",
+          "289"
+        ],
+        "explanation": "Chaque nombre est le carré d'un nombre premier et possède exactement trois diviseurs entiers positifs. 289 = 17² ; les autres propositions n'ont pas cette propriété.",
+        "hint": "Compte les diviseurs des nombres : pense aux carrés de nombres premiers."
+      },
+      "en": {
+        "prompt": "Which number shares the common property of both groups?",
+        "context": "4, 9, 25 · 49, 121, 169",
+        "choices": [
+          "15",
+          "27",
+          "64",
+          "100",
+          "289"
+        ],
+        "explanation": "Each number is the square of a prime and has exactly three positive integer divisors. 289 = 17²; the other choices do not satisfy this property.",
+        "hint": "Count positive divisors and think of squares of prime numbers."
+      }
+    }
+  },
+  {
+    "id": "T-L-15",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 2,
+    "estimatedSeconds": 75,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre suit le même critère que ceux des deux groupes ?",
+        "context": "29, 38, 47 · 56, 65, 74",
+        "choices": [
+          "84",
+          "83",
+          "62",
+          "75",
+          "91"
+        ],
+        "explanation": "Pour chaque nombre présenté, la somme des deux chiffres vaut 11. C'est également le cas de 83 : 8 + 3 = 11.",
+        "hint": "Additionne les chiffres des nombres."
+      },
+      "en": {
+        "prompt": "Which number follows the same rule as both groups?",
+        "context": "29, 38, 47 · 56, 65, 74",
+        "choices": [
+          "84",
+          "83",
+          "62",
+          "75",
+          "91"
+        ],
+        "explanation": "For each given number, the two digits add up to 11. The same is true of 83: 8 + 3 = 11.",
+        "hint": "Add the two digits of each number."
+      }
+    }
+  },
+  {
+    "id": "T-L-16",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 5,
+    "estimatedSeconds": 160,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre complète la catégorie commune aux deux groupes ?",
+        "context": "13, 17, 31 · 37, 71, 73",
+        "choices": [
+          "19",
+          "23",
+          "29",
+          "43",
+          "79"
+        ],
+        "explanation": "Chaque nombre est premier et reste premier lorsque l'ordre de ses deux chiffres est inversé. 79 et 97 sont premiers ; les inverses des quatre autres propositions sont composés.",
+        "hint": "Inverse l'ordre des chiffres et vérifie les deux nombres."
+      },
+      "en": {
+        "prompt": "Which number belongs to the category shared by both groups?",
+        "context": "13, 17, 31 · 37, 71, 73",
+        "choices": [
+          "19",
+          "23",
+          "29",
+          "43",
+          "79"
+        ],
+        "explanation": "Each number is prime and remains prime when its two digits are reversed. Both 79 and 97 are prime; the reversals of the other choices are composite.",
+        "hint": "Reverse the digits and check primality in both directions."
+      }
+    }
+  },
+  {
+    "id": "T-L-17",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "spatial-categorization",
+    "difficulty": 4,
+    "estimatedSeconds": 125,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle figure a la propriété commune aux deux ensembles ?",
+        "context": "Rectangle non carré, losange non carré, hexagone régulier · ellipse non circulaire, parallélogramme, octogone régulier",
+        "choices": [
+          "Triangle isocèle non équilatéral",
+          "Pentagone régulier",
+          "Nonagone régulier",
+          "Parallélogramme quelconque non rectangulaire",
+          "Trapèze isocèle non parallélogramme"
+        ],
+        "explanation": "Toutes les figures des deux ensembles possèdent un centre de symétrie (rotation de 180°). Un parallélogramme quelconque en possède un ; les autres choix, non.",
+        "hint": "Imagine une rotation d'un demi-tour autour du centre de chaque figure."
+      },
+      "en": {
+        "prompt": "Which shape shares the common property of both sets?",
+        "context": "Non-square rectangle, non-square rhombus, regular hexagon · noncircular ellipse, parallelogram, regular octagon",
+        "choices": [
+          "Non-equilateral isosceles triangle",
+          "Regular pentagon",
+          "Regular nonagon",
+          "Oblique nonrectangular parallelogram",
+          "Isosceles trapezoid that is not a parallelogram"
+        ],
+        "explanation": "All listed figures have a center of symmetry: a 180° rotation maps them onto themselves. An oblique parallelogram has this property; the other choices do not.",
+        "hint": "Picture rotating each figure 180° about its center."
+      }
+    }
+  },
+  {
+    "id": "T-L-18",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 3,
+    "estimatedSeconds": 105,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre respecte le critère commun aux deux groupes ?",
+        "context": "7, 13, 19 · 25, 31, 37",
+        "choices": [
+          "41",
+          "42",
+          "43",
+          "44",
+          "45"
+        ],
+        "explanation": "Chaque nombre est de la forme 6n + 1, soit un reste de 1 lors de la division par 6. Parmi les choix, seul 43 respecte ce critère.",
+        "hint": "Calcule le reste de la division par 6."
+      },
+      "en": {
+        "prompt": "Which number fits the criterion shared by both groups?",
+        "context": "7, 13, 19 · 25, 31, 37",
+        "choices": [
+          "41",
+          "42",
+          "43",
+          "44",
+          "45"
+        ],
+        "explanation": "All listed numbers have the form 6n + 1, leaving a remainder of 1 when divided by 6. Among the options, only 43 fits.",
+        "hint": "Find the remainder when each number is divided by 6."
+      }
+    }
+  },
+  {
+    "id": "G-D-13",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 3,
+    "estimatedSeconds": 135,
+    "correctAnswer": "A",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "La médiane de cinq montants de transaction distincts est-elle supérieure à 100 € ?",
+        "statements": [
+          "Au moins trois des cinq montants sont supérieurs à 100 €.",
+          "La moyenne des cinq montants est supérieure à 100 €."
+        ],
+        "explanation": "(1) suffit : si au moins trois montants dépassent 100 €, celui du milieu dépasse 100 €. (2) ne suffit pas : une valeur très élevée peut faire monter la moyenne sans changer une médiane faible.",
+        "hint": "Classe cinq valeurs par ordre croissant et cherche la troisième."
+      },
+      "en": {
+        "prompt": "Is the median of five distinct transaction amounts greater than €100?",
+        "statements": [
+          "At least three of the five amounts exceed €100.",
+          "The mean of the five amounts exceeds €100."
+        ],
+        "explanation": "(1) is sufficient: if at least three amounts exceed €100, the middle amount exceeds €100. (2) is not sufficient: one very large amount can raise the mean while the median stays low.",
+        "hint": "Sort five values and identify the third one."
+      }
+    }
+  },
+  {
+    "id": "G-D-14",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 3,
+    "estimatedSeconds": 150,
+    "correctAnswer": "C",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Le taux de conversion d'une boutique en ligne a-t-il été plus faible en avril qu'en mars ?",
+        "statements": [
+          "La boutique a enregistré 120 commandes en avril et 100 en mars.",
+          "La boutique a reçu 2 400 visites en avril et 1 000 en mars."
+        ],
+        "explanation": "Chaque information prise seule ne permet pas de calculer les deux taux. Ensemble, le taux d'avril est de 120/2 400 = 5 %, contre 100/1 000 = 10 % en mars : la réponse est oui.",
+        "hint": "Un taux de conversion est le rapport entre les commandes et les visites."
+      },
+      "en": {
+        "prompt": "Was an online store's conversion rate lower in April than in March?",
+        "statements": [
+          "The store recorded 120 orders in April and 100 in March.",
+          "The store received 2,400 visits in April and 1,000 in March."
+        ],
+        "explanation": "Neither statement alone gives both conversion rates. Together, April's rate is 120/2,400 = 5%, versus 100/1,000 = 10% in March: yes.",
+        "hint": "A conversion rate is orders divided by visits."
+      }
+    }
+  },
+  {
+    "id": "G-D-15",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 4,
+    "estimatedSeconds": 165,
+    "correctAnswer": "C",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Le nombre d'abonnements renouvelés a-t-il augmenté du premier au deuxième trimestre ?",
+        "statements": [
+          "Le nombre d'abonnements arrivant à échéance était plus élevé au deuxième trimestre qu'au premier.",
+          "La proportion de ces abonnements effectivement renouvelés était aussi plus élevée au deuxième trimestre."
+        ],
+        "explanation": "Le nombre de renouvellements vaut le nombre d'abonnements arrivant à échéance multiplié par le taux de renouvellement. Chaque donnée seule est insuffisante, mais si ces deux facteurs non négatifs augmentent strictement, leur produit augmente.",
+        "hint": "Exprime le nombre de renouvellements comme le produit d'un effectif et d'un taux."
+      },
+      "en": {
+        "prompt": "Did the number of renewed subscriptions increase from the first quarter to the second?",
+        "statements": [
+          "The number of subscriptions due for renewal was higher in the second quarter.",
+          "The proportion of those subscriptions actually renewed was also higher in the second quarter."
+        ],
+        "explanation": "Renewals equal subscriptions due times the renewal rate. Each statement alone is insufficient, but if both nonnegative factors increase strictly, their product increases.",
+        "hint": "Express the number of renewals as a count multiplied by a rate."
+      }
+    }
+  },
+  {
+    "id": "G-D-16",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 4,
+    "estimatedSeconds": 145,
+    "correctAnswer": "D",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "L'écart-type d'un ensemble de données numériques comportant au moins deux observations est-il strictement positif ?",
+        "statements": [
+          "Au moins deux observations ont des valeurs différentes.",
+          "La différence entre la valeur maximale et la valeur minimale est strictement positive."
+        ],
+        "explanation": "Chacune des deux informations assure que toutes les observations ne sont pas identiques. L'écart-type est alors strictement positif ; chacune suffit seule.",
+        "hint": "L'écart-type est nul uniquement si toutes les valeurs sont égales."
+      },
+      "en": {
+        "prompt": "Is the standard deviation of a numerical data set with at least two observations strictly positive?",
+        "statements": [
+          "At least two observations have different values.",
+          "The difference between the maximum and minimum is strictly positive."
+        ],
+        "explanation": "Each statement alone establishes that not all observations are identical. The standard deviation must therefore be positive; either statement is sufficient.",
+        "hint": "Standard deviation is zero only if all observations are identical."
+      }
+    }
   }
 ]

@@ -11,7 +11,7 @@
 - Game mode with local adaptive per-skill progression, hints and immediate explanation
 - Timed mini-tests with results and deferred correction
 - Static responsive Next.js React interface, with proper French and English routes
-- 36 original pilot questions in both FR and EN, **not editorially approved for release**
+- 46 original pilot questions in both FR and EN, **not editorially approved for release**
 - Community submissions via GitHub issues and PRs, subject to checks and human review
 
 ## Source structure
@@ -52,3 +52,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md), [docs/QUESTION_STANDARDS.md](docs/QUESTI
 Code under MIT; original question content under CC BY-SA 4.0, see [LICENSE-CONTENT.md](LICENSE-CONTENT.md). TAGE MAGE and GMAT are trademarks owned by their respective entities. This repository is independently developed.
 
 **No public site launch is authorized by the existence of the GitHub repository.** GitHub Pages deployment is manual-only and needs distinct approval after educational, legal and accessibility verification.
+
+## Development policy (XYZ)
+
+Use `main` as the sole source of truth. Create **one short-lived topic branch at a time**, require green CI, then **squash-merge** into `main` to avoid accumulating competing release versions. A code merge is **not** a site deployment: `deploy.yml` remains manual-only. Never modify question statuses from `pilot` to `reviewed` without independent editorial approval.

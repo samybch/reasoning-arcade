@@ -25,11 +25,18 @@ export function nextQuestion(bank:Question[],progress:Progress,exam:Exam,game:Ga
     return aScore-bScore||a.id.localeCompare(b.id);
   })[0];
 }
-export function buildExamQueue(bank:Question[],exam:Exam,game:Game|'mixed',size=6):Question[]{
+// A stable variant changes the subset between attempts without changing its validity.
+// This is mini-test practice, NOT GMAT-style psychometric adaptation.
+export function buildExamQueue(bank:Question[],exam:Exam,game:Game|'mixed',size=6,variant=0):Question[]{
   const eligible=bank.filter(q=>q.exam===exam&&(game==='mixed'||q.game===game))
     .sort((a,b)=>a.difficulty-b.difficulty||a.id.localeCompare(b.id));
+  if(!eligible.length)return [];
+  const offset=((Math.trunc(variant)%eligible.length)+eligible.length)%eligible.length;
+  const rotated=[...eligible.slice(offset),...eligible.slice(0,offset)];
   const chosen:Question[]=[];
-  while(eligible.length&&chosen.length<size)chosen.push(eligible.splice(Math.floor((eligible.length-1)/2),1)[0]);
+  while(rotated.length&&chosen.length<size){
+    chosen.push(rotated.splice(Math.floor((rotated.length-1)/2),1)[0]);
+  }
   return chosen;
 }
 // In timed sessions, unanswered questions count toward the denominator.
