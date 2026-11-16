@@ -1,0 +1,37 @@
+name: Original question / Exercice original
+description: Suggest a bilingual original question for review.
+title: "question: "
+labels: ["content"]
+body:
+  - type: dropdown
+    id: track
+    attributes:
+      label: Exam track
+      options:
+        - TAGE MAGE
+        - GMAT
+    validations:
+      required: true
+  - type: dropdown
+    id: game
+    attributes:
+      label: Game
+      options:
+        - Code Logic
+        - Argument Lab
+        - Enough Info?
+    validations:
+      required: true
+  - type: textarea
+    id: texts
+    attributes:
+      label: Question, choices and explanations in FR and EN
+    validations:
+      required: true
+  - type: checkboxes
+    id: originality
+    attributes:
+      label: Originality confirmation
+      options:
+        - label: I wrote the question and did not copy official or commercial exam material.
+          required: true
