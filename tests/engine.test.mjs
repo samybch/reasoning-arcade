@@ -41,3 +41,17 @@ test('timed scoring counts unanswered questions as incorrect',()=>{
   assert.equal(grade([],6).percent,0);
   assert.equal(grade(oneCorrect,1).percent,100);
 });
+
+test('repeat mini-tests use fresh deterministic question subsets while preserving valid IDs',()=>{
+  for(const exam of ['tage','gmat']){
+    const first=buildExamQueue(bank,exam,'mixed',6,0);
+    const replay=buildExamQueue(bank,exam,'mixed',6,1);
+    assert.equal(first.length,6);
+    assert.equal(replay.length,6);
+    assert.equal(new Set(first.map(q=>q.id)).size,6);
+    assert.equal(new Set(replay.map(q=>q.id)).size,6);
+    assert.ok(replay.every(q=>q.exam===exam));
+    assert.notDeepEqual(first.map(q=>q.id),replay.map(q=>q.id));
+    assert.deepEqual(replay.map(q=>q.id),buildExamQueue(bank,exam,'mixed',6,1).map(q=>q.id));
+  }
+});

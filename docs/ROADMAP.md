@@ -28,3 +28,12 @@
 
 ## User-facing progression
 - [x] Display locally stored experimental skill levels and successes on the home screen, with account-free reset
+
+## Next consolidation — 2026-11-16, XYZ
+- [x] Squash-merge original 16-commit PR #1 into `main` (one history checkpoint)
+- [x] Expand the pilot bank from 36 to 46 original FR/EN items, with more authentic categorization and applied data sufficiency
+- [x] Make the homepage question counter reflect the catalog rather than a hard-coded number
+- [x] Rotate fixed mini-test subsets between attempts without claiming exam-level adaptation
+- [ ] Independent educational review of all 46 pilots, especially the ten new examples
+- [ ] QA and squash-merge this stabilization lot into `main`
+- [ ] Publish the live site only after explicit release authorization and legal/accessibility gates

@@ -94,3 +94,17 @@ test('localized privacy notice explains local browser progress and reset',async(
   await expect(page.getByRole('heading',{level:1})).toContainText(/privacy/i);
   await expect(page.locator('main')).toContainText('local storage');
 });
+
+test('home displays the current catalog count, including new original pilot exercises',async({page})=>{
+  await page.goto(PREFIX+'/fr/');
+  await expect(page.locator('.hero-stats')).toContainText('46');
+});
+test('320px mobile viewport supports French and English game navigation without overflow',async({page})=>{
+  await page.setViewportSize({width:320,height:700});
+  for(const url of ['/fr/','/en/','/fr/play/code-logic/?exam=tage&mode=game','/en/play/enough-info/?exam=gmat&mode=game']){
+    await page.goto(PREFIX+url);
+    await expect(page.locator('main')).toBeVisible();
+    const amount=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
+    expect(amount, `overflow at ${url}`).toBeLessThanOrEqual(1);
+  }
+});

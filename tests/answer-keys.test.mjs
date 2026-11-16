@@ -129,3 +129,30 @@ test('GMAT reasoning exercises display localized French rather than duplicated E
     assert.ok(q.content.fr.choices.every((c,i)=>c!==q.content.en.choices[i]),`${q.id}: untranslated choices`);
   }
 });
+
+const extended={
+  'T-L-13':{key:'2',fr:'Heptagone régulier',en:'Regular heptagon'},
+  'T-L-14':{key:'4',fr:'289',en:'289'},
+  'T-L-15':{key:'1',fr:'83',en:'83'},
+  'T-L-16':{key:'4',fr:'79',en:'79'},
+  'T-L-17':{key:'3',fr:'Parallélogramme quelconque non rectangulaire',en:'Oblique nonrectangular parallelogram'},
+  'T-L-18':{key:'2',fr:'43',en:'43'},
+  'G-D-13':{key:'A'},
+  'G-D-14':{key:'C'},
+  'G-D-15':{key:'C'},
+  'G-D-16':{key:'D'}
+};
+test('ten original pilot questions have reference answers in both languages',()=>{
+  for(const [id,item] of Object.entries(extended)){
+    const q=byId.get(id);assert.ok(q,`Missing ${id}`);
+    assert.equal(q.correctAnswer,item.key,`${id}: answer key`);
+    if(q.game==='code-logic'){
+      assert.equal(q.content.fr.choices[Number(q.correctAnswer)],item.fr,`${id}: FR option`);
+      assert.equal(q.content.en.choices[Number(q.correctAnswer)],item.en,`${id}: EN option`);
+    }else{
+      assert.equal(q.content.fr.statements.length,2);
+      assert.equal(q.content.en.statements.length,2);
+    }
+    assert.equal(q.status,'pilot');
+  }
+});

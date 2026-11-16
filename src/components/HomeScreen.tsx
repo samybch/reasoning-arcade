@@ -10,7 +10,7 @@ const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string
   {id:'argument-lab',name:'Argument Lab',symbol:'◇',description:{fr:'Identifie hypothèses, conclusions et failles de raisonnement.',en:'Find assumptions, conclusions and flawed arguments.'}},
   {id:'enough-info',name:'Enough Info?',symbol:'∑',description:{fr:'Décide si deux informations suffisent à répondre.',en:'Decide if two statements contain enough information.'}}
 ];
-export function HomeScreen({locale}:{locale:Locale}){
+export function HomeScreen({locale,questionCount}:{locale:Locale;questionCount:number}){
   const [exam,setExam]=useState<Exam>('tage');
   const [stats,setStats]=useState({total:0,correct:0});
   const [skillSummary,setSkillSummary]=useState<Array<{key:string;exam:string;skill:string;progress:SkillProgress}>>([]);
@@ -39,7 +39,7 @@ export function HomeScreen({locale}:{locale:Locale}){
         <h1>{fr?'La logique,':'Better thinking,'}<br/><em>{fr?'à ton rythme.':'one puzzle at a time.'}</em></h1>
         <p className="lead">{fr?'Des jeux pour développer ton raisonnement et des mini-tests pour te préparer. Sans compte, gratuitement.':'Grow your reasoning skills with quick games and timed practice. Free, with no login.'}</p>
         <a className="button primary" href="#choose">{fr?'Commencer':'Get started'} →</a>
-        <p className="hero-stats"><strong>03</strong> {fr?'jeux':'games'} <span>·</span> <strong>36</strong> {fr?'questions pilotes':'pilot questions'} <span>·</span> <strong>0 €</strong></p>
+        <p className="hero-stats"><strong>03</strong> {fr?'jeux':'games'} <span>·</span> <strong>{questionCount}</strong> {fr?'questions pilotes':'pilot questions'} <span>·</span> <strong>0 €</strong></p>
       </div>
       <div className="hero-graphic" aria-hidden><div className="floating f1">3 · 6 · 12 · <b>?</b></div><div className="floating f2">IF → THEN</div><div className="floating f3">A / B / C / D / E</div></div>
     </section>
