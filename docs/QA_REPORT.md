@@ -1,17 +1,20 @@
-# QA report — 2026-11-16
+# QA and verification — XYZ (2026-11-16)
 
-## Verified
+## X — verified
+- First modular Next.js build after correction passed GitHub Actions: https://github.com/samybch/reasoning-arcade/actions/runs/43804518261
+- Npm installation, question-structure validation, unit tests, TypeScript and `next build` succeeded.
+- Main application no longer uses the preview iframe; the original HTML is retained as reference and the catalog is extracted on the server at build time.
+- No user accounts, backend or analytics.
 
-- Original standalone HTML preview: interactive navigation, corrections, mini-exam, language switch and mobile viewport exercised in Chromium in the creation environment.
-- GitHub Actions CI on commit `0a8eacc5586cef235fc840d6a7cd7880590f64b9`: successful npm installation, static smoke tests, TypeScript typecheck and Next.js production static build. Run: https://github.com/samybch/reasoning-arcade/actions/runs/43800665302
-- 36 pilot exercises exist in the single-file browser bank. FR/EN structure checks are strengthened in the follow-up commit.
+## Y — pending
+- Independent editorial validation of the 36 pilot questions and their translations.
+- Reliable psychometric calibration; no official score equivalence.
+- Proper typed question-bank migration out of the embedded HTML reference.
 
-## Not verified — blockers for public service
+## Z — pending
+- Chromium integration checks on the static export, in progress in PR #1.
+- Accessibility, cross-device QA, privacy/legal/brand review and terms of use.
+- npm lockfile and npm ci (reproducible dependency graph).
+- Pages has a manual-only deployment workflow and must not be activated before separate final release approval.
 
-- Editorial validation of correctness and translation of all 36 questions.
-- Full end-to-end browser and accessibility tests on the Next.js-exported artifact.
-- Legal/trademark compliance and public privacy notices.
-- Versioned npm lockfile (not yet generated locally).
-- Real GitHub Pages deployment and functional links on the published basePath.
-
-**Release decision: NO-GO.** The repository can be public while the actual site remains unpublished.
+**Release gate: NO-GO for public site deployment.** The source repository remains public.
