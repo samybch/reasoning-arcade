@@ -20,7 +20,12 @@
           "36"
         ],
         "explanation": "Chaque terme double.",
-        "hint": "Multiplie le terme précédent par un même nombre."
+        "hint": "Multiplie le terme précédent par un même nombre.",
+        "reviewSteps": [
+          "La suite semble multiplier chaque terme par deux.",
+          "On vérifie : 2 × 2 = 4, puis 4 × 2 = 8 et 8 × 2 = 16.",
+          "On retient donc 32 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -33,7 +38,12 @@
           "36"
         ],
         "explanation": "Each term doubles.",
-        "hint": "Multiply the previous term by a constant."
+        "hint": "Multiply the previous term by a constant.",
+        "reviewSteps": [
+          "The sequence appears to multiply every term by two.",
+          "Verify it: 2 × 2 = 4, then 4 × 2 = 8, and 8 × 2 = 16.",
+          "Therefore 32 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -59,7 +69,12 @@
           "36"
         ],
         "explanation": "Ce sont les carrés des entiers de 1 à 5.",
-        "hint": "Essaie de prendre la racine carrée des termes."
+        "hint": "Essaie de prendre la racine carrée des termes.",
+        "reviewSteps": [
+          "Les termes sont les carrés de nombres entiers successifs.",
+          "Les racines carrées des termes sont 1, 2, 3 et 4 ; l'entier suivant est 5.",
+          "On retient donc 25 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -72,7 +87,12 @@
           "36"
         ],
         "explanation": "These are consecutive square numbers from 1² to 5².",
-        "hint": "Try taking the square root of each term."
+        "hint": "Try taking the square root of each term.",
+        "reviewSteps": [
+          "The terms are squares of consecutive positive integers.",
+          "Their square roots are 1, 2, 3, and 4, making 5 the next integer.",
+          "Therefore 25 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -98,7 +118,12 @@
           "25"
         ],
         "explanation": "La différence est toujours de 4.",
-        "hint": "Regarde les écarts entre termes."
+        "hint": "Regarde les écarts entre termes.",
+        "reviewSteps": [
+          "On peut rechercher une différence constante entre les termes.",
+          "Les écarts sont 9 − 5 = 4, 13 − 9 = 4 et 17 − 13 = 4.",
+          "On retient donc 21 (réponse B) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -111,7 +136,12 @@
           "25"
         ],
         "explanation": "Each consecutive difference is 4.",
-        "hint": "Look at the differences."
+        "hint": "Look at the differences.",
+        "reviewSteps": [
+          "Look for a constant difference between consecutive terms.",
+          "The gaps are 9 − 5 = 4, 13 − 9 = 4, and 17 − 13 = 4.",
+          "Therefore 21 (option B) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -137,7 +167,12 @@
           "31"
         ],
         "explanation": "Les écarts sont 3, 5, 7, puis 9 : 18 + 9 = 27.",
-        "hint": "Regarde comment évoluent les écarts."
+        "hint": "Regarde comment évoluent les écarts.",
+        "reviewSteps": [
+          "Les différences successives forment elles-mêmes une série croissante.",
+          "Les écarts valent +3, +5 et +7 ; le suivant est donc +9.",
+          "On retient donc 27 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -150,7 +185,12 @@
           "31"
         ],
         "explanation": "The differences are 3, 5, 7, then 9: 18 + 9 = 27.",
-        "hint": "Watch how the gaps change."
+        "hint": "Watch how the gaps change.",
+        "reviewSteps": [
+          "The consecutive differences form an increasing sequence.",
+          "The gaps are +3, +5, and +7, so the next difference is +9.",
+          "Therefore 27 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -176,7 +216,12 @@
           "36"
         ],
         "explanation": "Les écarts sont 4, 6, 8, 10.",
-        "hint": "Les écarts augmentent de 2."
+        "hint": "Les écarts augmentent de 2.",
+        "reviewSteps": [
+          "On compare les différences successives plutôt que les termes seuls.",
+          "On obtient +4, +6 et +8 ; chaque différence augmente de deux.",
+          "On retient donc 30 (réponse B) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -189,7 +234,12 @@
           "36"
         ],
         "explanation": "The differences are 4, 6, 8, 10.",
-        "hint": "The differences grow by 2."
+        "hint": "The differences grow by 2.",
+        "reviewSteps": [
+          "Compare the gaps between terms rather than the terms alone.",
+          "The gaps are +4, +6, and +8; each new gap increases by two.",
+          "Therefore 30 (option B) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -215,7 +265,12 @@
           "6"
         ],
         "explanation": "Chaque terme est divisé par 3.",
-        "hint": "Pense à une progression géométrique décroissante."
+        "hint": "Pense à une progression géométrique décroissante.",
+        "reviewSteps": [
+          "La diminution correspond à un rapport constant entre les termes.",
+          "On vérifie 81 ÷ 3 = 27, puis 27 ÷ 3 = 9 et 9 ÷ 3 = 3.",
+          "On retient donc 1 (réponse B) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -228,7 +283,12 @@
           "6"
         ],
         "explanation": "Each term is divided by 3.",
-        "hint": "Think of a decreasing geometric sequence."
+        "hint": "Think of a decreasing geometric sequence.",
+        "reviewSteps": [
+          "The decrease follows a fixed ratio between consecutive terms.",
+          "Verify 81 ÷ 3 = 27, then 27 ÷ 3 = 9, and 9 ÷ 3 = 3.",
+          "Therefore 1 (option B) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -254,7 +314,12 @@
           "52"
         ],
         "explanation": "Tous ces nombres sont des multiples de 6 ; 48 l’est aussi.",
-        "hint": "Cherche un diviseur commun à tous les nombres."
+        "hint": "Cherche un diviseur commun à tous les nombres.",
+        "reviewSteps": [
+          "La propriété commune des deux groupes est la divisibilité par six.",
+          "Tous les exemples, de 6 à 42, donnent un quotient entier lorsqu'on les divise par 6.",
+          "On retient donc 48 (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -267,7 +332,12 @@
           "52"
         ],
         "explanation": "All shown numbers are divisible by 6; so is 48.",
-        "hint": "Look for a common divisor."
+        "hint": "Look for a common divisor.",
+        "reviewSteps": [
+          "Both groups share the property of being divisible by six.",
+          "Every example, from 6 through 42, gives an integer when divided by 6.",
+          "Therefore 48 (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -293,7 +363,12 @@
           "80"
         ],
         "explanation": "Ce sont des carrés parfaits ; 64 = 8².",
-        "hint": "Chaque nombre est le carré d’un entier."
+        "hint": "Chaque nombre est le carré d’un entier.",
+        "reviewSteps": [
+          "Les éléments des deux groupes sont tous des carrés parfaits.",
+          "Ils correspondent à 2², 3², 4², 5², 6² et 7², sans exception.",
+          "On retient donc 64 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -306,7 +381,12 @@
           "80"
         ],
         "explanation": "These are perfect squares; 64 = 8².",
-        "hint": "Each number is an integer squared."
+        "hint": "Each number is an integer squared.",
+        "reviewSteps": [
+          "Every item in both groups is a perfect square.",
+          "They correspond to 2², 3², 4², 5², 6², and 7², with no exceptions.",
+          "Therefore 64 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -332,7 +412,12 @@
           "90"
         ],
         "explanation": "Ce sont des multiples impairs de 5 ; 75 est le seul choix qui convient.",
-        "hint": "Regarde le chiffre des unités."
+        "hint": "Regarde le chiffre des unités.",
+        "reviewSteps": [
+          "Chaque exemple est un multiple impair de cinq et se termine donc par cinq.",
+          "Les valeurs 15, 25, 35, 45, 55 et 65 remplissent toutes cette propriété.",
+          "On retient donc 75 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -345,7 +430,12 @@
           "90"
         ],
         "explanation": "These are odd multiples of 5; only 75 fits.",
-        "hint": "Look at the units digit."
+        "hint": "Look at the units digit.",
+        "reviewSteps": [
+          "Each example is an odd multiple of five and therefore ends in five.",
+          "The values 15, 25, 35, 45, 55, and 65 all satisfy that rule.",
+          "Therefore 75 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -371,7 +461,12 @@
           "64"
         ],
         "explanation": "Chaque nombre est un multiple de 4 qui n’est pas divisible par 8 ; 60 convient.",
-        "hint": "Divise chacun par 4."
+        "hint": "Divise chacun par 4.",
+        "reviewSteps": [
+          "Les valeurs sont divisibles par quatre, mais pas par huit.",
+          "Leurs quotients après division par quatre sont 1, 3, 5, 7, 9 et 11.",
+          "On retient donc 60 (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -384,7 +479,12 @@
           "64"
         ],
         "explanation": "Every number is divisible by 4 but not by 8; 60 fits.",
-        "hint": "Divide each number by 4."
+        "hint": "Divide each number by 4.",
+        "reviewSteps": [
+          "The values are divisible by four, but none is divisible by eight.",
+          "Their quotients after division by four are 1, 3, 5, 7, 9, and 11.",
+          "Therefore 60 (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -410,7 +510,12 @@
           "35"
         ],
         "explanation": "Les exemples sont des nombres premiers ; 29 est le seul nombre premier proposé.",
-        "hint": "Cherche les nombres dont les seuls diviseurs sont 1 et eux-mêmes."
+        "hint": "Cherche les nombres dont les seuls diviseurs sont 1 et eux-mêmes.",
+        "reviewSteps": [
+          "La catégorie des exemples est celle des nombres premiers.",
+          "Les nombres 2, 3, 5, 7, 11 et 13 ont chacun exactement deux diviseurs positifs.",
+          "On retient donc 29 (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -423,7 +528,12 @@
           "35"
         ],
         "explanation": "The examples are prime numbers; 29 is the only prime option.",
-        "hint": "Find numbers with no divisors other than 1 and themselves."
+        "hint": "Find numbers with no divisors other than 1 and themselves.",
+        "reviewSteps": [
+          "The examples all belong to the set of prime numbers.",
+          "Each of 2, 3, 5, 7, 11, and 13 has exactly two positive divisors.",
+          "Therefore 29 (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -449,7 +559,12 @@
           "49"
         ],
         "explanation": "Ce sont les nombres triangulaires n(n+1)/2 ; le suivant est 45.",
-        "hint": "Observe les différences croissantes."
+        "hint": "Observe les différences croissantes.",
+        "reviewSteps": [
+          "Les nombres triangulaires s'obtiennent en additionnant les entiers successifs.",
+          "Les différences augmentent de 1 : +2, +3, +4, +5, +6, +7 et +8.",
+          "On retient donc 45 (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -462,7 +577,12 @@
           "49"
         ],
         "explanation": "These are triangular numbers n(n+1)/2; the next is 45.",
-        "hint": "Look for increasing differences."
+        "hint": "Look for increasing differences.",
+        "reviewSteps": [
+          "Triangular numbers are obtained by adding consecutive integers.",
+          "The gaps rise by one: +2, +3, +4, +5, +6, +7, and +8.",
+          "Therefore 45 (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1568,7 +1688,12 @@
           "Ellipse"
         ],
         "explanation": "Chaque figure citée est un polygone régulier : ses côtés et ses angles sont tous égaux. Parmi les propositions, seul l'heptagone régulier répond à cette définition.",
-        "hint": "Vérifie à la fois l'égalité des côtés et celle des angles."
+        "hint": "Vérifie à la fois l'égalité des côtés et celle des angles.",
+        "reviewSteps": [
+          "Les deux groupes sont composés de polygones réguliers.",
+          "Un polygone régulier a tous ses côtés égaux et tous ses angles égaux.",
+          "On retient donc Heptagone régulier (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which shape shares the property common to both groups?",
@@ -1581,7 +1706,12 @@
           "Ellipse"
         ],
         "explanation": "Every listed figure is a regular polygon: all sides and all angles are equal. Only a regular heptagon among the options fits.",
-        "hint": "Check equality of both sides and angles."
+        "hint": "Check equality of both sides and angles.",
+        "reviewSteps": [
+          "Both groups consist of regular polygons.",
+          "A regular polygon has equal side lengths and equal interior angles.",
+          "Therefore Regular heptagon (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1607,7 +1737,12 @@
           "289"
         ],
         "explanation": "Chaque nombre est le carré d'un nombre premier et possède exactement trois diviseurs entiers positifs. 289 = 17² ; les autres propositions n'ont pas cette propriété.",
-        "hint": "Compte les diviseurs des nombres : pense aux carrés de nombres premiers."
+        "hint": "Compte les diviseurs des nombres : pense aux carrés de nombres premiers.",
+        "reviewSteps": [
+          "Tous les nombres sont des carrés de nombres premiers.",
+          "Un tel carré possède exactement trois diviseurs : 1, le nombre premier et son carré.",
+          "On retient donc 289 (réponse E) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the common property of both groups?",
@@ -1620,7 +1755,12 @@
           "289"
         ],
         "explanation": "Each number is the square of a prime and has exactly three positive integer divisors. 289 = 17²; the other choices do not satisfy this property.",
-        "hint": "Count positive divisors and think of squares of prime numbers."
+        "hint": "Count positive divisors and think of squares of prime numbers.",
+        "reviewSteps": [
+          "Every given number is the square of a prime number.",
+          "Such a square has exactly three divisors: 1, the prime, and its square.",
+          "Therefore 289 (option E) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1646,7 +1786,12 @@
           "91"
         ],
         "explanation": "Pour chaque nombre présenté, la somme des deux chiffres vaut 11. C'est également le cas de 83 : 8 + 3 = 11.",
-        "hint": "Additionne les chiffres des nombres."
+        "hint": "Additionne les chiffres des nombres.",
+        "reviewSteps": [
+          "La somme des deux chiffres de chaque exemple vaut onze.",
+          "On vérifie notamment 2 + 9 = 11, 3 + 8 = 11 et 4 + 7 = 11.",
+          "On retient donc 83 (réponse B) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number follows the same rule as both groups?",
@@ -1659,7 +1804,12 @@
           "91"
         ],
         "explanation": "For each given number, the two digits add up to 11. The same is true of 83: 8 + 3 = 11.",
-        "hint": "Add the two digits of each number."
+        "hint": "Add the two digits of each number.",
+        "reviewSteps": [
+          "The digits of each example always add up to eleven.",
+          "For instance, 2 + 9 = 11, 3 + 8 = 11, and 4 + 7 = 11.",
+          "Therefore 83 (option B) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1685,7 +1835,12 @@
           "79"
         ],
         "explanation": "Chaque nombre est premier et reste premier lorsque l'ordre de ses deux chiffres est inversé. 79 et 97 sont premiers ; les inverses des quatre autres propositions sont composés.",
-        "hint": "Inverse l'ordre des chiffres et vérifie les deux nombres."
+        "hint": "Inverse l'ordre des chiffres et vérifie les deux nombres.",
+        "reviewSteps": [
+          "Les nombres sont premiers même lorsque leurs deux chiffres sont inversés.",
+          "Les paires 13 et 31, 17 et 71, 37 et 73 ne contiennent que des nombres premiers.",
+          "On retient donc 79 (réponse E) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number belongs to the category shared by both groups?",
@@ -1698,7 +1853,12 @@
           "79"
         ],
         "explanation": "Each number is prime and remains prime when its two digits are reversed. Both 79 and 97 are prime; the reversals of the other choices are composite.",
-        "hint": "Reverse the digits and check primality in both directions."
+        "hint": "Reverse the digits and check primality in both directions.",
+        "reviewSteps": [
+          "Each number stays prime when its two digits are reversed.",
+          "The pairs 13 and 31, 17 and 71, and 37 and 73 all contain primes.",
+          "Therefore 79 (option E) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1724,7 +1884,12 @@
           "Trapèze isocèle non parallélogramme"
         ],
         "explanation": "Toutes les figures des deux ensembles possèdent un centre de symétrie (rotation de 180°). Un parallélogramme quelconque en possède un ; les autres choix, non.",
-        "hint": "Imagine une rotation d'un demi-tour autour du centre de chaque figure."
+        "hint": "Imagine une rotation d'un demi-tour autour du centre de chaque figure.",
+        "reviewSteps": [
+          "Toutes les figures des groupes possèdent un centre de symétrie.",
+          "Une rotation de 180° laisse inchangés rectangles, losanges, ellipses et parallélogrammes.",
+          "On retient donc Parallélogramme quelconque non rectangulaire (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which shape shares the common property of both sets?",
@@ -1737,7 +1902,12 @@
           "Isosceles trapezoid that is not a parallelogram"
         ],
         "explanation": "All listed figures have a center of symmetry: a 180° rotation maps them onto themselves. An oblique parallelogram has this property; the other choices do not.",
-        "hint": "Picture rotating each figure 180° about its center."
+        "hint": "Picture rotating each figure 180° about its center.",
+        "reviewSteps": [
+          "All grouped shapes possess a center of symmetry.",
+          "A 180° rotation preserves rectangles, rhombuses, ellipses, and parallelograms.",
+          "Therefore Oblique nonrectangular parallelogram (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1763,7 +1933,12 @@
           "45"
         ],
         "explanation": "Chaque nombre est de la forme 6n + 1, soit un reste de 1 lors de la division par 6. Parmi les choix, seul 43 respecte ce critère.",
-        "hint": "Calcule le reste de la division par 6."
+        "hint": "Calcule le reste de la division par 6.",
+        "reviewSteps": [
+          "Tous les nombres donnent un reste égal à un lorsqu'on les divise par six.",
+          "Par exemple 7 = 6 × 1 + 1, 13 = 6 × 2 + 1 et 37 = 6 × 6 + 1.",
+          "On retient donc 43 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number fits the criterion shared by both groups?",
@@ -1776,7 +1951,12 @@
           "45"
         ],
         "explanation": "All listed numbers have the form 6n + 1, leaving a remainder of 1 when divided by 6. Among the options, only 43 fits.",
-        "hint": "Find the remainder when each number is divided by 6."
+        "hint": "Find the remainder when each number is divided by 6.",
+        "reviewSteps": [
+          "Every number leaves a remainder of one upon division by six.",
+          "For example, 7 = 6 × 1 + 1, 13 = 6 × 2 + 1, and 37 = 6 × 6 + 1.",
+          "Therefore 43 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
