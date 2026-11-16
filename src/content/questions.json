@@ -20,7 +20,12 @@
           "36"
         ],
         "explanation": "Chaque terme double.",
-        "hint": "Multiplie le terme précédent par un même nombre."
+        "hint": "Multiplie le terme précédent par un même nombre.",
+        "reviewSteps": [
+          "La suite semble multiplier chaque terme par deux.",
+          "On vérifie : 2 × 2 = 4, puis 4 × 2 = 8 et 8 × 2 = 16.",
+          "On retient donc 32 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -33,7 +38,12 @@
           "36"
         ],
         "explanation": "Each term doubles.",
-        "hint": "Multiply the previous term by a constant."
+        "hint": "Multiply the previous term by a constant.",
+        "reviewSteps": [
+          "The sequence appears to multiply every term by two.",
+          "Verify it: 2 × 2 = 4, then 4 × 2 = 8, and 8 × 2 = 16.",
+          "Therefore 32 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -59,7 +69,12 @@
           "36"
         ],
         "explanation": "Ce sont les carrés des entiers de 1 à 5.",
-        "hint": "Essaie de prendre la racine carrée des termes."
+        "hint": "Essaie de prendre la racine carrée des termes.",
+        "reviewSteps": [
+          "Les termes sont les carrés de nombres entiers successifs.",
+          "Les racines carrées des termes sont 1, 2, 3 et 4 ; l'entier suivant est 5.",
+          "On retient donc 25 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -72,7 +87,12 @@
           "36"
         ],
         "explanation": "These are consecutive square numbers from 1² to 5².",
-        "hint": "Try taking the square root of each term."
+        "hint": "Try taking the square root of each term.",
+        "reviewSteps": [
+          "The terms are squares of consecutive positive integers.",
+          "Their square roots are 1, 2, 3, and 4, making 5 the next integer.",
+          "Therefore 25 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -98,7 +118,12 @@
           "25"
         ],
         "explanation": "La différence est toujours de 4.",
-        "hint": "Regarde les écarts entre termes."
+        "hint": "Regarde les écarts entre termes.",
+        "reviewSteps": [
+          "On peut rechercher une différence constante entre les termes.",
+          "Les écarts sont 9 − 5 = 4, 13 − 9 = 4 et 17 − 13 = 4.",
+          "On retient donc 21 (réponse B) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -111,7 +136,12 @@
           "25"
         ],
         "explanation": "Each consecutive difference is 4.",
-        "hint": "Look at the differences."
+        "hint": "Look at the differences.",
+        "reviewSteps": [
+          "Look for a constant difference between consecutive terms.",
+          "The gaps are 9 − 5 = 4, 13 − 9 = 4, and 17 − 13 = 4.",
+          "Therefore 21 (option B) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -137,7 +167,12 @@
           "31"
         ],
         "explanation": "Les écarts sont 3, 5, 7, puis 9 : 18 + 9 = 27.",
-        "hint": "Regarde comment évoluent les écarts."
+        "hint": "Regarde comment évoluent les écarts.",
+        "reviewSteps": [
+          "Les différences successives forment elles-mêmes une série croissante.",
+          "Les écarts valent +3, +5 et +7 ; le suivant est donc +9.",
+          "On retient donc 27 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -150,7 +185,12 @@
           "31"
         ],
         "explanation": "The differences are 3, 5, 7, then 9: 18 + 9 = 27.",
-        "hint": "Watch how the gaps change."
+        "hint": "Watch how the gaps change.",
+        "reviewSteps": [
+          "The consecutive differences form an increasing sequence.",
+          "The gaps are +3, +5, and +7, so the next difference is +9.",
+          "Therefore 27 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -176,7 +216,12 @@
           "36"
         ],
         "explanation": "Les écarts sont 4, 6, 8, 10.",
-        "hint": "Les écarts augmentent de 2."
+        "hint": "Les écarts augmentent de 2.",
+        "reviewSteps": [
+          "On compare les différences successives plutôt que les termes seuls.",
+          "On obtient +4, +6 et +8 ; chaque différence augmente de deux.",
+          "On retient donc 30 (réponse B) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -189,7 +234,12 @@
           "36"
         ],
         "explanation": "The differences are 4, 6, 8, 10.",
-        "hint": "The differences grow by 2."
+        "hint": "The differences grow by 2.",
+        "reviewSteps": [
+          "Compare the gaps between terms rather than the terms alone.",
+          "The gaps are +4, +6, and +8; each new gap increases by two.",
+          "Therefore 30 (option B) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -215,7 +265,12 @@
           "6"
         ],
         "explanation": "Chaque terme est divisé par 3.",
-        "hint": "Pense à une progression géométrique décroissante."
+        "hint": "Pense à une progression géométrique décroissante.",
+        "reviewSteps": [
+          "La diminution correspond à un rapport constant entre les termes.",
+          "On vérifie 81 ÷ 3 = 27, puis 27 ÷ 3 = 9 et 9 ÷ 3 = 3.",
+          "On retient donc 1 (réponse B) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number completes the sequence?",
@@ -228,7 +283,12 @@
           "6"
         ],
         "explanation": "Each term is divided by 3.",
-        "hint": "Think of a decreasing geometric sequence."
+        "hint": "Think of a decreasing geometric sequence.",
+        "reviewSteps": [
+          "The decrease follows a fixed ratio between consecutive terms.",
+          "Verify 81 ÷ 3 = 27, then 27 ÷ 3 = 9, and 9 ÷ 3 = 3.",
+          "Therefore 1 (option B) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "warmup"
@@ -254,7 +314,12 @@
           "52"
         ],
         "explanation": "Tous ces nombres sont des multiples de 6 ; 48 l’est aussi.",
-        "hint": "Cherche un diviseur commun à tous les nombres."
+        "hint": "Cherche un diviseur commun à tous les nombres.",
+        "reviewSteps": [
+          "La propriété commune des deux groupes est la divisibilité par six.",
+          "Tous les exemples, de 6 à 42, donnent un quotient entier lorsqu'on les divise par 6.",
+          "On retient donc 48 (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -267,7 +332,12 @@
           "52"
         ],
         "explanation": "All shown numbers are divisible by 6; so is 48.",
-        "hint": "Look for a common divisor."
+        "hint": "Look for a common divisor.",
+        "reviewSteps": [
+          "Both groups share the property of being divisible by six.",
+          "Every example, from 6 through 42, gives an integer when divided by 6.",
+          "Therefore 48 (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -293,7 +363,12 @@
           "80"
         ],
         "explanation": "Ce sont des carrés parfaits ; 64 = 8².",
-        "hint": "Chaque nombre est le carré d’un entier."
+        "hint": "Chaque nombre est le carré d’un entier.",
+        "reviewSteps": [
+          "Les éléments des deux groupes sont tous des carrés parfaits.",
+          "Ils correspondent à 2², 3², 4², 5², 6² et 7², sans exception.",
+          "On retient donc 64 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -306,7 +381,12 @@
           "80"
         ],
         "explanation": "These are perfect squares; 64 = 8².",
-        "hint": "Each number is an integer squared."
+        "hint": "Each number is an integer squared.",
+        "reviewSteps": [
+          "Every item in both groups is a perfect square.",
+          "They correspond to 2², 3², 4², 5², 6², and 7², with no exceptions.",
+          "Therefore 64 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -332,7 +412,12 @@
           "90"
         ],
         "explanation": "Ce sont des multiples impairs de 5 ; 75 est le seul choix qui convient.",
-        "hint": "Regarde le chiffre des unités."
+        "hint": "Regarde le chiffre des unités.",
+        "reviewSteps": [
+          "Chaque exemple est un multiple impair de cinq et se termine donc par cinq.",
+          "Les valeurs 15, 25, 35, 45, 55 et 65 remplissent toutes cette propriété.",
+          "On retient donc 75 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -345,7 +430,12 @@
           "90"
         ],
         "explanation": "These are odd multiples of 5; only 75 fits.",
-        "hint": "Look at the units digit."
+        "hint": "Look at the units digit.",
+        "reviewSteps": [
+          "Each example is an odd multiple of five and therefore ends in five.",
+          "The values 15, 25, 35, 45, 55, and 65 all satisfy that rule.",
+          "Therefore 75 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -371,7 +461,12 @@
           "64"
         ],
         "explanation": "Chaque nombre est un multiple de 4 qui n’est pas divisible par 8 ; 60 convient.",
-        "hint": "Divise chacun par 4."
+        "hint": "Divise chacun par 4.",
+        "reviewSteps": [
+          "Les valeurs sont divisibles par quatre, mais pas par huit.",
+          "Leurs quotients après division par quatre sont 1, 3, 5, 7, 9 et 11.",
+          "On retient donc 60 (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -384,7 +479,12 @@
           "64"
         ],
         "explanation": "Every number is divisible by 4 but not by 8; 60 fits.",
-        "hint": "Divide each number by 4."
+        "hint": "Divide each number by 4.",
+        "reviewSteps": [
+          "The values are divisible by four, but none is divisible by eight.",
+          "Their quotients after division by four are 1, 3, 5, 7, 9, and 11.",
+          "Therefore 60 (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -410,7 +510,12 @@
           "35"
         ],
         "explanation": "Les exemples sont des nombres premiers ; 29 est le seul nombre premier proposé.",
-        "hint": "Cherche les nombres dont les seuls diviseurs sont 1 et eux-mêmes."
+        "hint": "Cherche les nombres dont les seuls diviseurs sont 1 et eux-mêmes.",
+        "reviewSteps": [
+          "La catégorie des exemples est celle des nombres premiers.",
+          "Les nombres 2, 3, 5, 7, 11 et 13 ont chacun exactement deux diviseurs positifs.",
+          "On retient donc 29 (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -423,7 +528,12 @@
           "35"
         ],
         "explanation": "The examples are prime numbers; 29 is the only prime option.",
-        "hint": "Find numbers with no divisors other than 1 and themselves."
+        "hint": "Find numbers with no divisors other than 1 and themselves.",
+        "reviewSteps": [
+          "The examples all belong to the set of prime numbers.",
+          "Each of 2, 3, 5, 7, 11, and 13 has exactly two positive divisors.",
+          "Therefore 29 (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -449,7 +559,12 @@
           "49"
         ],
         "explanation": "Ce sont les nombres triangulaires n(n+1)/2 ; le suivant est 45.",
-        "hint": "Observe les différences croissantes."
+        "hint": "Observe les différences croissantes.",
+        "reviewSteps": [
+          "Les nombres triangulaires s'obtiennent en additionnant les entiers successifs.",
+          "Les différences augmentent de 1 : +2, +3, +4, +5, +6, +7 et +8.",
+          "On retient donc 45 (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the property common to both groups?",
@@ -462,7 +577,12 @@
           "49"
         ],
         "explanation": "These are triangular numbers n(n+1)/2; the next is 45.",
-        "hint": "Look for increasing differences."
+        "hint": "Look for increasing differences.",
+        "reviewSteps": [
+          "Triangular numbers are obtained by adding consecutive integers.",
+          "The gaps rise by one: +2, +3, +4, +5, +6, +7, and +8.",
+          "Therefore 45 (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -488,7 +608,12 @@
           "Les bancs coûtent cher."
         ],
         "explanation": "Le festival constitue une explication concurrente de la hausse de fréquentation.",
-        "hint": "Cherche une cause alternative."
+        "hint": "Cherche une cause alternative.",
+        "reviewSteps": [
+          "L'argument attribue la hausse des visites du parc à l'installation de nouveaux bancs.",
+          "Un festival gratuit, commencé au même moment, pourrait attirer les visiteurs indépendamment des bancs.",
+          "La présence d'une cause alternative affaiblit l'explication initiale : la bonne réponse est B."
+        ]
       },
       "en": {
         "prompt": "Which fact most weakens the causal claim?",
@@ -501,7 +626,12 @@
           "The benches were expensive."
         ],
         "explanation": "The festival provides an alternative explanation for the increase.",
-        "hint": "Look for an alternative cause."
+        "hint": "Look for an alternative cause.",
+        "reviewSteps": [
+          "The argument attributes the rise in park visits to the installation of new benches.",
+          "A free festival beginning at the same time might attract visitors regardless of the benches.",
+          "A plausible alternative cause weakens the original explanation: the correct answer is B."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -527,7 +657,12 @@
           "Les abonnés connaissent les journalistes."
         ],
         "explanation": "La conclusion ne vaut pour la population entière que si l’échantillon n’est pas trop biaisé.",
-        "hint": "Compare la population interrogée à la population visée."
+        "hint": "Compare la population interrogée à la population visée.",
+        "reviewSteps": [
+          "Le sondage interroge uniquement les abonnés d'une revue, mais sa conclusion vise toute la ville.",
+          "Pour tirer cette conclusion à partir du seul sondage, les abonnés doivent refléter raisonnablement les préférences des habitants.",
+          "La représentativité de l'échantillon est l'hypothèse requise pour ce raisonnement : réponse D."
+        ]
       },
       "en": {
         "prompt": "What assumption is needed for this generalization?",
@@ -540,7 +675,12 @@
           "Subscribers know the reporters."
         ],
         "explanation": "Generalizing to the whole city requires a sufficiently representative sample.",
-        "hint": "Compare the sample with the target population."
+        "hint": "Compare the sample with the target population.",
+        "reviewSteps": [
+          "The survey samples magazine subscribers only, yet its conclusion concerns the entire city.",
+          "To justify that conclusion using the survey alone, subscribers need to reasonably reflect the preferences of city residents.",
+          "Sample representativeness is the assumption required by this reasoning: answer D."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -566,7 +706,12 @@
           "Tous les membres du club A sont étudiants."
         ],
         "explanation": "Les étudiants appartenant au club A parlent espagnol, donc certains étudiants le parlent.",
-        "hint": "Suis le groupe commun aux deux propositions."
+        "hint": "Suis le groupe commun aux deux propositions.",
+        "reviewSteps": [
+          "La première prémisse établit que tous les membres du club A parlent espagnol.",
+          "La seconde indique qu'au moins certains étudiants appartiennent à ce même club.",
+          "Ces étudiants parlent donc espagnol, sans généraliser à tous les élèves : réponse C."
+        ]
       },
       "en": {
         "prompt": "Which conclusion must be true?",
@@ -579,7 +724,12 @@
           "All club A members are students."
         ],
         "explanation": "Students who belong to club A speak Spanish, so some students speak Spanish.",
-        "hint": "Trace the group shared by both statements."
+        "hint": "Trace the group shared by both statements.",
+        "reviewSteps": [
+          "The first premise establishes that every member of club A speaks Spanish.",
+          "The second says that at least some students belong to that club.",
+          "Those students therefore speak Spanish, without generalizing to all students: answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -605,7 +755,12 @@
           "Confondre corrélation et causalité."
         ],
         "explanation": "Les magasins à forte demande peuvent choisir des horaires plus longs, sans que ces horaires causent la demande.",
-        "hint": "Une corrélation ne suffit pas à prouver la cause."
+        "hint": "Une corrélation ne suffit pas à prouver la cause.",
+        "reviewSteps": [
+          "La donnée observée est une association entre des horaires tardifs et des ventes plus élevées.",
+          "On ne sait pas si les horaires causent la hausse des ventes ou si les commerces populaires prolongent leurs horaires.",
+          "Conclure à une causalité nécessaire à partir d'une corrélation est l'erreur : réponse E."
+        ]
       },
       "en": {
         "prompt": "Which reasoning error weakens the argument?",
@@ -618,7 +773,12 @@
           "Confusing correlation with causation."
         ],
         "explanation": "High-demand stores may choose longer opening hours; correlation alone does not establish causation.",
-        "hint": "Correlation is not proof of causation."
+        "hint": "Correlation is not proof of causation.",
+        "reviewSteps": [
+          "The observed evidence is an association between late opening hours and higher sales.",
+          "It is unclear whether longer hours cause sales or successful stores choose to stay open later.",
+          "Treating a correlation as necessarily causal is the reasoning error: answer E."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -644,7 +804,12 @@
           "Les enseignants aiment les statistiques."
         ],
         "explanation": "Un test identique réduit une source de différence étrangère à la méthode.",
-        "hint": "Quelle variable parasite peux-tu éliminer ?"
+        "hint": "Quelle variable parasite peux-tu éliminer ?",
+        "reviewSteps": [
+          "Les élèves sont répartis au hasard entre deux méthodes, et le groupe B obtient une note moyenne supérieure.",
+          "Une différence d'épreuves ou de conditions d'examen pourrait expliquer cet écart sans effet réel de la méthode.",
+          "Un examen identique pour les deux groupes réduit cette explication concurrente : réponse A."
+        ]
       },
       "en": {
         "prompt": "What most strengthens the conclusion that method B helped?",
@@ -657,7 +822,12 @@
           "Teachers like statistics."
         ],
         "explanation": "An identical test reduces a competing explanation for the score difference.",
-        "hint": "Which confounding variable can be ruled out?"
+        "hint": "Which confounding variable can be ruled out?",
+        "reviewSteps": [
+          "Students are randomly assigned to two methods, and group B obtains a higher average score.",
+          "Different exams or testing conditions could explain that gap without any effect from the study method.",
+          "Using the same examination under the same conditions reduces that alternative explanation: answer A."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -683,7 +853,12 @@
           "Le nombre de développeurs."
         ],
         "explanation": "La prémisse ne dit rien sur les clients hors application.",
-        "hint": "Quel groupe est absent de la prémisse ?"
+        "hint": "Quel groupe est absent de la prémisse ?",
+        "reviewSteps": [
+          "La prémisse affirme la satisfaction des clients qui utilisent effectivement l'application.",
+          "La conclusion étend cette satisfaction à tous les clients, y compris ceux qui ne l'utilisent pas.",
+          "L'information manquante concerne les non-utilisateurs de l'application : réponse D."
+        ]
       },
       "en": {
         "prompt": "What is missing from the reasoning?",
@@ -696,7 +871,12 @@
           "The number of developers."
         ],
         "explanation": "The premise gives no information about customers who do not use the app.",
-        "hint": "Which group is missing from the premise?"
+        "hint": "Which group is missing from the premise?",
+        "reviewSteps": [
+          "The premise establishes satisfaction only among customers who actually use the application.",
+          "The conclusion extends this satisfaction to every customer, including people who do not use it.",
+          "The missing evidence concerns the non-users of the application: answer D."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -722,7 +902,12 @@
           "Le commerçant a élargi sa gamme de produits."
         ],
         "explanation": "La baisse des réclamations liées aux retards soutient directement le mécanisme avancé.",
-        "hint": "Observe la catégorie précise des plaintes."
+        "hint": "Observe la catégorie précise des plaintes.",
+        "reviewSteps": [
+          "Le commerçant avance que les livraisons plus rapides expliquent la diminution des réclamations.",
+          "Une baisse qui touche précisément les plaintes liées aux retards correspond au mécanisme de causalité proposé.",
+          "Ce lien direct renforce davantage la conclusion que les détails sans rapport : réponse A."
+        ]
       },
       "en": {
         "prompt": "Which observation most strengthens the claim that faster delivery reduced complaints?",
@@ -735,7 +920,12 @@
           "The retailer increased its product range."
         ],
         "explanation": "Fewer late-delivery complaints directly support the proposed causal mechanism.",
-        "hint": "Look at the category of complaints."
+        "hint": "Look at the category of complaints.",
+        "reviewSteps": [
+          "The retailer proposes faster delivery as the cause of fewer customer complaints.",
+          "A decline specifically in late-delivery complaints matches the proposed causal mechanism.",
+          "That direct connection strengthens the conclusion more than unrelated details do: answer A."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -761,7 +951,12 @@
           "La production horaire peut être mesurée."
         ],
         "explanation": "L’automatisation offre une explication alternative crédible.",
-        "hint": "Cherche une autre modification simultanée."
+        "hint": "Cherche une autre modification simultanée.",
+        "reviewSteps": [
+          "La direction attribue une meilleure productivité horaire au passage à la semaine de quatre jours.",
+          "L'arrivée simultanée de nouvelles machines automatisées pourrait expliquer la productivité accrue.",
+          "Ce changement concurrent affaiblit l'explication par les seuls horaires : réponse C."
+        ]
       },
       "en": {
         "prompt": "Which fact most weakens management’s explanation?",
@@ -774,7 +969,12 @@
           "Hourly output is measurable."
         ],
         "explanation": "Automation offers a strong competing cause of higher hourly productivity.",
-        "hint": "Look for another simultaneous change."
+        "hint": "Look for another simultaneous change.",
+        "reviewSteps": [
+          "Management credits a four-day workweek for the increase in productivity per hour.",
+          "New automated machinery introduced at the same time might account for the productivity improvement.",
+          "That competing change weakens the explanation based on the schedule alone: answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -800,7 +1000,12 @@
           "La formation exige un consultant externe."
         ],
         "explanation": "Le coût total ne baisse que si les économies compensent le coût de la formation.",
-        "hint": "Compare économies et coûts ajoutés."
+        "hint": "Compare économies et coûts ajoutés.",
+        "reviewSteps": [
+          "Le plan prétend réduire les coûts totaux en limitant les départs grâce à la formation.",
+          "Former les employés engendre un coût supplémentaire qui peut annuler les économies liées aux départs évités.",
+          "Les économies doivent dépasser ce coût additionnel pour atteindre l'objectif : réponse D."
+        ]
       },
       "en": {
         "prompt": "Which assumption is necessary for the plan to reduce total costs?",
@@ -813,7 +1018,12 @@
           "Training requires an external consultant."
         ],
         "explanation": "Total costs decline only if turnover savings outweigh training expense.",
-        "hint": "Compare savings with added costs."
+        "hint": "Compare savings with added costs.",
+        "reviewSteps": [
+          "The plan aims to cut total costs by reducing employee turnover through training.",
+          "Training carries an additional expense that may cancel the savings from avoided turnover.",
+          "Savings must exceed that extra expense for total costs to fall: answer D."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -839,7 +1049,12 @@
           "Tous les salariés détiennent une autorisation."
         ],
         "explanation": "Le permis implique une formation achevée ; Dana possède le permis.",
-        "hint": "Applique l’implication, pas sa réciproque."
+        "hint": "Applique l’implication, pas sa réciproque.",
+        "reviewSteps": [
+          "La règle donnée affirme qu'une autorisation d'accès implique une formation de sécurité achevée.",
+          "Dana détient cette autorisation : elle remplit donc la condition de départ de la règle.",
+          "On peut conclure que Dana a suivi cette formation, sans inverser l'implication : réponse B."
+        ]
       },
       "en": {
         "prompt": "Which conclusion necessarily follows?",
@@ -852,7 +1067,12 @@
           "All employees have permits."
         ],
         "explanation": "A permit implies completed safety training, and Dana holds a permit.",
-        "hint": "Apply the implication, not its converse."
+        "hint": "Apply the implication, not its converse.",
+        "reviewSteps": [
+          "The given rule states that a laboratory access permit implies completed safety training.",
+          "Dana holds such a permit, so the condition triggering the rule applies to Dana.",
+          "Dana must have completed the training, without reversing the implication: answer B."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -878,7 +1098,12 @@
           "La ligne de métro était fermée pour travaux pendant la même période."
         ],
         "explanation": "La fermeture du métro peut expliquer la hausse d’usage des bus indépendamment du prix.",
-        "hint": "Quel autre transport a pu changer ?"
+        "hint": "Quel autre transport a pu changer ?",
+        "reviewSteps": [
+          "Les responsables municipaux attribuent toute la hausse des voyages en bus à la baisse des tarifs.",
+          "La fermeture de la ligne de métro au même moment peut avoir reporté des voyageurs sur les bus.",
+          "Cette autre explication remet en cause l'attribution exclusive aux tarifs : réponse E."
+        ]
       },
       "en": {
         "prompt": "Which information most seriously challenges that conclusion?",
@@ -891,7 +1116,12 @@
           "The subway line was closed for repairs over the same period."
         ],
         "explanation": "A subway closure offers an independent explanation for rising bus demand.",
-        "hint": "What else changed in public transport?"
+        "hint": "What else changed in public transport?",
+        "reviewSteps": [
+          "City officials attribute the entire rise in bus ridership to lower fares.",
+          "A subway closure at the same time may have redirected subway passengers to buses.",
+          "That competing explanation challenges the claim that fares alone caused the increase: answer E."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -917,7 +1147,12 @@
           "Le revêtement a été appliqué par des employés."
         ],
         "explanation": "Les conditions de température et d’humidité pourraient modifier le résultat.",
-        "hint": "Regarde où la conclusion va au-delà de l’échantillon."
+        "hint": "Regarde où la conclusion va au-delà de l’échantillon.",
+        "reviewSteps": [
+          "Le nouveau revêtement a été testé dans un unique entrepôt frais et sec.",
+          "La température et l'humidité peuvent modifier son efficacité dans d'autres environnements.",
+          "Généraliser à tous les climats dépasse donc les preuves disponibles : réponse C."
+        ]
       },
       "en": {
         "prompt": "What is the main flaw in the conclusion?",
@@ -930,7 +1165,12 @@
           "The coating was applied by staff."
         ],
         "explanation": "Temperature and humidity might affect performance, so the tested setting may not generalize.",
-        "hint": "Spot where the conclusion exceeds the tested sample."
+        "hint": "Spot where the conclusion exceeds the tested sample.",
+        "reviewSteps": [
+          "The new coating was tested in just one cool, dry warehouse.",
+          "Temperature and humidity might change its effectiveness under other conditions.",
+          "Generalizing the result to every climate therefore exceeds the available evidence: answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1508,7 +1748,12 @@
           "Ellipse"
         ],
         "explanation": "Chaque figure citée est un polygone régulier : ses côtés et ses angles sont tous égaux. Parmi les propositions, seul l'heptagone régulier répond à cette définition.",
-        "hint": "Vérifie à la fois l'égalité des côtés et celle des angles."
+        "hint": "Vérifie à la fois l'égalité des côtés et celle des angles.",
+        "reviewSteps": [
+          "Les deux groupes sont composés de polygones réguliers.",
+          "Un polygone régulier a tous ses côtés égaux et tous ses angles égaux.",
+          "On retient donc Heptagone régulier (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which shape shares the property common to both groups?",
@@ -1521,7 +1766,12 @@
           "Ellipse"
         ],
         "explanation": "Every listed figure is a regular polygon: all sides and all angles are equal. Only a regular heptagon among the options fits.",
-        "hint": "Check equality of both sides and angles."
+        "hint": "Check equality of both sides and angles.",
+        "reviewSteps": [
+          "Both groups consist of regular polygons.",
+          "A regular polygon has equal side lengths and equal interior angles.",
+          "Therefore Regular heptagon (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1547,7 +1797,12 @@
           "289"
         ],
         "explanation": "Chaque nombre est le carré d'un nombre premier et possède exactement trois diviseurs entiers positifs. 289 = 17² ; les autres propositions n'ont pas cette propriété.",
-        "hint": "Compte les diviseurs des nombres : pense aux carrés de nombres premiers."
+        "hint": "Compte les diviseurs des nombres : pense aux carrés de nombres premiers.",
+        "reviewSteps": [
+          "Tous les nombres sont des carrés de nombres premiers.",
+          "Un tel carré possède exactement trois diviseurs : 1, le nombre premier et son carré.",
+          "On retient donc 289 (réponse E) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number shares the common property of both groups?",
@@ -1560,7 +1815,12 @@
           "289"
         ],
         "explanation": "Each number is the square of a prime and has exactly three positive integer divisors. 289 = 17²; the other choices do not satisfy this property.",
-        "hint": "Count positive divisors and think of squares of prime numbers."
+        "hint": "Count positive divisors and think of squares of prime numbers.",
+        "reviewSteps": [
+          "Every given number is the square of a prime number.",
+          "Such a square has exactly three divisors: 1, the prime, and its square.",
+          "Therefore 289 (option E) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1586,7 +1846,12 @@
           "91"
         ],
         "explanation": "Pour chaque nombre présenté, la somme des deux chiffres vaut 11. C'est également le cas de 83 : 8 + 3 = 11.",
-        "hint": "Additionne les chiffres des nombres."
+        "hint": "Additionne les chiffres des nombres.",
+        "reviewSteps": [
+          "La somme des deux chiffres de chaque exemple vaut onze.",
+          "On vérifie notamment 2 + 9 = 11, 3 + 8 = 11 et 4 + 7 = 11.",
+          "On retient donc 83 (réponse B) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number follows the same rule as both groups?",
@@ -1599,7 +1864,12 @@
           "91"
         ],
         "explanation": "For each given number, the two digits add up to 11. The same is true of 83: 8 + 3 = 11.",
-        "hint": "Add the two digits of each number."
+        "hint": "Add the two digits of each number.",
+        "reviewSteps": [
+          "The digits of each example always add up to eleven.",
+          "For instance, 2 + 9 = 11, 3 + 8 = 11, and 4 + 7 = 11.",
+          "Therefore 83 (option B) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1625,7 +1895,12 @@
           "79"
         ],
         "explanation": "Chaque nombre est premier et reste premier lorsque l'ordre de ses deux chiffres est inversé. 79 et 97 sont premiers ; les inverses des quatre autres propositions sont composés.",
-        "hint": "Inverse l'ordre des chiffres et vérifie les deux nombres."
+        "hint": "Inverse l'ordre des chiffres et vérifie les deux nombres.",
+        "reviewSteps": [
+          "Les nombres sont premiers même lorsque leurs deux chiffres sont inversés.",
+          "Les paires 13 et 31, 17 et 71, 37 et 73 ne contiennent que des nombres premiers.",
+          "On retient donc 79 (réponse E) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number belongs to the category shared by both groups?",
@@ -1638,7 +1913,12 @@
           "79"
         ],
         "explanation": "Each number is prime and remains prime when its two digits are reversed. Both 79 and 97 are prime; the reversals of the other choices are composite.",
-        "hint": "Reverse the digits and check primality in both directions."
+        "hint": "Reverse the digits and check primality in both directions.",
+        "reviewSteps": [
+          "Each number stays prime when its two digits are reversed.",
+          "The pairs 13 and 31, 17 and 71, and 37 and 73 all contain primes.",
+          "Therefore 79 (option E) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1664,7 +1944,12 @@
           "Trapèze isocèle non parallélogramme"
         ],
         "explanation": "Toutes les figures des deux ensembles possèdent un centre de symétrie (rotation de 180°). Un parallélogramme quelconque en possède un ; les autres choix, non.",
-        "hint": "Imagine une rotation d'un demi-tour autour du centre de chaque figure."
+        "hint": "Imagine une rotation d'un demi-tour autour du centre de chaque figure.",
+        "reviewSteps": [
+          "Toutes les figures des groupes possèdent un centre de symétrie.",
+          "Une rotation de 180° laisse inchangés rectangles, losanges, ellipses et parallélogrammes.",
+          "On retient donc Parallélogramme quelconque non rectangulaire (réponse D) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which shape shares the common property of both sets?",
@@ -1677,7 +1962,12 @@
           "Isosceles trapezoid that is not a parallelogram"
         ],
         "explanation": "All listed figures have a center of symmetry: a 180° rotation maps them onto themselves. An oblique parallelogram has this property; the other choices do not.",
-        "hint": "Picture rotating each figure 180° about its center."
+        "hint": "Picture rotating each figure 180° about its center.",
+        "reviewSteps": [
+          "All grouped shapes possess a center of symmetry.",
+          "A 180° rotation preserves rectangles, rhombuses, ellipses, and parallelograms.",
+          "Therefore Oblique nonrectangular parallelogram (option D) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1703,7 +1993,12 @@
           "45"
         ],
         "explanation": "Chaque nombre est de la forme 6n + 1, soit un reste de 1 lors de la division par 6. Parmi les choix, seul 43 respecte ce critère.",
-        "hint": "Calcule le reste de la division par 6."
+        "hint": "Calcule le reste de la division par 6.",
+        "reviewSteps": [
+          "Tous les nombres donnent un reste égal à un lorsqu'on les divise par six.",
+          "Par exemple 7 = 6 × 1 + 1, 13 = 6 × 2 + 1 et 37 = 6 × 6 + 1.",
+          "On retient donc 43 (réponse C) : c'est la proposition qui respecte cette règle."
+        ]
       },
       "en": {
         "prompt": "Which number fits the criterion shared by both groups?",
@@ -1716,7 +2011,12 @@
           "45"
         ],
         "explanation": "All listed numbers have the form 6n + 1, leaving a remainder of 1 when divided by 6. Among the options, only 43 fits.",
-        "hint": "Find the remainder when each number is divided by 6."
+        "hint": "Find the remainder when each number is divided by 6.",
+        "reviewSteps": [
+          "Every number leaves a remainder of one upon division by six.",
+          "For example, 7 = 6 × 1 + 1, 13 = 6 × 2 + 1, and 37 = 6 × 6 + 1.",
+          "Therefore 43 (option C) is the answer choice that satisfies this rule."
+        ]
       }
     },
     "alignment": "skill-practice"

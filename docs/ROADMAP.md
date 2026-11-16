@@ -65,3 +65,19 @@
 - [x] CI schema detects contradictory or mismatched A–E answer mappings
 - [x] Issue forms for reporting incorrect/ambiguous original exercises (question ID and language only)
 - [ ] Independent editorial review and final pilot approval of each question (issue #3)
+
+## Next XYZ consolidation — structured Argument Lab explanations
+
+- [x] Add original three-step French and English explanations for all 12 Argument Lab items
+- [x] Reuse the existing `ReasoningBreakdown` component, choosing game-specific headings
+- [x] Validate translation parity and test immediate versus deferred feedback
+- [ ] Complete independent review of all 46 pilot exercises and refine difficulty calibration
+- [ ] Squash-merge this focused QA-validated lot; keep GitHub Pages unpublished
+
+## Consolidated XYZ — full pilot explanation coverage
+
+- [x] Complete 46/46 original bilingual teaching breakdowns, three steps per question
+- [x] Use one reusable component with headings that match each game mechanic
+- [x] Test that explanations do not appear before timed sessions finish
+- [x] Extend schema validation to require detailed FR/EN reasoning for every pilot item
+- [ ] Independent editorial approval, difficulty calibration and user feedback still required
