@@ -43,3 +43,13 @@
 - [x] Preserve previous version-1 browser progress while retaining a bounded recent-question history
 - [x] Improve timed-test stability under background tab throttling and review unanswered items
 - [ ] Independent pedagogical approval of all 46 pilots (remaining blocker)
+
+## Fourth consolidated XYZ — revision loop
+
+- [x] Correct answers remove an item from the local review queue; wrong answers add it
+- [x] At most 24 question IDs awaiting review, isolated by exam pathway
+- [x] Bilingual account-free review route with hints, immediate correction and completion results
+- [x] Existing progress v1 loads without migration or data loss
+- [x] Tests cover queue limits, cross-track isolation, stale IDs and successful retry
+- [ ] Independent expert/editorial check of all 46 question statements and translations
+- [ ] Validate the entire draft PR in CI and squash-merge into `main`; keep Pages untriggered

@@ -13,10 +13,12 @@ const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string
 export function HomeScreen({locale,questionCount}:{locale:Locale;questionCount:number}){
   const [exam,setExam]=useState<Exam>('tage');
   const [stats,setStats]=useState({total:0,correct:0});
+  const [pendingReviewIds,setPendingReviewIds]=useState<string[]>([]);
   const [skillSummary,setSkillSummary]=useState<Array<{key:string;exam:string;skill:string;progress:SkillProgress}>>([]);
   useEffect(()=>{
     const p=loadProgress();
     setStats({total:p.totalAnswered,correct:p.totalCorrect});
+    setPendingReviewIds(p.pendingReviewIds??[]);
     const summary=Object.entries(p.skills).filter(([,v])=>v.attempts>0).map(([key,progress])=>{
       const [exam,,skill]=key.split(':');
       return {key,exam,skill,progress};
@@ -30,8 +32,9 @@ export function HomeScreen({locale,questionCount}:{locale:Locale;questionCount:n
     'critical-reasoning':{fr:'Raisonnement critique',en:'Critical reasoning'},
     'data-sufficiency':{fr:'Suffisance de données',en:'Data sufficiency'}
   };
+  const reviewCount=pendingReviewIds.filter(id=>id.startsWith(exam==='tage'?'T-':'G-')).length;
   function reset(){if(window.confirm(fr?'Effacer ta progression sur cet appareil ?':'Delete progress stored on this device?')){
-    clearProgress();setStats({total:0,correct:0});setSkillSummary([]);
+    clearProgress();setStats({total:0,correct:0});setSkillSummary([]);setPendingReviewIds([]);
   }}
   return <ArcadeShell locale={locale}>
     <section className="hero">
@@ -61,6 +64,13 @@ export function HomeScreen({locale,questionCount}:{locale:Locale;questionCount:n
       </div>
       {exam==='gmat'&&<p className="note">{fr?'Code Logic est un exercice complémentaire et non une section du GMAT.':'Code Logic is supplemental practice, not a GMAT exam section.'}</p>}
     </section>
+    {reviewCount>0&&<section className="review-cta" aria-label={fr?'Révision des erreurs':'Mistake review'}>
+      <div><p className="eyebrow">{fr?'ENTRAÎNEMENT CIBLÉ':'TARGETED PRACTICE'}</p>
+        <h2>{fr?'Revoir mes erreurs':'Review my mistakes'}</h2>
+        <p>{reviewCount} {fr?'exercice(s) à retravailler pour ce parcours.':'exercise(s) to revisit in this track.'}</p>
+      </div>
+      <Link className="button primary" href={`/${locale}/review/?exam=${exam}`}>{fr?'Revoir mes erreurs':'Review my mistakes'} →</Link>
+    </section>}
     <section className="progress-panel"><div><p className="eyebrow">03 — {fr?'PROGRESSION':'PROGRESS'}</p><h2>{fr?'Ta progression locale':'Your local progress'}</h2>
       <p>{fr?'Elle reste dans ton navigateur. Aucun compte nécessaire.':'Saved in your browser. No account required.'}</p></div>
       <div className="stats"><div><strong>{stats.total}</strong><small>{fr?'Réponses':'Answers'}</small></div>

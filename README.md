@@ -63,3 +63,7 @@ Use `main` as the sole source of truth. Create **one short-lived topic branch at
 - Unanswered timed questions are counted against the fixed test total, and shown with explanations in the final review.
 - Six introductory TAGE numerical sequences have explicit `warmup` classification.
 - The bilingual coverage page discloses exactly which official skill areas are still absent; this does not constitute exam certification.
+
+### Review mistaken answers locally
+
+Players may revisit mistakes from either exam pathway with **Review my mistakes / Revoir mes erreurs**. Incorrectly answered question IDs are stored in a bounded queue (up to 24) on the same device and removed after a correct retry. No user account, server synchronization, tracking or third-party analytics is required. Individual questions remain editorial `pilot` exercises; successful review does not imply official exam readiness.
