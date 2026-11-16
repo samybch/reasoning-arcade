@@ -18,6 +18,10 @@ export function validateQuestions(questions=QUESTIONS) {
     for(const lang of ['fr','en']){
       const loc=q.content?.[lang];
       if(!loc?.prompt?.trim()||!loc?.explanation?.trim()||!loc?.hint?.trim()) errors.push(`${q.id}: incomplete ${lang} text`);
+      if(lang==='fr' && /^(which|what|every|is |does |a firm|a city|an online|a factory|a food)/i.test(loc?.prompt??'')) errors.push(`${q.id}: French prompt appears untranslated`);
+      if(lang==='fr' && /^(an online|a factory|a firm|every employee|a city|a food)/i.test(loc?.context??'')) errors.push(`${q.id}: French context appears untranslated`);
+      if(lang==='fr' && loc?.choices?.some(s=>/^(most of|workers prefer|training takes|dana has|the subway|the test used|new automated)/i.test(s))) errors.push(`${q.id}: French answer choices appear untranslated`);
+      if(loc?.choices && new Set(loc.choices.map(c=>c.trim().toLocaleLowerCase(lang))).size!==loc.choices.length) errors.push(`${q.id}: repeated answer choices in ${lang}`);
       if(q.game==='enough-info') {
         if(loc?.statements?.length!==2) errors.push(`${q.id}: expected two statements in ${lang}`);
         if(!['A','B','C','D','E'].includes(q.correctAnswer)) errors.push(`${q.id}: invalid sufficiency key`);

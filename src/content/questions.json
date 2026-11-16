@@ -694,14 +694,14 @@
     "status": "pilot",
     "content": {
       "fr": {
-        "prompt": "Which observation most strengthens the claim that faster delivery reduced complaints?",
-        "context": "An online retailer reduced delivery times last quarter, while complaints fell.",
+        "prompt": "Quelle observation renforce le plus l'idée que des livraisons plus rapides ont réduit les réclamations ?",
+        "context": "Un commerçant en ligne a raccourci ses délais de livraison au dernier trimestre, tandis que le nombre de réclamations diminuait.",
         "choices": [
-          "Most of the decrease came from complaints specifically about late deliveries.",
-          "The website changed its font.",
-          "The retailer opened a new office.",
-          "Customers prefer free returns.",
-          "The retailer increased its product range."
+          "La majeure partie de la baisse concerne précisément les réclamations pour livraison tardive.",
+          "Le site Internet a changé de police de caractères.",
+          "Le commerçant a ouvert un nouveau bureau.",
+          "Les clients préfèrent les retours gratuits.",
+          "Le commerçant a élargi sa gamme de produits."
         ],
         "explanation": "La baisse des réclamations liées aux retards soutient directement le mécanisme avancé.",
         "hint": "Observe la catégorie précise des plaintes."
@@ -732,14 +732,14 @@
     "status": "pilot",
     "content": {
       "fr": {
-        "prompt": "Which fact most weakens management’s explanation?",
-        "context": "A factory adopted a four-day week. Productivity per hour then increased. Management credits the new schedule.",
+        "prompt": "Quel fait affaiblit le plus l'explication de la direction ?",
+        "context": "Une usine est passée à la semaine de quatre jours. Sa productivité horaire a ensuite augmenté. La direction attribue cette hausse au nouveau rythme de travail.",
         "choices": [
-          "Workers prefer shorter meetings.",
-          "The factory makes several products.",
-          "New automated machinery was installed at the same time.",
-          "The schedule was announced in advance.",
-          "Hourly output is measurable."
+          "Les salariés préfèrent les réunions courtes.",
+          "L'usine fabrique plusieurs produits.",
+          "De nouvelles machines automatisées ont été installées au même moment.",
+          "Le changement d'horaires avait été annoncé à l'avance.",
+          "La production horaire peut être mesurée."
         ],
         "explanation": "L’automatisation offre une explication alternative crédible.",
         "hint": "Cherche une autre modification simultanée."
@@ -770,14 +770,14 @@
     "status": "pilot",
     "content": {
       "fr": {
-        "prompt": "Which assumption is necessary for the plan to reduce total costs?",
-        "context": "A firm proposes mandatory training to reduce turnover costs, arguing that trained staff stay longer.",
+        "prompt": "Quelle hypothèse est nécessaire pour que ce projet réduise les coûts totaux ?",
+        "context": "Une entreprise envisage une formation obligatoire pour réduire les coûts liés au départ des salariés, car les salariés formés restent plus longtemps.",
         "choices": [
-          "Training takes place on Tuesdays.",
-          "The company has a website.",
-          "All staff enjoy training equally.",
-          "Savings from reduced turnover will exceed the added training costs.",
-          "Training requires an external consultant."
+          "La formation a lieu le mardi.",
+          "L'entreprise possède un site Internet.",
+          "Tous les salariés apprécient autant la formation.",
+          "Les économies liées à la baisse des départs dépasseront le coût supplémentaire de la formation.",
+          "La formation exige un consultant externe."
         ],
         "explanation": "Le coût total ne baisse que si les économies compensent le coût de la formation.",
         "hint": "Compare économies et coûts ajoutés."
@@ -808,14 +808,14 @@
     "status": "pilot",
     "content": {
       "fr": {
-        "prompt": "Which conclusion necessarily follows?",
-        "context": "Every employee with a laboratory access permit has completed safety training. Dana has such a permit.",
+        "prompt": "Quelle conclusion découle nécessairement des informations ?",
+        "context": "Chaque salarié qui détient une autorisation d'accès au laboratoire a suivi la formation de sécurité. Dana détient cette autorisation.",
         "choices": [
-          "Dana supervises the laboratory.",
-          "Dana has completed safety training.",
-          "Every trained employee has a permit.",
-          "Dana trained the other employees.",
-          "All employees have permits."
+          "Dana supervise le laboratoire.",
+          "Dana a suivi la formation de sécurité.",
+          "Chaque salarié formé détient une autorisation.",
+          "Dana a formé les autres salariés.",
+          "Tous les salariés détiennent une autorisation."
         ],
         "explanation": "Le permis implique une formation achevée ; Dana possède le permis.",
         "hint": "Applique l’implication, pas sa réciproque."
@@ -846,14 +846,14 @@
     "status": "pilot",
     "content": {
       "fr": {
-        "prompt": "Which information most seriously challenges that conclusion?",
-        "context": "A city lowered bus fares and bus ridership rose. Officials attribute the increase entirely to lower fares.",
+        "prompt": "Quelle information remet le plus sérieusement en cause cette conclusion ?",
+        "context": "Une ville a réduit les tarifs des bus et leur fréquentation a augmenté. Les responsables attribuent entièrement cette hausse à la baisse des tarifs.",
         "choices": [
-          "Buses are painted blue.",
-          "Some riders pay cash.",
-          "The city has a river.",
-          "Bus fares are displayed at stops.",
-          "The subway line was closed for repairs over the same period."
+          "Les bus sont peints en bleu.",
+          "Certains passagers paient en espèces.",
+          "La ville est traversée par une rivière.",
+          "Les tarifs des bus sont affichés aux arrêts.",
+          "La ligne de métro était fermée pour travaux pendant la même période."
         ],
         "explanation": "La fermeture du métro peut expliquer la hausse d’usage des bus indépendamment du prix.",
         "hint": "Quel autre transport a pu changer ?"
@@ -884,14 +884,14 @@
     "status": "pilot",
     "content": {
       "fr": {
-        "prompt": "What is the main flaw in the conclusion?",
-        "context": "A food producer tested a new coating in one cool, dry warehouse, then concluded that it extends shelf life in every climate.",
+        "prompt": "Quelle est la principale faille de cette conclusion ?",
+        "context": "Un producteur alimentaire a testé un nouveau revêtement dans un seul entrepôt frais et sec, puis a conclu qu'il prolongeait la durée de conservation dans tous les climats.",
         "choices": [
-          "The test used warehouse shelves.",
-          "The test was conducted on packaged food.",
-          "Results in one climate may not generalize to all climates.",
-          "Some products last longer than others.",
-          "The coating was applied by staff."
+          "L'essai a été réalisé sur les étagères d'un entrepôt.",
+          "L'essai portait sur des produits alimentaires emballés.",
+          "Les résultats obtenus sous un climat donné ne sont pas forcément généralisables à tous les climats.",
+          "Certains produits se conservent plus longtemps que d'autres.",
+          "Le revêtement a été appliqué par des employés."
         ],
         "explanation": "Les conditions de température et d’humidité pourraient modifier le résultat.",
         "hint": "Regarde où la conclusion va au-delà de l’échantillon."

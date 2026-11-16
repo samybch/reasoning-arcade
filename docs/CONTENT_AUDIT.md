@@ -43,3 +43,7 @@ Current GitHub tracking: [Issue #3 — pedagogical review](https://github.com/sa
 ## Source of truth
 
 The active single source is `src/content/questions.json`. The old standalone design prototype is archived at `reference/preview.html` and is not part of the deployed site.
+
+## Bilingual remediation — 2026-11-16
+
+Six GMAT Critical Reasoning exercises (`G-A-07` through `G-A-12`) had English prompts, contexts and answer options under the French locale. These have been fully translated without changing answer indexes, the English originals or core logic. Automated checks now flag obviously untranslated English phrases and duplicate choices. This is a preliminary content improvement, not independent pedagogical certification.
