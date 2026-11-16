@@ -10,6 +10,7 @@ Reference sites for later editorial verification:
 | Argument Lab | Reasoning and argumentation-related skills | Critical Reasoning-related skills |
 | Enough Info? | Conditions minimales-related skills | Data Sufficiency-related skills |
 | Quant Lab | Arithmetic, geometry and algebra-related skills from Calcul | Algebra and arithmetic Problem Solving-related skills in Quantitative Reasoning |
+| Reading Lab | Text comprehension: central idea, inference, evidence and author's position | Verbal Reading Comprehension: main idea, inference, support, structure |
 
 The current preview is a **learning experiment**, not an official simulation. Some questions are elementary and not indicative of official test difficulty. Review exact answer conventions for both exams before calling anything exam-like. No score equivalence, affiliation or endorsement is claimed.
 
@@ -49,3 +50,13 @@ FNEGE describes Calcul as word problems using elementary arithmetic, geometry an
 - GMAC: https://www.mba.com/exams/gmat-exam/about/exam-content
 
 Current catalog total: **58 bilingual pilot questions**. The GMAT quantitative path and TAGE Calcul path are now partially covered; the remaining gaps shown on the bilingual coverage page still need development.
+
+## 2026-11-16 — Original Reading Lab pilots
+
+Reading Lab adds twelve independently written **pilot** questions (`T-R-01`–`T-R-06`, `G-R-01`–`G-R-06`) based on four original passages translated into FR/EN. Each passage supports three questions on comprehension, inference, evidence or author intent. They remain preliminary targeted drills, not official or independently calibrated questions.
+
+Verified syllabus descriptions:
+- TAGE MAGE Compréhension de textes, FNEGE: https://www.tagemage.fr/page/sous-tests
+- GMAT Verbal Reading Comprehension, GMAC: https://www.mba.com/exams/gmat-exam/about/exam-content
+
+Current bank: **70 original bilingual pilot questions across five games**. TAGE MAGE Expression and most GMAT Data Insights formats are still not represented. No comprehensive exam simulation or official score equivalence.
