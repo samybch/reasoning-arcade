@@ -1,0 +1,33 @@
+# Independent editorial review — operating procedure
+
+**Current status: 58/58 original questions still require independent educational review.** A passing CI, key-regression test, or assistant first-pass check **is not a review approval**. The source of truth is `src/content/questions.json`; the review queue is `docs/editorial-review-ledger.json`.
+
+## One-question review
+
+Open the question in both FR and EN, including the context/statements, answer options, hint, summary explanation, and all three teaching steps. Use the appropriate exam owner’s current syllabus for *category alignment only*; never copy official or third-party exam problems.
+
+For every item, independently:
+1. **Solve without using the stored key.** For numerical items, recompute with units and boundary cases; for Data Sufficiency, test each statement alone and combined, with explicit counterexamples when insufficient; for arguments, examine competing assumptions; for patterns, challenge alternative simple rules.
+2. **Check all options.** Confirm exactly one best answer and that its indexed position or A–E classification matches the source.
+3. **Compare FR and EN.** Check that negations, quantifiers, numbers, ranges and distractor meanings survive translation unchanged. Read all three explanation stages.
+4. **Assess difficulty/time and rights.** Estimate only as *pilot*, note uncertainty, and confirm original authorship and allowed content licensing.
+5. **Record a decision.** Change the corresponding ledger entry from `pending` to `needs_changes`, `rejected`, or `approved`. For approval, set an identifiable reviewer and ISO review date, and change the question's source `status` to `reviewed` **in the same reviewed PR**. Do not mark approved without an actual independent review.
+
+Each ledger record contains a targeted **reviewFocus**, which is a review prompt, not a previously established defect. Add detailed evidence in the PR or a linked GitHub issue and record the issue URL when fixing ambiguity. If a question is removed, delete its ledger entry in the same PR. New questions require a new ledger entry.
+
+## Priority areas
+
+- **Patterns, T-L-12 and T-L-16:** prove uniqueness under the intended rule and inspect counterexamples.
+- **Spatial categorization, T-L-17:** ensure every named figure satisfies the center-symmetry requirement.
+- **Cost assumption, G-A-09:** savings must *strictly exceed* training costs to reduce total cost; the French explanation was clarified.
+- **Data Sufficiency, G-D-13–G-D-16:** review sufficiency classification, realistic positive counts, quantifiers and boundary values.
+- **Quant Lab:** verify every arithmetic result and five-choice distractor set independently; automated checks are helpful but insufficient.
+- **All categories:** many current questions are introductory and **not** equivalent to official exam difficulty.
+
+## Controlled learner testing
+
+Before public release, run a voluntary browser-based preview with a small group of learners. Ask them to report only the **question ID**, language, unclear wording, multiple plausible answers and usability problems. Do not request names, official exam results, contact details, or recorded browser progress. GitHub issue reports are optional and require an account; consent to external navigation must remain explicit.
+
+## Release distinction
+
+A squash merge into `main` indicates tested source code only. It does not authorize GitHub Pages publication or allow claims of official TAGE MAGE / GMAT scores. Publication continues to require the separate legal, privacy, accessibility and editorial gates in `docs/RELEASE_GATES.md`.
