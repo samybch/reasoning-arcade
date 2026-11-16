@@ -67,3 +67,7 @@ Use `main` as the sole source of truth. Create **one short-lived topic branch at
 ### Review mistaken answers locally
 
 Players may revisit mistakes from either exam pathway with **Review my mistakes / Revoir mes erreurs**. Incorrectly answered question IDs are stored in a bounded queue (up to 24) on the same device and removed after a correct retry. No user account, server synchronization, tracking or third-party analytics is required. Individual questions remain editorial `pilot` exercises; successful review does not imply official exam readiness.
+
+## Detailed pedagogical corrections
+
+Both `Enough Info?` (16 pilot questions) and `Argument Lab` (12 pilot questions) include original, bilingual, structured reasoning steps. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 28 remain `pilot` content: the presence of steps is not independent editorial approval.
