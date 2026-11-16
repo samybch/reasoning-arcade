@@ -15,14 +15,14 @@ export default async function CoveragePage({params}:{params:Promise<{locale:stri
   type CoverageRow={fr:string;en:string;n:number;detail?:string};
   const tage:CoverageRow[]=[
     {fr:'Compréhension de textes',en:'Reading comprehension',n:0},
-    {fr:'Calcul',en:'Mathematical problem solving',n:0},
+    {fr:'Calcul',en:'Mathematical problem solving',n:count('tage','quant-lab')},
     {fr:'Raisonnement / Argumentation',en:'Reasoning / Argumentation',n:count('tage','argument-lab')},
     {fr:'Conditions minimales',en:'Data sufficiency',n:count('tage','enough-info')},
     {fr:'Expression',en:'Written expression',n:0},
     {fr:'Logique',en:'Categorical logic',n:count('tage','code-logic'),detail:fr?`dont ${warmups} échauffements`:`${warmups} warm-ups included`}
   ];
   const gmat:CoverageRow[]=[
-    {fr:'Quantitative Reasoning — Problem Solving',en:'Quantitative Reasoning — Problem Solving',n:0},
+    {fr:'Quantitative Reasoning — Problem Solving',en:'Quantitative Reasoning — Problem Solving',n:count('gmat','quant-lab')},
     {fr:'Verbal — Reading Comprehension',en:'Verbal — Reading Comprehension',n:0},
     {fr:'Verbal — Critical Reasoning',en:'Verbal — Critical Reasoning',n:count('gmat','argument-lab')},
     {fr:'Data Insights — Data Sufficiency',en:'Data Insights — Data Sufficiency',n:count('gmat','enough-info')},
