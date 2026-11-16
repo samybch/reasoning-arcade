@@ -23,9 +23,18 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /reasoning-arcade
       - name: Assemble static route test server
         run: mkdir -p .site/reasoning-arcade && cp -r out/. .site/reasoning-arcade/
+      - name: Build offline editorial review packet
+        run: npm run build:review-pack
       - name: Install Chromium only
         run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
+      - name: Upload offline reviewer packet after successful tests
+        uses: actions/upload-artifact@v4
+        with:
+          name: reasoning-arcade-offline-review
+          path: review-pack/reasoning-arcade-editorial-review.html
+          if-no-files-found: error
+          retention-days: 14
       - name: Upload trace on failure
         if: failure()
         uses: actions/upload-artifact@v4

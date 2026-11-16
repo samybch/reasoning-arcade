@@ -31,5 +31,9 @@ Every `code-logic` question now requires three original stages in FR and EN: ide
 
 For `quant-lab` items use IDs `T-C-XX` (TAGE MAGE Calcul) or `G-Q-XX` (GMAT Quantitative Problem Solving), five answer choices indexed 0–4, and three detailed FR/EN solution steps. Confirm the correct answer by an **independent arithmetic calculation**, test distractors, and verify that the prompt does not rely on a calculator or missing contextual assumptions. These are original pilot exercises, never official exam items.
 
-## Reading Lab editorial requirements
-Use `T-R-XX` for original TAGE Compréhension de textes and `G-R-XX` for original GMAT Reading Comprehension pilot items. Every question needs a fully original passage (`context`) of at least 350 characters in **each** language, five plausible answers, one uniquely supported correct answer, one practical hint, and three original bilingual teaching stages. Reviewers must prove the answer using only the passage and document why competing choices fail. Shared passages are allowed across multiple questions. Do not reproduce past exam passages, protected texts or official score claims.
+## Mandatory review ledger
+
+Each question ID must also appear **exactly once** in `docs/editorial-review-ledger.json` with a matching answer key and review focus. Source status `reviewed` requires a corresponding `approved` decision, accountable reviewer and date; and vice versa. A CI pass does not imply reviewer approval. Follow `docs/EDITORIAL_REVIEW_PROTOCOL.md`. A new question with no ledger entry must fail CI rather than silently bypass the editorial gate.
+
+## Reading Lab
+Questions `T-R-XX` / `G-R-XX` need an original passage at least 350 characters long in each locale, five unique options, a uniquely passage-supported key, a hint and three detailed bilingual correction stages. Independent reviewers must test every distractor.

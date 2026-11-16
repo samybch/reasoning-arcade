@@ -90,10 +90,32 @@
 - [ ] Independent external math/translation review of 58 pilot items
 - [ ] Safely squash-merge the green CI branch; remove its merged branch when connector support becomes available
 
-## XYZ — Reading Lab (one consolidated branch)
-- [x] Five-game modular architecture without introducing separate application versions
-- [x] 12 original bilingual reading questions with four original passages and three-stage corrections
-- [x] FR/EN navigation, static routes, coverage counts and 320px browser regression tests
-- [ ] Obtain independent item-by-item subject-matter review across 70 pilot exercises
-- [ ] Squash-merge only after CI success and all applicable branch protections
-- [ ] Public website still requires separate explicit authorization and legal/accessibility gates
+## XYZ — Learning quality and consolidation (post Quant Lab)
+- [x] Fix persisted Quant Lab question IDs (`T-C` and `G-Q`) in both recent history and revision queue
+- [x] Guarantee that mixed mini-tests exercise every currently available game, without claiming official exam weighting
+- [x] Place unanswered questions from expired mini-tests in the existing local review queue, without counting fabricated attempts
+- [x] Add regression tests for browser reload, category coverage, queue limits, and elapsed sessions
+- [ ] Review pedagogical quality with real learners; no production website deployment before separate GO
+
+## XYZ — Pilot validity / readiness gate (2026-11-16)
+- [x] Record a review focus and pending reviewer decision for every one of the 58 source questions
+- [x] Enforce review-ledger completeness and agreement with the source answer key in CI
+- [x] Correct the FR strict-inequality wording for cost-savings question `G-A-09`
+- [x] Make timed practice budgets reflect each question's current pilot estimate rather than a fixed allowance
+- [ ] Secure independent FR/EN mathematical, linguistic and pedagogy sign-off for all 58 exercises
+- [ ] Run controlled, opt-in browser usability review and log non-sensitive issues only
+- [ ] Keep GitHub Pages untriggered until explicit owner GO plus legal and accessibility gates
+
+## XYZ — No-install human QA infrastructure (2026-11-16)
+- [x] Generate a self-contained offline HTML review workbook for all 58 bilingual pilot exercises
+- [x] Include independent-solve-first corrections, local issue notes, JSON export/import and catalog hash mismatch detection
+- [x] Upload the workbook from green CI as a limited-retention GitHub Actions artifact, not a public site deployment
+- [x] Test full review coverage, source HTML escaping, absence of network requests and stale-ledger failure
+- [ ] Have real independent reviewers test the workbook and assess the source questions; log evidence before approving content
+
+## XYZ — Reading Lab synchronized with source of truth
+- [x] Preserve the latest editorial ledger, offline review pack and corrected G-A-09 wording
+- [x] Add Reading Lab (12 original FR/EN questions) and 12 pending editorial records
+- [x] Expand offline review workbook and browser QA to 70 questions
+- [ ] Squash merge only after successful GitHub checks and branch protections
+- [ ] Publish website only with a separate explicit release decision

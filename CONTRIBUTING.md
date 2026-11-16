@@ -32,5 +32,5 @@ Set `alignment` to `warmup` only for a clearly identified introductory exercise 
 
 Each original pilot question offers a link to the GitHub `question-feedback.yml` issue form. It identifies only the question ID and selected language in the URL; GitHub login is required to submit. Review reports for ambiguity, incorrect keys, misleading wording, translation, accessibility or incorrect exam categorization, and log the editorial decision. Do not request users' test results, personal information or proprietary exam content.
 
-## Reading Lab submissions
-Submit an original passage in both FR/EN plus a question set. Include `T-R-XX` or `G-R-XX` identifiers, the passage evidence supporting each correct choice, three worked bilingual explanation stages, and distractors that are plausible but contradicted or unsupported. Confirm that the passage and options are original and may be published under the repo's content license.
+## Original Reading Lab contributions
+Use IDs `T-R-XX` or `G-R-XX`, provide a new passage in FR and EN with five options per question, supporting evidence and detailed corrections. Never reproduce official exam passages.

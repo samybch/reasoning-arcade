@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.mjs",
     "validate:questions": "node scripts/validate-questions.mjs",
+    "build:review-pack": "node scripts/build-review-pack.mjs",
     "test:e2e": "playwright test"
   },
   "dependencies": {

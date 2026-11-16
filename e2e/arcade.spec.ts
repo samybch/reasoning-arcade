@@ -307,6 +307,52 @@ test('coverage now lists six quantitative pilots for each track',async({page})=>
   await expect(page.locator('.coverage-row')).toHaveCount(14);
 });
 
+test('Quant Lab mistake history survives browser reload for both exams',async({page})=>{
+  for(const [exam,prefix] of [['tage','T-C'],['gmat','G-Q']] as const){
+    await page.goto(PREFIX+`/en/play/quant-lab/?exam=${exam}&mode=game`);
+    const firstPrompt=await page.locator('#question-title').textContent();
+    await page.locator('.answer-list button').first().click();
+    await page.getByRole('button',{name:/Submit/}).click();
+    await expect(page.locator('.feedback.bad')).toBeVisible();
+    await page.reload();
+    const nextPrompt=await page.locator('#question-title').textContent();
+    expect(nextPrompt).not.toBe(firstPrompt);
+    await page.locator('.answer-list button').first().click();
+    await page.getByRole('button',{name:/Submit/}).click();
+    await expect(page.locator('.feedback.bad')).toBeVisible();
+    const data=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+    expect(data.recentQuestionIds.filter((id:string)=>id.startsWith(prefix))).toHaveLength(2);
+    expect(data.pendingReviewIds.filter((id:string)=>id.startsWith(prefix))).toHaveLength(2);
+    await page.goto(PREFIX+'/en/');
+    if(exam==='gmat')await page.getByRole('button',{name:/GMAT/}).click();
+    await expect(page.locator('.review-cta')).toContainText('2 exercise(s)');
+  }
+});
+test('mixed mini-tests include all available skills for TAGE and GMAT',async({page})=>{
+  for(const [exam,expected] of [['tage',['A','C','D','L']],['gmat',['A','D','Q']]] as const){
+    await page.goto(PREFIX+`/en/practice/?exam=${exam}`);
+    for(let i=0;i<6;i++){
+      await expect(page.locator('#question-title')).toBeVisible();
+      await page.locator('.answer-list button').first().click();
+      await page.getByRole('button',{name:/Submit/}).click();
+    }
+    await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
+    const seen=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}').recentQuestionIds as string[]);
+    const categories=[...new Set(seen.slice(-6).map(id=>id.split('-')[1]))].sort();
+    expect(categories).toEqual(expected);
+  }
+});
+
+test('Quant Lab clock reflects the actual pilot question budget and warns that it is not official',async({page})=>{
+  await page.goto(PREFIX+'/en/play/quant-lab/?exam=gmat&mode=exam');
+  await expect(page.locator('#question-title')).toBeVisible();
+  const clock=await page.locator('.timer').textContent();
+  const parts=(clock||'').split(':').map(Number);
+  expect(parts).toHaveLength(2);
+  expect(parts[0]*60+parts[1]).toBeGreaterThan(500); // Five quantitative questions, unlike the former fixed 400s.
+  await expect(page.locator('.quiz-card')).toContainText("not an official exam limit");
+});
+
 test('Reading Lab appears on both tracks with 5 response choices and explanations',async({page})=>{
   await page.goto(PREFIX+'/fr/');
   await expect(page.locator('.hero-stats')).toContainText('5 jeux');

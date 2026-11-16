@@ -8,3 +8,6 @@ out/
 coverage/
 playwright-report/
 test-results/
+
+# Generated review pack; download the GitHub Actions artifact instead
+review-pack/

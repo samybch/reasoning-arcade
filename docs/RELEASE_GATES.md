@@ -50,8 +50,19 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] Math answer keys checked by executable arithmetic invariants and per-item FR/EN correction steps
 - [ ] Independent expert review of quantitative item difficulty, ambiguity and alignment before any official-syllabus claims
 
-## Reading comprehension
-- [x] Original bilingual Reading Lab pilots with four independently authored passages
-- [x] Six questions per track; semantic answer-key checks; 320px/FR/EN browser coverage
-- [ ] Independent editorial and translation review of all four passages and twelve questions
-- [ ] Verify readability and cognitive load on volunteer learners before public claims of exam fidelity
+## Traceable question review / timer
+- [x] 58/58 pilot review records with accountable reviewer/date fields that cannot be marked approved in CI without matching content status
+- [x] Separate documented independent review protocol and focused risk questions, including counterexample checks
+- [x] Show timer budgets derived from draft question estimates with explicit non-official disclaimer
+- [ ] Actual independent reviewer decisions and evidence for all source questions before public exam-preparation claims
+
+## Offline review readiness
+- [x] Build a single-file FR/EN offline workbook with every question and a hidden reference solution
+- [x] Enable local JSON observations export/import, catalog SHA-256 match and no automatic remote transmission
+- [x] Attach the workbook as a downloadable GitHub Actions artifact after successful CI (without deploying GitHub Pages)
+- [ ] Collect actual independent reviewer reports, triage genuine ambiguities and record accountable approvals
+
+## Reading Lab
+- [x] Four original reading passages, twelve pilot questions and bilingual worked stages
+- [x] Twelve pending ledger records and inclusion in the offline reviewer workbook
+- [ ] Independent external FR/EN correctness review, ambiguity checks and rights signoff

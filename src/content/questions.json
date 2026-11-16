@@ -999,7 +999,7 @@
           "Les économies liées à la baisse des départs dépasseront le coût supplémentaire de la formation.",
           "La formation exige un consultant externe."
         ],
-        "explanation": "Le coût total ne baisse que si les économies compensent le coût de la formation.",
+        "explanation": "Les coûts totaux ne diminuent que si les économies réalisées grâce à la baisse des départs dépassent le coût additionnel de la formation. Une simple égalité ne réduit pas les coûts.",
         "hint": "Compare économies et coûts ajoutés.",
         "reviewSteps": [
           "Le plan prétend réduire les coûts totaux en limitant les départs grâce à la formation.",

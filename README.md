@@ -74,5 +74,23 @@ All **70 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough 
 
 **Quant Lab** includes 12 original pilot word problems with five choices, bilingual hints and three-stage corrections. This extends skill practice into TAGE MAGE Calcul and current GMAT Quantitative Reasoning but does not constitute a complete exam simulation.
 
+## Practice quality and persistence (XYZ)
+
+- Mixed six-question mini-tests sample all question-game categories currently available in the chosen exam track (four for TAGE MAGE; three for GMAT), without implying an official section weighting or scoring method.
+- Browser progress keeps a bounded history for every question ID, including the new `T-C-xx` and `G-Q-xx` Quant Lab identifiers, across page reloads.
+- When the mini-test time limit expires, unanswered question IDs are added to the **local revision queue**, without counting them as attempted answers. The existing progress storage format (`v1`) is unchanged.
+
+## Editorial review and realistic pilot timing (XYZ)
+
+Each of the **70 pilot questions** now has a distinct pending-review record in [the editorial review ledger](docs/editorial-review-ledger.json), with a targeted point for human scrutiny. See [the independent review procedure](docs/EDITORIAL_REVIEW_PROTOCOL.md) for bilingual checks, numerical counterexamples and approval rules. Machine checks do **not** replace independent review.
+
+Timed mini-tests use the sum of the selected questions' **estimated pilot solving times**, rather than imposing the same 80-second allowance for all puzzles. Those estimates have not been calibrated to official TAGE MAGE or GMAT section durations.
+
+## Offline bilingual review (no installation or public website)
+
+After the `CI / test` job succeeds, open that GitHub Actions run and download the `reasoning-arcade-offline-review` artifact. Unzip it and open `reasoning-arcade-editorial-review.html` in a browser. This **self-contained HTML file** displays all 70 pilot questions side by side in FR/EN. It hides answer keys until the reviewer expands each solution, records preliminary observations, and exports/imports a local JSON feedback file. **No JavaScript packages, account on the reviewing computer, network connection or hosted site are required to open it.** Alternatively, run `npm run build:review-pack` on a developer machine.
+
+The export contains review findings only, **not** independent approvals. See [the offline review guide](docs/OFFLINE_REVIEW_GUIDE.md) and [the editorial protocol](docs/EDITORIAL_REVIEW_PROTOCOL.md). The original public-source licensing remains unchanged; this is a QA worksheet, not a public release.
+
 ## Reading Lab
-Two original reading passages per exam pathway, each with three original FR/EN questions and corrections, now provide limited practice in main idea, inference, supporting evidence and author purpose. Four passages, 12 questions; no official text was reproduced. Reading Lab remains introductory and **not** a full official exam simulation.
+Four original FR/EN passages support 12 pilot questions on main idea, evidence, inference and author purpose. They are included in the 70-question offline editorial workbook; none is independently approved.
