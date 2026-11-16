@@ -55,3 +55,9 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] Separate documented independent review protocol and focused risk questions, including counterexample checks
 - [x] Show timer budgets derived from draft question estimates with explicit non-official disclaimer
 - [ ] Actual independent reviewer decisions and evidence for all source questions before public exam-preparation claims
+
+## Offline review readiness
+- [x] Build a single-file FR/EN offline workbook with every question and a hidden reference solution
+- [x] Enable local JSON observations export/import, catalog SHA-256 match and no automatic remote transmission
+- [x] Attach the workbook as a downloadable GitHub Actions artifact after successful CI (without deploying GitHub Pages)
+- [ ] Collect actual independent reviewer reports, triage genuine ambiguities and record accountable approvals
