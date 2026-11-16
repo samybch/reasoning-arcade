@@ -49,3 +49,12 @@
 .review-cta h2{font-size:23px;letter-spacing:-.5px;margin:4px 0}
 .review-cta p:not(.eyebrow){margin:5px 0 0;color:var(--muted)}
 @media(max-width:620px){.review-cta{flex-direction:column;align-items:stretch}}
+
+/* Data sufficiency: structured feedback, visible only after answer/exam completion. */
+.reasoning-breakdown{margin:15px 0 0;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink)}
+.reasoning-breakdown h3{font-size:15px;margin:0 0 11px;line-height:1.4}
+.reasoning-breakdown ol{padding-left:21px;margin:0;display:grid;gap:10px}
+.reasoning-breakdown li::marker{color:var(--primary);font-weight:800}
+.reasoning-breakdown li strong{font-size:13px}
+.reasoning-breakdown li p{margin:3px 0 0;color:var(--muted);font-size:13px;line-height:1.6}
+.review-answer{font-size:13px;font-weight:750}

@@ -28,7 +28,7 @@ test('game question accepts an answer and shows pedagogical correction',async({p
   await expect(page.locator('.answer-list button').first()).toHaveAttribute('aria-pressed','true');
   await page.getByRole('button',{name:/Valider/}).click();
   await expect(page.locator('.feedback')).toBeVisible();
-  await expect(page.locator('.feedback p')).not.toBeEmpty();
+  await expect(page.locator('.feedback > p').last()).not.toBeEmpty();
 });
 
 test('timed GMAT mini-test gives results after six questions',async({page})=>{
@@ -172,4 +172,26 @@ test('review page stays consistent with progress reset and missing local IDs',as
   page.once('dialog',d=>d.accept());
   await page.getByRole('button',{name:/Effacer/}).click();
   await expect(page.getByRole('link',{name:/Revoir mes erreurs/})).toHaveCount(0);
+});
+
+test('data sufficiency gives 3 review steps only after submitting in game mode',async({page})=>{
+  await page.goto(PREFIX+'/fr/play/enough-info/?exam=tage&mode=game');
+  await expect(page.locator('.reasoning-breakdown')).toHaveCount(0);
+  await page.locator('.answer-list button').first().click();
+  await page.getByRole('button',{name:/Valider/}).click();
+  await expect(page.locator('.reasoning-breakdown')).toBeVisible();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+  await expect(page.locator('.feedback')).toContainText('Réponse attendue');
+});
+test('timed data sufficiency hides explanations until final results, including English steps',async({page})=>{
+  await page.goto(PREFIX+'/en/play/enough-info/?exam=gmat&mode=exam');
+  for(let i=0;i<5;i++){
+    await expect(page.locator('.reasoning-breakdown')).toHaveCount(0);
+    await page.locator('.answer-list button').first().click();
+    await page.getByRole('button',{name:/Submit/}).click();
+  }
+  await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
+  await expect(page.locator('.reasoning-breakdown')).toHaveCount(5);
+  await expect(page.locator('.reasoning-breakdown').first().locator('li')).toHaveCount(3);
+  await expect(page.locator('.review-answer').first()).toContainText('Correct answer');
 });

@@ -53,3 +53,9 @@
 - [x] Tests cover queue limits, cross-track isolation, stale IDs and successful retry
 - [ ] Independent expert/editorial check of all 46 question statements and translations
 - [ ] Validate the entire draft PR in CI and squash-merge into `main`; keep Pages untriggered
+
+## XYZ — pedagogical correction quality
+- [x] All 16 TAGE MAGE / GMAT sufficiency questions receive a 3-step FR/EN explanation: statement (1), statement (2), verdict
+- [x] Game mode reveals structured solutions after answer; exam mode defers all explanations until results
+- [x] All exam review entries state the correct choice explicitly
+- [ ] Independent reviewer approves the logical counterexamples and wording; all items remain pilots

@@ -45,3 +45,22 @@ test('all original pilot items have an explicit, non-official alignment class',(
   const invalid={...QUESTIONS[0],alignment:'official'};
   assert.ok(validateQuestions(QUESTIONS.map(q=>q.id===invalid.id?invalid:q)).some(e=>e.includes('alignment')));
 });
+
+test('all 16 data-sufficiency items have 3 detailed bilingual review stages',()=>{
+  const items=QUESTIONS.filter(q=>q.game==='enough-info');
+  assert.equal(items.length,16);
+  for(const q of items){
+    for(const lang of ['fr','en']){
+      const stages=q.content[lang].reviewSteps;
+      assert.ok(Array.isArray(stages),q.id+' '+lang);
+      assert.equal(stages.length,3,q.id+' '+lang);
+      assert.ok(stages.every(s=>typeof s==='string'&&s.trim().length>=40),q.id+' '+lang);
+    }
+  }
+});
+test('missing bilingual reasoning stages fail schema validation',()=>{
+  const bad=QUESTIONS.map(q=>q.id==='G-D-14'?{
+    ...q,content:{...q.content,fr:{...q.content.fr,reviewSteps:['Statement 1','','']}}
+  }:q);
+  assert.ok(validateQuestions(bad).some(e=>e.includes('G-D-14')&&e.includes('review steps')));
+});

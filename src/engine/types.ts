@@ -9,6 +9,7 @@ export interface QuestionText {
   statements?: string[];
   explanation: string;
   hint: string;
+  reviewSteps?: [string,string,string]; // Statement (1), statement (2), combined verdict.
 }
 export interface Question {
   id:string; exam:Exam; game:Game; competency:string; difficulty:Level;

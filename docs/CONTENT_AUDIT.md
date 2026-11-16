@@ -51,3 +51,7 @@ Six GMAT Critical Reasoning exercises (`G-A-07` through `G-A-12`) had English pr
 ## Traceable answer-key matrix
 
 A 36-item answer-key and reasoning matrix was added in [QUESTION_REVIEW_MATRIX.md](QUESTION_REVIEW_MATRIX.md), with automated reference checks. This is **first-pass internal verification only**, not independent exam-level quality certification.
+
+## 16 bilingual step-by-step sufficiency corrections (16 November 2026)
+
+The 16 pilot data-sufficiency items now have structured FR/EN correction stages for (1) alone, (2) alone, and the combined A–E verdict. The text includes counterexamples for insufficient statements, which are more informative than a short answer-key explanation. Structural checks and two browser scenarios were added. This **does not** amount to independent pedagogical approval: keep all 46 items in `pilot` status until reviewed.

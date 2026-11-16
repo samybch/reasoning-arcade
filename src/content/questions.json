@@ -952,7 +952,12 @@
           "x est pair (entier)."
         ],
         "explanation": "(1) impose x = 8. (2) admet de nombreux entiers pairs.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), x + 3 = 11 donne x = 8. La valeur est unique : (1) suffit.",
+          "Avec (2), x peut être 2 ou 10, par exemple. La parité seule ne fixe pas sa valeur.",
+          "Réponse A : seule l'information (1) suffit. Il n'est pas nécessaire de combiner les deux."
+        ]
       },
       "en": {
         "prompt": "What is the value of real number x?",
@@ -961,7 +966,12 @@
           "x is an even integer."
         ],
         "explanation": "(1) fixes x = 8. (2) allows many even integers.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), x + 3 = 11 implies x = 8. The value is unique: (1) is sufficient.",
+          "With (2), x could be 2 or 10, for instance. Evenness does not determine its value.",
+          "Answer A: only statement (1) is sufficient. Combining the statements is unnecessary."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -983,7 +993,12 @@
           "2x = 16"
         ],
         "explanation": "(1) ne donne pas une valeur unique ; (2) impose x = 8.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), plusieurs valeurs conviennent, par exemple x = 1 ou x = 10. Ce n'est pas suffisant.",
+          "Avec (2), 2x = 16 impose x = 8. La valeur est unique : (2) suffit.",
+          "Réponse B : seule l'information (2) fixe la valeur de x."
+        ]
       },
       "en": {
         "prompt": "What is the value of real number x?",
@@ -992,7 +1007,12 @@
           "2x = 16"
         ],
         "explanation": "(1) does not fix a unique value; (2) fixes x = 8.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), many values work, such as x = 1 or x = 10. This is insufficient.",
+          "With (2), 2x = 16 gives x = 8. The value is unique: (2) is sufficient.",
+          "Answer B: only statement (2) determines x."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1014,7 +1034,12 @@
           "y = 4"
         ],
         "explanation": "Chaque information laisse une inconnue libre ; ensemble, x = 6.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), x peut valoir 4 si y = 6, ou 7 si y = 3. (1) ne suffit pas.",
+          "Avec (2), y = 4 ne donne aucune équation pour x. (2) ne suffit pas.",
+          "En combinant x + y = 10 et y = 4, on trouve x = 6. Réponse C."
+        ]
       },
       "en": {
         "prompt": "What is x, given real numbers x and y?",
@@ -1023,7 +1048,12 @@
           "y = 4"
         ],
         "explanation": "Each statement alone leaves x undetermined; together x = 6.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), x could equal 4 if y = 6, or 7 if y = 3. (1) is insufficient.",
+          "With (2), y = 4 gives no equation for x. (2) is insufficient.",
+          "Together, x + y = 10 and y = 4 imply x = 6. Answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1045,7 +1075,12 @@
           "x − 2 = 3"
         ],
         "explanation": "(1) avec x positif fixe x = 5 ; (2) fixe aussi x = 5.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), x² = 25 donne ±5, mais l'énoncé impose x > 0 : x = 5. (1) suffit.",
+          "Avec (2), x − 2 = 3 donne directement x = 5. (2) suffit.",
+          "Réponse D : chacune des deux informations suffit indépendamment, en conservant la contrainte x > 0."
+        ]
       },
       "en": {
         "prompt": "What is x, given x > 0?",
@@ -1054,7 +1089,12 @@
           "x − 2 = 3"
         ],
         "explanation": "(1) and x > 0 fix x = 5; (2) also fixes x = 5.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), x² = 25 gives ±5, but the question says x > 0: x = 5. (1) is sufficient.",
+          "With (2), x − 2 = 3 directly gives x = 5. (2) is sufficient.",
+          "Answer D: each statement independently suffices, using the original condition x > 0."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1076,7 +1116,12 @@
           "n < 8"
         ],
         "explanation": "Ensemble, n peut valoir 5, 6 ou 7 : la parité n’est pas déterminée.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), n peut être 5 (impair) ou 6 (pair) : on ne peut décider.",
+          "Avec (2), n peut être 6 (pair) ou 7 (impair) : on ne peut décider.",
+          "Ensemble, les entiers n = 5, 6 et 7 restent possibles. La réponse à « n est-il pair ? » varie : E."
+        ]
       },
       "en": {
         "prompt": "Is integer n even?",
@@ -1085,7 +1130,12 @@
           "n < 8"
         ],
         "explanation": "Together, n can be 5, 6, or 7; parity is not fixed.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), n could be 5 (odd) or 6 (even): the answer is uncertain.",
+          "With (2), n could be 6 (even) or 7 (odd): the answer is uncertain.",
+          "Together, n can still be 5, 6 or 7. The answer to 'Is n even?' varies: E."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1107,7 +1157,12 @@
           "3x + 6 = 0"
         ],
         "explanation": "(1) laisse de nombreuses valeurs ; (2) donne x = −2.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), x peut être −1 ou −2, entre autres. Le signe ne suffit pas à déterminer sa valeur.",
+          "Avec (2), 3x + 6 = 0 impose x = −2. (2) suffit seule.",
+          "Réponse B : la seconde information détermine x, la première non."
+        ]
       },
       "en": {
         "prompt": "What is real number x?",
@@ -1116,7 +1171,12 @@
           "3x + 6 = 0"
         ],
         "explanation": "(1) allows many values; (2) fixes x = −2.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), x could be −1 or −2, among other possibilities. Its sign is insufficient.",
+          "With (2), 3x + 6 = 0 gives x = −2. (2) is sufficient.",
+          "Answer B: statement (2) fixes x, while statement (1) does not."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1138,7 +1198,12 @@
           "3x = 21"
         ],
         "explanation": "La positivité permet de déduire x = 7 de (1) ; (2) donne aussi x = 7.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), x² = 49 donne x = ±7 ; l'énoncé précise x > 0, donc x = 7.",
+          "Avec (2), 3x = 21 donne directement x = 7.",
+          "Réponse D : les deux informations, testées séparément avec la positivité donnée, suffisent chacune."
+        ]
       },
       "en": {
         "prompt": "What is x, given that x is a positive real number?",
@@ -1147,7 +1212,12 @@
           "3x = 21"
         ],
         "explanation": "Positivity fixes x = 7 from (1); (2) also fixes x = 7.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), x² = 49 gives x = ±7; the question specifies x > 0, so x = 7.",
+          "With (2), 3x = 21 directly implies x = 7.",
+          "Answer D: tested independently with the given positivity condition, either statement suffices."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1169,7 +1239,12 @@
           "x² = 4"
         ],
         "explanation": "(1) implique x > 0. (2) permet x = 2 ou x = −2.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), x³ > 0 implique x > 0 pour un réel : la réponse à la question est forcément « oui ».",
+          "Avec (2), x² = 4 laisse x = 2 (oui) ou x = −2 (non). Cette information ne suffit pas.",
+          "Réponse A : (1) seule permet de répondre avec certitude, même sans connaître la valeur exacte de x."
+        ]
       },
       "en": {
         "prompt": "Is x positive, given x is a nonzero real number?",
@@ -1178,7 +1253,12 @@
           "x² = 4"
         ],
         "explanation": "(1) implies x > 0; (2) allows either x = 2 or x = −2.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), x³ > 0 implies x > 0 for a real number: the answer is definitely yes.",
+          "With (2), x² = 4 permits x = 2 (yes) or x = −2 (no). It is insufficient.",
+          "Answer A: statement (1) alone gives a certain yes/no answer without specifying x."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1200,7 +1280,12 @@
           "p = 5"
         ],
         "explanation": "Il faut connaître à la fois le nombre d’articles et le prix unitaire : 8 × 5 = 40.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), n = 8 mais le prix p n'est pas connu : le coût pourrait être 16 ou 40.",
+          "Avec (2), p = 5 mais n reste libre : le coût pourrait être 5 ou 40.",
+          "Ensemble, 8 articles à 5 unités monétaires coûtent 8 × 5 = 40. Réponse C."
+        ]
       },
       "en": {
         "prompt": "What is the total cost of n identical items, given n is a positive integer and unit price p is positive?",
@@ -1209,7 +1294,12 @@
           "p = 5"
         ],
         "explanation": "Both item count and unit price are necessary: 8 × 5 = 40.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), n = 8 but unit price p is unknown: the total could be 16 or 40.",
+          "With (2), p = 5 but n remains unknown: the total could be 5 or 40.",
+          "Together, 8 items priced at 5 currency units each cost 8 × 5 = 40. Answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1231,7 +1321,12 @@
           "x < 0"
         ],
         "explanation": "(1) laisse ±3 ; (2) seule ne fixe rien ; ensemble, x = −3.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), x² = 9 implique x = 3 ou x = −3 : deux valeurs possibles.",
+          "Avec (2), x < 0 laisse de nombreux nombres négatifs possibles.",
+          "Ensemble, seule la valeur x = −3 vérifie les deux contraintes. Réponse C."
+        ]
       },
       "en": {
         "prompt": "What is the value of real number x?",
@@ -1240,7 +1335,12 @@
           "x < 0"
         ],
         "explanation": "(1) allows ±3; (2) alone is not enough; together they fix x = −3.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), x² = 9 allows x = 3 or x = −3: two possibilities.",
+          "With (2), x < 0 still allows many negative numbers.",
+          "Together, only x = −3 meets both conditions. Answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1262,7 +1362,12 @@
           "n est divisible par 9."
         ],
         "explanation": "Un multiple de 6 ou de 9 est nécessairement divisible par 3.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), tout multiple de 6 est aussi multiple de 3 : la réponse est toujours « oui ».",
+          "Avec (2), tout multiple de 9 est aussi multiple de 3 : la réponse est encore toujours « oui ».",
+          "Réponse D : chacune permet indépendamment une réponse certaine à la question fermée."
+        ]
       },
       "en": {
         "prompt": "Is positive integer n divisible by 3?",
@@ -1271,7 +1376,12 @@
           "n is divisible by 9."
         ],
         "explanation": "Any multiple of 6 or 9 is divisible by 3.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), any multiple of 6 is divisible by 3: the answer is always yes.",
+          "With (2), any multiple of 9 is divisible by 3: the answer is also always yes.",
+          "Answer D: either statement independently settles the yes/no question."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1293,7 +1403,12 @@
           "x < 2"
         ],
         "explanation": "Même ensemble, 0 < x < 2 permet x = 0,5 ou x = 1,5 : on ne peut trancher.",
-        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+        "hint": "Teste (1) puis (2) isolément avant de les combiner.",
+        "reviewSteps": [
+          "Avec (1), x = 0,5 conduit à « non », tandis que x = 1,5 conduit à « oui ». (1) ne suffit pas.",
+          "Avec (2), les valeurs 0,5 et 1,5 vérifient aussi x < 2 : (2) ne suffit pas.",
+          "Même avec 0 < x < 2, ces deux contre-exemples restent possibles. Réponse E."
+        ]
       },
       "en": {
         "prompt": "Is real number x greater than 1?",
@@ -1302,7 +1417,12 @@
           "x < 2"
         ],
         "explanation": "Even together, 0 < x < 2 allows x = 0.5 or x = 1.5, so the answer is unknown.",
-        "hint": "Test (1) and (2) separately before combining them."
+        "hint": "Test (1) and (2) separately before combining them.",
+        "reviewSteps": [
+          "With (1), x = 0.5 gives no, while x = 1.5 gives yes. (1) is insufficient.",
+          "With (2), both 0.5 and 1.5 also satisfy x < 2. (2) is insufficient.",
+          "Even together, 0 < x < 2 admits both counterexamples. Answer E."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1558,7 +1678,12 @@
           "La moyenne des cinq montants est supérieure à 100 €."
         ],
         "explanation": "(1) suffit : si au moins trois montants dépassent 100 €, celui du milieu dépasse 100 €. (2) ne suffit pas : une valeur très élevée peut faire monter la moyenne sans changer une médiane faible.",
-        "hint": "Classe cinq valeurs par ordre croissant et cherche la troisième."
+        "hint": "Classe cinq valeurs par ordre croissant et cherche la troisième.",
+        "reviewSteps": [
+          "Avec (1), au moins trois montants dépassent 100 €. Le troisième montant une fois trié, donc la médiane, dépasse 100 € : « oui ».",
+          "Avec (2), cinq valeurs 1, 2, 3, 4 et 1 000 ont une moyenne > 100 € mais une médiane de 3 €. D'autres séries ont les deux > 100 € : impossible de conclure.",
+          "Réponse A : la condition sur trois des cinq montants suffit à elle seule, contrairement à la moyenne."
+        ]
       },
       "en": {
         "prompt": "Is the median of five distinct transaction amounts greater than €100?",
@@ -1567,7 +1692,12 @@
           "The mean of the five amounts exceeds €100."
         ],
         "explanation": "(1) is sufficient: if at least three amounts exceed €100, the middle amount exceeds €100. (2) is not sufficient: one very large amount can raise the mean while the median stays low.",
-        "hint": "Sort five values and identify the third one."
+        "hint": "Sort five values and identify the third one.",
+        "reviewSteps": [
+          "With (1), at least three amounts exceed €100. The third value in sorted order—the median—must exceed €100: yes.",
+          "With (2), the five values 1, 2, 3, 4 and 1,000 have a mean above €100 but a median of 3. Other sets have both above €100, so the mean alone is insufficient.",
+          "Answer A: knowing three of five amounts exceed the threshold suffices; the mean does not."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1589,7 +1719,12 @@
           "La boutique a reçu 2 400 visites en avril et 1 000 en mars."
         ],
         "explanation": "Chaque information prise seule ne permet pas de calculer les deux taux. Ensemble, le taux d'avril est de 120/2 400 = 5 %, contre 100/1 000 = 10 % en mars : la réponse est oui.",
-        "hint": "Un taux de conversion est le rapport entre les commandes et les visites."
+        "hint": "Un taux de conversion est le rapport entre les commandes et les visites.",
+        "reviewSteps": [
+          "Avec (1), les nombres de commandes sont connus, mais pas les visites nécessaires au calcul des deux taux.",
+          "Avec (2), les visites sont connues, mais pas les commandes : aucun taux de conversion ne peut être calculé.",
+          "Ensemble : avril = 120/2 400 = 5 % et mars = 100/1 000 = 10 %. Avril est bien plus faible : réponse C."
+        ]
       },
       "en": {
         "prompt": "Was an online store's conversion rate lower in April than in March?",
@@ -1598,7 +1733,12 @@
           "The store received 2,400 visits in April and 1,000 in March."
         ],
         "explanation": "Neither statement alone gives both conversion rates. Together, April's rate is 120/2,400 = 5%, versus 100/1,000 = 10% in March: yes.",
-        "hint": "A conversion rate is orders divided by visits."
+        "hint": "A conversion rate is orders divided by visits.",
+        "reviewSteps": [
+          "With (1), we know order counts but not the visit counts needed for the two rates.",
+          "With (2), we know visit counts but not the orders: neither conversion rate can be calculated.",
+          "Together: April = 120/2,400 = 5%, March = 100/1,000 = 10%. April is indeed lower: answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1620,7 +1760,12 @@
           "La proportion de ces abonnements effectivement renouvelés était aussi plus élevée au deuxième trimestre."
         ],
         "explanation": "Le nombre de renouvellements vaut le nombre d'abonnements arrivant à échéance multiplié par le taux de renouvellement. Chaque donnée seule est insuffisante, mais si ces deux facteurs non négatifs augmentent strictement, leur produit augmente.",
-        "hint": "Exprime le nombre de renouvellements comme le produit d'un effectif et d'un taux."
+        "hint": "Exprime le nombre de renouvellements comme le produit d'un effectif et d'un taux.",
+        "reviewSteps": [
+          "Avec (1), le nombre d'échéances augmente, mais le taux de renouvellement pourrait baisser suffisamment pour réduire le nombre de renouvellements.",
+          "Avec (2), le taux augmente, mais le nombre d'échéances pourrait chuter : le nombre de renouvellements n'est pas fixé.",
+          "Ensemble, les deux facteurs non négatifs « échéances × taux » augmentent strictement ; leur produit augmente donc strictement. Réponse C."
+        ]
       },
       "en": {
         "prompt": "Did the number of renewed subscriptions increase from the first quarter to the second?",
@@ -1629,7 +1774,12 @@
           "The proportion of those subscriptions actually renewed was also higher in the second quarter."
         ],
         "explanation": "Renewals equal subscriptions due times the renewal rate. Each statement alone is insufficient, but if both nonnegative factors increase strictly, their product increases.",
-        "hint": "Express the number of renewals as a count multiplied by a rate."
+        "hint": "Express the number of renewals as a count multiplied by a rate.",
+        "reviewSteps": [
+          "With (1), more subscriptions fall due, but the renewal rate might drop enough to reduce renewals.",
+          "With (2), a higher rate does not suffice because the number falling due might shrink sharply.",
+          "Together, both nonnegative factors, 'subscriptions due × renewal rate', increase strictly, so their product increases. Answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -1651,7 +1801,12 @@
           "La différence entre la valeur maximale et la valeur minimale est strictement positive."
         ],
         "explanation": "Chacune des deux informations assure que toutes les observations ne sont pas identiques. L'écart-type est alors strictement positif ; chacune suffit seule.",
-        "hint": "L'écart-type est nul uniquement si toutes les valeurs sont égales."
+        "hint": "L'écart-type est nul uniquement si toutes les valeurs sont égales.",
+        "reviewSteps": [
+          "Avec (1), deux valeurs différentes impliquent une dispersion non nulle, donc un écart-type strictement positif.",
+          "Avec (2), maximum − minimum > 0 signifie que toutes les valeurs ne sont pas égales ; l'écart-type est positif.",
+          "Réponse D : chacun des deux constats suffit à montrer que la variance, et donc l'écart-type, est positive."
+        ]
       },
       "en": {
         "prompt": "Is the standard deviation of a numerical data set with at least two observations strictly positive?",
@@ -1660,7 +1815,12 @@
           "The difference between the maximum and minimum is strictly positive."
         ],
         "explanation": "Each statement alone establishes that not all observations are identical. The standard deviation must therefore be positive; either statement is sufficient.",
-        "hint": "Standard deviation is zero only if all observations are identical."
+        "hint": "Standard deviation is zero only if all observations are identical.",
+        "reviewSteps": [
+          "With (1), at least two different values imply nonzero spread and therefore positive standard deviation.",
+          "With (2), maximum − minimum > 0 means the observations are not all identical, so standard deviation is positive.",
+          "Answer D: each statement alone guarantees positive variance and thus positive standard deviation."
+        ]
       }
     },
     "alignment": "skill-practice"
