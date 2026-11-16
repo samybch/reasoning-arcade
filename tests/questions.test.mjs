@@ -36,3 +36,12 @@ test('validator flags duplicate IDs, missing translations and repeated answer op
   }};
   assert.ok(validateQuestions([...QUESTIONS,english]).some(x=>x.includes('untranslated')));
 });
+
+test('all original pilot items have an explicit, non-official alignment class',()=>{
+  const warmups=QUESTIONS.filter(q=>q.alignment==='warmup');
+  assert.equal(warmups.length,6);
+  assert.deepEqual(warmups.map(q=>q.id),['T-L-01','T-L-02','T-L-03','T-L-04','T-L-05','T-L-06']);
+  assert.equal(QUESTIONS.filter(q=>q.alignment==='skill-practice').length,40);
+  const invalid={...QUESTIONS[0],alignment:'official'};
+  assert.ok(validateQuestions(QUESTIONS.map(q=>q.id===invalid.id?invalid:q)).some(e=>e.includes('alignment')));
+});

@@ -19,7 +19,10 @@ export function loadProgress():Progress {
     if(x.version!==1||!validNonNeg(x.totalAnswered)||!validNonNeg(x.totalCorrect)||
       Number(x.totalCorrect)>Number(x.totalAnswered)||!x.skills||typeof x.skills!=='object'||Array.isArray(x.skills))return initial();
     const skills=Object.fromEntries(Object.entries(x.skills as Record<string,unknown>).filter(([,s])=>validSkill(s))) as Record<string,SkillProgress>;
-    return {version:1,totalAnswered:x.totalAnswered as number,totalCorrect:x.totalCorrect as number,skills};
+    const recentQuestionIds=Array.isArray(x.recentQuestionIds)
+      ? x.recentQuestionIds.filter((id:unknown):id is string=>typeof id==='string'&&/^[TG]-[LAD]-\d{2,4}$/.test(id)).slice(-16)
+      : [];
+    return {version:1,totalAnswered:x.totalAnswered as number,totalCorrect:x.totalCorrect as number,skills,recentQuestionIds};
   }catch{return {...EMPTY_PROGRESS,skills:{}}}
 }
 export function saveProgress(progress:Progress):void {try{window.localStorage.setItem(KEY,JSON.stringify(progress))}catch{/* private browsing */}}

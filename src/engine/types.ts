@@ -12,7 +12,8 @@ export interface QuestionText {
 }
 export interface Question {
   id:string; exam:Exam; game:Game; competency:string; difficulty:Level;
-  estimatedSeconds:number; correctAnswer:string; status:'pilot';
+  estimatedSeconds:number; correctAnswer:string; status:'pilot'|'reviewed';
+  alignment:'warmup'|'skill-practice';
   content:Record<Locale,QuestionText>;
 }
 export interface SkillProgress {
@@ -20,6 +21,7 @@ export interface SkillProgress {
 }
 export interface Progress {
   version:1; skills:Record<string,SkillProgress>; totalAnswered:number; totalCorrect:number;
+  recentQuestionIds?:string[]; // Optional for backward compatibility with existing v1 progress.
 }
 export interface Attempt {
   questionId:string; selected:string; correct:boolean; elapsedSeconds:number;

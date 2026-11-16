@@ -56,3 +56,10 @@ Code under MIT; original question content under CC BY-SA 4.0, see [LICENSE-CONTE
 ## Development policy (XYZ)
 
 Use `main` as the sole source of truth. Create **one short-lived topic branch at a time**, require green CI, then **squash-merge** into `main` to avoid accumulating competing release versions. A code merge is **not** a site deployment: `deploy.yml` remains manual-only. Never modify question statuses from `pilot` to `reviewed` without independent editorial approval.
+
+## Local progress and timing improvements (XYZ)
+- Stores a bounded list of the last 16 question IDs to reduce immediate repeats in game mode; existing `v1` progress continues to load.
+- Timed mini-tests use elapsed monotonic time, so background browser throttling does not artificially extend a deadline.
+- Unanswered timed questions are counted against the fixed test total, and shown with explanations in the final review.
+- Six introductory TAGE numerical sequences have explicit `warmup` classification.
+- The bilingual coverage page discloses exactly which official skill areas are still absent; this does not constitute exam certification.

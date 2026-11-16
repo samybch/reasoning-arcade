@@ -22,3 +22,19 @@ The current preview is a **learning experiment**, not an official simulation. So
   Sources: https://www.mba.com/exams/gmat-exam/about/exam-structure and https://www.tagemage.fr/page/sous-tests
 - Four new original GMAT Data Sufficiency pilots (`G-D-13`–`G-D-16`) cover the median, conversion rates, renewals and standard deviation instead of only isolated equations.
 - All new questions remain **pilot** content. No psychometric calibration or claim of official exam fidelity is established.
+
+## Explicit exercise alignment — 16 November 2026
+
+The current 46 pilot exercises are now classified as:
+- **6 warm-ups:** `T-L-01` through `T-L-06`, numerical sequences for initial reasoning practice; not a simulation of the TAGE MAGE categorical Logic subtest.
+- **40 targeted skill drills:** original questions based on broadly relevant reasoning skills, but **not** certified reproductions of official exam question formats or difficulties.
+
+This classification is enforced in the question validator and displayed to players when an introductory warm-up is encountered.
+
+### Coverage is not comprehensive
+
+TAGE MAGE offers six subtests, and this MVP trains skills related to only three (Logic, Reasoning/Argumentation, Conditions minimales). GMAT has three sections, and this MVP offers Critical Reasoning skill drills and Data Sufficiency only, not the other Data Insights formats, Reading Comprehension or Quantitative Problem Solving.
+
+Sources, verified 2026-11-16:
+- FNEGE: https://www.tagemage.fr/page/sous-tests
+- GMAC: https://www.mba.com/exams/gmat-exam/about/exam-content

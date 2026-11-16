@@ -23,3 +23,7 @@ Thanks for supporting this independent free bilingual learning project. Merci de
 Automated tests validate **structure only**. Maintainers must also verify that questions are original, mathematically correct, unambiguous, properly translated, and relevant to the correct exam category.
 
 The reviewed question catalog is maintained in `src/content/questions.json`. Propose new content through GitHub issues or a focused pull request. All new items must pass automated checks and human editorial review.
+
+## Classification for new questions
+
+Set `alignment` to `warmup` only for a clearly identified introductory exercise (currently simple TAGE MAGE numerical sequences); other questions use `skill-practice`. Even `skill-practice` means **targeted original practice**, not official format matching or certification. Every new question must include its status and alignment, and the coverage page must remain truthful.

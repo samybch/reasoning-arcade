@@ -37,3 +37,9 @@
 - [ ] Independent educational review of all 46 pilots, especially the ten new examples
 - [ ] QA and squash-merge this stabilization lot into `main`
 - [ ] Publish the live site only after explicit release authorization and legal/accessibility gates
+
+## Third consolidated XYZ lot
+- [x] Explicitly label six numerical sequences as non-official warm-up exercises
+- [x] Preserve previous version-1 browser progress while retaining a bounded recent-question history
+- [x] Improve timed-test stability under background tab throttling and review unanswered items
+- [ ] Independent pedagogical approval of all 46 pilots (remaining blocker)
