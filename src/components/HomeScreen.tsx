@@ -10,7 +10,7 @@ const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string
   {id:'argument-lab',name:'Argument Lab',symbol:'◇',description:{fr:'Identifie hypothèses, conclusions et failles de raisonnement.',en:'Find assumptions, conclusions and flawed arguments.'}},
   {id:'enough-info',name:'Enough Info?',symbol:'∑',description:{fr:'Décide si deux informations suffisent à répondre.',en:'Decide if two statements contain enough information.'}}
 ];
-export function HomeScreen({locale,questionCount}:{locale:Locale;questionCount:number}){
+export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;questionCount:number;questionIds:string[]}){
   const [exam,setExam]=useState<Exam>('tage');
   const [stats,setStats]=useState({total:0,correct:0});
   const [pendingReviewIds,setPendingReviewIds]=useState<string[]>([]);
@@ -32,7 +32,8 @@ export function HomeScreen({locale,questionCount}:{locale:Locale;questionCount:n
     'critical-reasoning':{fr:'Raisonnement critique',en:'Critical reasoning'},
     'data-sufficiency':{fr:'Suffisance de données',en:'Data sufficiency'}
   };
-  const reviewCount=pendingReviewIds.filter(id=>id.startsWith(exam==='tage'?'T-':'G-')).length;
+  const knownQuestionIds=new Set(questionIds);
+  const reviewCount=pendingReviewIds.filter(id=>knownQuestionIds.has(id)&&id.startsWith(exam==='tage'?'T-':'G-')).length;
   function reset(){if(window.confirm(fr?'Effacer ta progression sur cet appareil ?':'Delete progress stored on this device?')){
     clearProgress();setStats({total:0,correct:0});setSkillSummary([]);setPendingReviewIds([]);
   }}

@@ -165,6 +165,7 @@ test('review page stays consistent with progress reset and missing local IDs',as
   });
   await page.reload();
   await expect(page.getByRole('link',{name:/Revoir mes erreurs/})).toBeVisible();
+  await expect(page.locator('.review-cta')).toContainText('1 exercice(s)');
   await page.getByRole('link',{name:/Revoir mes erreurs/}).click();
   await expect(page.locator('#question-title')).toBeVisible();
   await page.getByRole('link',{name:/Retour/}).click();
