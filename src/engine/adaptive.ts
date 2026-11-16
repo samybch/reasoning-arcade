@@ -45,19 +45,51 @@ export function nextReviewQuestion(bank:Question[],progress:Progress,exam:Exam,u
   }
   return null;
 }
-// A stable variant changes the subset between attempts without changing its validity.
-// This is mini-test practice, NOT GMAT-style psychometric adaptation.
+// Unofficial timed practice: rotate item selection and cover each available skill game.
+// Round-robin selection avoids a mixed mini-test accidentally containing a single category.
 export function buildExamQueue(bank:Question[],exam:Exam,game:Game|'mixed',size=6,variant=0):Question[]{
-  const eligible=bank.filter(q=>q.exam===exam&&(game==='mixed'||q.game===game))
-    .sort((a,b)=>a.difficulty-b.difficulty||a.id.localeCompare(b.id));
-  if(!eligible.length)return [];
-  const offset=((Math.trunc(variant)%eligible.length)+eligible.length)%eligible.length;
-  const rotated=[...eligible.slice(offset),...eligible.slice(0,offset)];
+  const eligible=bank.filter(q=>q.exam===exam&&(game==='mixed'||q.game===game));
+  if(!eligible.length||size<=0)return [];
+  const normalizedVariant=Number.isFinite(variant)?Math.trunc(variant):0;
+  const select=(items:Question[],shift:number):Question[]=>{
+    const sorted=[...items].sort((a,b)=>a.difficulty-b.difficulty||a.id.localeCompare(b.id));
+    if(!sorted.length)return [];
+    const offset=((shift%sorted.length)+sorted.length)%sorted.length;
+    const rotated=[...sorted.slice(offset),...sorted.slice(0,offset)];
+    const chosen:Question[]=[];
+    while(rotated.length&&chosen.length<size){
+      chosen.push(rotated.splice(Math.floor((rotated.length-1)/2),1)[0]);
+    }
+    return chosen;
+  };
+  if(game!=='mixed')return select(eligible,normalizedVariant);
+  const order:Game[]=['code-logic','argument-lab','enough-info','quant-lab'];
+  const availableGames=order.filter(g=>eligible.some(q=>q.game===g));
+  const offset=((normalizedVariant%availableGames.length)+availableGames.length)%availableGames.length;
+  const rotatedGames=[...availableGames.slice(offset),...availableGames.slice(0,offset)];
+  const pools=new Map(rotatedGames.map((g,i)=>[g,select(eligible.filter(q=>q.game===g),normalizedVariant+i)]));
   const chosen:Question[]=[];
-  while(rotated.length&&chosen.length<size){
-    chosen.push(rotated.splice(Math.floor((rotated.length-1)/2),1)[0]);
+  while(chosen.length<size){
+    let picked=false;
+    for(const g of rotatedGames){
+      const next=pools.get(g)?.shift();
+      if(!next)continue;
+      chosen.push(next);
+      picked=true;
+      if(chosen.length>=size)break;
+    }
+    if(!picked)break;
   }
   return chosen;
+}
+export function queueUnansweredForReview(progress:Progress,unanswered:Question[]):Progress{
+  if(unanswered.length===0)return progress;
+  const pending=[...(progress.pendingReviewIds??[])];
+  for(const question of unanswered){
+    if(!pending.includes(question.id))pending.push(question.id);
+  }
+  // Unanswered questions join the local review queue but do not count as attempts.
+  return {...progress,pendingReviewIds:pending.slice(-REVIEW_LIMIT)};
 }
 // In timed sessions, unanswered questions count toward the denominator.
 export function grade(attempts:Attempt[],expectedQuestions=attempts.length){
