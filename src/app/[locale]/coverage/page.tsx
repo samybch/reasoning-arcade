@@ -12,7 +12,8 @@ export default async function CoveragePage({params}:{params:Promise<{locale:stri
   const questions=getQuestions();
   const count=(exam:Exam,game:Game)=>questions.filter(q=>q.exam===exam&&q.game===game).length;
   const warmups=questions.filter(q=>q.alignment==='warmup').length;
-  const tage:Array<{fr:string;en:string;n:number;detail?:string}>=[
+  type CoverageRow={fr:string;en:string;n:number;detail?:string};
+  const tage:CoverageRow[]=[
     {fr:'Compréhension de textes',en:'Reading comprehension',n:0},
     {fr:'Calcul',en:'Mathematical problem solving',n:0},
     {fr:'Raisonnement / Argumentation',en:'Reasoning / Argumentation',n:count('tage','argument-lab')},
@@ -20,7 +21,7 @@ export default async function CoveragePage({params}:{params:Promise<{locale:stri
     {fr:'Expression',en:'Written expression',n:0},
     {fr:'Logique',en:'Categorical logic',n:count('tage','code-logic'),detail:fr?`dont ${warmups} échauffements`:`${warmups} warm-ups included`}
   ];
-  const gmat:Array<{fr:string;en:string;n:number}>=[
+  const gmat:CoverageRow[]=[
     {fr:'Quantitative Reasoning — Problem Solving',en:'Quantitative Reasoning — Problem Solving',n:0},
     {fr:'Verbal — Reading Comprehension',en:'Verbal — Reading Comprehension',n:0},
     {fr:'Verbal — Critical Reasoning',en:'Verbal — Critical Reasoning',n:count('gmat','argument-lab')},
@@ -41,7 +42,7 @@ export default async function CoveragePage({params}:{params:Promise<{locale:stri
         <h2>{section.name}</h2>
         <p>{fr?'Nombre d’exercices originaux par compétence':'Original exercises by skill area'}</p>
         <dl className="coverage-list">{section.rows.map(row=><div className="coverage-row" key={row.en}>
-          <dt>{row[locale as Locale]}{('detail' in row)&&row.detail?<small style={{display:'block',color:'var(--muted)'}}>{row.detail}</small>:null}</dt>
+          <dt>{row[locale as Locale]}{row.detail?<small style={{display:'block',color:'var(--muted)'}}>{row.detail}</small>:null}</dt>
           <dd className={row.n>0?'covered':'absent'}>{row.n>0?`${row.n} ${fr?'pilotes':'pilot'}`:(fr?'Non couvert':'Not covered')}</dd>
         </div>)}</dl>
       </section>)}
