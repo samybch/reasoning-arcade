@@ -74,3 +74,21 @@ test('browser progress can be saved and cleared without an account',async({page}
   await page.getByRole('button',{name:/Effacer/}).click();
   await expect(page.locator('.stats strong').first()).toHaveText('0');
 });
+
+test('keyboard skip link reaches the main content',async({page})=>{
+  await page.goto(PREFIX+'/fr/');
+  await page.keyboard.press('Tab');
+  const skip=page.getByRole('link',{name:'Aller au contenu'});
+  await expect(skip).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/#main$/);
+});
+test('localized privacy notice explains local browser progress and reset',async({page})=>{
+  await page.goto(PREFIX+'/fr/');
+  await page.getByRole('link',{name:'Confidentialité'}).click();
+  await expect(page.getByRole('heading',{level:1})).toContainText('Confidentialité');
+  await expect(page.locator('main')).toContainText('stockage local');
+  await page.goto(PREFIX+'/en/privacy/');
+  await expect(page.getByRole('heading',{level:1})).toContainText('Privacy');
+  await expect(page.locator('main')).toContainText('local storage');
+});

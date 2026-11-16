@@ -90,8 +90,8 @@ export function PlayScreen({locale,game,bank,forceExam=false}:{locale:Locale;gam
     </section>:!current?<section className="quiz-card"><h1>{fr?'Aucun exercice disponible':'No exercises available'}</h1><Link href={`/${locale}/`}>{fr?'Accueil':'Home'}</Link></section>:
     <section className="quiz-card" aria-labelledby="question-title">
       <div className="question-top"><div><p className="eyebrow">{name} · {fr?'Question':'Question'} {number}/{max}</p><p className="difficulty">{fr?'Niveau':'Level'} {current.difficulty}/5</p></div>
-        <span className="timer" aria-label={fr?'Chronomètre':'Timer'}>{mmss(mode==='exam'?duration-seconds:seconds)}</span></div>
-      <div className="progress-bar" role="progressbar" aria-valuenow={attempts.length} aria-valuemin={0} aria-valuemax={max}><span style={{width:`${Math.min(100,100*attempts.length/max)}%`}}/></div>
+        <span className="timer" role="timer" aria-label={fr?'Chronomètre':'Timer'}>{mmss(mode==='exam'?duration-seconds:seconds)}</span></div>
+      <div className="progress-bar" role="progressbar" aria-label={fr?'Progression des questions':'Question progress'} aria-valuenow={attempts.length} aria-valuemin={0} aria-valuemax={max}><span style={{width:`${Math.min(100,100*attempts.length/max)}%`}}/></div>
       <h1 id="question-title">{current.content[locale].prompt}</h1>
       {current.content[locale].context&&<p className="context">{current.content[locale].context}</p>}
       {current.content[locale].statements?.map((s,i)=><div className="statement" key={i}><span>({i+1})</span> {s}</div>)}

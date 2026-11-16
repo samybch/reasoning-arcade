@@ -4,6 +4,7 @@ import type {Locale} from '../engine/types';
 
 export function ArcadeShell({locale,children}:{locale:Locale;children:ReactNode}) {
   return <div className="app-shell">
+    <a className="skip-link" href="#main">{locale==='fr'?'Aller au contenu':'Skip to content'}</a>
     <header className="topbar"><div className="page-width topbar-inner">
       <Link className="brand" href={`/${locale}/`}><span className="brand-icon" aria-hidden>◈</span> Reasoning <em>Arcade</em></Link>
       <nav aria-label={locale==='fr'?'Navigation':'Navigation'}>
@@ -15,7 +16,10 @@ export function ArcadeShell({locale,children}:{locale:Locale;children:ReactNode}
     <main id="main" className="page-width">{children}</main>
     <footer className="page-width footer">
       <p>{locale==='fr'?'Prototype pédagogique indépendant • Sans inscription • Exercices pilotes':'Independent learning prototype • No login • Pilot exercises'}</p>
-      <a href="https://github.com/samybch/reasoning-arcade" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <div className="footer-links">
+        <Link href={`/${locale}/privacy/`}>{locale==='fr'?'Confidentialité':'Privacy'}</Link>
+        <a href="https://github.com/samybch/reasoning-arcade" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
     </footer>
   </div>;
 }

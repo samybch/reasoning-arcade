@@ -9,3 +9,9 @@
   .game-card,.question-top,.answer-list,.quiz-card{min-width:0}
   .answer>span:not(.answer-letter){min-width:0;overflow-wrap:anywhere}
 }
+
+/* Keyboard navigation and transparent, usable footer links */
+.skip-link{position:absolute;left:12px;top:-80px;z-index:50;background:var(--surface);padding:10px 14px;border:2px solid var(--primary);border-radius:10px;font-weight:750}
+.skip-link:focus,.skip-link:focus-visible{top:10px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.footer-links a:hover{text-decoration:underline}
