@@ -32,4 +32,9 @@ export function buildExamQueue(bank:Question[],exam:Exam,game:Game|'mixed',size=
   while(eligible.length&&chosen.length<size)chosen.push(eligible.splice(Math.floor((eligible.length-1)/2),1)[0]);
   return chosen;
 }
-export function grade(attempts:Attempt[]){const correct=attempts.filter(a=>a.correct).length;return {correct,total:attempts.length,percent:attempts.length?Math.round(100*correct/attempts.length):0}}
+// In timed sessions, unanswered questions count toward the denominator.
+export function grade(attempts:Attempt[],expectedQuestions=attempts.length){
+  const correct=attempts.filter(a=>a.correct).length;
+  const denominator=Math.max(expectedQuestions,attempts.length);
+  return {correct,total:attempts.length,percent:denominator?Math.round(100*correct/denominator):0};
+}

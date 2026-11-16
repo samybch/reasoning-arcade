@@ -72,7 +72,7 @@ export function PlayScreen({locale,game,bank,forceExam=false}:{locale:Locale;gam
     if(!next){setFinished(true);setCurrent(null);return}
     setCurrent(next);setSelected(null);setRevealed(false);setHint(false);
   }
-  const result=grade(attempts);
+  const result=grade(attempts,mode==='exam'?queue.length:sessionSize);
   const max=mode==='exam'?queue.length:sessionSize;
   const number=Math.min(attempts.length+(mode==='game'&&revealed?0:1),max);
   const name=game==='mixed'?(fr?'Mini-test mixte':'Mixed mini-test'):titles[game];

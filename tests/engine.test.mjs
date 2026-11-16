@@ -34,3 +34,10 @@ test('grade handles empty and partial sessions',()=>{
   assert.deepEqual(grade([]),{correct:0,total:0,percent:0});
   assert.equal(grade([{questionId:'x',selected:'0',correct:true,elapsedSeconds:1}]).percent,100);
 });
+
+test('timed scoring counts unanswered questions as incorrect',()=>{
+  const oneCorrect=[{questionId:'T-L-01',selected:'2',correct:true,elapsedSeconds:12}];
+  assert.equal(grade(oneCorrect,6).percent,17);
+  assert.equal(grade([],6).percent,0);
+  assert.equal(grade(oneCorrect,1).percent,100);
+});

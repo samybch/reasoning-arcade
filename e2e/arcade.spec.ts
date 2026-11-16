@@ -54,3 +54,23 @@ test('mobile viewport has no horizontal overflow on home and on a question',asyn
   overflow=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
   expect(overflow).toBeLessThanOrEqual(1);
 });
+
+test('French GMAT critical reasoning questions are presented in French',async({page})=>{
+  await page.goto(PREFIX+'/fr/play/argument-lab/?exam=gmat&mode=game');
+  await expect(page.locator('#question-title')).toBeVisible();
+  await expect(page.locator('#question-title')).not.toContainText('Which');
+  await expect(page.locator('.answer-list button').first()).not.toContainText('Most of');
+});
+test('browser progress can be saved and cleared without an account',async({page})=>{
+  await page.goto(PREFIX+'/fr/play/argument-lab/?exam=tage&mode=game');
+  const first=page.locator('.answer-list button').first();
+  await first.focus();
+  await page.keyboard.press('Space');
+  await expect(first).toHaveAttribute('aria-pressed','true');
+  await page.getByRole('button',{name:/Valider/}).click();
+  await page.getByRole('link',{name:/Retour/}).click();
+  await expect(page.locator('.stats strong').first()).toHaveText('1');
+  page.once('dialog',d=>d.accept());
+  await page.getByRole('button',{name:/Effacer/}).click();
+  await expect(page.locator('.stats strong').first()).toHaveText('0');
+});
