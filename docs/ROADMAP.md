@@ -89,3 +89,10 @@
 - [x] Add arithmetic-key and responsive browser regression tests
 - [ ] Independent external math/translation review of 58 pilot items
 - [ ] Safely squash-merge the green CI branch; remove its merged branch when connector support becomes available
+
+## XYZ — Learning quality and consolidation (post Quant Lab)
+- [x] Fix persisted Quant Lab question IDs (`T-C` and `G-Q`) in both recent history and revision queue
+- [x] Guarantee that mixed mini-tests exercise every currently available game, without claiming official exam weighting
+- [x] Place unanswered questions from expired mini-tests in the existing local review queue, without counting fabricated attempts
+- [x] Add regression tests for browser reload, category coverage, queue limits, and elapsed sessions
+- [ ] Review pedagogical quality with real learners; no production website deployment before separate GO
