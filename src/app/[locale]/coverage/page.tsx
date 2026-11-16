@@ -14,7 +14,7 @@ export default async function CoveragePage({params}:{params:Promise<{locale:stri
   const warmups=questions.filter(q=>q.alignment==='warmup').length;
   type CoverageRow={fr:string;en:string;n:number;detail?:string};
   const tage:CoverageRow[]=[
-    {fr:'Compréhension de textes',en:'Reading comprehension',n:0},
+    {fr:'Compréhension de textes',en:'Reading comprehension',n:count('tage','reading-lab')},
     {fr:'Calcul',en:'Mathematical problem solving',n:count('tage','quant-lab')},
     {fr:'Raisonnement / Argumentation',en:'Reasoning / Argumentation',n:count('tage','argument-lab')},
     {fr:'Conditions minimales',en:'Data sufficiency',n:count('tage','enough-info')},
@@ -23,7 +23,7 @@ export default async function CoveragePage({params}:{params:Promise<{locale:stri
   ];
   const gmat:CoverageRow[]=[
     {fr:'Quantitative Reasoning — Problem Solving',en:'Quantitative Reasoning — Problem Solving',n:count('gmat','quant-lab')},
-    {fr:'Verbal — Reading Comprehension',en:'Verbal — Reading Comprehension',n:0},
+    {fr:'Verbal — Reading Comprehension',en:'Verbal — Reading Comprehension',n:count('gmat','reading-lab')},
     {fr:'Verbal — Critical Reasoning',en:'Verbal — Critical Reasoning',n:count('gmat','argument-lab')},
     {fr:'Data Insights — Data Sufficiency',en:'Data Insights — Data Sufficiency',n:count('gmat','enough-info')},
     {fr:'Data Insights — Multi-Source Reasoning',en:'Data Insights — Multi-Source Reasoning',n:0},
