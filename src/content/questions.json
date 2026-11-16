@@ -1,0 +1,1274 @@
+[
+  {
+    "id": "T-L-01",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-patterns",
+    "difficulty": 1,
+    "estimatedSeconds": 60,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre complète cette série ?",
+        "context": "2 · 4 · 8 · 16 · ?",
+        "choices": [
+          "24",
+          "30",
+          "32",
+          "34",
+          "36"
+        ],
+        "explanation": "Chaque terme double.",
+        "hint": "Multiplie le terme précédent par un même nombre."
+      },
+      "en": {
+        "prompt": "Which number completes the sequence?",
+        "context": "2 · 4 · 8 · 16 · ?",
+        "choices": [
+          "24",
+          "30",
+          "32",
+          "34",
+          "36"
+        ],
+        "explanation": "Each term doubles.",
+        "hint": "Multiply the previous term by a constant."
+      }
+    }
+  },
+  {
+    "id": "T-L-02",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-patterns",
+    "difficulty": 1,
+    "estimatedSeconds": 60,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre complète cette série ?",
+        "context": "1 · 4 · 9 · 16 · ?",
+        "choices": [
+          "20",
+          "24",
+          "25",
+          "26",
+          "36"
+        ],
+        "explanation": "Ce sont les carrés des entiers de 1 à 5.",
+        "hint": "Essaie de prendre la racine carrée des termes."
+      },
+      "en": {
+        "prompt": "Which number completes the sequence?",
+        "context": "1 · 4 · 9 · 16 · ?",
+        "choices": [
+          "20",
+          "24",
+          "25",
+          "26",
+          "36"
+        ],
+        "explanation": "These are consecutive square numbers from 1² to 5².",
+        "hint": "Try taking the square root of each term."
+      }
+    }
+  },
+  {
+    "id": "T-L-03",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-patterns",
+    "difficulty": 1,
+    "estimatedSeconds": 60,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre complète cette série ?",
+        "context": "5 · 9 · 13 · 17 · ?",
+        "choices": [
+          "20",
+          "21",
+          "22",
+          "23",
+          "25"
+        ],
+        "explanation": "La différence est toujours de 4.",
+        "hint": "Regarde les écarts entre termes."
+      },
+      "en": {
+        "prompt": "Which number completes the sequence?",
+        "context": "5 · 9 · 13 · 17 · ?",
+        "choices": [
+          "20",
+          "21",
+          "22",
+          "23",
+          "25"
+        ],
+        "explanation": "Each consecutive difference is 4.",
+        "hint": "Look at the differences."
+      }
+    }
+  },
+  {
+    "id": "T-L-04",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-patterns",
+    "difficulty": 2,
+    "estimatedSeconds": 75,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre complète cette série ?",
+        "context": "3 · 6 · 11 · 18 · ?",
+        "choices": [
+          "25",
+          "26",
+          "27",
+          "29",
+          "31"
+        ],
+        "explanation": "Les écarts sont 3, 5, 7, puis 9 : 18 + 9 = 27.",
+        "hint": "Regarde comment évoluent les écarts."
+      },
+      "en": {
+        "prompt": "Which number completes the sequence?",
+        "context": "3 · 6 · 11 · 18 · ?",
+        "choices": [
+          "25",
+          "26",
+          "27",
+          "29",
+          "31"
+        ],
+        "explanation": "The differences are 3, 5, 7, then 9: 18 + 9 = 27.",
+        "hint": "Watch how the gaps change."
+      }
+    }
+  },
+  {
+    "id": "T-L-05",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-patterns",
+    "difficulty": 2,
+    "estimatedSeconds": 75,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre complète cette série ?",
+        "context": "2 · 6 · 12 · 20 · ?",
+        "choices": [
+          "28",
+          "30",
+          "32",
+          "34",
+          "36"
+        ],
+        "explanation": "Les écarts sont 4, 6, 8, 10.",
+        "hint": "Les écarts augmentent de 2."
+      },
+      "en": {
+        "prompt": "Which number completes the sequence?",
+        "context": "2 · 6 · 12 · 20 · ?",
+        "choices": [
+          "28",
+          "30",
+          "32",
+          "34",
+          "36"
+        ],
+        "explanation": "The differences are 4, 6, 8, 10.",
+        "hint": "The differences grow by 2."
+      }
+    }
+  },
+  {
+    "id": "T-L-06",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-patterns",
+    "difficulty": 2,
+    "estimatedSeconds": 75,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre complète cette série ?",
+        "context": "81 · 27 · 9 · 3 · ?",
+        "choices": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "6"
+        ],
+        "explanation": "Chaque terme est divisé par 3.",
+        "hint": "Pense à une progression géométrique décroissante."
+      },
+      "en": {
+        "prompt": "Which number completes the sequence?",
+        "context": "81 · 27 · 9 · 3 · ?",
+        "choices": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "6"
+        ],
+        "explanation": "Each term is divided by 3.",
+        "hint": "Think of a decreasing geometric sequence."
+      }
+    }
+  },
+  {
+    "id": "T-L-07",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 3,
+    "estimatedSeconds": 90,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre respecte la propriété commune à ces deux groupes ?",
+        "context": "6, 12, 18  ·  24, 30, 42",
+        "choices": [
+          "16",
+          "25",
+          "33",
+          "48",
+          "52"
+        ],
+        "explanation": "Tous ces nombres sont des multiples de 6 ; 48 l’est aussi.",
+        "hint": "Cherche un diviseur commun à tous les nombres."
+      },
+      "en": {
+        "prompt": "Which number shares the property common to both groups?",
+        "context": "6, 12, 18  ·  24, 30, 42",
+        "choices": [
+          "16",
+          "25",
+          "33",
+          "48",
+          "52"
+        ],
+        "explanation": "All shown numbers are divisible by 6; so is 48.",
+        "hint": "Look for a common divisor."
+      }
+    }
+  },
+  {
+    "id": "T-L-08",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 3,
+    "estimatedSeconds": 90,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre respecte la propriété commune à ces deux groupes ?",
+        "context": "4, 9, 16  ·  25, 36, 49",
+        "choices": [
+          "50",
+          "60",
+          "64",
+          "72",
+          "80"
+        ],
+        "explanation": "Ce sont des carrés parfaits ; 64 = 8².",
+        "hint": "Chaque nombre est le carré d’un entier."
+      },
+      "en": {
+        "prompt": "Which number shares the property common to both groups?",
+        "context": "4, 9, 16  ·  25, 36, 49",
+        "choices": [
+          "50",
+          "60",
+          "64",
+          "72",
+          "80"
+        ],
+        "explanation": "These are perfect squares; 64 = 8².",
+        "hint": "Each number is an integer squared."
+      }
+    }
+  },
+  {
+    "id": "T-L-09",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 3,
+    "estimatedSeconds": 90,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre respecte la propriété commune à ces deux groupes ?",
+        "context": "15, 25, 35  ·  45, 55, 65",
+        "choices": [
+          "70",
+          "72",
+          "75",
+          "80",
+          "90"
+        ],
+        "explanation": "Ce sont des multiples impairs de 5 ; 75 est le seul choix qui convient.",
+        "hint": "Regarde le chiffre des unités."
+      },
+      "en": {
+        "prompt": "Which number shares the property common to both groups?",
+        "context": "15, 25, 35  ·  45, 55, 65",
+        "choices": [
+          "70",
+          "72",
+          "75",
+          "80",
+          "90"
+        ],
+        "explanation": "These are odd multiples of 5; only 75 fits.",
+        "hint": "Look at the units digit."
+      }
+    }
+  },
+  {
+    "id": "T-L-10",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 4,
+    "estimatedSeconds": 105,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre respecte la propriété commune à ces deux groupes ?",
+        "context": "4, 12, 20  ·  28, 36, 44",
+        "choices": [
+          "48",
+          "50",
+          "54",
+          "60",
+          "64"
+        ],
+        "explanation": "Chaque nombre est un multiple de 4 qui n’est pas divisible par 8 ; 60 convient.",
+        "hint": "Divise chacun par 4."
+      },
+      "en": {
+        "prompt": "Which number shares the property common to both groups?",
+        "context": "4, 12, 20  ·  28, 36, 44",
+        "choices": [
+          "48",
+          "50",
+          "54",
+          "60",
+          "64"
+        ],
+        "explanation": "Every number is divisible by 4 but not by 8; 60 fits.",
+        "hint": "Divide each number by 4."
+      }
+    }
+  },
+  {
+    "id": "T-L-11",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 4,
+    "estimatedSeconds": 105,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre respecte la propriété commune à ces deux groupes ?",
+        "context": "2, 3, 5  ·  7, 11, 13",
+        "choices": [
+          "15",
+          "21",
+          "27",
+          "29",
+          "35"
+        ],
+        "explanation": "Les exemples sont des nombres premiers ; 29 est le seul nombre premier proposé.",
+        "hint": "Cherche les nombres dont les seuls diviseurs sont 1 et eux-mêmes."
+      },
+      "en": {
+        "prompt": "Which number shares the property common to both groups?",
+        "context": "2, 3, 5  ·  7, 11, 13",
+        "choices": [
+          "15",
+          "21",
+          "27",
+          "29",
+          "35"
+        ],
+        "explanation": "The examples are prime numbers; 29 is the only prime option.",
+        "hint": "Find numbers with no divisors other than 1 and themselves."
+      }
+    }
+  },
+  {
+    "id": "T-L-12",
+    "exam": "tage",
+    "game": "code-logic",
+    "competency": "numeric-categorization",
+    "difficulty": 5,
+    "estimatedSeconds": 120,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel nombre respecte la propriété commune à ces deux groupes ?",
+        "context": "1, 3, 6, 10  ·  15, 21, 28, 36",
+        "choices": [
+          "40",
+          "42",
+          "43",
+          "45",
+          "49"
+        ],
+        "explanation": "Ce sont les nombres triangulaires n(n+1)/2 ; le suivant est 45.",
+        "hint": "Observe les différences croissantes."
+      },
+      "en": {
+        "prompt": "Which number shares the property common to both groups?",
+        "context": "1, 3, 6, 10  ·  15, 21, 28, 36",
+        "choices": [
+          "40",
+          "42",
+          "43",
+          "45",
+          "49"
+        ],
+        "explanation": "These are triangular numbers n(n+1)/2; the next is 45.",
+        "hint": "Look for increasing differences."
+      }
+    }
+  },
+  {
+    "id": "T-A-01",
+    "exam": "tage",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 1,
+    "estimatedSeconds": 95,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel élément remet le plus en cause le lien de causalité ?",
+        "context": "Une ville a installé de nouveaux bancs. Les visites du parc ont augmenté le même mois.",
+        "choices": [
+          "Les bancs sont bleus.",
+          "Le même mois, un festival gratuit a commencé dans le parc.",
+          "Les bancs sont en bois.",
+          "La ville compte plusieurs parcs.",
+          "Les bancs coûtent cher."
+        ],
+        "explanation": "Le festival constitue une explication concurrente de la hausse de fréquentation.",
+        "hint": "Cherche une cause alternative."
+      },
+      "en": {
+        "prompt": "Which fact most weakens the causal claim?",
+        "context": "A city installed new benches. Park visits increased in the same month.",
+        "choices": [
+          "The benches are blue.",
+          "A free festival started in the park that same month.",
+          "The benches are wooden.",
+          "The city has several parks.",
+          "The benches were expensive."
+        ],
+        "explanation": "The festival provides an alternative explanation for the increase.",
+        "hint": "Look for an alternative cause."
+      }
+    }
+  },
+  {
+    "id": "T-A-02",
+    "exam": "tage",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 2,
+    "estimatedSeconds": 115,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle hypothèse est nécessaire à cette généralisation ?",
+        "context": "Un sondage réalisé uniquement auprès des abonnés d’une revue conclut que toute la ville souhaite davantage de magazines.",
+        "choices": [
+          "Les magazines ont des couvertures colorées.",
+          "La revue existe depuis dix ans.",
+          "Il y a plus d’un magazine en ville.",
+          "Les abonnés interrogés représentent raisonnablement les préférences de la ville.",
+          "Les abonnés connaissent les journalistes."
+        ],
+        "explanation": "La conclusion ne vaut pour la population entière que si l’échantillon n’est pas trop biaisé.",
+        "hint": "Compare la population interrogée à la population visée."
+      },
+      "en": {
+        "prompt": "What assumption is needed for this generalization?",
+        "context": "A survey of a magazine’s subscribers concludes that the whole city wants more magazines.",
+        "choices": [
+          "Magazines have colorful covers.",
+          "The magazine has existed for ten years.",
+          "More than one magazine is sold in town.",
+          "The surveyed subscribers reasonably represent the city’s preferences.",
+          "Subscribers know the reporters."
+        ],
+        "explanation": "Generalizing to the whole city requires a sufficiently representative sample.",
+        "hint": "Compare the sample with the target population."
+      }
+    }
+  },
+  {
+    "id": "T-A-03",
+    "exam": "tage",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 2,
+    "estimatedSeconds": 115,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle conclusion est nécessairement vraie ?",
+        "context": "Tous les membres du club A parlent espagnol. Certains étudiants du lycée sont membres du club A.",
+        "choices": [
+          "Tous les étudiants parlent espagnol.",
+          "Aucun étudiant ne parle espagnol.",
+          "Certains étudiants parlent espagnol.",
+          "Tous les hispanophones sont membres du club A.",
+          "Tous les membres du club A sont étudiants."
+        ],
+        "explanation": "Les étudiants appartenant au club A parlent espagnol, donc certains étudiants le parlent.",
+        "hint": "Suis le groupe commun aux deux propositions."
+      },
+      "en": {
+        "prompt": "Which conclusion must be true?",
+        "context": "Every member of club A speaks Spanish. Some high-school students belong to club A.",
+        "choices": [
+          "All students speak Spanish.",
+          "No student speaks Spanish.",
+          "Some students speak Spanish.",
+          "Every Spanish speaker belongs to club A.",
+          "All club A members are students."
+        ],
+        "explanation": "Students who belong to club A speak Spanish, so some students speak Spanish.",
+        "hint": "Trace the group shared by both statements."
+      }
+    }
+  },
+  {
+    "id": "T-A-04",
+    "exam": "tage",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 3,
+    "estimatedSeconds": 135,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle erreur fragilise l’argument ?",
+        "context": "Les magasins ouverts tard vendent plus. Un commerçant conclut qu’ouvrir tard augmente nécessairement les ventes.",
+        "choices": [
+          "Comparer deux magasins.",
+          "Utiliser des chiffres de ventes.",
+          "Observer une corrélation.",
+          "Raisonner sur des horaires.",
+          "Confondre corrélation et causalité."
+        ],
+        "explanation": "Les magasins à forte demande peuvent choisir des horaires plus longs, sans que ces horaires causent la demande.",
+        "hint": "Une corrélation ne suffit pas à prouver la cause."
+      },
+      "en": {
+        "prompt": "Which reasoning error weakens the argument?",
+        "context": "Stores open late sell more. A merchant concludes that staying open late necessarily increases sales.",
+        "choices": [
+          "Comparing two stores.",
+          "Using sales figures.",
+          "Observing a correlation.",
+          "Reasoning about opening hours.",
+          "Confusing correlation with causation."
+        ],
+        "explanation": "High-demand stores may choose longer opening hours; correlation alone does not establish causation.",
+        "hint": "Correlation is not proof of causation."
+      }
+    }
+  },
+  {
+    "id": "T-A-05",
+    "exam": "tage",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 3,
+    "estimatedSeconds": 135,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel élément renforce le mieux la conclusion que la méthode B a aidé ?",
+        "context": "Un lycée teste deux méthodes de révision sur des groupes comparables constitués par tirage au sort. Le groupe B obtient une meilleure note moyenne.",
+        "choices": [
+          "Les deux groupes ont passé le même examen dans les mêmes conditions.",
+          "Le groupe B utilise des stylos bleus.",
+          "Le lycée est situé en centre-ville.",
+          "Les deux méthodes ont des noms différents.",
+          "Les enseignants aiment les statistiques."
+        ],
+        "explanation": "Un test identique réduit une source de différence étrangère à la méthode.",
+        "hint": "Quelle variable parasite peux-tu éliminer ?"
+      },
+      "en": {
+        "prompt": "What most strengthens the conclusion that method B helped?",
+        "context": "A school randomly assigns comparable students to two study methods. Group B obtains a higher average grade.",
+        "choices": [
+          "Both groups took the same examination under the same conditions.",
+          "Group B used blue pens.",
+          "The school is downtown.",
+          "The methods have different names.",
+          "Teachers like statistics."
+        ],
+        "explanation": "An identical test reduces a competing explanation for the score difference.",
+        "hint": "Which confounding variable can be ruled out?"
+      }
+    }
+  },
+  {
+    "id": "T-A-06",
+    "exam": "tage",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel point manque au raisonnement ?",
+        "context": "Une entreprise affirme : « Tous nos clients qui utilisent l’application sont satisfaits. Donc tous nos clients sont satisfaits. »",
+        "choices": [
+          "Le prix de l’application.",
+          "La couleur du logo.",
+          "L’âge de l’entreprise.",
+          "La satisfaction des clients qui n’utilisent pas l’application.",
+          "Le nombre de développeurs."
+        ],
+        "explanation": "La prémisse ne dit rien sur les clients hors application.",
+        "hint": "Quel groupe est absent de la prémisse ?"
+      },
+      "en": {
+        "prompt": "What is missing from the reasoning?",
+        "context": "A company says: “All our clients who use the app are satisfied. Therefore all our clients are satisfied.”",
+        "choices": [
+          "The app’s price.",
+          "The logo color.",
+          "The firm’s age.",
+          "Satisfaction among customers who do not use the app.",
+          "The number of developers."
+        ],
+        "explanation": "The premise gives no information about customers who do not use the app.",
+        "hint": "Which group is missing from the premise?"
+      }
+    }
+  },
+  {
+    "id": "G-A-07",
+    "exam": "gmat",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 1,
+    "estimatedSeconds": 95,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Which observation most strengthens the claim that faster delivery reduced complaints?",
+        "context": "An online retailer reduced delivery times last quarter, while complaints fell.",
+        "choices": [
+          "Most of the decrease came from complaints specifically about late deliveries.",
+          "The website changed its font.",
+          "The retailer opened a new office.",
+          "Customers prefer free returns.",
+          "The retailer increased its product range."
+        ],
+        "explanation": "La baisse des réclamations liées aux retards soutient directement le mécanisme avancé.",
+        "hint": "Observe la catégorie précise des plaintes."
+      },
+      "en": {
+        "prompt": "Which observation most strengthens the claim that faster delivery reduced complaints?",
+        "context": "An online retailer reduced delivery times last quarter, while complaints fell.",
+        "choices": [
+          "Most of the decrease came from complaints specifically about late deliveries.",
+          "The website changed its font.",
+          "The retailer opened a new office.",
+          "Customers prefer free returns.",
+          "The retailer increased its product range."
+        ],
+        "explanation": "Fewer late-delivery complaints directly support the proposed causal mechanism.",
+        "hint": "Look at the category of complaints."
+      }
+    }
+  },
+  {
+    "id": "G-A-08",
+    "exam": "gmat",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 2,
+    "estimatedSeconds": 115,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Which fact most weakens management’s explanation?",
+        "context": "A factory adopted a four-day week. Productivity per hour then increased. Management credits the new schedule.",
+        "choices": [
+          "Workers prefer shorter meetings.",
+          "The factory makes several products.",
+          "New automated machinery was installed at the same time.",
+          "The schedule was announced in advance.",
+          "Hourly output is measurable."
+        ],
+        "explanation": "L’automatisation offre une explication alternative crédible.",
+        "hint": "Cherche une autre modification simultanée."
+      },
+      "en": {
+        "prompt": "Which fact most weakens management’s explanation?",
+        "context": "A factory adopted a four-day week. Productivity per hour then increased. Management credits the new schedule.",
+        "choices": [
+          "Workers prefer shorter meetings.",
+          "The factory makes several products.",
+          "New automated machinery was installed at the same time.",
+          "The schedule was announced in advance.",
+          "Hourly output is measurable."
+        ],
+        "explanation": "Automation offers a strong competing cause of higher hourly productivity.",
+        "hint": "Look for another simultaneous change."
+      }
+    }
+  },
+  {
+    "id": "G-A-09",
+    "exam": "gmat",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 3,
+    "estimatedSeconds": 135,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Which assumption is necessary for the plan to reduce total costs?",
+        "context": "A firm proposes mandatory training to reduce turnover costs, arguing that trained staff stay longer.",
+        "choices": [
+          "Training takes place on Tuesdays.",
+          "The company has a website.",
+          "All staff enjoy training equally.",
+          "Savings from reduced turnover will exceed the added training costs.",
+          "Training requires an external consultant."
+        ],
+        "explanation": "Le coût total ne baisse que si les économies compensent le coût de la formation.",
+        "hint": "Compare économies et coûts ajoutés."
+      },
+      "en": {
+        "prompt": "Which assumption is necessary for the plan to reduce total costs?",
+        "context": "A firm proposes mandatory training to reduce turnover costs, arguing that trained staff stay longer.",
+        "choices": [
+          "Training takes place on Tuesdays.",
+          "The company has a website.",
+          "All staff enjoy training equally.",
+          "Savings from reduced turnover will exceed the added training costs.",
+          "Training requires an external consultant."
+        ],
+        "explanation": "Total costs decline only if turnover savings outweigh training expense.",
+        "hint": "Compare savings with added costs."
+      }
+    }
+  },
+  {
+    "id": "G-A-10",
+    "exam": "gmat",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 2,
+    "estimatedSeconds": 115,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Which conclusion necessarily follows?",
+        "context": "Every employee with a laboratory access permit has completed safety training. Dana has such a permit.",
+        "choices": [
+          "Dana supervises the laboratory.",
+          "Dana has completed safety training.",
+          "Every trained employee has a permit.",
+          "Dana trained the other employees.",
+          "All employees have permits."
+        ],
+        "explanation": "Le permis implique une formation achevée ; Dana possède le permis.",
+        "hint": "Applique l’implication, pas sa réciproque."
+      },
+      "en": {
+        "prompt": "Which conclusion necessarily follows?",
+        "context": "Every employee with a laboratory access permit has completed safety training. Dana has such a permit.",
+        "choices": [
+          "Dana supervises the laboratory.",
+          "Dana has completed safety training.",
+          "Every trained employee has a permit.",
+          "Dana trained the other employees.",
+          "All employees have permits."
+        ],
+        "explanation": "A permit implies completed safety training, and Dana holds a permit.",
+        "hint": "Apply the implication, not its converse."
+      }
+    }
+  },
+  {
+    "id": "G-A-11",
+    "exam": "gmat",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 3,
+    "estimatedSeconds": 135,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Which information most seriously challenges that conclusion?",
+        "context": "A city lowered bus fares and bus ridership rose. Officials attribute the increase entirely to lower fares.",
+        "choices": [
+          "Buses are painted blue.",
+          "Some riders pay cash.",
+          "The city has a river.",
+          "Bus fares are displayed at stops.",
+          "The subway line was closed for repairs over the same period."
+        ],
+        "explanation": "La fermeture du métro peut expliquer la hausse d’usage des bus indépendamment du prix.",
+        "hint": "Quel autre transport a pu changer ?"
+      },
+      "en": {
+        "prompt": "Which information most seriously challenges that conclusion?",
+        "context": "A city lowered bus fares and bus ridership rose. Officials attribute the increase entirely to lower fares.",
+        "choices": [
+          "Buses are painted blue.",
+          "Some riders pay cash.",
+          "The city has a river.",
+          "Bus fares are displayed at stops.",
+          "The subway line was closed for repairs over the same period."
+        ],
+        "explanation": "A subway closure offers an independent explanation for rising bus demand.",
+        "hint": "What else changed in public transport?"
+      }
+    }
+  },
+  {
+    "id": "G-A-12",
+    "exam": "gmat",
+    "game": "argument-lab",
+    "competency": "critical-reasoning",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "What is the main flaw in the conclusion?",
+        "context": "A food producer tested a new coating in one cool, dry warehouse, then concluded that it extends shelf life in every climate.",
+        "choices": [
+          "The test used warehouse shelves.",
+          "The test was conducted on packaged food.",
+          "Results in one climate may not generalize to all climates.",
+          "Some products last longer than others.",
+          "The coating was applied by staff."
+        ],
+        "explanation": "Les conditions de température et d’humidité pourraient modifier le résultat.",
+        "hint": "Regarde où la conclusion va au-delà de l’échantillon."
+      },
+      "en": {
+        "prompt": "What is the main flaw in the conclusion?",
+        "context": "A food producer tested a new coating in one cool, dry warehouse, then concluded that it extends shelf life in every climate.",
+        "choices": [
+          "The test used warehouse shelves.",
+          "The test was conducted on packaged food.",
+          "Results in one climate may not generalize to all climates.",
+          "Some products last longer than others.",
+          "The coating was applied by staff."
+        ],
+        "explanation": "Temperature and humidity might affect performance, so the tested setting may not generalize.",
+        "hint": "Spot where the conclusion exceeds the tested sample."
+      }
+    }
+  },
+  {
+    "id": "T-D-01",
+    "exam": "tage",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 1,
+    "estimatedSeconds": 100,
+    "correctAnswer": "A",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle est la valeur de x (nombre réel) ?",
+        "statements": [
+          "x + 3 = 11",
+          "x est pair (entier)."
+        ],
+        "explanation": "(1) impose x = 8. (2) admet de nombreux entiers pairs.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "What is the value of real number x?",
+        "statements": [
+          "x + 3 = 11",
+          "x is an even integer."
+        ],
+        "explanation": "(1) fixes x = 8. (2) allows many even integers.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "T-D-02",
+    "exam": "tage",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 1,
+    "estimatedSeconds": 100,
+    "correctAnswer": "B",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle est la valeur de x (nombre réel) ?",
+        "statements": [
+          "x > 0",
+          "2x = 16"
+        ],
+        "explanation": "(1) ne donne pas une valeur unique ; (2) impose x = 8.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "What is the value of real number x?",
+        "statements": [
+          "x > 0",
+          "2x = 16"
+        ],
+        "explanation": "(1) does not fix a unique value; (2) fixes x = 8.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "T-D-03",
+    "exam": "tage",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 2,
+    "estimatedSeconds": 120,
+    "correctAnswer": "C",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle est la valeur de x (x et y réels) ?",
+        "statements": [
+          "x + y = 10",
+          "y = 4"
+        ],
+        "explanation": "Chaque information laisse une inconnue libre ; ensemble, x = 6.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "What is x, given real numbers x and y?",
+        "statements": [
+          "x + y = 10",
+          "y = 4"
+        ],
+        "explanation": "Each statement alone leaves x undetermined; together x = 6.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "T-D-04",
+    "exam": "tage",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 2,
+    "estimatedSeconds": 120,
+    "correctAnswer": "D",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle est la valeur de x, sachant x > 0 ?",
+        "statements": [
+          "x² = 25",
+          "x − 2 = 3"
+        ],
+        "explanation": "(1) avec x positif fixe x = 5 ; (2) fixe aussi x = 5.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "What is x, given x > 0?",
+        "statements": [
+          "x² = 25",
+          "x − 2 = 3"
+        ],
+        "explanation": "(1) and x > 0 fix x = 5; (2) also fixes x = 5.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "T-D-05",
+    "exam": "tage",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "E",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "L’entier n est-il pair ?",
+        "statements": [
+          "n > 4",
+          "n < 8"
+        ],
+        "explanation": "Ensemble, n peut valoir 5, 6 ou 7 : la parité n’est pas déterminée.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "Is integer n even?",
+        "statements": [
+          "n > 4",
+          "n < 8"
+        ],
+        "explanation": "Together, n can be 5, 6, or 7; parity is not fixed.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "T-D-06",
+    "exam": "tage",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 4,
+    "estimatedSeconds": 160,
+    "correctAnswer": "B",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle est la valeur de x, nombre réel ?",
+        "statements": [
+          "x est strictement négatif.",
+          "3x + 6 = 0"
+        ],
+        "explanation": "(1) laisse de nombreuses valeurs ; (2) donne x = −2.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "What is real number x?",
+        "statements": [
+          "x is strictly negative.",
+          "3x + 6 = 0"
+        ],
+        "explanation": "(1) allows many values; (2) fixes x = −2.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "G-D-07",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 1,
+    "estimatedSeconds": 100,
+    "correctAnswer": "D",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle est la valeur de x, sachant que x est un réel strictement positif ?",
+        "statements": [
+          "x² = 49",
+          "3x = 21"
+        ],
+        "explanation": "La positivité permet de déduire x = 7 de (1) ; (2) donne aussi x = 7.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "What is x, given that x is a positive real number?",
+        "statements": [
+          "x² = 49",
+          "3x = 21"
+        ],
+        "explanation": "Positivity fixes x = 7 from (1); (2) also fixes x = 7.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "G-D-08",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 2,
+    "estimatedSeconds": 120,
+    "correctAnswer": "A",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Le réel non nul x est-il positif ?",
+        "statements": [
+          "x³ > 0",
+          "x² = 4"
+        ],
+        "explanation": "(1) implique x > 0. (2) permet x = 2 ou x = −2.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "Is x positive, given x is a nonzero real number?",
+        "statements": [
+          "x³ > 0",
+          "x² = 4"
+        ],
+        "explanation": "(1) implies x > 0; (2) allows either x = 2 or x = −2.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "G-D-09",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 2,
+    "estimatedSeconds": 120,
+    "correctAnswer": "C",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quel est le coût total de n articles identiques, sachant que n est un entier positif et que le prix unitaire p est positif ?",
+        "statements": [
+          "n = 8",
+          "p = 5"
+        ],
+        "explanation": "Il faut connaître à la fois le nombre d’articles et le prix unitaire : 8 × 5 = 40.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "What is the total cost of n identical items, given n is a positive integer and unit price p is positive?",
+        "statements": [
+          "n = 8",
+          "p = 5"
+        ],
+        "explanation": "Both item count and unit price are necessary: 8 × 5 = 40.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "G-D-10",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "C",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Quelle est la valeur du réel x ?",
+        "statements": [
+          "x² = 9",
+          "x < 0"
+        ],
+        "explanation": "(1) laisse ±3 ; (2) seule ne fixe rien ; ensemble, x = −3.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "What is the value of real number x?",
+        "statements": [
+          "x² = 9",
+          "x < 0"
+        ],
+        "explanation": "(1) allows ±3; (2) alone is not enough; together they fix x = −3.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "G-D-11",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "D",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "L’entier positif n est-il divisible par 3 ?",
+        "statements": [
+          "n est divisible par 6.",
+          "n est divisible par 9."
+        ],
+        "explanation": "Un multiple de 6 ou de 9 est nécessairement divisible par 3.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "Is positive integer n divisible by 3?",
+        "statements": [
+          "n is divisible by 6.",
+          "n is divisible by 9."
+        ],
+        "explanation": "Any multiple of 6 or 9 is divisible by 3.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  },
+  {
+    "id": "G-D-12",
+    "exam": "gmat",
+    "game": "enough-info",
+    "competency": "data-sufficiency",
+    "difficulty": 4,
+    "estimatedSeconds": 160,
+    "correctAnswer": "E",
+    "status": "pilot",
+    "content": {
+      "fr": {
+        "prompt": "Le réel x est-il strictement supérieur à 1 ?",
+        "statements": [
+          "x > 0",
+          "x < 2"
+        ],
+        "explanation": "Même ensemble, 0 < x < 2 permet x = 0,5 ou x = 1,5 : on ne peut trancher.",
+        "hint": "Teste (1) puis (2) isolément avant de les combiner."
+      },
+      "en": {
+        "prompt": "Is real number x greater than 1?",
+        "statements": [
+          "x > 0",
+          "x < 2"
+        ],
+        "explanation": "Even together, 0 < x < 2 allows x = 0.5 or x = 1.5, so the answer is unknown.",
+        "hint": "Test (1) and (2) separately before combining them."
+      }
+    }
+  }
+]

@@ -22,4 +22,4 @@ Thanks for supporting this independent free bilingual learning project. Merci de
 
 Automated tests validate **structure only**. Maintainers must also verify that questions are original, mathematically correct, unambiguous, properly translated, and relevant to the correct exam category.
 
-The first implementation contains a standalone preview; all new question suggestions should go through GitHub issues until the structured content module is merged.
+The reviewed question catalog is maintained in `src/content/questions.json`. Propose new content through GitHub issues or a focused pull request. All new items must pass automated checks and human editorial review.

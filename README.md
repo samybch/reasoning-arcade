@@ -1,44 +1,54 @@
 # Reasoning Arcade
 
-Independent, free, bilingual (FR/EN) logic games inspired by the reasoning skills tested in TAGE MAGE and GMAT.
+**Free, independent, bilingual (FR/EN) logic games.** Original practice for the reasoning skills associated with TAGE MAGE and GMAT, with distinct study tracks and no registration.
 
-**Status: working MVP preview in a draft pull request — not a validated exam preparation service.** No claim of affiliation or score equivalence with either exam.
+**Status: draft MVP for internal review — not a certified exam practice service.** No affiliation with or endorsement by exam owners. Exam scores and official percentiles are never inferred.
 
-## Try the prototype
+## Features
 
-The single-file application is in [public/preview/index.html](public/preview/index.html). Open it in a browser without installing anything, or run `npm run dev` to see it through the Next.js prototype shell.
+- TAGE MAGE: Code Logic, Argument Lab, Enough Info?
+- GMAT: Argument Lab, Enough Info? (Code Logic is not presented as a GMAT exam section)
+- Game mode with local adaptive per-skill progression, hints and immediate explanation
+- Timed mini-tests with results and deferred correction
+- Static responsive Next.js React interface, with proper French and English routes
+- 36 original pilot questions in both FR and EN, **not editorially approved for release**
+- Community submissions via GitHub issues and PRs, subject to checks and human review
 
-The current preview includes Code Logic (TAGE MAGE only), Argument Lab, Enough Info?, exam choice, FR/EN toggle, game sessions and timed mini-tests, answer explanations, and local browser progress.
+## Source structure
 
-## Architecture and limitations
-
-- `src/app/page.tsx` is a **temporary Next.js static shell** embedding the standalone preview. Replacing the monolithic preview with the modular TypeScript implementation is the next engineering step.
-- Progress lives in localStorage and is not synchronized.
-- The question bank has 36 original **pilot** items. Their pedagogical validity, difficulty and translations require editorial review before public launch.
-- Adaptive difficulty is an experimental rule-based heuristic, **not** an official psychometric model.
-- The GitHub Pages workflow is manual-only until QA and legal review are complete.
-- No site publication, official scores, registration service, or production exam simulation is claimed.
+- `src/content/questions.json`: **single source of truth** for the pilot question catalog
+- `src/engine/`: adaptive selection, scoring and local progress storage
+- `src/components/`: React UI for home, games, results
+- `src/app/`: statically generated Next.js routes
+- `scripts/validate-questions.mjs`: bilingual schema and allocation validator
+- `e2e/`: Chromium browser tests, including a mobile viewport
+- `reference/preview.html`: archived standalone visual design prototype, not deployed
 
 ## Development
 
-Requires Node.js 22+.
+Node.js 22+ required.
 
 ```bash
 npm install
-npm run dev
+npm run validate:questions
 npm test
 npm run typecheck
-npm run build
+npm run dev
+# Or build and test static output:
+NEXT_PUBLIC_BASE_PATH=/reasoning-arcade npm run build
+mkdir -p .site/reasoning-arcade && cp -r out/. .site/reasoning-arcade/
+npx playwright install chromium
+npm run test:e2e
 ```
 
-**Note:** The first dependency install and Next.js build have not yet been validated in the creation environment because npm registry access was unavailable. GitHub Actions is intended to perform this validation.
+GitHub Actions performs the checks remotely; no paid service or backend is required. A versioned lockfile and reproducible `npm ci` workflow remain future work.
 
-## Contributions
+## Contributing and roadmap
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/QUESTION_STANDARDS.md](docs/QUESTION_STANDARDS.md). Suggest original exercises via the GitHub issue form; contributions require review. Never copy questions from paid or official exam materials.
+See [CONTRIBUTING.md](CONTRIBUTING.md), [docs/QUESTION_STANDARDS.md](docs/QUESTION_STANDARDS.md), and [docs/ROADMAP.md](docs/ROADMAP.md). Questions must be independently created, have exactly one valid answer, and provide accurate explanations in FR/EN.
 
-## Licenses and disclaimer
+## Licenses and legal status
 
-Code: MIT. Original educational content: CC BY-SA 4.0; see [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
+Code under MIT; original question content under CC BY-SA 4.0, see [LICENSE-CONTENT.md](LICENSE-CONTENT.md). TAGE MAGE and GMAT are trademarks owned by their respective entities. This repository is independently developed.
 
-TAGE MAGE and GMAT are trademarks of their respective owners. This is an independent learning experiment and is not affiliated with, endorsed by or certified by those owners.
+**No public site launch is authorized by the existence of the GitHub repository.** GitHub Pages deployment is manual-only and needs distinct approval after educational, legal and accessibility verification.

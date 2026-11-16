@@ -1,4 +1,4 @@
-# Content quality gate — original 36-question pilot bank
+# Content quality gate — original 36-question typed JSON pilot bank
 
 **Status 2026-11-16: NOT EDITORIALLY APPROVED FOR RELEASE.** Structural validation is automated; scientific calibration and bilingual editorial review remain pending.
 
@@ -39,3 +39,7 @@ The 36 items are available in both French and English, for 72 language versions.
 - [GMAT content overview](https://www.mba.com/exams/gmat-exam/about/exam-content)
 
 Current GitHub tracking: [Issue #3 — pedagogical review](https://github.com/samybch/reasoning-arcade/issues/3).
+
+## Source of truth
+
+The active single source is `src/content/questions.json`. The old standalone design prototype is archived at `reference/preview.html` and is not part of the deployed site.

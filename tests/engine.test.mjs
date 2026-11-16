@@ -3,12 +3,7 @@ import assert from 'node:assert/strict';
 import {recordAttempt,nextQuestion,buildExamQueue,grade,EMPTY_PROGRESS,skillKey} from '../src/engine/adaptive.ts';
 import {readFileSync} from 'node:fs';
 
-const html=readFileSync(new URL('../public/preview/index.html',import.meta.url),'utf8');
-const marker='<script type="application/json" id="bank">';
-const start=html.indexOf(marker);
-const end=html.indexOf('</script>',start+marker.length);
-assert.ok(start>=0&&end>start,'Pilot bank marker must be present');
-const bank=JSON.parse(html.slice(start+marker.length,end));
+const bank=JSON.parse(readFileSync(new URL('../src/content/questions.json',import.meta.url),'utf8'));
 const q=bank[0];
 
 test('two consecutive correct answers increase skill level',()=>{

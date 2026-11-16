@@ -1,22 +1,26 @@
 # Architecture — XYZ
 
-## X: React migration
+## X: modular React architecture
 
-The application is now rendered by static-exported Next.js App Router pages:
-- `/fr/` and `/en/` provide language-specific home screens.
-- `/[locale]/play/[game]/` loads one of three React game experiences.
-- `/[locale]/practice/` provides a fixed mini-test queue.
+Static-exported Next.js App Router pages serve the bilingual learning prototype:
+- `/` language landing page, `/fr/` and `/en/` localized homes
+- `/[locale]/play/[game]/` for three games
+- `/[locale]/practice/` for fixed timed mini-tests
 
-Pure modules in `src/engine/` handle scoring, per-skill adaptive progression and client-side storage.
+Root layouts set the HTML `lang` attribute per language. All displayed content uses React text rendering rather than directly injecting HTML.
 
-### Temporary bank migration bridge
+The engine in `src/engine/` handles deterministic question selection, per-skill adaptive progression and local browser storage.
 
-`src/content/catalog.ts` extracts the 36-question JSON bank from `public/preview/index.html` **at build time**. This prevents bank divergence while the new React UI is being reviewed. The original standalone preview remains available for comparison only; no iframe is used by the main application.
+## Y: single source of truth for original questions
 
-**Next Y task:** move the single source of truth to a typed structured question catalog, and generate/archive the preview from it, rather than extracting from HTML.
+`src/content/questions.json` holds 36 independent pilot questions. `src/content/catalog.ts` imports them as a typed catalog for build-time/static routes, and `scripts/validate-questions.mjs` validates structure and response conventions in CI. The former standalone demo is **archived** at `reference/preview.html` for visual comparison only and is not part of the deployed site.
 
-No remote database, account, analytics, cookies, credentials or paid APIs are needed. User progress is stored in localStorage.
+The bank is **not** pedagogically approved yet. Community submissions require original content, FR/EN review and human editorial approval before a public release.
 
-## Z: release control
+## Z: release controls
 
-GitHub Pages deployment is workflow_dispatch only. The public repo is not an authorization to release a website. Review translation, pedagogy, accessibility, copyright and legal notices before public GO.
+GitHub Actions validates the JSON schema, unit tests, TypeScript, Next.js static export and 5 Chromium browser flows including mobile viewports.
+
+The site needs no accounts, server, database, analytics or paid API. Progress lives only in localStorage.
+
+GitHub Pages deployment remains manual-only and is blocked from public activation pending a separate explicit final GO.

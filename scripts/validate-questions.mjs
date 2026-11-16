@@ -1,10 +1,5 @@
 import {readFileSync} from 'node:fs';
-
-const html = readFileSync(new URL('../public/preview/index.html', import.meta.url), 'utf8');
-const data = html.match(/<script type="application\/json" id="bank">([\s\S]*?)<\/script>/);
-if (!data) throw new Error('Question bank is missing from preview HTML');
-
-export const QUESTIONS = JSON.parse(data[1]);
+export const QUESTIONS=JSON.parse(readFileSync(new URL('../src/content/questions.json',import.meta.url),'utf8'));
 
 export function validateQuestions(questions=QUESTIONS) {
   const errors = [];

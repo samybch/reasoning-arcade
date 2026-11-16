@@ -3,13 +3,13 @@
 ## X — verified
 - First modular Next.js build after correction passed GitHub Actions: https://github.com/samybch/reasoning-arcade/actions/runs/43804518261
 - Npm installation, question-structure validation, unit tests, TypeScript and `next build` succeeded.
-- Main application no longer uses the preview iframe; the original HTML is retained as reference and the catalog is extracted on the server at build time.
+- Main application uses typed React components, and the standalone preview has been archived under `reference/preview.html`. The active question bank is `src/content/questions.json`.
 - No user accounts, backend or analytics.
 
 ## Y — pending
 - Independent editorial validation of the 36 pilot questions and their translations.
 - Reliable psychometric calibration; no official score equivalence.
-- Proper typed question-bank migration out of the embedded HTML reference.
+- Question-bank migration into standalone JSON completed; independent editorial review still outstanding.
 
 ## Z — pending
 - Chromium integration checks on the static export, in progress in PR #1.
