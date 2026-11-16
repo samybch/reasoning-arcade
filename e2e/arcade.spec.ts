@@ -28,7 +28,7 @@ test('game question accepts an answer and shows pedagogical correction',async({p
   await expect(page.locator('.answer-list button').first()).toHaveAttribute('aria-pressed','true');
   await page.getByRole('button',{name:/Valider/}).click();
   await expect(page.locator('.feedback')).toBeVisible();
-  await expect(page.locator('.feedback p')).not.toBeEmpty();
+  await expect(page.locator('.feedback > p').last()).not.toBeEmpty();
 });
 
 test('timed GMAT mini-test gives results after six questions',async({page})=>{
