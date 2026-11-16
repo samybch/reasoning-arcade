@@ -1,7 +1,22 @@
-# Architecture
+# Architecture — XYZ
 
-The first GitHub staging version uses a static single-file browser app at `public/preview/index.html`, embedded by a minimal Next.js App Router page. The active prototype contains inline bilingual question data and UI logic. It is NOT the final modular architecture.
+## X: React migration
 
-Next steps: split content into versioned JSON/TypeScript question definitions, move adaptive logic and persistence to pure tested TypeScript functions, convert the UI into modular accessible React components, and enforce question validation in CI.
+The application is now rendered by static-exported Next.js App Router pages:
+- `/fr/` and `/en/` provide language-specific home screens.
+- `/[locale]/play/[game]/` loads one of three React game experiences.
+- `/[locale]/practice/` provides a fixed mini-test queue.
 
-Hosting plan: static Next.js export with `basePath=/reasoning-arcade`. No backend, accounts, database or paid APIs. GitHub Pages deploy must remain manual until release approval.
+Pure modules in `src/engine/` handle scoring, per-skill adaptive progression and client-side storage.
+
+### Temporary bank migration bridge
+
+`src/content/catalog.ts` extracts the 36-question JSON bank from `public/preview/index.html` **at build time**. This prevents bank divergence while the new React UI is being reviewed. The original standalone preview remains available for comparison only; no iframe is used by the main application.
+
+**Next Y task:** move the single source of truth to a typed structured question catalog, and generate/archive the preview from it, rather than extracting from HTML.
+
+No remote database, account, analytics, cookies, credentials or paid APIs are needed. User progress is stored in localStorage.
+
+## Z: release control
+
+GitHub Pages deployment is workflow_dispatch only. The public repo is not an authorization to release a website. Review translation, pedagogy, accessibility, copyright and legal notices before public GO.

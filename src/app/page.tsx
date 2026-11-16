@@ -1,13 +1,6 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
-
-export default function Home() {
-  return (
-    <main style={{height:'100dvh',overflow:'hidden'}}>
-      <iframe
-        src={`${basePath}/preview/index.html`}
-        title="Reasoning Arcade bilingual interactive prototype"
-        style={{width:'100%',height:'100%',border:0}}
-      />
-    </main>
-  );
-}
+import Link from 'next/link';
+export default function Start(){return <main className="page-width" style={{paddingTop:80}}>
+  <h1>Reasoning Arcade</h1><p>Choose a language / Choisissez une langue</p>
+  <div className="actions"><Link className="button primary" href="/fr/">Français</Link><Link className="button secondary" href="/en/">English</Link></div>
+  <p className="note">Independent, non-official learning prototype.</p>
+</main>}
