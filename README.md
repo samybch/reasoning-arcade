@@ -70,4 +70,4 @@ Players may revisit mistakes from either exam pathway with **Review my mistakes 
 
 ## Detailed pedagogical corrections
 
-Both `Enough Info?` (16 pilot questions) and `Argument Lab` (12 pilot questions) include original, bilingual, structured reasoning steps. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 28 remain `pilot` content: the presence of steps is not independent editorial approval.
+All **46 original pilot exercises**—18 Code Logic, 12 Argument Lab and 16 Enough Info?—include three original, bilingual steps explaining the reasoning. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 28 remain `pilot` content: the presence of steps is not independent editorial approval.
