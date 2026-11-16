@@ -6,12 +6,12 @@
 
 ## Features
 
-- TAGE MAGE: Code Logic, Argument Lab, Enough Info?, **Quant Lab (Calcul)**
-- GMAT: Argument Lab, Enough Info?, **Quant Lab (Quantitative Reasoning)**; Code Logic is not presented as a GMAT exam section
+- TAGE MAGE: Code Logic, Argument Lab, Enough Info?, **Quant Lab (Calcul)**, **Reading Lab (Compréhension de textes)**
+- GMAT: Argument Lab, Enough Info?, **Quant Lab (Quantitative Reasoning)**, **Reading Lab (Reading Comprehension)**; Code Logic is not presented as a GMAT exam section
 - Game mode with local adaptive per-skill progression, hints and immediate explanation
 - Timed mini-tests with results and deferred correction
 - Static responsive Next.js React interface, with proper French and English routes
-- 58 original pilot questions in both FR and EN, **not editorially approved for release**
+- 70 original pilot questions in both FR and EN, **not editorially approved for release**
 - Community submissions via GitHub issues and PRs, subject to checks and human review
 
 ## Source structure
@@ -70,6 +70,9 @@ Players may revisit mistakes from either exam pathway with **Review my mistakes 
 
 ## Detailed pedagogical corrections
 
-All **58 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough Info? and 12 Quant Lab—include three original, bilingual steps explaining the reasoning. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 58 remain `pilot` content: the presence of steps is not independent editorial approval.
+All **70 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough Info?, 12 Quant Lab and 12 Reading Lab—include three original, bilingual steps explaining the reasoning. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 70 remain `pilot` content: the presence of steps is not independent editorial approval.
 
 **Quant Lab** includes 12 original pilot word problems with five choices, bilingual hints and three-stage corrections. This extends skill practice into TAGE MAGE Calcul and current GMAT Quantitative Reasoning but does not constitute a complete exam simulation.
+
+## Reading Lab
+Two original reading passages per exam pathway, each with three original FR/EN questions and corrections, now provide limited practice in main idea, inference, supporting evidence and author purpose. Four passages, 12 questions; no official text was reproduced. Reading Lab remains introductory and **not** a full official exam simulation.
