@@ -59,3 +59,11 @@
 - [x] Game mode reveals structured solutions after answer; exam mode defers all explanations until results
 - [x] All exam review entries state the correct choice explicitly
 - [ ] Independent reviewer approves the logical counterexamples and wording; all items remain pilots
+
+## Next XYZ consolidation — structured Argument Lab explanations
+
+- [x] Add original three-step French and English explanations for all 12 Argument Lab items
+- [x] Reuse the existing `ReasoningBreakdown` component, choosing game-specific headings
+- [x] Validate translation parity and test immediate versus deferred feedback
+- [ ] Complete independent review of all 46 pilot exercises and refine difficulty calibration
+- [ ] Squash-merge this focused QA-validated lot; keep GitHub Pages unpublished
