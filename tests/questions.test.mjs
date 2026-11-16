@@ -41,7 +41,7 @@ test('all original pilot items have an explicit, non-official alignment class',(
   const warmups=QUESTIONS.filter(q=>q.alignment==='warmup');
   assert.equal(warmups.length,6);
   assert.deepEqual(warmups.map(q=>q.id),['T-L-01','T-L-02','T-L-03','T-L-04','T-L-05','T-L-06']);
-  assert.equal(QUESTIONS.filter(q=>q.alignment==='skill-practice').length,52);
+  assert.equal(QUESTIONS.filter(q=>q.alignment==='skill-practice').length,64);
   const invalid={...QUESTIONS[0],alignment:'official'};
   assert.ok(validateQuestions(QUESTIONS.map(q=>q.id===invalid.id?invalid:q)).some(e=>e.includes('alignment')));
 });
@@ -130,8 +130,8 @@ test('missing or shortened Code Logic solution steps fail schema validation',()=
   }:q);
   assert.ok(validateQuestions(invalid).some(error=>error.includes('T-L-18')&&error.includes('review steps')));
 });
-test('all 58 bilingual pilots have structured feedback without modifying their review status',()=>{
-  assert.equal(QUESTIONS.length,58);
+test('all 70 bilingual pilots have structured feedback without modifying their review status',()=>{
+  assert.equal(QUESTIONS.length,70);
   assert.ok(QUESTIONS.every(q=>q.status==='pilot'));
   assert.ok(QUESTIONS.every(q=>q.content.fr.reviewSteps?.length===3&&q.content.en.reviewSteps?.length===3));
 });
@@ -156,4 +156,26 @@ test('new Quant Lab questions reject invalid ID or incomplete bilingual correcti
   const errors=validateQuestions([...QUESTIONS,corrupt]);
   assert.ok(errors.some(e=>e.includes('exam or game ID mismatch')));
   assert.ok(errors.some(e=>e.includes('review steps')));
+});
+
+test('Reading Lab uses six original, bilingual and long-passage questions per exam',()=>{
+  for(const exam of ['tage','gmat']){
+    const items=QUESTIONS.filter(q=>q.game==='reading-lab'&&q.exam===exam);
+    assert.equal(items.length,6,exam);
+    assert.equal(new Set(items.map(q=>q.content.fr.context)).size,2,exam+' FR passages');
+    assert.equal(new Set(items.map(q=>q.content.en.context)).size,2,exam+' EN passages');
+    for(const q of items){
+      assert.equal(q.status,'pilot');
+      for(const lang of ['fr','en']){
+        assert.ok(q.content[lang].context.length>=350,q.id+' '+lang+' passage too short');
+        assert.equal(q.content[lang].choices.length,5);
+        assert.equal(q.content[lang].reviewSteps.length,3);
+      }
+    }
+  }
+});
+test('missing or too-short reading passages must fail validation',()=>{
+  const original=QUESTIONS.find(q=>q.id==='T-R-02');
+  const invalid=QUESTIONS.map(q=>q.id===original.id?{...q,content:{...q.content,en:{...q.content.en,context:'Too short'}}}:q);
+  assert.ok(validateQuestions(invalid).some(x=>x.includes('T-R-02')&&x.includes('reading passage')));
 });
