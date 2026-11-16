@@ -83,3 +83,27 @@ test('missing Argument Lab review stages fail bilingual schema validation',()=>{
   }:q);
   assert.ok(validateQuestions(corrupted).some(error=>error.includes('G-A-10')&&error.includes('review steps')));
 });
+
+test('all 18 Code Logic pilots have three original bilingual solution steps',()=>{
+  const items=QUESTIONS.filter(q=>q.game==='code-logic');
+  assert.equal(items.length,18);
+  for(const q of items){
+    for(const locale of ['fr','en']){
+      const steps=q.content[locale].reviewSteps;
+      assert.ok(Array.isArray(steps),q.id+' '+locale);
+      assert.equal(steps.length,3,q.id+' '+locale);
+      assert.ok(steps.every(step=>typeof step==='string'&&step.trim().length>=40),q.id+' '+locale);
+    }
+  }
+});
+test('missing or shortened Code Logic solution steps fail schema validation',()=>{
+  const invalid=QUESTIONS.map(q=>q.id==='T-L-18'?{
+    ...q,content:{...q.content,fr:{...q.content.fr,reviewSteps:['too short','','']}}
+  }:q);
+  assert.ok(validateQuestions(invalid).some(error=>error.includes('T-L-18')&&error.includes('review steps')));
+});
+test('all 46 bilingual pilots have structured feedback without modifying their review status',()=>{
+  assert.equal(QUESTIONS.length,46);
+  assert.ok(QUESTIONS.every(q=>q.status==='pilot'));
+  assert.ok(QUESTIONS.every(q=>q.content.fr.reviewSteps?.length===3&&q.content.en.reviewSteps?.length===3));
+});
