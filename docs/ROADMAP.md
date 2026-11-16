@@ -89,3 +89,11 @@
 - [x] Add arithmetic-key and responsive browser regression tests
 - [ ] Independent external math/translation review of 58 pilot items
 - [ ] Safely squash-merge the green CI branch; remove its merged branch when connector support becomes available
+
+## XYZ — Reading Lab (one consolidated branch)
+- [x] Five-game modular architecture without introducing separate application versions
+- [x] 12 original bilingual reading questions with four original passages and three-stage corrections
+- [x] FR/EN navigation, static routes, coverage counts and 320px browser regression tests
+- [ ] Obtain independent item-by-item subject-matter review across 70 pilot exercises
+- [ ] Squash-merge only after CI success and all applicable branch protections
+- [ ] Public website still requires separate explicit authorization and legal/accessibility gates
