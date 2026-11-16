@@ -1,0 +1,47 @@
+name: Question quality / Signaler une question
+description: Report an incorrect answer, ambiguity, translation error, or other issue in an original pilot exercise.
+title: "question-review: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de nous aider à améliorer ces exercices pilotes non officiels.
+        Thank you for improving these independently authored, non-official pilot exercises.
+        The question ID and language are already in the issue title when opened from the game.
+        Please do not include personal details or paste proprietary third-party exam questions.
+  - type: input
+    id: question_id
+    attributes:
+      label: ID de la question / Question ID
+      description: Shown in the browser issue title when you arrive from the game.
+      placeholder: G-D-13
+    validations:
+      required: true
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Type de problème / Problem type
+      options:
+        - Incorrect answer / Réponse incorrecte
+        - Ambiguous question / Question ambiguë
+        - Incorrect explanation / Explication erronée
+        - Translation / Traduction
+        - Difficulty or exam category / Niveau ou catégorie
+        - Accessibility / Accessibilité
+        - Other / Autre
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Explication et correction suggérée / Explanation and suggested fix
+      placeholder: Describe what is wrong and provide a concise counterexample if possible.
+    validations:
+      required: true
+  - type: checkboxes
+    id: content_rules
+    attributes:
+      label: Content rules / Règles de contenu
+      options:
+        - label: I have not included private information or reproduced protected exam materials.
+          required: true

@@ -15,6 +15,7 @@ export interface Question {
   id:string; exam:Exam; game:Game; competency:string; difficulty:Level;
   estimatedSeconds:number; correctAnswer:string; status:'pilot'|'reviewed';
   alignment:'warmup'|'skill-practice';
+  sufficiency?:{first:boolean;second:boolean;together:boolean}; // Proof flags for Data Sufficiency only.
   content:Record<Locale,QuestionText>;
 }
 export interface SkillProgress {

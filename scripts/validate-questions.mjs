@@ -34,6 +34,16 @@ export function validateQuestions(questions=QUESTIONS){
     if(q.alignment==='warmup'&&q.game!=='code-logic')errors.push(`${id}: only Code Logic warm-ups are currently supported`);
     const key=`${q.exam}:${q.game}`;groupCounts[key]=(groupCounts[key]||0)+1;
     if(!correctKey(q).includes(q.correctAnswer))errors.push(`${id}: invalid answer key`);
+    if(q.game==='enough-info'){
+      const s=q.sufficiency;
+      if(!s||typeof s!=='object'||!['first','second','together'].every(x=>typeof s[x]==='boolean')){
+        errors.push(`${id}: missing or invalid sufficiency-proof flags`);
+      }else{
+        if((s.first||s.second)&&!s.together)errors.push(`${id}: inconsistent sufficiency-proof flags`);
+        const expected=s.first&&s.second?'D':s.first?'A':s.second?'B':s.together?'C':'E';
+        if(q.correctAnswer!==expected)errors.push(`${id}: answer key conflicts with proof flags (${expected})`);
+      }
+    }else if(q.sufficiency!==undefined)errors.push(`${id}: sufficiency proof on non-DS item`);
     for(const lang of ['fr','en']){
       const loc=q.content?.[lang];
       if(!loc||typeof loc!=='object'){errors.push(`${id}: missing ${lang} translation`);continue;}

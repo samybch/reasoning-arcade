@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {QUESTIONS,validateQuestions} from '../scripts/validate-questions.mjs';
 
-test('36 bilingual questions conform to the draft schema', () => {
+test('bilingual questions conform to the draft schema', () => {
   assert.deepEqual(validateQuestions(), []);
 });
 
@@ -63,4 +63,32 @@ test('missing bilingual reasoning stages fail schema validation',()=>{
     ...q,content:{...q.content,fr:{...q.content.fr,reviewSteps:['Statement 1','','']}}
   }:q);
   assert.ok(validateQuestions(bad).some(e=>e.includes('G-D-14')&&e.includes('review steps')));
+});
+
+test('all 16 data-sufficiency keys are corroborated by explicit three-way proof flags',()=>{
+  const rows=QUESTIONS.filter(q=>q.game==='enough-info');
+  assert.equal(rows.length,16);
+  for(const q of rows){
+    const s=q.sufficiency;
+    assert.ok(s,`${q.id}: proof missing`);
+    assert.ok(!s.first||s.together);
+    assert.ok(!s.second||s.together);
+    const expected=s.first&&s.second?'D':s.first?'A':s.second?'B':s.together?'C':'E';
+    assert.equal(q.correctAnswer,expected,`${q.id}: answer key mismatch`);
+    assert.equal(q.content.fr.reviewSteps.length,3,`${q.id}: FR reasoning`);
+    assert.equal(q.content.en.reviewSteps.length,3,`${q.id}: EN reasoning`);
+  }
+});
+test('a contradictory proof flag or answer change fails content validation',()=>{
+  const original=QUESTIONS.find(q=>q.id==='G-D-08');
+  const variants=[
+    {...original,sufficiency:{first:true,second:false,together:false}},
+    {...original,correctAnswer:'D'},
+    {...original,sufficiency:{first:false,second:false,together:false}},
+    {...original,sufficiency:null}
+  ];
+  for(const modified of variants){
+    const errors=validateQuestions(QUESTIONS.map(q=>q.id===modified.id?modified:q));
+    assert.ok(errors.some(e=>/sufficiency-proof|proof flags/.test(e)),JSON.stringify(errors));
+  }
 });
