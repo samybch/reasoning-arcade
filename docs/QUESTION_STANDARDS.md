@@ -25,8 +25,11 @@ A three-step explanation is a **teaching aid**, not evidence of official examina
 
 Every `code-logic` question now requires three original stages in FR and EN: identify a candidate rule, verify it against the examples, then explain the selected option. The same reusable `ReasoningBreakdown` interface shows the method only after an answer, or after the timed session ends.
 
-**All 58 pilot items have structured steps, but none is independently certified as exam-equivalent or editorially approved.** Reviewers must still challenge possible alternative patterns, inconsistent illustrations, and the uniqueness of the answer.
+**All 70 pilot items have structured steps, but none is independently certified as exam-equivalent or editorially approved.** Reviewers must still challenge possible alternative patterns, inconsistent illustrations, and the uniqueness of the answer.
 
 ## Quant Lab editorial checklist
 
 For `quant-lab` items use IDs `T-C-XX` (TAGE MAGE Calcul) or `G-Q-XX` (GMAT Quantitative Problem Solving), five answer choices indexed 0–4, and three detailed FR/EN solution steps. Confirm the correct answer by an **independent arithmetic calculation**, test distractors, and verify that the prompt does not rely on a calculator or missing contextual assumptions. These are original pilot exercises, never official exam items.
+
+## Reading Lab editorial requirements
+Use `T-R-XX` for original TAGE Compréhension de textes and `G-R-XX` for original GMAT Reading Comprehension pilot items. Every question needs a fully original passage (`context`) of at least 350 characters in **each** language, five plausible answers, one uniquely supported correct answer, one practical hint, and three original bilingual teaching stages. Reviewers must prove the answer using only the passage and document why competing choices fail. Shared passages are allowed across multiple questions. Do not reproduce past exam passages, protected texts or official score claims.
