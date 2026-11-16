@@ -14,7 +14,7 @@
 ## Z — pending
 - Chromium integration checks on the static export, in progress in PR #1.
 - Accessibility, cross-device QA, privacy/legal/brand review and terms of use.
-- npm lockfile and npm ci (reproducible dependency graph).
+- npm lockfile versioned and npm ci configured; green CI confirmation pending.
 - Pages has a manual-only deployment workflow and must not be activated before separate final release approval.
 
 **Release gate: NO-GO for public site deployment.** The source repository remains public.

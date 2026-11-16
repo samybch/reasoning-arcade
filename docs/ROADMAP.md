@@ -6,7 +6,8 @@
 - [x] Next.js static-export setup and first green GitHub Actions CI
 - [x] Replace iframe shell with modular React home/game components
 - [x] Separate adaptive engine and local progress storage modules
-- [ ] Merge draft PR after review; commit npm lockfile and convert CI to npm ci
+- [x] Commit npm lockfile and convert CI to npm ci
+- [ ] Merge draft PR after content and release gate review
 
 ## Y — Educational gameplay
 - [x] Separate TAGE MAGE / GMAT game selection

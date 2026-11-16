@@ -14,9 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install --no-audit --no-fund
-      - name: Temporary lockfile export for version pinning
-        run: node -e "const s=require('fs').readFileSync('package-lock.json').toString('base64');for(let i=0;i<s.length;i+=1600)console.log('LOCKCHUNK_'+(i/1600)+'='+s.slice(i,i+1600))"
+      - run: npm ci --no-audit --no-fund
       - run: npm run validate:questions
       - run: npm test
       - run: npm run typecheck

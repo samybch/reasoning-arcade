@@ -29,7 +29,7 @@
 Node.js 22+ required.
 
 ```bash
-npm install
+npm ci
 npm run validate:questions
 npm test
 npm run typecheck
@@ -41,7 +41,7 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-GitHub Actions performs the checks remotely; no paid service or backend is required. A versioned lockfile and reproducible `npm ci` workflow remain future work.
+GitHub Actions performs the checks remotely; no paid service or backend is required. The committed `package-lock.json` pins dependency versions and CI uses `npm ci` for reproducible installs.
 
 ## Contributing and roadmap
 
