@@ -1,0 +1,40 @@
+import type {Attempt,Exam,Game,Level,Progress,Question,SkillProgress} from './types';
+
+export const EMPTY_PROGRESS:Progress={version:1,skills:{},totalAnswered:0,totalCorrect:0};
+export const skillKey=(q:Question):string=>`${q.exam}:${q.game}:${q.competency}`;
+export function recordAttempt(progress:Progress,question:Question,correct:boolean):Progress {
+  const key=skillKey(question);
+  const current:SkillProgress=progress.skills[key]??{level:2,streakCorrect:0,streakWrong:0,attempts:0,correct:0};
+  const wins=correct?current.streakCorrect+1:0;
+  const losses=correct?0:current.streakWrong+1;
+  const level=Math.max(1,Math.min(5,current.level+(wins>=2?1:losses>=2?-1:0))) as Level;
+  const next:SkillProgress={
+    level,streakCorrect:wins>=2?0:wins,streakWrong:losses>=2?0:losses,
+    attempts:current.attempts+1,correct:current.correct+(correct?1:0)
+  };
+  return {version:1,skills:{...progress.skills,[key]:next},totalAnswered:progress.totalAnswered+1,totalCorrect:progress.totalCorrect+(correct?1:0)};
+}
+export function nextQuestion(bank:Question[],progress:Progress,exam:Exam,game:Game|'mixed',used:string[]):Question|null{
+  const unseen=bank.filter(q=>q.exam===exam&&(game==='mixed'||q.game===game)&&!used.includes(q.id));
+  if(!unseen.length)return null;
+  return unseen.sort((a,b)=>{
+    const aSkill=progress.skills[skillKey(a)];
+    const bSkill=progress.skills[skillKey(b)];
+    const aScore=Math.abs(a.difficulty-(aSkill?.level??2))*10+(aSkill?.attempts??0);
+    const bScore=Math.abs(b.difficulty-(bSkill?.level??2))*10+(bSkill?.attempts??0);
+    return aScore-bScore||a.id.localeCompare(b.id);
+  })[0];
+}
+export function buildExamQueue(bank:Question[],exam:Exam,game:Game|'mixed',size=6):Question[]{
+  const eligible=bank.filter(q=>q.exam===exam&&(game==='mixed'||q.game===game))
+    .sort((a,b)=>a.difficulty-b.difficulty||a.id.localeCompare(b.id));
+  const chosen:Question[]=[];
+  while(eligible.length&&chosen.length<size)chosen.push(eligible.splice(Math.floor((eligible.length-1)/2),1)[0]);
+  return chosen;
+}
+// In timed sessions, unanswered questions count toward the denominator.
+export function grade(attempts:Attempt[],expectedQuestions=attempts.length){
+  const correct=attempts.filter(a=>a.correct).length;
+  const denominator=Math.max(expectedQuestions,attempts.length);
+  return {correct,total:attempts.length,percent:denominator?Math.round(100*correct/denominator):0};
+}
