@@ -41,7 +41,7 @@ test('all original pilot items have an explicit, non-official alignment class',(
   const warmups=QUESTIONS.filter(q=>q.alignment==='warmup');
   assert.equal(warmups.length,6);
   assert.deepEqual(warmups.map(q=>q.id),['T-L-01','T-L-02','T-L-03','T-L-04','T-L-05','T-L-06']);
-  assert.equal(QUESTIONS.filter(q=>q.alignment==='skill-practice').length,40);
+  assert.equal(QUESTIONS.filter(q=>q.alignment==='skill-practice').length,52);
   const invalid={...QUESTIONS[0],alignment:'official'};
   assert.ok(validateQuestions(QUESTIONS.map(q=>q.id===invalid.id?invalid:q)).some(e=>e.includes('alignment')));
 });
@@ -130,8 +130,30 @@ test('missing or shortened Code Logic solution steps fail schema validation',()=
   }:q);
   assert.ok(validateQuestions(invalid).some(error=>error.includes('T-L-18')&&error.includes('review steps')));
 });
-test('all 46 bilingual pilots have structured feedback without modifying their review status',()=>{
-  assert.equal(QUESTIONS.length,46);
+test('all 58 bilingual pilots have structured feedback without modifying their review status',()=>{
+  assert.equal(QUESTIONS.length,58);
   assert.ok(QUESTIONS.every(q=>q.status==='pilot'));
   assert.ok(QUESTIONS.every(q=>q.content.fr.reviewSteps?.length===3&&q.content.en.reviewSteps?.length===3));
+});
+
+test('the new Quant Lab uses six original bilingual pilot items per exam path',()=>{
+  for(const exam of ['tage','gmat']){
+    const items=QUESTIONS.filter(q=>q.exam===exam&&q.game==='quant-lab');
+    assert.equal(items.length,6,exam);
+    assert.ok(items.every(q=>q.alignment==='skill-practice'&&q.status==='pilot'));
+    for(const q of items){
+      for(const locale of ['fr','en']){
+        assert.equal(q.content[locale].choices.length,5);
+        assert.equal(q.content[locale].reviewSteps.length,3);
+        assert.ok(q.content[locale].reviewSteps.every(step=>step.length>=40));
+      }
+    }
+  }
+});
+test('new Quant Lab questions reject invalid ID or incomplete bilingual corrections',()=>{
+  const original=QUESTIONS.find(q=>q.id==='G-Q-01');
+  const corrupt={...original,id:'T-Q-01',content:{...original.content,fr:{...original.content.fr,reviewSteps:[]}}};
+  const errors=validateQuestions([...QUESTIONS,corrupt]);
+  assert.ok(errors.some(e=>e.includes('exam or game ID mismatch')));
+  assert.ok(errors.some(e=>e.includes('review steps')));
 });
