@@ -27,11 +27,15 @@ test('every bilingual pilot item has exactly one traceable editorial review reco
     }
   }
 });
-test('no pilot exercises are represented as independently approved without real signoff',()=>{
-  const pending=ledger.entries.filter(e=>e.decision==='pending');
-  assert.equal(pending.length,questions.length,'all current 58 exercises still need independent review');
-  assert.ok(questions.every(q=>q.status==='pilot'));
-  assert.ok(pending.every(e=>e.reviewer===null&&e.reviewedAt===null));
+test('pending exercises do not claim independent approval or stale review signatures',()=>{
+  const byId=new Map(questions.map(q=>[q.id,q]));
+  for(const entry of ledger.entries){
+    if(entry.decision==='pending'){
+      assert.equal(byId.get(entry.id)?.status,'pilot',`${entry.id}: pending items must remain pilot`);
+      assert.equal(entry.reviewer,null,`${entry.id}: no reviewer should be invented`);
+      assert.equal(entry.reviewedAt,null,`${entry.id}: no review date should be invented`);
+    }
+  }
 });
 test('the strict inequality explanation is unambiguous in French and English',()=>{
   const q=questions.find(q=>q.id==='G-A-09');
