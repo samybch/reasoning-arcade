@@ -67,3 +67,11 @@
 - [x] Validate translation parity and test immediate versus deferred feedback
 - [ ] Complete independent review of all 46 pilot exercises and refine difficulty calibration
 - [ ] Squash-merge this focused QA-validated lot; keep GitHub Pages unpublished
+
+## Consolidated XYZ — full pilot explanation coverage
+
+- [x] Complete 46/46 original bilingual teaching breakdowns, three steps per question
+- [x] Use one reusable component with headings that match each game mechanic
+- [x] Test that explanations do not appear before timed sessions finish
+- [x] Extend schema validation to require detailed FR/EN reasoning for every pilot item
+- [ ] Independent editorial approval, difficulty calibration and user feedback still required
