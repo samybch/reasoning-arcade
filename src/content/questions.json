@@ -488,7 +488,12 @@
           "Les bancs coûtent cher."
         ],
         "explanation": "Le festival constitue une explication concurrente de la hausse de fréquentation.",
-        "hint": "Cherche une cause alternative."
+        "hint": "Cherche une cause alternative.",
+        "reviewSteps": [
+          "L'argument attribue la hausse des visites du parc à l'installation de nouveaux bancs.",
+          "Un festival gratuit, commencé au même moment, pourrait attirer les visiteurs indépendamment des bancs.",
+          "La présence d'une cause alternative affaiblit l'explication initiale : la bonne réponse est B."
+        ]
       },
       "en": {
         "prompt": "Which fact most weakens the causal claim?",
@@ -501,7 +506,12 @@
           "The benches were expensive."
         ],
         "explanation": "The festival provides an alternative explanation for the increase.",
-        "hint": "Look for an alternative cause."
+        "hint": "Look for an alternative cause.",
+        "reviewSteps": [
+          "The argument attributes the rise in park visits to the installation of new benches.",
+          "A free festival beginning at the same time might attract visitors regardless of the benches.",
+          "A plausible alternative cause weakens the original explanation: the correct answer is B."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -527,7 +537,12 @@
           "Les abonnés connaissent les journalistes."
         ],
         "explanation": "La conclusion ne vaut pour la population entière que si l’échantillon n’est pas trop biaisé.",
-        "hint": "Compare la population interrogée à la population visée."
+        "hint": "Compare la population interrogée à la population visée.",
+        "reviewSteps": [
+          "Le sondage interroge uniquement les abonnés d'une revue, mais sa conclusion vise toute la ville.",
+          "Pour tirer cette conclusion à partir du seul sondage, les abonnés doivent refléter raisonnablement les préférences des habitants.",
+          "La représentativité de l'échantillon est l'hypothèse requise pour ce raisonnement : réponse D."
+        ]
       },
       "en": {
         "prompt": "What assumption is needed for this generalization?",
@@ -540,7 +555,12 @@
           "Subscribers know the reporters."
         ],
         "explanation": "Generalizing to the whole city requires a sufficiently representative sample.",
-        "hint": "Compare the sample with the target population."
+        "hint": "Compare the sample with the target population.",
+        "reviewSteps": [
+          "The survey samples magazine subscribers only, yet its conclusion concerns the entire city.",
+          "To justify that conclusion using the survey alone, subscribers need to reasonably reflect the preferences of city residents.",
+          "Sample representativeness is the assumption required by this reasoning: answer D."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -566,7 +586,12 @@
           "Tous les membres du club A sont étudiants."
         ],
         "explanation": "Les étudiants appartenant au club A parlent espagnol, donc certains étudiants le parlent.",
-        "hint": "Suis le groupe commun aux deux propositions."
+        "hint": "Suis le groupe commun aux deux propositions.",
+        "reviewSteps": [
+          "La première prémisse établit que tous les membres du club A parlent espagnol.",
+          "La seconde indique qu'au moins certains étudiants appartiennent à ce même club.",
+          "Ces étudiants parlent donc espagnol, sans généraliser à tous les élèves : réponse C."
+        ]
       },
       "en": {
         "prompt": "Which conclusion must be true?",
@@ -579,7 +604,12 @@
           "All club A members are students."
         ],
         "explanation": "Students who belong to club A speak Spanish, so some students speak Spanish.",
-        "hint": "Trace the group shared by both statements."
+        "hint": "Trace the group shared by both statements.",
+        "reviewSteps": [
+          "The first premise establishes that every member of club A speaks Spanish.",
+          "The second says that at least some students belong to that club.",
+          "Those students therefore speak Spanish, without generalizing to all students: answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -605,7 +635,12 @@
           "Confondre corrélation et causalité."
         ],
         "explanation": "Les magasins à forte demande peuvent choisir des horaires plus longs, sans que ces horaires causent la demande.",
-        "hint": "Une corrélation ne suffit pas à prouver la cause."
+        "hint": "Une corrélation ne suffit pas à prouver la cause.",
+        "reviewSteps": [
+          "La donnée observée est une association entre des horaires tardifs et des ventes plus élevées.",
+          "On ne sait pas si les horaires causent la hausse des ventes ou si les commerces populaires prolongent leurs horaires.",
+          "Conclure à une causalité nécessaire à partir d'une corrélation est l'erreur : réponse E."
+        ]
       },
       "en": {
         "prompt": "Which reasoning error weakens the argument?",
@@ -618,7 +653,12 @@
           "Confusing correlation with causation."
         ],
         "explanation": "High-demand stores may choose longer opening hours; correlation alone does not establish causation.",
-        "hint": "Correlation is not proof of causation."
+        "hint": "Correlation is not proof of causation.",
+        "reviewSteps": [
+          "The observed evidence is an association between late opening hours and higher sales.",
+          "It is unclear whether longer hours cause sales or successful stores choose to stay open later.",
+          "Treating a correlation as necessarily causal is the reasoning error: answer E."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -644,7 +684,12 @@
           "Les enseignants aiment les statistiques."
         ],
         "explanation": "Un test identique réduit une source de différence étrangère à la méthode.",
-        "hint": "Quelle variable parasite peux-tu éliminer ?"
+        "hint": "Quelle variable parasite peux-tu éliminer ?",
+        "reviewSteps": [
+          "Les élèves sont répartis au hasard entre deux méthodes, et le groupe B obtient une note moyenne supérieure.",
+          "Une différence d'épreuves ou de conditions d'examen pourrait expliquer cet écart sans effet réel de la méthode.",
+          "Un examen identique pour les deux groupes réduit cette explication concurrente : réponse A."
+        ]
       },
       "en": {
         "prompt": "What most strengthens the conclusion that method B helped?",
@@ -657,7 +702,12 @@
           "Teachers like statistics."
         ],
         "explanation": "An identical test reduces a competing explanation for the score difference.",
-        "hint": "Which confounding variable can be ruled out?"
+        "hint": "Which confounding variable can be ruled out?",
+        "reviewSteps": [
+          "Students are randomly assigned to two methods, and group B obtains a higher average score.",
+          "Different exams or testing conditions could explain that gap without any effect from the study method.",
+          "Using the same examination under the same conditions reduces that alternative explanation: answer A."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -683,7 +733,12 @@
           "Le nombre de développeurs."
         ],
         "explanation": "La prémisse ne dit rien sur les clients hors application.",
-        "hint": "Quel groupe est absent de la prémisse ?"
+        "hint": "Quel groupe est absent de la prémisse ?",
+        "reviewSteps": [
+          "La prémisse affirme la satisfaction des clients qui utilisent effectivement l'application.",
+          "La conclusion étend cette satisfaction à tous les clients, y compris ceux qui ne l'utilisent pas.",
+          "L'information manquante concerne les non-utilisateurs de l'application : réponse D."
+        ]
       },
       "en": {
         "prompt": "What is missing from the reasoning?",
@@ -696,7 +751,12 @@
           "The number of developers."
         ],
         "explanation": "The premise gives no information about customers who do not use the app.",
-        "hint": "Which group is missing from the premise?"
+        "hint": "Which group is missing from the premise?",
+        "reviewSteps": [
+          "The premise establishes satisfaction only among customers who actually use the application.",
+          "The conclusion extends this satisfaction to every customer, including people who do not use it.",
+          "The missing evidence concerns the non-users of the application: answer D."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -722,7 +782,12 @@
           "Le commerçant a élargi sa gamme de produits."
         ],
         "explanation": "La baisse des réclamations liées aux retards soutient directement le mécanisme avancé.",
-        "hint": "Observe la catégorie précise des plaintes."
+        "hint": "Observe la catégorie précise des plaintes.",
+        "reviewSteps": [
+          "Le commerçant avance que les livraisons plus rapides expliquent la diminution des réclamations.",
+          "Une baisse qui touche précisément les plaintes liées aux retards correspond au mécanisme de causalité proposé.",
+          "Ce lien direct renforce davantage la conclusion que les détails sans rapport : réponse A."
+        ]
       },
       "en": {
         "prompt": "Which observation most strengthens the claim that faster delivery reduced complaints?",
@@ -735,7 +800,12 @@
           "The retailer increased its product range."
         ],
         "explanation": "Fewer late-delivery complaints directly support the proposed causal mechanism.",
-        "hint": "Look at the category of complaints."
+        "hint": "Look at the category of complaints.",
+        "reviewSteps": [
+          "The retailer proposes faster delivery as the cause of fewer customer complaints.",
+          "A decline specifically in late-delivery complaints matches the proposed causal mechanism.",
+          "That direct connection strengthens the conclusion more than unrelated details do: answer A."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -761,7 +831,12 @@
           "La production horaire peut être mesurée."
         ],
         "explanation": "L’automatisation offre une explication alternative crédible.",
-        "hint": "Cherche une autre modification simultanée."
+        "hint": "Cherche une autre modification simultanée.",
+        "reviewSteps": [
+          "La direction attribue une meilleure productivité horaire au passage à la semaine de quatre jours.",
+          "L'arrivée simultanée de nouvelles machines automatisées pourrait expliquer la productivité accrue.",
+          "Ce changement concurrent affaiblit l'explication par les seuls horaires : réponse C."
+        ]
       },
       "en": {
         "prompt": "Which fact most weakens management’s explanation?",
@@ -774,7 +849,12 @@
           "Hourly output is measurable."
         ],
         "explanation": "Automation offers a strong competing cause of higher hourly productivity.",
-        "hint": "Look for another simultaneous change."
+        "hint": "Look for another simultaneous change.",
+        "reviewSteps": [
+          "Management credits a four-day workweek for the increase in productivity per hour.",
+          "New automated machinery introduced at the same time might account for the productivity improvement.",
+          "That competing change weakens the explanation based on the schedule alone: answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -800,7 +880,12 @@
           "La formation exige un consultant externe."
         ],
         "explanation": "Le coût total ne baisse que si les économies compensent le coût de la formation.",
-        "hint": "Compare économies et coûts ajoutés."
+        "hint": "Compare économies et coûts ajoutés.",
+        "reviewSteps": [
+          "Le plan prétend réduire les coûts totaux en limitant les départs grâce à la formation.",
+          "Former les employés engendre un coût supplémentaire qui peut annuler les économies liées aux départs évités.",
+          "Les économies doivent dépasser ce coût additionnel pour atteindre l'objectif : réponse D."
+        ]
       },
       "en": {
         "prompt": "Which assumption is necessary for the plan to reduce total costs?",
@@ -813,7 +898,12 @@
           "Training requires an external consultant."
         ],
         "explanation": "Total costs decline only if turnover savings outweigh training expense.",
-        "hint": "Compare savings with added costs."
+        "hint": "Compare savings with added costs.",
+        "reviewSteps": [
+          "The plan aims to cut total costs by reducing employee turnover through training.",
+          "Training carries an additional expense that may cancel the savings from avoided turnover.",
+          "Savings must exceed that extra expense for total costs to fall: answer D."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -839,7 +929,12 @@
           "Tous les salariés détiennent une autorisation."
         ],
         "explanation": "Le permis implique une formation achevée ; Dana possède le permis.",
-        "hint": "Applique l’implication, pas sa réciproque."
+        "hint": "Applique l’implication, pas sa réciproque.",
+        "reviewSteps": [
+          "La règle donnée affirme qu'une autorisation d'accès implique une formation de sécurité achevée.",
+          "Dana détient cette autorisation : elle remplit donc la condition de départ de la règle.",
+          "On peut conclure que Dana a suivi cette formation, sans inverser l'implication : réponse B."
+        ]
       },
       "en": {
         "prompt": "Which conclusion necessarily follows?",
@@ -852,7 +947,12 @@
           "All employees have permits."
         ],
         "explanation": "A permit implies completed safety training, and Dana holds a permit.",
-        "hint": "Apply the implication, not its converse."
+        "hint": "Apply the implication, not its converse.",
+        "reviewSteps": [
+          "The given rule states that a laboratory access permit implies completed safety training.",
+          "Dana holds such a permit, so the condition triggering the rule applies to Dana.",
+          "Dana must have completed the training, without reversing the implication: answer B."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -878,7 +978,12 @@
           "La ligne de métro était fermée pour travaux pendant la même période."
         ],
         "explanation": "La fermeture du métro peut expliquer la hausse d’usage des bus indépendamment du prix.",
-        "hint": "Quel autre transport a pu changer ?"
+        "hint": "Quel autre transport a pu changer ?",
+        "reviewSteps": [
+          "Les responsables municipaux attribuent toute la hausse des voyages en bus à la baisse des tarifs.",
+          "La fermeture de la ligne de métro au même moment peut avoir reporté des voyageurs sur les bus.",
+          "Cette autre explication remet en cause l'attribution exclusive aux tarifs : réponse E."
+        ]
       },
       "en": {
         "prompt": "Which information most seriously challenges that conclusion?",
@@ -891,7 +996,12 @@
           "The subway line was closed for repairs over the same period."
         ],
         "explanation": "A subway closure offers an independent explanation for rising bus demand.",
-        "hint": "What else changed in public transport?"
+        "hint": "What else changed in public transport?",
+        "reviewSteps": [
+          "City officials attribute the entire rise in bus ridership to lower fares.",
+          "A subway closure at the same time may have redirected subway passengers to buses.",
+          "That competing explanation challenges the claim that fares alone caused the increase: answer E."
+        ]
       }
     },
     "alignment": "skill-practice"
@@ -917,7 +1027,12 @@
           "Le revêtement a été appliqué par des employés."
         ],
         "explanation": "Les conditions de température et d’humidité pourraient modifier le résultat.",
-        "hint": "Regarde où la conclusion va au-delà de l’échantillon."
+        "hint": "Regarde où la conclusion va au-delà de l’échantillon.",
+        "reviewSteps": [
+          "Le nouveau revêtement a été testé dans un unique entrepôt frais et sec.",
+          "La température et l'humidité peuvent modifier son efficacité dans d'autres environnements.",
+          "Généraliser à tous les climats dépasse donc les preuves disponibles : réponse C."
+        ]
       },
       "en": {
         "prompt": "What is the main flaw in the conclusion?",
@@ -930,7 +1045,12 @@
           "The coating was applied by staff."
         ],
         "explanation": "Temperature and humidity might affect performance, so the tested setting may not generalize.",
-        "hint": "Spot where the conclusion exceeds the tested sample."
+        "hint": "Spot where the conclusion exceeds the tested sample.",
+        "reviewSteps": [
+          "The new coating was tested in just one cool, dry warehouse.",
+          "Temperature and humidity might change its effectiveness under other conditions.",
+          "Generalizing the result to every climate therefore exceeds the available evidence: answer C."
+        ]
       }
     },
     "alignment": "skill-practice"
