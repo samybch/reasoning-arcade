@@ -1,24 +1,25 @@
 # Contributing / Contribuer
 
-Thank you for improving this independent learning project. Merci de participer !
+Thanks for supporting this independent free bilingual learning project. Merci de participer !
 
-## Offer a new question
+## Submit original questions
 
-1. Open the **Propose a question** GitHub issue template or fork the repository and open a pull request.
-2. Include a **new original question**, FR + EN translations, one uniquely correct answer, a clear independent explanation, a helpful hint, a plausible estimated time and a difficulty level 1–5.
-3. The entire exercise must be yours to contribute under **CC BY-SA 4.0**. Do **not** copy, paraphrase too closely, or upload official practice questions, commercial exercise books, copyrighted charts, logos or questions from paid training platforms.
-4. Set `status: 'pilot'`; only a maintainer can approve material for a future reviewed release.
-5. Run `npm run validate:questions && npm test` before opening your PR. Do not share personal information or credentials.
+1. Open the GitHub "Original question / Exercice original" issue form.
+2. Include the exam path, game, original question in both French and English, five choices (or two statements for sufficiency), a uniquely correct answer, a clear explanation, and a difficulty estimate.
+3. Make sure **you own** the content and agree to publish it under CC BY-SA 4.0.
+4. Never copy official exam questions, proprietary training exercises, protected charts, trademarks or copyrighted illustrations.
+5. Every exercise stays **pilot / under review** until editorial approval. Maintainers incorporate reviewed submissions into the bank in a later PR.
 
 ## Code changes
 
-- Use one focused branch per change; open a PR against `main`.
-- Keep the zero-backend, no-account, local-first MVP intact unless there is a reviewed architecture decision.
-- Keep accessibility, FR/EN parity, automated tests and mobile layouts.
-- No secrets, analytics, paid APIs, or external user tracking.
-- No claims of official exam endorsement or score prediction.
-- Contributions to code are submitted under MIT; original question content under CC BY-SA 4.0.
+- Fork and open a focused PR to `main`.
+- Run `npm run validate:questions`, `npm test`, `npm run typecheck` and `npm run build`.
+- Keep FR/EN parity, accessible keyboard control and responsive layouts.
+- Do not add trackers, paid APIs, accounts, secret keys or server collection without an explicit architecture decision.
+- Code contributions use MIT; original questions use CC BY-SA 4.0.
 
 ## Review policy
 
-Automated validation checks *structure*, not pedagogical correctness. Maintainers check originality, response ambiguity, answer correctness, explanation quality, taxonomy, translations and potential IP issues. Revisions may be requested before merge. Maintainer reviews are a human gate; a passing CI does not mean a question is correct.
+Automated tests validate **structure only**. Maintainers must also verify that questions are original, mathematically correct, unambiguous, properly translated, and relevant to the correct exam category.
+
+The first implementation contains a standalone preview; all new question suggestions should go through GitHub issues until the structured content module is merged.
