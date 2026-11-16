@@ -15,3 +15,14 @@
 .skip-link:focus,.skip-link:focus-visible{top:10px}
 .footer-links{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
 .footer-links a:hover{text-decoration:underline}
+
+/* Per-skill adaptive profile, stored entirely in this browser */
+.skill-section{padding:8px 0 32px}
+.skill-section h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.8px;margin:6px 0}
+.skill-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:12px;margin:20px 0;padding:0}
+.skill-card{background:#fff;border:1px solid var(--line);border-radius:15px;display:flex;justify-content:space-between;gap:14px;padding:17px}
+.skill-card>div{display:flex;flex-direction:column;gap:3px}
+.skill-card small{color:var(--muted);font-size:11px}
+.skill-card strong{font-size:14px}
+.skill-card b{color:var(--primary);font-size:14px;white-space:nowrap}
+@media(max-width:420px){.skill-card{flex-wrap:wrap}}

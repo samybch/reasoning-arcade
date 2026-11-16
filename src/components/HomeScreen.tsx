@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {useEffect,useState} from 'react';
 import {ArcadeShell} from './ArcadeShell';
 import {clearProgress,loadProgress} from '../engine/storage';
-import type {Exam,Game,Locale} from '../engine/types';
+import type {Exam,Game,Locale,SkillProgress} from '../engine/types';
 
 const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string}[]=[
   {id:'code-logic',name:'Code Logic',symbol:'⌘',description:{fr:'Trouve la règle cachée dans les nombres et les figures.',en:'Find the hidden rule behind numbers and patterns.'}},
@@ -13,9 +13,26 @@ const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string
 export function HomeScreen({locale}:{locale:Locale}){
   const [exam,setExam]=useState<Exam>('tage');
   const [stats,setStats]=useState({total:0,correct:0});
-  useEffect(()=>{const p=loadProgress();setStats({total:p.totalAnswered,correct:p.totalCorrect})},[]);
+  const [skillSummary,setSkillSummary]=useState<Array<{key:string;exam:string;skill:string;progress:SkillProgress}>>([]);
+  useEffect(()=>{
+    const p=loadProgress();
+    setStats({total:p.totalAnswered,correct:p.totalCorrect});
+    const summary=Object.entries(p.skills).filter(([,v])=>v.attempts>0).map(([key,progress])=>{
+      const [exam,,skill]=key.split(':');
+      return {key,exam,skill,progress};
+    });
+    setSkillSummary(summary.sort((a,b)=>a.key.localeCompare(b.key)));
+  },[]);
   const fr=locale==='fr';
-  function reset(){if(window.confirm(fr?'Effacer ta progression sur cet appareil ?':'Delete progress stored on this device?')){clearProgress();setStats({total:0,correct:0})}}
+  const names:Record<string,{fr:string;en:string}>={
+    'numeric-patterns':{fr:'Suites numériques',en:'Number patterns'},
+    'numeric-categorization':{fr:'Catégorisation',en:'Categorization'},
+    'critical-reasoning':{fr:'Raisonnement critique',en:'Critical reasoning'},
+    'data-sufficiency':{fr:'Suffisance de données',en:'Data sufficiency'}
+  };
+  function reset(){if(window.confirm(fr?'Effacer ta progression sur cet appareil ?':'Delete progress stored on this device?')){
+    clearProgress();setStats({total:0,correct:0});setSkillSummary([]);
+  }}
   return <ArcadeShell locale={locale}>
     <section className="hero">
       <div><p className="eyebrow">THINK SMARTER · PLAY BETTER</p>
@@ -49,6 +66,17 @@ export function HomeScreen({locale}:{locale:Locale}){
       <div className="stats"><div><strong>{stats.total}</strong><small>{fr?'Réponses':'Answers'}</small></div>
       <div><strong>{stats.total?Math.round(stats.correct/stats.total*100):0}%</strong><small>{fr?'Réussite':'Accuracy'}</small></div>
       <button className="reset-button" type="button" onClick={reset}>{fr?'Effacer':'Reset'}</button></div>
-    </section><p className="disclaimer">{fr?'Exercices originaux pilotes. Site indépendant, non affilié aux organismes officiels. Aucun score présenté comme officiel.':'Original pilot exercises. Independent project, not affiliated with exam organizations. No official score estimates.'}</p>
+    </section>
+    {skillSummary.length>0&&<section className="skill-section" aria-labelledby="skill-heading">
+      <p className="eyebrow">{fr?'MAÎTRISE PAR COMPÉTENCE':'MASTERY BY SKILL'}</p>
+      <h2 id="skill-heading">{fr?'Compétences travaillées':'Skills practiced'}</h2>
+      <p className="note">{fr?'Ces niveaux sont expérimentaux et ne correspondent à aucun score officiel.':'These levels are experimental and do not correspond to official scores.'}</p>
+      <ul className="skill-grid">{skillSummary.map(item=><li key={item.key} className="skill-card">
+        <div><small>{item.exam.toUpperCase()==='TAGE'?'TAGE MAGE':'GMAT'}</small><strong>{names[item.skill]?.[locale]??item.skill.replaceAll('-',' ')}</strong></div>
+        <div><b>{fr?'Niveau':'Level'} {item.progress.level}/5</b>
+          <small>{item.progress.correct}/{item.progress.attempts} {fr?'réussites':'correct'}</small></div>
+      </li>)}</ul>
+    </section>}
+    <p className="disclaimer">{fr?'Exercices originaux pilotes. Site indépendant, non affilié aux organismes officiels. Aucun score présenté comme officiel.':'Original pilot exercises. Independent project, not affiliated with exam organizations. No official score estimates.'}</p>
   </ArcadeShell>;
 }

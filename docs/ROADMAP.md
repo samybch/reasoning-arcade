@@ -25,3 +25,6 @@
 - [ ] Audit legal notices, trademarks, images and privacy
 - [ ] Review mobile user experience and launch criteria
 - [ ] Obtain a distinct explicit GO before publishing an end-user site
+
+## User-facing progression
+- [x] Display locally stored experimental skill levels and successes on the home screen, with account-free reset

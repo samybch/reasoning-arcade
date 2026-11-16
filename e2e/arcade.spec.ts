@@ -70,9 +70,11 @@ test('browser progress can be saved and cleared without an account',async({page}
   await page.getByRole('button',{name:/Valider/}).click();
   await page.getByRole('link',{name:/Retour/}).click();
   await expect(page.locator('.stats strong').first()).toHaveText('1');
+  await expect(page.getByRole('heading',{name:'Compétences travaillées'})).toBeVisible();
   page.once('dialog',d=>d.accept());
   await page.getByRole('button',{name:/Effacer/}).click();
   await expect(page.locator('.stats strong').first()).toHaveText('0');
+  await expect(page.getByRole('heading',{name:'Compétences travaillées'})).toHaveCount(0);
 });
 
 test('keyboard skip link reaches the main content',async({page})=>{
