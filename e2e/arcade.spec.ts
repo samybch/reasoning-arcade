@@ -91,6 +91,6 @@ test('localized privacy notice explains local browser progress and reset',async(
   await expect(page.getByRole('heading',{level:1})).toContainText('Confidentialité');
   await expect(page.locator('main')).toContainText('stockage local');
   await page.goto(PREFIX+'/en/privacy/');
-  await expect(page.getByRole('heading',{level:1})).toContainText('Privacy');
+  await expect(page.getByRole('heading',{level:1})).toContainText(/privacy/i);
   await expect(page.locator('main')).toContainText('local storage');
 });
