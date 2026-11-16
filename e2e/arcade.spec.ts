@@ -5,9 +5,11 @@ const PREFIX='/reasoning-arcade';
 test('French and English homepages display and language navigation works',async({page})=>{
   await page.goto(PREFIX+'/fr/');
   await expect(page.getByRole('heading',{level:1})).toContainText('La logique');
+  await expect(page.locator('html')).toHaveAttribute('lang','fr');
   await page.getByRole('link',{name:'EN',exact:true}).click();
   await expect(page).toHaveURL(new RegExp('/reasoning-arcade/en/?$'));
   await expect(page.getByRole('heading',{level:1})).toContainText('Better thinking');
+  await expect(page.locator('html')).toHaveAttribute('lang','en');
 });
 
 test('GMAT track omits numerical logic game and exposes the other two',async({page})=>{
