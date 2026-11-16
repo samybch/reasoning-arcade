@@ -27,3 +27,7 @@ The reviewed question catalog is maintained in `src/content/questions.json`. Pro
 ## Classification for new questions
 
 Set `alignment` to `warmup` only for a clearly identified introductory exercise (currently simple TAGE MAGE numerical sequences); other questions use `skill-practice`. Even `skill-practice` means **targeted original practice**, not official format matching or certification. Every new question must include its status and alignment, and the coverage page must remain truthful.
+
+## Question-quality reports
+
+Each original pilot question offers a link to the GitHub `question-feedback.yml` issue form. It identifies only the question ID and selected language in the URL; GitHub login is required to submit. Review reports for ambiguity, incorrect keys, misleading wording, translation, accessibility or incorrect exam categorization, and log the editorial decision. Do not request users' test results, personal information or proprietary exam content.

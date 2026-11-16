@@ -7,6 +7,7 @@ import {loadProgress,saveProgress} from '../engine/storage';
 import {elapsedSeconds,timeExpired} from '../engine/timing';
 import type {Attempt,Exam,Game,Locale,Progress,Question} from '../engine/types';
 import {ReasoningBreakdown} from './ReasoningBreakdown';
+import {QuestionFeedbackLink} from './QuestionFeedbackLink';
 
 type Mode='game'|'exam'|'review';
 const LABELS:{fr:string[];en:string[]}={
@@ -104,12 +105,13 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
       <p className="note">{fr?'Ce résultat n’est pas un score officiel.':'This result is not an official exam score.'}</p>
       <div className="review"><h2>{fr?'Corrections':'Review'}</h2>
         {expired&&queue.length>attempts.length&&<p className="warning">{fr?'Questions non répondues :':'Unanswered questions:'} {queue.length-attempts.length}</p>}
-        {attempts.map((a,i)=>{const q=bank.find(v=>v.id===a.questionId);return q?<article key={q.id} className="review-item"><strong>{a.correct?'✓':'×'} {i+1}. {q.content[locale].prompt}</strong><p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q)}</p><p>{q.content[locale].explanation}</p><ReasoningBreakdown text={q.content[locale]} locale={locale}/></article>:null})}
+        {attempts.map((a,i)=>{const q=bank.find(v=>v.id===a.questionId);return q?<article key={q.id} className="review-item"><strong>{a.correct?'✓':'×'} {i+1}. {q.content[locale].prompt}</strong><p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q)}</p><p>{q.content[locale].explanation}</p><ReasoningBreakdown text={q.content[locale]} locale={locale}/><QuestionFeedbackLink questionId={q.id} locale={locale}/></article>:null})}
         {expired&&queue.slice(attempts.length).map(q=><article key={q.id} className="review-item">
           <strong>{fr?'Non répondu':'Unanswered'} — {q.content[locale].prompt}</strong>
           <p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q)}</p>
           <p>{q.content[locale].explanation}</p>
           <ReasoningBreakdown text={q.content[locale]} locale={locale}/>
+          <QuestionFeedbackLink questionId={q.id} locale={locale}/>
         </article>)}
       </div><div className="actions"><button type="button" className="button primary" onClick={()=>setRound(v=>v+1)}>{fr?'Rejouer':'Try again'} ↻</button><Link className="button secondary" href={`/${locale}/`}>{fr?'Accueil':'Home'}</Link></div>
     </section>:!current?<section className="quiz-card"><h1>{mode==='review'?(fr?'Aucune erreur à revoir pour ce parcours':'No mistakes to review in this track'):(fr?'Aucun exercice disponible':'No exercises available')}</h1><Link href={`/${locale}/`}>{fr?'Accueil':'Home'}</Link></section>:
@@ -141,6 +143,7 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
         {mode!=='exam'&&revealed?<button type="button" className="button primary" onClick={advance}>{attempts.length>=max?(fr?'Terminer':'Finish'):(fr?'Suivante':'Next')} →</button>:
           <button type="button" className="button primary" disabled={selected===null} onClick={submit}>{fr?'Valider':'Submit'} →</button>}</div>
       {mode==='exam'&&<p className="note">{fr?'Entraînement chronométré, non officiel. Les explications seront visibles à la fin.':'Unofficial timed practice. Explanations appear at the end.'}</p>}
+      <QuestionFeedbackLink questionId={current.id} locale={locale}/>
     </section>}
   </ArcadeShell>;
 }
