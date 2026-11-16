@@ -1,4 +1,4 @@
-# Content quality gate — original 36-question typed JSON pilot bank
+# Content quality gate — original 46-question typed JSON pilot bank
 
 **Status 2026-11-16: NOT EDITORIALLY APPROVED FOR RELEASE.** Structural validation is automated; scientific calibration and bilingual editorial review remain pending.
 
@@ -6,13 +6,13 @@
 
 | Track | Game | Count | Distinct IDs |
 | --- | --- | ---: | --- |
-| TAGE MAGE | Code Logic | 12 | T-L-01–12 |
+| TAGE MAGE | Code Logic | 18 | T-L-01–18 |
 | TAGE MAGE | Argument Lab | 6 | T-A-01–06 |
 | TAGE MAGE | Enough Info? | 6 | T-D-01–06 |
 | GMAT | Argument Lab | 6 | G-A-07–12 |
-| GMAT | Enough Info? | 6 | G-D-07–12 |
+| GMAT | Enough Info? | 10 | G-D-07–16 |
 
-The 36 items are available in both French and English, for 72 language versions.
+The 46 items are available in both French and English, for 92 language versions.
 
 ## Preliminary check
 
@@ -38,7 +38,8 @@ The 36 items are available in both French and English, for 72 language versions.
 - [TAGE MAGE preparation extract — Conditions minimales, A–E meanings](https://www.editions-ellipses.fr/PDF/9782340103696_extrait.pdf)
 - [GMAT content overview](https://www.mba.com/exams/gmat-exam/about/exam-content)
 
-Current GitHub tracking: [Issue #3 — pedagogical review](https://github.com/samybch/reasoning-arcade/issues/3).
+All 46 question statuses remain **pilot**, pending independent editorial sign-off.
+\nCurrent GitHub tracking: [Issue #3 — pedagogical review](https://github.com/samybch/reasoning-arcade/issues/3).
 
 ## Source of truth
 

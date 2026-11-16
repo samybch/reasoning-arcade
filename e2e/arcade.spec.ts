@@ -196,6 +196,28 @@ test('timed data sufficiency hides explanations until final results, including E
   await expect(page.locator('.review-answer').first()).toContainText('Correct answer');
 });
 
+test('question feedback link identifies the exercise without transmitting any answer',async({page})=>{
+  await page.goto(PREFIX+'/fr/play/enough-info/?exam=tage&mode=game');
+  const link=page.getByRole('link',{name:/Signaler un problème avec cette question/});
+  await expect(link).toBeVisible();
+  await expect(link).toHaveAttribute('target','_blank');
+  const href=await link.getAttribute('href');
+  expect(href).toContain('github.com/samybch/reasoning-arcade/issues/new?template=question-feedback.yml');
+  expect(href).toMatch(/question-review%3A%20T-D-\d+/);
+  expect(href).not.toContain('correctAnswer');
+  expect(href).not.toContain('pendingReviewIds');
+});
+test('timed review exposes question-specific feedback links only after completing the test',async({page})=>{
+  await page.goto(PREFIX+'/en/play/enough-info/?exam=gmat&mode=exam');
+  for(let i=0;i<5;i++){
+    await page.locator('.answer-list button').first().click();
+    await page.getByRole('button',{name:/Submit/}).click();
+  }
+  await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
+  await expect(page.getByRole('link',{name:/Report an issue with this question/})).toHaveCount(5);
+  await expect(page.locator('.reasoning-breakdown')).toHaveCount(5);
+});
+
 test('Argument Lab displays three teaching stages only after answer in French game mode',async({page})=>{
   await page.goto(PREFIX+'/fr/play/argument-lab/?exam=tage&mode=game');
   await expect(page.locator('.reasoning-breakdown')).toHaveCount(0);

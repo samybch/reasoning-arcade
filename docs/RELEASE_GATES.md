@@ -39,3 +39,8 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] Local-only, bounded queue of previously missed items with FR/EN dedicated practice route
 - [x] Question is removed from that queue after a correct retry
 - [ ] Evaluate learning outcomes and exercise difficulty with actual volunteer learners, without collecting personal data by default
+
+## Community question feedback
+- [x] Question-specific GitHub issue-report links and template; external navigation is voluntary
+- [x] No browser progress or chosen answers transmitted in feedback links
+- [ ] Define response times and report moderation before actively inviting public learner traffic

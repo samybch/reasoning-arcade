@@ -1214,7 +1214,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": true,
+      "second": false,
+      "together": true
+    }
   },
   {
     "id": "T-D-02",
@@ -1255,7 +1260,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": true,
+      "together": true
+    }
   },
   {
     "id": "T-D-03",
@@ -1296,7 +1306,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": false,
+      "together": true
+    }
   },
   {
     "id": "T-D-04",
@@ -1337,7 +1352,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": true,
+      "second": true,
+      "together": true
+    }
   },
   {
     "id": "T-D-05",
@@ -1378,7 +1398,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": false,
+      "together": false
+    }
   },
   {
     "id": "T-D-06",
@@ -1419,7 +1444,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": true,
+      "together": true
+    }
   },
   {
     "id": "G-D-07",
@@ -1460,7 +1490,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": true,
+      "second": true,
+      "together": true
+    }
   },
   {
     "id": "G-D-08",
@@ -1501,7 +1536,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": true,
+      "second": false,
+      "together": true
+    }
   },
   {
     "id": "G-D-09",
@@ -1542,7 +1582,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": false,
+      "together": true
+    }
   },
   {
     "id": "G-D-10",
@@ -1583,7 +1628,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": false,
+      "together": true
+    }
   },
   {
     "id": "G-D-11",
@@ -1624,7 +1674,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": true,
+      "second": true,
+      "together": true
+    }
   },
   {
     "id": "G-D-12",
@@ -1665,7 +1720,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": false,
+      "together": false
+    }
   },
   {
     "id": "T-L-13",
@@ -2000,7 +2060,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": true,
+      "second": false,
+      "together": true
+    }
   },
   {
     "id": "G-D-14",
@@ -2041,7 +2106,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": false,
+      "together": true
+    }
   },
   {
     "id": "G-D-15",
@@ -2082,7 +2152,12 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": false,
+      "second": false,
+      "together": true
+    }
   },
   {
     "id": "G-D-16",
@@ -2123,6 +2198,11 @@
         ]
       }
     },
-    "alignment": "skill-practice"
+    "alignment": "skill-practice",
+    "sufficiency": {
+      "first": true,
+      "second": true,
+      "together": true
+    }
   }
 ]

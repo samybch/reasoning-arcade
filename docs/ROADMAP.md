@@ -60,6 +60,12 @@
 - [x] All exam review entries state the correct choice explicitly
 - [ ] Independent reviewer approves the logical counterexamples and wording; all items remain pilots
 
+## Fifth consolidated XYZ lot — answer quality
+- [x] Structured answer-key proof flags for 16 original bilingual Data Sufficiency items
+- [x] CI schema detects contradictory or mismatched A–E answer mappings
+- [x] Issue forms for reporting incorrect/ambiguous original exercises (question ID and language only)
+- [ ] Independent editorial review and final pilot approval of each question (issue #3)
+
 ## Next XYZ consolidation — structured Argument Lab explanations
 
 - [x] Add original three-step French and English explanations for all 12 Argument Lab items

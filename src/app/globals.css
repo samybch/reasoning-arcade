@@ -58,3 +58,7 @@
 .reasoning-breakdown li strong{font-size:13px}
 .reasoning-breakdown li p{margin:3px 0 0;color:var(--muted);font-size:13px;line-height:1.6}
 .review-answer{font-size:13px;font-weight:750}
+
+/* Voluntary, external link to a structured original-question issue report. */
+.question-feedback-link{display:inline-block;color:var(--primary);font-weight:700;font-size:12px;text-decoration:underline;text-underline-offset:3px;margin-top:17px}
+.question-feedback-link:hover{text-decoration-thickness:2px}
