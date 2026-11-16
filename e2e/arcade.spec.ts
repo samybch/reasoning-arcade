@@ -342,3 +342,13 @@ test('mixed mini-tests include all available skills for TAGE and GMAT',async({pa
     expect(categories).toEqual(expected);
   }
 });
+
+test('Quant Lab clock reflects the actual pilot question budget and warns that it is not official',async({page})=>{
+  await page.goto(PREFIX+'/en/play/quant-lab/?exam=gmat&mode=exam');
+  await expect(page.locator('#question-title')).toBeVisible();
+  const clock=await page.locator('.timer').textContent();
+  const parts=(clock||'').split(':').map(Number);
+  expect(parts).toHaveLength(2);
+  expect(parts[0]*60+parts[1]).toBeGreaterThan(500); // Five quantitative questions, unlike the former fixed 400s.
+  await expect(page.locator('.quiz-card')).toContainText("not an official exam limit");
+});

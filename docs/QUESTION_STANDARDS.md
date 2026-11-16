@@ -30,3 +30,7 @@ Every `code-logic` question now requires three original stages in FR and EN: ide
 ## Quant Lab editorial checklist
 
 For `quant-lab` items use IDs `T-C-XX` (TAGE MAGE Calcul) or `G-Q-XX` (GMAT Quantitative Problem Solving), five answer choices indexed 0–4, and three detailed FR/EN solution steps. Confirm the correct answer by an **independent arithmetic calculation**, test distractors, and verify that the prompt does not rely on a calculator or missing contextual assumptions. These are original pilot exercises, never official exam items.
+
+## Mandatory review ledger
+
+Each question ID must also appear **exactly once** in `docs/editorial-review-ledger.json` with a matching answer key and review focus. Source status `reviewed` requires a corresponding `approved` decision, accountable reviewer and date; and vice versa. A CI pass does not imply reviewer approval. Follow `docs/EDITORIAL_REVIEW_PROTOCOL.md`. A new question with no ledger entry must fail CI rather than silently bypass the editorial gate.

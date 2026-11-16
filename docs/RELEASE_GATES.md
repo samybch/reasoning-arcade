@@ -49,3 +49,9 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] New bilingual Quant Lab available on both exam pathways, six original pilot problems per track
 - [x] Math answer keys checked by executable arithmetic invariants and per-item FR/EN correction steps
 - [ ] Independent expert review of quantitative item difficulty, ambiguity and alignment before any official-syllabus claims
+
+## Traceable question review / timer
+- [x] 58/58 pilot review records with accountable reviewer/date fields that cannot be marked approved in CI without matching content status
+- [x] Separate documented independent review protocol and focused risk questions, including counterexample checks
+- [x] Show timer budgets derived from draft question estimates with explicit non-official disclaimer
+- [ ] Actual independent reviewer decisions and evidence for all source questions before public exam-preparation claims

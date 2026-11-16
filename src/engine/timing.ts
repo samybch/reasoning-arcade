@@ -6,3 +6,8 @@ export function elapsedSeconds(startMs:number,nowMs:number):number {
 export function timeExpired(startMs:number,nowMs:number,durationSeconds:number):boolean{
   return durationSeconds>0 && elapsedSeconds(startMs,nowMs)>=durationSeconds;
 }
+
+// Timed practice uses each pilot's estimated solving time, never official exam section timing.
+export function practiceDurationSeconds(questions:ReadonlyArray<{estimatedSeconds:number}>):number {
+  return questions.reduce((sum,q)=>sum+q.estimatedSeconds,0);
+}

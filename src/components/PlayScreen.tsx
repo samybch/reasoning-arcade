@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {ArcadeShell} from './ArcadeShell';
 import {buildExamQueue,grade,nextQuestion,nextReviewQuestion,queueUnansweredForReview,recordAttempt} from '../engine/adaptive';
 import {loadProgress,saveProgress} from '../engine/storage';
-import {elapsedSeconds,timeExpired} from '../engine/timing';
+import {elapsedSeconds,practiceDurationSeconds,timeExpired} from '../engine/timing';
 import type {Attempt,Exam,Game,Locale,Progress,Question} from '../engine/types';
 import {ReasoningBreakdown} from './ReasoningBreakdown';
 import {QuestionFeedbackLink} from './QuestionFeedbackLink';
@@ -61,7 +61,7 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
     const id=window.setInterval(tick,mode==='exam'?250:1000);
     return ()=>window.clearInterval(id);
   },[ready,finished,current,mode,revealed]);
-  const duration=queue.length*80;
+  const duration=practiceDurationSeconds(queue);
   useEffect(()=>{
     if(mode==='exam'&&ready&&!finished&&queue.length&&seconds>=duration){
       if(progress){
@@ -148,7 +148,7 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
       <div className="quiz-footer"><span className="small-muted">{fr?'Les progrès restent sur cet appareil.':'Progress stays on this device.'}</span>
         {mode!=='exam'&&revealed?<button type="button" className="button primary" onClick={advance}>{attempts.length>=max?(fr?'Terminer':'Finish'):(fr?'Suivante':'Next')} →</button>:
           <button type="button" className="button primary" disabled={selected===null} onClick={submit}>{fr?'Valider':'Submit'} →</button>}</div>
-      {mode==='exam'&&<p className="note">{fr?'Entraînement chronométré, non officiel. Les explications seront visibles à la fin.':'Unofficial timed practice. Explanations appear at the end.'}</p>}
+      {mode==='exam'&&<p className="note">{fr?'Entraînement chronométré non officiel : le temps total est calculé à partir des durées estimées des questions pilotes, et non d’un barème officiel. Les explications seront visibles à la fin.':'Unofficial timed practice: the time budget comes from each pilot question’s estimated duration, not an official exam limit. Explanations appear at the end.'}</p>}
       <QuestionFeedbackLink questionId={current.id} locale={locale}/>
     </section>}
   </ArcadeShell>;

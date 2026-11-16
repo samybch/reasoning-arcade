@@ -96,3 +96,12 @@
 - [x] Place unanswered questions from expired mini-tests in the existing local review queue, without counting fabricated attempts
 - [x] Add regression tests for browser reload, category coverage, queue limits, and elapsed sessions
 - [ ] Review pedagogical quality with real learners; no production website deployment before separate GO
+
+## XYZ — Pilot validity / readiness gate (2026-11-16)
+- [x] Record a review focus and pending reviewer decision for every one of the 58 source questions
+- [x] Enforce review-ledger completeness and agreement with the source answer key in CI
+- [x] Correct the FR strict-inequality wording for cost-savings question `G-A-09`
+- [x] Make timed practice budgets reflect each question's current pilot estimate rather than a fixed allowance
+- [ ] Secure independent FR/EN mathematical, linguistic and pedagogy sign-off for all 58 exercises
+- [ ] Run controlled, opt-in browser usability review and log non-sensitive issues only
+- [ ] Keep GitHub Pages untriggered until explicit owner GO plus legal and accessibility gates
