@@ -2204,5 +2204,569 @@
       "second": true,
       "together": true
     }
+  },
+  {
+    "id": "T-C-01",
+    "exam": "tage",
+    "game": "quant-lab",
+    "competency": "percentages",
+    "difficulty": 2,
+    "estimatedSeconds": 90,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Un club propose 120 billets. Il en vend 25 % le matin, puis un tiers des billets restants l'après-midi. Combien de billets restent invendus ?",
+        "choices": [
+          "40",
+          "50",
+          "55",
+          "60",
+          "70"
+        ],
+        "explanation": "Le matin, 30 billets sont vendus. Il reste 90 billets, dont un tiers, soit 30, sont vendus l'après-midi. Il reste donc 60 billets.",
+        "hint": "Calcule d'abord le stock de billets après la vente du matin.",
+        "reviewSteps": [
+          "Le quart des 120 billets initiaux représente 30 billets vendus le matin.",
+          "Après cette vente, 90 billets restent : le tiers de 90 vaut encore 30 billets.",
+          "Au total, 120 − 30 − 30 = 60 billets restent disponibles à la vente."
+        ]
+      },
+      "en": {
+        "prompt": "A club has 120 tickets. It sells 25% in the morning, then one third of the remaining tickets in the afternoon. How many tickets remain unsold?",
+        "choices": [
+          "40",
+          "50",
+          "55",
+          "60",
+          "70"
+        ],
+        "explanation": "The morning sale accounts for 30 tickets, leaving 90. One third of 90 is another 30, so 60 remain unsold.",
+        "hint": "First calculate the number of tickets remaining after the morning sale.",
+        "reviewSteps": [
+          "One quarter of the original 120 tickets means 30 tickets were sold in the morning.",
+          "There are 90 tickets left. One third of 90 equals another 30 tickets sold.",
+          "Subtract both sales from the initial total: 120 − 30 − 30 = 60 unsold tickets."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-C-02",
+    "exam": "tage",
+    "game": "quant-lab",
+    "competency": "rates",
+    "difficulty": 3,
+    "estimatedSeconds": 115,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Deux robinets à débit constant remplissent séparément un bassin en 6 heures et en 3 heures. En combien de minutes le remplissent-ils ensemble ?",
+        "choices": [
+          "90",
+          "100",
+          "120",
+          "150",
+          "180"
+        ],
+        "explanation": "Leurs débits s'additionnent : 1/6 + 1/3 = 1/2 bassin par heure. Ils remplissent donc le bassin en 2 heures, soit 120 minutes.",
+        "hint": "Additionne les débits de remplissage, pas les durées.",
+        "reviewSteps": [
+          "Exprime chaque débit comme une fraction du bassin remplie par heure : 1/6 et 1/3.",
+          "Ensemble, les robinets remplissent 1/6 + 1/3 = 1/2 du bassin chaque heure.",
+          "Un bassin entier demande deux heures à ce débit, soit 2 × 60 = 120 minutes."
+        ]
+      },
+      "en": {
+        "prompt": "Two constant-flow taps can each fill a tank in 6 hours and 3 hours. How many minutes do they need when running together?",
+        "choices": [
+          "90",
+          "100",
+          "120",
+          "150",
+          "180"
+        ],
+        "explanation": "Their rates add: 1/6 + 1/3 = 1/2 tank per hour. Together they fill one tank in 2 hours, or 120 minutes.",
+        "hint": "Add the filling rates rather than the separate times.",
+        "reviewSteps": [
+          "Express the taps' respective rates as 1/6 and 1/3 of a tank per hour.",
+          "Together they fill 1/6 + 1/3 = 1/2 of the tank each hour.",
+          "A full tank at this rate requires 2 hours, which equals 120 minutes."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-C-03",
+    "exam": "tage",
+    "game": "quant-lab",
+    "competency": "algebra",
+    "difficulty": 2,
+    "estimatedSeconds": 100,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Un nombre à deux chiffres possède des chiffres dont la somme vaut 11. Le chiffre des dizaines dépasse celui des unités de 3. Quel est ce nombre ?",
+        "choices": [
+          "47",
+          "56",
+          "65",
+          "74",
+          "83"
+        ],
+        "explanation": "Avec d pour les dizaines et u pour les unités : d + u = 11 et d − u = 3. On obtient d = 7 et u = 4 ; le nombre est 74.",
+        "hint": "Écris deux équations, une pour la somme et une pour la différence.",
+        "reviewSteps": [
+          "Appelle d le chiffre des dizaines et u celui des unités. La somme impose d + u = 11.",
+          "La deuxième condition donne d − u = 3. En ajoutant, 2d = 14.",
+          "Les dizaines valent 7 et les unités 4 : 74 vérifie les deux conditions."
+        ]
+      },
+      "en": {
+        "prompt": "A two-digit number has digits whose sum is 11. Its tens digit is 3 greater than its units digit. What is the number?",
+        "choices": [
+          "47",
+          "56",
+          "65",
+          "74",
+          "83"
+        ],
+        "explanation": "If t is the tens digit and u the units digit, t + u = 11 and t − u = 3. Therefore t = 7, u = 4, and the number is 74.",
+        "hint": "Write one equation for the sum and one equation for the difference.",
+        "reviewSteps": [
+          "Let t represent the tens digit and u the units digit. Their sum gives t + u = 11.",
+          "The second condition gives t − u = 3. Adding the equations yields 2t = 14.",
+          "Thus the tens digit is 7 and the units digit is 4: the number is 74."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-C-04",
+    "exam": "tage",
+    "game": "quant-lab",
+    "competency": "geometry",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Un terrain rectangulaire a un périmètre de 54 mètres. Sa longueur mesure 3 mètres de plus que le double de sa largeur. Quelle est son aire en m² ?",
+        "choices": [
+          "128",
+          "144",
+          "150",
+          "152",
+          "160"
+        ],
+        "explanation": "Si la largeur est l, la longueur vaut 2l + 3. Leur somme vaut 27, donc 3l + 3 = 27 : l = 8 et longueur = 19. L'aire vaut 152 m².",
+        "hint": "Utilise le demi-périmètre pour relier les dimensions du rectangle.",
+        "reviewSteps": [
+          "Le demi-périmètre vaut 27 mètres : longueur + largeur = 27 mètres.",
+          "En remplaçant la longueur par 2 × largeur + 3, on trouve 3 × largeur + 3 = 27.",
+          "La largeur est 8 mètres et la longueur 19 mètres. L'aire vaut 8 × 19 = 152 m²."
+        ]
+      },
+      "en": {
+        "prompt": "A rectangular plot has a perimeter of 54 meters. Its length is 3 meters more than twice its width. What is its area in m²?",
+        "choices": [
+          "128",
+          "144",
+          "150",
+          "152",
+          "160"
+        ],
+        "explanation": "Let the width be w, so length = 2w + 3. Their sum is 27, giving 3w + 3 = 27. Therefore width = 8, length = 19 and area = 152 m².",
+        "hint": "Use half the perimeter to relate the length and the width.",
+        "reviewSteps": [
+          "Half the perimeter is 27 meters, so length plus width equals 27 meters.",
+          "Replace the length with 2 × width + 3 to obtain 3 × width + 3 = 27.",
+          "The width is 8 meters and length is 19 meters. Their product is 152 m²."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-C-05",
+    "exam": "tage",
+    "game": "quant-lab",
+    "competency": "percentages",
+    "difficulty": 2,
+    "estimatedSeconds": 90,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Le prix d'un objet est de 200 €. Il augmente de 20 %, puis baisse de 20 % par rapport au nouveau prix. Quel est le prix final en euros ?",
+        "choices": [
+          "180",
+          "188",
+          "192",
+          "200",
+          "208"
+        ],
+        "explanation": "Une hausse de 20 % multiplie par 1,20 puis une baisse de 20 % multiplie par 0,80. Le prix final est 200 × 1,20 × 0,80 = 192 €.",
+        "hint": "Une hausse puis une baisse de même pourcentage ne s'annulent pas forcément.",
+        "reviewSteps": [
+          "Applique la hausse à 200 € : le nouveau prix est 200 × 1,20 = 240 €.",
+          "La baisse de 20 % se calcule sur les 240 €, et non sur le prix initial.",
+          "Multiplie 240 par 0,80 pour obtenir 192 €, un prix inférieur au départ."
+        ]
+      },
+      "en": {
+        "prompt": "An item costs €200. Its price rises by 20%, then falls by 20% of the new price. What is the final price in euros?",
+        "choices": [
+          "180",
+          "188",
+          "192",
+          "200",
+          "208"
+        ],
+        "explanation": "A 20% increase multiplies by 1.20 and a 20% decrease then multiplies by 0.80. The final price is 200 × 1.20 × 0.80 = €192.",
+        "hint": "Equal percentage increases and decreases do not necessarily cancel.",
+        "reviewSteps": [
+          "Apply the first increase to €200: the updated price is 200 × 1.20 = €240.",
+          "The second change is calculated from €240, not from the original €200.",
+          "Apply the 20% decrease to €240: 240 × 0.80 = €192, below the initial price."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-C-06",
+    "exam": "tage",
+    "game": "quant-lab",
+    "competency": "probability",
+    "difficulty": 3,
+    "estimatedSeconds": 130,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Un sac contient 4 jetons rouges, 3 bleus et 2 verts. On tire deux jetons successivement sans remise. Quelle est la probabilité qu'ils soient tous deux rouges ?",
+        "choices": [
+          "1/9",
+          "1/8",
+          "1/6",
+          "2/9",
+          "1/4"
+        ],
+        "explanation": "La probabilité vaut (4/9) × (3/8) = 1/6. Au deuxième tirage, si le premier jeton était rouge, il reste 3 rouges parmi 8 jetons.",
+        "hint": "Le nombre de jetons change au deuxième tirage, car il n'y a pas de remise.",
+        "reviewSteps": [
+          "Sur les 9 jetons de départ, 4 sont rouges : la première probabilité est 4/9.",
+          "Après le tirage d'un rouge, il reste 8 jetons au total et 3 rouges.",
+          "Multiplie les probabilités successives : (4/9) × (3/8) = 1/6."
+        ]
+      },
+      "en": {
+        "prompt": "A bag contains 4 red tokens, 3 blue tokens and 2 green tokens. Two tokens are drawn successively without replacement. What is the probability both are red?",
+        "choices": [
+          "1/9",
+          "1/8",
+          "1/6",
+          "2/9",
+          "1/4"
+        ],
+        "explanation": "The probability is (4/9) × (3/8) = 1/6. After one red token is removed, 3 red tokens remain among 8 tokens.",
+        "hint": "The total number of tokens changes after the first draw.",
+        "reviewSteps": [
+          "Initially there are 9 tokens in the bag, including 4 red ones: P(first red) = 4/9.",
+          "If the first token is red, 8 tokens remain, of which only 3 are red.",
+          "Multiply the sequential conditional probabilities: (4/9) × (3/8) = 1/6."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-01",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "weighted-averages",
+    "difficulty": 2,
+    "estimatedSeconds": 110,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Dans une équipe, 12 personnes gagnent en moyenne 40 milliers d'euros et 8 autres gagnent en moyenne 50 milliers d'euros. Quel est le salaire moyen de l'ensemble, en milliers d'euros ?",
+        "choices": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46"
+        ],
+        "explanation": "Il faut pondérer par les effectifs : (12 × 40 + 8 × 50) / 20 = (480 + 400) / 20 = 44 milliers d'euros.",
+        "hint": "La moyenne globale se calcule en pondérant par le nombre de personnes.",
+        "reviewSteps": [
+          "Le premier groupe représente 12 × 40 = 480 milliers d'euros de rémunérations.",
+          "Le second groupe représente 8 × 50 = 400, soit un total de 880 pour vingt personnes.",
+          "Divise la somme par l'effectif total : 880/20 = 44 milliers d'euros."
+        ]
+      },
+      "en": {
+        "prompt": "A team has 12 employees earning an average of €40 thousand and 8 others earning an average of €50 thousand. What is the overall average in thousands of euros?",
+        "choices": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46"
+        ],
+        "explanation": "Weight the subgroup means by their sizes: (12 × 40 + 8 × 50) / 20 = (480 + 400) / 20 = 44 thousand euros.",
+        "hint": "The overall average is weighted by the number of people in each group.",
+        "reviewSteps": [
+          "First calculate the total for 12 employees: 12 × 40 = 480 thousand euros.",
+          "The other group has 8 × 50 = 400, producing 880 thousand euros in total.",
+          "Divide the combined amount by 20 employees: 880/20 = 44 thousand euros."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-02",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "rates",
+    "difficulty": 2,
+    "estimatedSeconds": 100,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Une machine produit 240 étiquettes en 6 minutes, à rythme constant. Combien d'étiquettes trois machines identiques produisent-elles en 18 minutes ?",
+        "choices": [
+          "720",
+          "1440",
+          "1800",
+          "2160",
+          "2400"
+        ],
+        "explanation": "Une machine produit 240/6 = 40 étiquettes par minute. Trois machines produisent donc 3 × 40 × 18 = 2 160 étiquettes.",
+        "hint": "Commence par calculer le débit d'une seule machine par minute.",
+        "reviewSteps": [
+          "Divise 240 étiquettes par 6 minutes pour obtenir 40 étiquettes par minute.",
+          "Trois machines identiques atteignent un débit cumulé de 3 × 40 = 120 étiquettes par minute.",
+          "Pour 18 minutes, la production totale est de 120 × 18 = 2 160 étiquettes."
+        ]
+      },
+      "en": {
+        "prompt": "One machine makes 240 labels in 6 minutes at a constant rate. How many labels do three identical machines make in 18 minutes?",
+        "choices": [
+          "720",
+          "1440",
+          "1800",
+          "2160",
+          "2400"
+        ],
+        "explanation": "One machine produces 240/6 = 40 labels per minute. Three machines therefore produce 3 × 40 × 18 = 2,160 labels.",
+        "hint": "Begin by finding the output rate of one machine per minute.",
+        "reviewSteps": [
+          "Divide 240 labels by 6 minutes: the rate is 40 labels per minute for one machine.",
+          "Three identical machines work at a combined rate of 3 × 40 = 120 labels per minute.",
+          "Over 18 minutes, the machines make 120 × 18 = 2,160 labels."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-03",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "algebra",
+    "difficulty": 3,
+    "estimatedSeconds": 130,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Deux nombres réels x et y vérifient x + y = 25 et 3x = 2y. Quelle est la valeur de x ?",
+        "choices": [
+          "8",
+          "9",
+          "10",
+          "12",
+          "15"
+        ],
+        "explanation": "De 3x = 2y, on tire y = 1,5x. Ainsi x + y = 2,5x = 25 et x = 10.",
+        "hint": "Exprime une inconnue en fonction de l'autre pour résoudre le système.",
+        "reviewSteps": [
+          "Transforme d'abord 3x = 2y en y = (3/2)x pour n'avoir que x à calculer.",
+          "Remplace y dans x + y = 25 : x + 1,5x = 25, soit 2,5x = 25.",
+          "Divise par 2,5 : x = 10. La valeur y = 15 confirme les deux équations."
+        ]
+      },
+      "en": {
+        "prompt": "Two real numbers x and y satisfy x + y = 25 and 3x = 2y. What is x?",
+        "choices": [
+          "8",
+          "9",
+          "10",
+          "12",
+          "15"
+        ],
+        "explanation": "Since 3x = 2y, y = 1.5x. Then x + y = 2.5x = 25, so x = 10.",
+        "hint": "Express one unknown as a multiple of the other to solve the equations.",
+        "reviewSteps": [
+          "First rewrite 3x = 2y as y = (3/2)x, leaving only x to determine.",
+          "Substitute into the first equation: x + 1.5x = 25, or 2.5x = 25.",
+          "Divide by 2.5 to obtain x = 10; y = 15 confirms both constraints."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-04",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "weighted-averages",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Une entreprise réalise 60 % de son chiffre d'affaires sur l'activité A, à marge opérationnelle de 20 %, et 40 % sur B, à marge de 35 %. Quelle est sa marge opérationnelle globale ?",
+        "choices": [
+          "24%",
+          "25%",
+          "26%",
+          "27.5%",
+          "30%"
+        ],
+        "explanation": "La marge globale est pondérée par le chiffre d'affaires : 0,60 × 20 % + 0,40 × 35 % = 12 % + 14 % = 26 %.",
+        "hint": "La moyenne des marges doit être pondérée par les parts de chiffre d'affaires.",
+        "reviewSteps": [
+          "Suppose un chiffre d'affaires total de 100 € : A représente 60 € et B représente 40 €.",
+          "L'activité A génère 12 € de marge, et l'activité B 14 € de marge opérationnelle.",
+          "La somme des marges vaut 26 € pour 100 € de ventes, soit une marge de 26 %."
+        ]
+      },
+      "en": {
+        "prompt": "A firm earns 60% of revenue from division A with a 20% operating margin, and 40% from division B with a 35% margin. What is its overall operating margin?",
+        "choices": [
+          "24%",
+          "25%",
+          "26%",
+          "27.5%",
+          "30%"
+        ],
+        "explanation": "The combined margin is weighted by revenue: 0.60 × 20% + 0.40 × 35% = 12% + 14% = 26%.",
+        "hint": "Calculate the weighted average using the revenue shares as weights.",
+        "reviewSteps": [
+          "Assume the company generates €100 in revenue: A accounts for €60 and B for €40.",
+          "Division A contributes €12 of profit and division B contributes €14 of profit.",
+          "Total operating profit is €26 per €100 of revenue, so the margin is 26%."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-05",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "algebra",
+    "difficulty": 3,
+    "estimatedSeconds": 135,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Le produit de deux entiers pairs positifs consécutifs est 168. Quelle est leur somme ?",
+        "choices": [
+          "22",
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "explanation": "Les entiers sont 12 et 14 : leur produit vaut 168 et leur somme vaut 26.",
+        "hint": "Deux nombres pairs consécutifs diffèrent toujours de deux unités.",
+        "reviewSteps": [
+          "Appelle n le plus petit entier pair, puis représente l'autre entier par n + 2.",
+          "Pour vérifier le produit 168, observe que 12 × 14 = 168 et que ces nombres sont pairs.",
+          "Additionne les valeurs 12 et 14 pour obtenir une somme de 26 unités."
+        ]
+      },
+      "en": {
+        "prompt": "The product of two consecutive positive even integers is 168. What is their sum?",
+        "choices": [
+          "22",
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "explanation": "The integers are 12 and 14: their product is 168 and their sum is 26.",
+        "hint": "Consecutive even integers always differ from each other by exactly two.",
+        "reviewSteps": [
+          "Let n be the smaller even integer, so the other integer is n + 2.",
+          "The product 12 × 14 = 168 shows that these positive even consecutive numbers fit.",
+          "Add the two values, 12 and 14, to obtain the required sum of 26."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-06",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "algebra",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Une entreprise supporte 960 € de coûts fixes. Chaque produit se vend 30 € et engendre 18 € de coûts variables. Combien d'unités doit-elle vendre pour atteindre exactement le seuil de rentabilité ?",
+        "choices": [
+          "60",
+          "70",
+          "80",
+          "90",
+          "100"
+        ],
+        "explanation": "Chaque unité apporte 30 − 18 = 12 € de marge sur coût variable. Pour couvrir 960 € de coûts fixes, il faut 960/12 = 80 unités.",
+        "hint": "Calcule d'abord la contribution de chaque vente après les coûts variables.",
+        "reviewSteps": [
+          "Chaque unité vendue 30 € coûte 18 € en charges variables : sa contribution est 12 €.",
+          "Le total des contributions doit couvrir exactement les coûts fixes de 960 €.",
+          "Divise 960 € par 12 € par unité : l'entreprise doit vendre 80 unités."
+        ]
+      },
+      "en": {
+        "prompt": "A firm has €960 in fixed costs. Each product sells for €30 and incurs €18 in variable costs. How many units must it sell to break even exactly?",
+        "choices": [
+          "60",
+          "70",
+          "80",
+          "90",
+          "100"
+        ],
+        "explanation": "Each unit contributes €30 − €18 = €12 toward fixed costs. Covering €960 requires 960/12 = 80 units.",
+        "hint": "First compute the contribution earned from each product after its variable costs.",
+        "reviewSteps": [
+          "A €30 sale incurs €18 of variable cost, leaving a €12 contribution per unit.",
+          "The contributions must cover precisely €960 in fixed costs to reach break-even.",
+          "Divide fixed costs by the contribution per unit: 960/12 = 80 units."
+        ]
+      }
+    }
   }
 ]

@@ -8,7 +8,8 @@ import type {Exam,Game,Locale,SkillProgress} from '../engine/types';
 const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string}[]=[
   {id:'code-logic',name:'Code Logic',symbol:'⌘',description:{fr:'Trouve la règle cachée dans les nombres et les figures.',en:'Find the hidden rule behind numbers and patterns.'}},
   {id:'argument-lab',name:'Argument Lab',symbol:'◇',description:{fr:'Identifie hypothèses, conclusions et failles de raisonnement.',en:'Find assumptions, conclusions and flawed arguments.'}},
-  {id:'enough-info',name:'Enough Info?',symbol:'∑',description:{fr:'Décide si deux informations suffisent à répondre.',en:'Decide if two statements contain enough information.'}}
+  {id:'enough-info',name:'Enough Info?',symbol:'∑',description:{fr:'Décide si deux informations suffisent à répondre.',en:'Decide if two statements contain enough information.'}},
+  {id:'quant-lab',name:'Quant Lab',symbol:'%',description:{fr:'Résous des problèmes de calcul, de proportion et d’algèbre.',en:'Solve quantitative, rate, algebra and ratio challenges.'}}
 ];
 export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;questionCount:number;questionIds:string[]}){
   const [exam,setExam]=useState<Exam>('tage');
@@ -30,7 +31,13 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
     'numeric-patterns':{fr:'Suites numériques',en:'Number patterns'},
     'numeric-categorization':{fr:'Catégorisation',en:'Categorization'},
     'critical-reasoning':{fr:'Raisonnement critique',en:'Critical reasoning'},
-    'data-sufficiency':{fr:'Suffisance de données',en:'Data sufficiency'}
+    'data-sufficiency':{fr:'Suffisance de données',en:'Data sufficiency'},
+    'percentages':{fr:'Pourcentages',en:'Percentages'},
+    'rates':{fr:'Débits et proportions',en:'Rates and proportions'},
+    'algebra':{fr:'Algèbre',en:'Algebra'},
+    'geometry':{fr:'Géométrie',en:'Geometry'},
+    'probability':{fr:'Probabilités',en:'Probability'},
+    'weighted-averages':{fr:'Moyennes pondérées',en:'Weighted averages'}
   };
   const knownQuestionIds=new Set(questionIds);
   const reviewCount=pendingReviewIds.filter(id=>knownQuestionIds.has(id)&&id.startsWith(exam==='tage'?'T-':'G-')).length;
@@ -43,15 +50,15 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
         <h1>{fr?'La logique,':'Better thinking,'}<br/><em>{fr?'à ton rythme.':'one puzzle at a time.'}</em></h1>
         <p className="lead">{fr?'Des jeux pour développer ton raisonnement et des mini-tests pour te préparer. Sans compte, gratuitement.':'Grow your reasoning skills with quick games and timed practice. Free, with no login.'}</p>
         <a className="button primary" href="#choose">{fr?'Commencer':'Get started'} →</a>
-        <p className="hero-stats"><strong>03</strong> {fr?'jeux':'games'} <span>·</span> <strong>{questionCount}</strong> {fr?'questions pilotes':'pilot questions'} <span>·</span> <strong>0 €</strong></p>
+        <p className="hero-stats"><strong>{games.length}</strong> {fr?'jeux':'games'} <span>·</span> <strong>{questionCount}</strong> {fr?'questions pilotes':'pilot questions'} <span>·</span> <strong>0 €</strong></p>
       </div>
       <div className="hero-graphic" aria-hidden><div className="floating f1">3 · 6 · 12 · <b>?</b></div><div className="floating f2">IF → THEN</div><div className="floating f3">A / B / C / D / E</div></div>
     </section>
     <section id="choose" className="section">
       <p className="eyebrow">01 — {fr?'CHOISIS TON PARCOURS':'CHOOSE YOUR TRACK'}</p><h2>{fr?'Quel examen prépares-tu ?':'Which exam are you preparing for?'}</h2>
       <div className="track-selector" role="group" aria-label={fr?'Examen':'Exam'}>
-        <button type="button" aria-pressed={exam==='tage'} className={exam==='tage'?'track active':'track'} onClick={()=>setExam('tage')}><strong>TAGE MAGE</strong><small>{fr?'Logique · Raisonnement':'Logic · Reasoning'}</small></button>
-        <button type="button" aria-pressed={exam==='gmat'} className={exam==='gmat'?'track active':'track'} onClick={()=>setExam('gmat')}><strong>GMAT</strong><small>Verbal · Data Insights</small></button>
+        <button type="button" aria-pressed={exam==='tage'} className={exam==='tage'?'track active':'track'} onClick={()=>setExam('tage')}><strong>TAGE MAGE</strong><small>{fr?'Logique · Calcul · Raisonnement':'Logic · Quantitative · Reasoning'}</small></button>
+        <button type="button" aria-pressed={exam==='gmat'} className={exam==='gmat'?'track active':'track'} onClick={()=>setExam('gmat')}><strong>GMAT</strong><small>Quant · Verbal · Data Insights</small></button>
       </div>
       <div className="section-header"><div><p className="eyebrow">02 — {fr?'À TOI DE JOUER':'YOUR CHALLENGE'}</p><h2>{fr?'Choisis ton jeu':'Choose a game'}</h2></div>
         <Link className="text-link" href={`/${locale}/practice/?exam=${exam}`}>{fr?'Mini-test chronométré':'Timed mini-test'} →</Link></div>

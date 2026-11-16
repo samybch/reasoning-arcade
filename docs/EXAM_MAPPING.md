@@ -9,6 +9,7 @@ Reference sites for later editorial verification:
 | Code Logic | Supplemental numeric/geometric logic warm-ups; not a full official Logic subtest representation | Not offered |
 | Argument Lab | Reasoning and argumentation-related skills | Critical Reasoning-related skills |
 | Enough Info? | Conditions minimales-related skills | Data Sufficiency-related skills |
+| Quant Lab | Arithmetic, geometry and algebra-related skills from Calcul | Algebra and arithmetic Problem Solving-related skills in Quantitative Reasoning |
 
 The current preview is a **learning experiment**, not an official simulation. Some questions are elementary and not indicative of official test difficulty. Review exact answer conventions for both exams before calling anything exam-like. No score equivalence, affiliation or endorsement is claimed.
 
@@ -38,3 +39,13 @@ TAGE MAGE offers six subtests, and this MVP trains skills related to only three 
 Sources, verified 2026-11-16:
 - FNEGE: https://www.tagemage.fr/page/sous-tests
 - GMAC: https://www.mba.com/exams/gmat-exam/about/exam-content
+
+## 2026-11-16 — New Quant Lab pilot category
+
+Six original bilingual Calcul exercises (T-C-01 through T-C-06) and six original GMAT Quantitative Reasoning/Problem Solving exercises (G-Q-01 through G-Q-06) were added. These **pilot exercises** test percentages, rates, elementary algebra, geometry, probability, weighted averages and break-even logic.
+
+FNEGE describes Calcul as word problems using elementary arithmetic, geometry and algebra, while GMAC describes the current GMAT Quantitative Reasoning section as 21 Problem Solving questions testing arithmetic and algebra (without a calculator). The small Quant Lab drills are **not** official GMAT/TAGE MAGE examples or calibrated mock exam material.
+- FNEGE: https://www.tagemage.fr/page/sous-tests
+- GMAC: https://www.mba.com/exams/gmat-exam/about/exam-content
+
+Current catalog total: **58 bilingual pilot questions**. The GMAT quantitative path and TAGE Calcul path are now partially covered; the remaining gaps shown on the bilingual coverage page still need development.

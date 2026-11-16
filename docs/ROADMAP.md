@@ -81,3 +81,11 @@
 - [x] Test that explanations do not appear before timed sessions finish
 - [x] Extend schema validation to require detailed FR/EN reasoning for every pilot item
 - [ ] Independent editorial approval, difficulty calibration and user feedback still required
+
+## XYZ — Quant Lab (consolidation batch)
+- [x] Add a fourth reusable question game (Quant Lab) without backend or account
+- [x] Provide 12 original FR/EN arithmetic/algebra/geometry word problems and three-stage worked solutions
+- [x] Derive program coverage counts from the same canonical bank
+- [x] Add arithmetic-key and responsive browser regression tests
+- [ ] Independent external math/translation review of 58 pilot items
+- [ ] Safely squash-merge the green CI branch; remove its merged branch when connector support becomes available

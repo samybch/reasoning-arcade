@@ -25,4 +25,8 @@ A three-step explanation is a **teaching aid**, not evidence of official examina
 
 Every `code-logic` question now requires three original stages in FR and EN: identify a candidate rule, verify it against the examples, then explain the selected option. The same reusable `ReasoningBreakdown` interface shows the method only after an answer, or after the timed session ends.
 
-**All 46 pilot items have structured steps, but none is independently certified as exam-equivalent or editorially approved.** Reviewers must still challenge possible alternative patterns, inconsistent illustrations, and the uniqueness of the answer.
+**All 58 pilot items have structured steps, but none is independently certified as exam-equivalent or editorially approved.** Reviewers must still challenge possible alternative patterns, inconsistent illustrations, and the uniqueness of the answer.
+
+## Quant Lab editorial checklist
+
+For `quant-lab` items use IDs `T-C-XX` (TAGE MAGE Calcul) or `G-Q-XX` (GMAT Quantitative Problem Solving), five answer choices indexed 0–4, and three detailed FR/EN solution steps. Confirm the correct answer by an **independent arithmetic calculation**, test distractors, and verify that the prompt does not rely on a calculator or missing contextual assumptions. These are original pilot exercises, never official exam items.
