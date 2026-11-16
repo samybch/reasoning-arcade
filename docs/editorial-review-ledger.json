@@ -1,0 +1,596 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-16",
+  "source": "src/content/questions.json",
+  "purpose": "Independent editorial review tracking. Automated validation does not establish question correctness or exam equivalence.",
+  "requiredApprovalChecks": [
+    "correct-answer-uniqueness",
+    "fr-en-parity",
+    "reasoning-and-distractors",
+    "difficulty-and-estimated-time",
+    "originality-and-rights",
+    "exam-competency-mapping"
+  ],
+  "entries": [
+    {
+      "id": "T-L-01",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-02",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-03",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-04",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-05",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-06",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-07",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-08",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-09",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-10",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-11",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-12",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check whether the triangular-number interpretation is unambiguous; the prompt asks for a shared property rather than necessarily the next term."
+    },
+    {
+      "id": "T-A-01",
+      "exam": "tage",
+      "game": "argument-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "T-A-02",
+      "exam": "tage",
+      "game": "argument-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "T-A-03",
+      "exam": "tage",
+      "game": "argument-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "T-A-04",
+      "exam": "tage",
+      "game": "argument-lab",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "T-A-05",
+      "exam": "tage",
+      "game": "argument-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check whether same-exam evidence strengthens the claimed causal effect beyond randomized assignment."
+    },
+    {
+      "id": "T-A-06",
+      "exam": "tage",
+      "game": "argument-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "G-A-07",
+      "exam": "gmat",
+      "game": "argument-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "G-A-08",
+      "exam": "gmat",
+      "game": "argument-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "G-A-09",
+      "exam": "gmat",
+      "game": "argument-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that savings strictly exceed, rather than merely equal, added training costs; verify the French and English explanation."
+    },
+    {
+      "id": "G-A-10",
+      "exam": "gmat",
+      "game": "argument-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "G-A-11",
+      "exam": "gmat",
+      "game": "argument-lab",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "G-A-12",
+      "exam": "gmat",
+      "game": "argument-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+    },
+    {
+      "id": "T-D-01",
+      "exam": "tage",
+      "game": "enough-info",
+      "referenceKey": "A",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "T-D-02",
+      "exam": "tage",
+      "game": "enough-info",
+      "referenceKey": "B",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "T-D-03",
+      "exam": "tage",
+      "game": "enough-info",
+      "referenceKey": "C",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "T-D-04",
+      "exam": "tage",
+      "game": "enough-info",
+      "referenceKey": "D",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "T-D-05",
+      "exam": "tage",
+      "game": "enough-info",
+      "referenceKey": "E",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "T-D-06",
+      "exam": "tage",
+      "game": "enough-info",
+      "referenceKey": "B",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "G-D-07",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "D",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "G-D-08",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "A",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "G-D-09",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "C",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "G-D-10",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "C",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "G-D-11",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "D",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "G-D-12",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "E",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Test each statement separately and together; construct counterexamples for every claimed insufficiency and confirm A–E mapping."
+    },
+    {
+      "id": "T-L-13",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-14",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-15",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "T-L-16",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check primality both before and after digit reversal for every candidate."
+    },
+    {
+      "id": "T-L-17",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check 180-degree rotational symmetry of every named example and distractor, including regular even-sided polygons."
+    },
+    {
+      "id": "T-L-18",
+      "exam": "tage",
+      "game": "code-logic",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+    },
+    {
+      "id": "G-D-13",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "A",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Supply distinct positive transaction values for a counterexample where mean exceeds 100 but median does not."
+    },
+    {
+      "id": "G-D-14",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "C",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Confirm how visits and orders define conversion rate and that either statement alone is insufficient."
+    },
+    {
+      "id": "G-D-15",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "C",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check positive renewal denominators, strict changes in counts/rates, and realisable counterexamples to each statement alone."
+    },
+    {
+      "id": "G-D-16",
+      "exam": "gmat",
+      "game": "enough-info",
+      "referenceKey": "D",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Confirm the minimum sample size and that a positive range implies positive standard deviation."
+    },
+    {
+      "id": "T-C-01",
+      "exam": "tage",
+      "game": "quant-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "T-C-02",
+      "exam": "tage",
+      "game": "quant-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "T-C-03",
+      "exam": "tage",
+      "game": "quant-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "T-C-04",
+      "exam": "tage",
+      "game": "quant-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "T-C-05",
+      "exam": "tage",
+      "game": "quant-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "T-C-06",
+      "exam": "tage",
+      "game": "quant-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify the probability model requires drawing without replacement."
+    },
+    {
+      "id": "G-Q-01",
+      "exam": "gmat",
+      "game": "quant-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "G-Q-02",
+      "exam": "gmat",
+      "game": "quant-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "G-Q-03",
+      "exam": "gmat",
+      "game": "quant-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "G-Q-04",
+      "exam": "gmat",
+      "game": "quant-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Confirm weighted operating margins use revenue shares, not an unweighted average."
+    },
+    {
+      "id": "G-Q-05",
+      "exam": "gmat",
+      "game": "quant-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recalculate the answer independently; check arithmetic units, assumptions and uniqueness across all five numerical options."
+    },
+    {
+      "id": "G-Q-06",
+      "exam": "gmat",
+      "game": "quant-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Confirm fixed/variable cost and break-even assumptions remain explicit."
+    }
+  ]
+}
