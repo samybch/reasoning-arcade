@@ -10,7 +10,7 @@
 - [ ] Review dependency alerts and pin or update responsibly
 
 ## Y — Pedagogy and claims
-- [x] 46 original FR/EN pilot items with first-pass answer-key matrix
+- [x] 58 original FR/EN pilot items with first-pass answer-key matrix
 - [x] Key-regression tests and a structural validator that allows new contributions
 - [ ] Independent French/English correctness review and approval for every item (issue #3)
 - [ ] Verify official exam taxonomy and current answer conventions in authoritative materials
@@ -44,3 +44,8 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] Question-specific GitHub issue-report links and template; external navigation is voluntary
 - [x] No browser progress or chosen answers transmitted in feedback links
 - [ ] Define response times and report moderation before actively inviting public learner traffic
+
+## Quantitative learning expansion
+- [x] New bilingual Quant Lab available on both exam pathways, six original pilot problems per track
+- [x] Math answer keys checked by executable arithmetic invariants and per-item FR/EN correction steps
+- [ ] Independent expert review of quantitative item difficulty, ambiguity and alignment before any official-syllabus claims
