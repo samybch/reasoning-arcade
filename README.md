@@ -85,3 +85,9 @@ All **58 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough 
 Each of the **58 pilot questions** now has a distinct pending-review record in [the editorial review ledger](docs/editorial-review-ledger.json), with a targeted point for human scrutiny. See [the independent review procedure](docs/EDITORIAL_REVIEW_PROTOCOL.md) for bilingual checks, numerical counterexamples and approval rules. Machine checks do **not** replace independent review.
 
 Timed mini-tests use the sum of the selected questions' **estimated pilot solving times**, rather than imposing the same 80-second allowance for all puzzles. Those estimates have not been calibrated to official TAGE MAGE or GMAT section durations.
+
+## Offline bilingual review (no installation or public website)
+
+After the `CI / test` job succeeds, open that GitHub Actions run and download the `reasoning-arcade-offline-review` artifact. Unzip it and open `reasoning-arcade-editorial-review.html` in a browser. This **self-contained HTML file** displays all 58 pilot questions side by side in FR/EN. It hides answer keys until the reviewer expands each solution, records preliminary observations, and exports/imports a local JSON feedback file. **No JavaScript packages, account on the reviewing computer, network connection or hosted site are required to open it.** Alternatively, run `npm run build:review-pack` on a developer machine.
+
+The export contains review findings only, **not** independent approvals. See [the offline review guide](docs/OFFLINE_REVIEW_GUIDE.md) and [the editorial protocol](docs/EDITORIAL_REVIEW_PROTOCOL.md). The original public-source licensing remains unchanged; this is a QA worksheet, not a public release.
