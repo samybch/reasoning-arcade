@@ -2486,5 +2486,287 @@
         ]
       }
     }
+  },
+  {
+    "id": "G-Q-01",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "weighted-averages",
+    "difficulty": 2,
+    "estimatedSeconds": 110,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Dans une équipe, 12 personnes gagnent en moyenne 40 milliers d'euros et 8 autres gagnent en moyenne 50 milliers d'euros. Quel est le salaire moyen de l'ensemble, en milliers d'euros ?",
+        "choices": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46"
+        ],
+        "explanation": "Il faut pondérer par les effectifs : (12 × 40 + 8 × 50) / 20 = (480 + 400) / 20 = 44 milliers d'euros.",
+        "hint": "La moyenne globale se calcule en pondérant par le nombre de personnes.",
+        "reviewSteps": [
+          "Le premier groupe représente 12 × 40 = 480 milliers d'euros de rémunérations.",
+          "Le second groupe représente 8 × 50 = 400, soit un total de 880 pour vingt personnes.",
+          "Divise la somme par l'effectif total : 880/20 = 44 milliers d'euros."
+        ]
+      },
+      "en": {
+        "prompt": "A team has 12 employees earning an average of €40 thousand and 8 others earning an average of €50 thousand. What is the overall average in thousands of euros?",
+        "choices": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46"
+        ],
+        "explanation": "Weight the subgroup means by their sizes: (12 × 40 + 8 × 50) / 20 = (480 + 400) / 20 = 44 thousand euros.",
+        "hint": "The overall average is weighted by the number of people in each group.",
+        "reviewSteps": [
+          "First calculate the total for 12 employees: 12 × 40 = 480 thousand euros.",
+          "The other group has 8 × 50 = 400, producing 880 thousand euros in total.",
+          "Divide the combined amount by 20 employees: 880/20 = 44 thousand euros."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-02",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "rates",
+    "difficulty": 2,
+    "estimatedSeconds": 100,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Une machine produit 240 étiquettes en 6 minutes, à rythme constant. Combien d'étiquettes trois machines identiques produisent-elles en 18 minutes ?",
+        "choices": [
+          "720",
+          "1440",
+          "1800",
+          "2160",
+          "2400"
+        ],
+        "explanation": "Une machine produit 240/6 = 40 étiquettes par minute. Trois machines produisent donc 3 × 40 × 18 = 2 160 étiquettes.",
+        "hint": "Commence par calculer le débit d'une seule machine par minute.",
+        "reviewSteps": [
+          "Divise 240 étiquettes par 6 minutes pour obtenir 40 étiquettes par minute.",
+          "Trois machines identiques atteignent un débit cumulé de 3 × 40 = 120 étiquettes par minute.",
+          "Pour 18 minutes, la production totale est de 120 × 18 = 2 160 étiquettes."
+        ]
+      },
+      "en": {
+        "prompt": "One machine makes 240 labels in 6 minutes at a constant rate. How many labels do three identical machines make in 18 minutes?",
+        "choices": [
+          "720",
+          "1440",
+          "1800",
+          "2160",
+          "2400"
+        ],
+        "explanation": "One machine produces 240/6 = 40 labels per minute. Three machines therefore produce 3 × 40 × 18 = 2,160 labels.",
+        "hint": "Begin by finding the output rate of one machine per minute.",
+        "reviewSteps": [
+          "Divide 240 labels by 6 minutes: the rate is 40 labels per minute for one machine.",
+          "Three identical machines work at a combined rate of 3 × 40 = 120 labels per minute.",
+          "Over 18 minutes, the machines make 120 × 18 = 2,160 labels."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-03",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "algebra",
+    "difficulty": 3,
+    "estimatedSeconds": 130,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Deux nombres réels x et y vérifient x + y = 25 et 3x = 2y. Quelle est la valeur de x ?",
+        "choices": [
+          "8",
+          "9",
+          "10",
+          "12",
+          "15"
+        ],
+        "explanation": "De 3x = 2y, on tire y = 1,5x. Ainsi x + y = 2,5x = 25 et x = 10.",
+        "hint": "Exprime une inconnue en fonction de l'autre pour résoudre le système.",
+        "reviewSteps": [
+          "Transforme d'abord 3x = 2y en y = (3/2)x pour n'avoir que x à calculer.",
+          "Remplace y dans x + y = 25 : x + 1,5x = 25, soit 2,5x = 25.",
+          "Divise par 2,5 : x = 10. La valeur y = 15 confirme les deux équations."
+        ]
+      },
+      "en": {
+        "prompt": "Two real numbers x and y satisfy x + y = 25 and 3x = 2y. What is x?",
+        "choices": [
+          "8",
+          "9",
+          "10",
+          "12",
+          "15"
+        ],
+        "explanation": "Since 3x = 2y, y = 1.5x. Then x + y = 2.5x = 25, so x = 10.",
+        "hint": "Express one unknown as a multiple of the other to solve the equations.",
+        "reviewSteps": [
+          "First rewrite 3x = 2y as y = (3/2)x, leaving only x to determine.",
+          "Substitute into the first equation: x + 1.5x = 25, or 2.5x = 25.",
+          "Divide by 2.5 to obtain x = 10; y = 15 confirms both constraints."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-04",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "weighted-averages",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Une entreprise réalise 60 % de son chiffre d'affaires sur l'activité A, à marge opérationnelle de 20 %, et 40 % sur B, à marge de 35 %. Quelle est sa marge opérationnelle globale ?",
+        "choices": [
+          "24%",
+          "25%",
+          "26%",
+          "27.5%",
+          "30%"
+        ],
+        "explanation": "La marge globale est pondérée par le chiffre d'affaires : 0,60 × 20 % + 0,40 × 35 % = 12 % + 14 % = 26 %.",
+        "hint": "La moyenne des marges doit être pondérée par les parts de chiffre d'affaires.",
+        "reviewSteps": [
+          "Suppose un chiffre d'affaires total de 100 € : A représente 60 € et B représente 40 €.",
+          "L'activité A génère 12 € de marge, et l'activité B 14 € de marge opérationnelle.",
+          "La somme des marges vaut 26 € pour 100 € de ventes, soit une marge de 26 %."
+        ]
+      },
+      "en": {
+        "prompt": "A firm earns 60% of revenue from division A with a 20% operating margin, and 40% from division B with a 35% margin. What is its overall operating margin?",
+        "choices": [
+          "24%",
+          "25%",
+          "26%",
+          "27.5%",
+          "30%"
+        ],
+        "explanation": "The combined margin is weighted by revenue: 0.60 × 20% + 0.40 × 35% = 12% + 14% = 26%.",
+        "hint": "Calculate the weighted average using the revenue shares as weights.",
+        "reviewSteps": [
+          "Assume the company generates €100 in revenue: A accounts for €60 and B for €40.",
+          "Division A contributes €12 of profit and division B contributes €14 of profit.",
+          "Total operating profit is €26 per €100 of revenue, so the margin is 26%."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-05",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "algebra",
+    "difficulty": 3,
+    "estimatedSeconds": 135,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Le produit de deux entiers pairs positifs consécutifs est 168. Quelle est leur somme ?",
+        "choices": [
+          "22",
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "explanation": "Les entiers sont 12 et 14 : leur produit vaut 168 et leur somme vaut 26.",
+        "hint": "Deux nombres pairs consécutifs diffèrent toujours de deux unités.",
+        "reviewSteps": [
+          "Appelle n le plus petit entier pair, puis représente l'autre entier par n + 2.",
+          "Pour vérifier le produit 168, observe que 12 × 14 = 168 et que ces nombres sont pairs.",
+          "Additionne les valeurs 12 et 14 pour obtenir une somme de 26 unités."
+        ]
+      },
+      "en": {
+        "prompt": "The product of two consecutive positive even integers is 168. What is their sum?",
+        "choices": [
+          "22",
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "explanation": "The integers are 12 and 14: their product is 168 and their sum is 26.",
+        "hint": "Consecutive even integers always differ from each other by exactly two.",
+        "reviewSteps": [
+          "Let n be the smaller even integer, so the other integer is n + 2.",
+          "The product 12 × 14 = 168 shows that these positive even consecutive numbers fit.",
+          "Add the two values, 12 and 14, to obtain the required sum of 26."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-Q-06",
+    "exam": "gmat",
+    "game": "quant-lab",
+    "competency": "algebra",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Une entreprise supporte 960 € de coûts fixes. Chaque produit se vend 30 € et engendre 18 € de coûts variables. Combien d'unités doit-elle vendre pour atteindre exactement le seuil de rentabilité ?",
+        "choices": [
+          "60",
+          "70",
+          "80",
+          "90",
+          "100"
+        ],
+        "explanation": "Chaque unité apporte 30 − 18 = 12 € de marge sur coût variable. Pour couvrir 960 € de coûts fixes, il faut 960/12 = 80 unités.",
+        "hint": "Calcule d'abord la contribution de chaque vente après les coûts variables.",
+        "reviewSteps": [
+          "Chaque unité vendue 30 € coûte 18 € en charges variables : sa contribution est 12 €.",
+          "Le total des contributions doit couvrir exactement les coûts fixes de 960 €.",
+          "Divise 960 € par 12 € par unité : l'entreprise doit vendre 80 unités."
+        ]
+      },
+      "en": {
+        "prompt": "A firm has €960 in fixed costs. Each product sells for €30 and incurs €18 in variable costs. How many units must it sell to break even exactly?",
+        "choices": [
+          "60",
+          "70",
+          "80",
+          "90",
+          "100"
+        ],
+        "explanation": "Each unit contributes €30 − €18 = €12 toward fixed costs. Covering €960 requires 960/12 = 80 units.",
+        "hint": "First compute the contribution earned from each product after its variable costs.",
+        "reviewSteps": [
+          "A €30 sale incurs €18 of variable cost, leaving a €12 contribution per unit.",
+          "The contributions must cover precisely €960 in fixed costs to reach break-even.",
+          "Divide fixed costs by the contribution per unit: 960/12 = 80 units."
+        ]
+      }
+    }
   }
 ]
