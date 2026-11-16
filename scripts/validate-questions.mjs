@@ -40,7 +40,7 @@ export function validateQuestions(questions=QUESTIONS){
       for(const field of ['prompt','explanation','hint'])if(!nonEmpty(loc[field]))errors.push(`${id}: missing ${lang} ${field}`);
       if(q.game==='argument-lab'&&!nonEmpty(loc.context))errors.push(`${id}: missing ${lang} context`);
       if(q.game==='code-logic'&&!nonEmpty(loc.context))errors.push(`${id}: missing ${lang} puzzle data`);
-      if((q.game==='enough-info'||q.game==='argument-lab')&&(!Array.isArray(loc.reviewSteps)||loc.reviewSteps.length!==3||!loc.reviewSteps.every(s=>nonEmpty(s)&&s.trim().length>=40)))errors.push(`${id}: ${lang} requires three detailed review steps`);
+      if(!Array.isArray(loc.reviewSteps)||loc.reviewSteps.length!==3||!loc.reviewSteps.every(s=>nonEmpty(s)&&s.trim().length>=40))errors.push(`${id}: ${lang} requires three detailed review steps`);
       if(q.game==='enough-info'){
         if(!Array.isArray(loc.statements)||loc.statements.length!==2||!loc.statements.every(nonEmpty))errors.push(`${id}: ${lang} requires exactly two nonempty statements`);
 
