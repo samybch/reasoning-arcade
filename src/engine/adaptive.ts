@@ -1,7 +1,8 @@
 import type {Attempt,Exam,Game,Level,Progress,Question,SkillProgress} from './types';
 
-export const EMPTY_PROGRESS:Progress={version:1,skills:{},totalAnswered:0,totalCorrect:0,recentQuestionIds:[]};
+export const EMPTY_PROGRESS:Progress={version:1,skills:{},totalAnswered:0,totalCorrect:0,recentQuestionIds:[],pendingReviewIds:[]};
 const RECENT_LIMIT=16;
+const REVIEW_LIMIT=24;
 export const skillKey=(q:Question):string=>`${q.exam}:${q.game}:${q.competency}`;
 export function recordAttempt(progress:Progress,question:Question,correct:boolean):Progress {
   const key=skillKey(question);
@@ -14,7 +15,10 @@ export function recordAttempt(progress:Progress,question:Question,correct:boolea
     attempts:current.attempts+1,correct:current.correct+(correct?1:0)
   };
   const recentQuestionIds=[...(progress.recentQuestionIds??[]).filter(id=>id!==question.id),question.id].slice(-RECENT_LIMIT);
-  return {version:1,skills:{...progress.skills,[key]:next},totalAnswered:progress.totalAnswered+1,totalCorrect:progress.totalCorrect+(correct?1:0),recentQuestionIds};
+  const pendingReviewIds=correct
+    ? (progress.pendingReviewIds??[]).filter(id=>id!==question.id)
+    : [...(progress.pendingReviewIds??[]).filter(id=>id!==question.id),question.id].slice(-REVIEW_LIMIT);
+  return {version:1,skills:{...progress.skills,[key]:next},totalAnswered:progress.totalAnswered+1,totalCorrect:progress.totalCorrect+(correct?1:0),recentQuestionIds,pendingReviewIds};
 }
 export function nextQuestion(bank:Question[],progress:Progress,exam:Exam,game:Game|'mixed',used:string[]):Question|null{
   const unseen=bank.filter(q=>q.exam===exam&&(game==='mixed'||q.game===game)&&!used.includes(q.id));
@@ -30,6 +34,16 @@ export function nextQuestion(bank:Question[],progress:Progress,exam:Exam,game:Ga
     const bScore=Math.abs(b.difficulty-(bSkill?.level??2))*10+(bSkill?.attempts??0);
     return aScore-bScore||a.id.localeCompare(b.id);
   })[0];
+}
+// Use oldest pending mistakes first, without repeating an item inside one review session.
+// The bank remains the source of truth: stale local IDs are ignored, not rendered.
+export function nextReviewQuestion(bank:Question[],progress:Progress,exam:Exam,used:string[]):Question|null {
+  const excluded=new Set(used);
+  const available=new Map(bank.filter(q=>q.exam===exam).map(q=>[q.id,q]));
+  for(const id of progress.pendingReviewIds??[]) {
+    if(!excluded.has(id) && available.has(id)) return available.get(id)??null;
+  }
+  return null;
 }
 // A stable variant changes the subset between attempts without changing its validity.
 // This is mini-test practice, NOT GMAT-style psychometric adaptation.

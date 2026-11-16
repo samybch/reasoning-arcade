@@ -126,3 +126,50 @@ test('new navigation remains usable at 320px without horizontal overflow',async(
   await expect(page.getByRole('heading',{name:'Couverture actuelle des examens'})).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth)).toBeLessThanOrEqual(1);
 });
+
+test('incorrectly answered items can be reviewed by exam, then cleared after success',async({page})=>{
+  await page.goto(PREFIX+'/fr/');
+  await page.evaluate(()=>{
+    localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+      version:1,skills:{},totalAnswered:2,totalCorrect:0,recentQuestionIds:[],
+      pendingReviewIds:['T-L-01','G-D-13']
+    }));
+  });
+  await page.reload();
+  await expect(page.getByRole('link',{name:/Revoir mes erreurs/})).toBeVisible();
+  await page.getByRole('link',{name:/Revoir mes erreurs/}).click();
+  await expect(page).toHaveURL(/\/fr\/review\/\?exam=tage/);
+  await expect(page.locator('#question-title')).toBeVisible();
+  await page.locator('.answer-list button').nth(2).click();
+  await page.getByRole('button',{name:/Valider/}).click();
+  await expect(page.locator('.feedback.good')).toBeVisible();
+  await page.getByRole('button',{name:/Terminer/}).click();
+  await expect(page.getByRole('heading',{name:'Tes résultats'})).toBeVisible();
+  await page.getByRole('link',{name:'Accueil'}).first().click();
+  await expect(page.getByRole('link',{name:/Revoir mes erreurs/})).toHaveCount(0);
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('link',{name:/Revoir mes erreurs/})).toBeVisible();
+});
+test('empty error queue displays a useful state instead of an empty challenge',async({page})=>{
+  await page.goto(PREFIX+'/en/review/?exam=gmat');
+  await expect(page.getByRole('heading',{name:'No mistakes to review in this track'})).toBeVisible();
+  await expect(page.getByRole('link',{name:'Home'}).first()).toBeVisible();
+});
+test('review page stays consistent with progress reset and missing local IDs',async({page})=>{
+  await page.goto(PREFIX+'/fr/');
+  await page.evaluate(()=>{
+    localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+      version:1,skills:{},totalAnswered:4,totalCorrect:2,
+      pendingReviewIds:['T-L-999','T-L-01','T-L-01','invalid-id','G-D-13']
+    }));
+  });
+  await page.reload();
+  await expect(page.getByRole('link',{name:/Revoir mes erreurs/})).toBeVisible();
+  await expect(page.locator('.review-cta')).toContainText('1 exercice(s)');
+  await page.getByRole('link',{name:/Revoir mes erreurs/}).click();
+  await expect(page.locator('#question-title')).toBeVisible();
+  await page.getByRole('link',{name:/Retour/}).click();
+  page.once('dialog',d=>d.accept());
+  await page.getByRole('button',{name:/Effacer/}).click();
+  await expect(page.getByRole('link',{name:/Revoir mes erreurs/})).toHaveCount(0);
+});

@@ -1,6 +1,11 @@
 name: Deploy manual preview to GitHub Pages
 on:
   workflow_dispatch:
+    inputs:
+      release_confirmation:
+        description: "After completed legal and educational release gates, type I_APPROVE_PUBLIC_LAUNCH"
+        type: string
+        required: true
 permissions:
   contents: read
   pages: write
@@ -10,6 +15,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   deploy:
+    if: github.event.inputs.release_confirmation == 'I_APPROVE_PUBLIC_LAUNCH'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

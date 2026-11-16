@@ -22,6 +22,7 @@ export interface SkillProgress {
 export interface Progress {
   version:1; skills:Record<string,SkillProgress>; totalAnswered:number; totalCorrect:number;
   recentQuestionIds?:string[]; // Optional for backward compatibility with existing v1 progress.
+  pendingReviewIds?:string[]; // Bounded IDs of missed pilot items to review; no accounts.
 }
 export interface Attempt {
   questionId:string; selected:string; correct:boolean; elapsedSeconds:number;

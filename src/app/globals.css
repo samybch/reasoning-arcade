@@ -43,3 +43,9 @@
 .coverage-row .covered{color:var(--good)}.coverage-row .absent{color:var(--muted)}
 .coverage-notes{background:#fff;border-radius:18px;border:1px solid var(--line);padding:21px;margin:0 0 35px}
 .coverage-notes p{color:var(--muted)}
+
+/* Review queue — local only, shown for the selected exam track. */
+.review-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#f0efff;border:1px solid #d6d2fb;border-radius:18px;padding:20px 24px;margin:0 0 24px}
+.review-cta h2{font-size:23px;letter-spacing:-.5px;margin:4px 0}
+.review-cta p:not(.eyebrow){margin:5px 0 0;color:var(--muted)}
+@media(max-width:620px){.review-cta{flex-direction:column;align-items:stretch}}

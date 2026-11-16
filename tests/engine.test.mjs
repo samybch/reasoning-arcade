@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {recordAttempt,nextQuestion,buildExamQueue,grade,EMPTY_PROGRESS,skillKey} from '../src/engine/adaptive.ts';
+import {recordAttempt,nextQuestion,nextReviewQuestion,buildExamQueue,grade,EMPTY_PROGRESS,skillKey} from '../src/engine/adaptive.ts';
 import {readFileSync} from 'node:fs';
 
 const bank=JSON.parse(readFileSync(new URL('../src/content/questions.json',import.meta.url),'utf8'));
@@ -74,4 +74,28 @@ test('recent history never repeats the same item within a session or blocks an e
   const excluded=pool.slice(0,-1).map(q=>q.id);
   assert.equal(nextQuestion(pool,progress,'gmat','argument-lab',excluded).id,pool.at(-1).id);
   assert.equal(nextQuestion(pool,progress,'gmat','argument-lab',pool.map(q=>q.id)),null);
+});
+
+test('a wrong answer enters a local review queue and a correct retry clears it',()=>{
+  const question=bank.find(q=>q.id==='G-D-13');
+  const incorrect=recordAttempt(EMPTY_PROGRESS,question,false);
+  assert.deepEqual(incorrect.pendingReviewIds,['G-D-13']);
+  assert.equal(nextReviewQuestion(bank,incorrect,'gmat',[]).id,'G-D-13');
+  assert.equal(nextReviewQuestion(bank,incorrect,'tage',[]),null);
+  const retried=recordAttempt(incorrect,question,true);
+  assert.deepEqual(retried.pendingReviewIds,[]);
+  assert.equal(nextReviewQuestion(bank,retried,'gmat',[]),null);
+  assert.deepEqual(EMPTY_PROGRESS.pendingReviewIds,[]);
+});
+test('review queue is bounded, unique and skips deleted question IDs',()=>{
+  let p={...EMPTY_PROGRESS,skills:{},pendingReviewIds:[]};
+  for(const q of bank.slice(0,30))p=recordAttempt(p,q,false);
+  assert.equal(p.pendingReviewIds.length,24);
+  assert.equal(new Set(p.pendingReviewIds).size,24);
+  const repeat=recordAttempt(p,bank[28],false);
+  assert.equal(repeat.pendingReviewIds.length,24);
+  assert.equal(repeat.pendingReviewIds.at(-1),bank[28].id);
+  const stale={...EMPTY_PROGRESS,pendingReviewIds:['T-L-999','T-A-01']};
+  assert.equal(nextReviewQuestion(bank,stale,'tage',[]).id,'T-A-01');
+  assert.equal(nextReviewQuestion(bank,stale,'tage',['T-A-01']),null);
 });

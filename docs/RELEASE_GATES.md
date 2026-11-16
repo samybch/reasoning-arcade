@@ -34,3 +34,8 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] User-facing FR/EN program coverage page shows missing official sections and current pilot totals
 - [x] Links to official FNEGE/GMAC descriptions; no unofficial score equivalence
 - [ ] Recheck official changes periodically and before publicly advertising syllabus alignment
+
+## Practice revision quality
+- [x] Local-only, bounded queue of previously missed items with FR/EN dedicated practice route
+- [x] Question is removed from that queue after a correct retry
+- [ ] Evaluate learning outcomes and exercise difficulty with actual volunteer learners, without collecting personal data by default
