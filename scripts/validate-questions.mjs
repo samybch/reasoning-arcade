@@ -30,6 +30,8 @@ export function validateQuestions(questions=QUESTIONS){
     if(!Number.isInteger(q.difficulty)||q.difficulty<1||q.difficulty>5)errors.push(`${id}: difficulty must be 1–5`);
     if(!Number.isInteger(q.estimatedSeconds)||q.estimatedSeconds<20||q.estimatedSeconds>900)errors.push(`${id}: invalid estimatedSeconds`);
     if(!['pilot','reviewed'].includes(q.status))errors.push(`${id}: invalid editorial status`);
+    if(!['warmup','skill-practice'].includes(q.alignment))errors.push(`${id}: missing/invalid exam alignment classification`);
+    if(q.alignment==='warmup'&&q.game!=='code-logic')errors.push(`${id}: only Code Logic warm-ups are currently supported`);
     const key=`${q.exam}:${q.game}`;groupCounts[key]=(groupCounts[key]||0)+1;
     if(!correctKey(q).includes(q.correctAnswer))errors.push(`${id}: invalid answer key`);
     for(const lang of ['fr','en']){

@@ -12,7 +12,8 @@ export interface QuestionText {
 }
 export interface Question {
   id:string; exam:Exam; game:Game; competency:string; difficulty:Level;
-  estimatedSeconds:number; correctAnswer:string; status:'pilot';
+  estimatedSeconds:number; correctAnswer:string; status:'pilot'|'reviewed';
+  alignment:'warmup'|'skill-practice';
   content:Record<Locale,QuestionText>;
 }
 export interface SkillProgress {

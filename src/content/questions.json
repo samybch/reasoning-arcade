@@ -35,7 +35,8 @@
         "explanation": "Each term doubles.",
         "hint": "Multiply the previous term by a constant."
       }
-    }
+    },
+    "alignment": "warmup"
   },
   {
     "id": "T-L-02",
@@ -73,7 +74,8 @@
         "explanation": "These are consecutive square numbers from 1² to 5².",
         "hint": "Try taking the square root of each term."
       }
-    }
+    },
+    "alignment": "warmup"
   },
   {
     "id": "T-L-03",
@@ -111,7 +113,8 @@
         "explanation": "Each consecutive difference is 4.",
         "hint": "Look at the differences."
       }
-    }
+    },
+    "alignment": "warmup"
   },
   {
     "id": "T-L-04",
@@ -149,7 +152,8 @@
         "explanation": "The differences are 3, 5, 7, then 9: 18 + 9 = 27.",
         "hint": "Watch how the gaps change."
       }
-    }
+    },
+    "alignment": "warmup"
   },
   {
     "id": "T-L-05",
@@ -187,7 +191,8 @@
         "explanation": "The differences are 4, 6, 8, 10.",
         "hint": "The differences grow by 2."
       }
-    }
+    },
+    "alignment": "warmup"
   },
   {
     "id": "T-L-06",
@@ -225,7 +230,8 @@
         "explanation": "Each term is divided by 3.",
         "hint": "Think of a decreasing geometric sequence."
       }
-    }
+    },
+    "alignment": "warmup"
   },
   {
     "id": "T-L-07",
@@ -263,7 +269,8 @@
         "explanation": "All shown numbers are divisible by 6; so is 48.",
         "hint": "Look for a common divisor."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-08",
@@ -301,7 +308,8 @@
         "explanation": "These are perfect squares; 64 = 8².",
         "hint": "Each number is an integer squared."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-09",
@@ -339,7 +347,8 @@
         "explanation": "These are odd multiples of 5; only 75 fits.",
         "hint": "Look at the units digit."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-10",
@@ -377,7 +386,8 @@
         "explanation": "Every number is divisible by 4 but not by 8; 60 fits.",
         "hint": "Divide each number by 4."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-11",
@@ -415,7 +425,8 @@
         "explanation": "The examples are prime numbers; 29 is the only prime option.",
         "hint": "Find numbers with no divisors other than 1 and themselves."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-12",
@@ -453,7 +464,8 @@
         "explanation": "These are triangular numbers n(n+1)/2; the next is 45.",
         "hint": "Look for increasing differences."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-A-01",
@@ -491,7 +503,8 @@
         "explanation": "The festival provides an alternative explanation for the increase.",
         "hint": "Look for an alternative cause."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-A-02",
@@ -529,7 +542,8 @@
         "explanation": "Generalizing to the whole city requires a sufficiently representative sample.",
         "hint": "Compare the sample with the target population."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-A-03",
@@ -567,7 +581,8 @@
         "explanation": "Students who belong to club A speak Spanish, so some students speak Spanish.",
         "hint": "Trace the group shared by both statements."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-A-04",
@@ -605,7 +620,8 @@
         "explanation": "High-demand stores may choose longer opening hours; correlation alone does not establish causation.",
         "hint": "Correlation is not proof of causation."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-A-05",
@@ -643,7 +659,8 @@
         "explanation": "An identical test reduces a competing explanation for the score difference.",
         "hint": "Which confounding variable can be ruled out?"
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-A-06",
@@ -681,7 +698,8 @@
         "explanation": "The premise gives no information about customers who do not use the app.",
         "hint": "Which group is missing from the premise?"
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-A-07",
@@ -719,7 +737,8 @@
         "explanation": "Fewer late-delivery complaints directly support the proposed causal mechanism.",
         "hint": "Look at the category of complaints."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-A-08",
@@ -757,7 +776,8 @@
         "explanation": "Automation offers a strong competing cause of higher hourly productivity.",
         "hint": "Look for another simultaneous change."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-A-09",
@@ -795,7 +815,8 @@
         "explanation": "Total costs decline only if turnover savings outweigh training expense.",
         "hint": "Compare savings with added costs."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-A-10",
@@ -833,7 +854,8 @@
         "explanation": "A permit implies completed safety training, and Dana holds a permit.",
         "hint": "Apply the implication, not its converse."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-A-11",
@@ -871,7 +893,8 @@
         "explanation": "A subway closure offers an independent explanation for rising bus demand.",
         "hint": "What else changed in public transport?"
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-A-12",
@@ -909,7 +932,8 @@
         "explanation": "Temperature and humidity might affect performance, so the tested setting may not generalize.",
         "hint": "Spot where the conclusion exceeds the tested sample."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-D-01",
@@ -939,7 +963,8 @@
         "explanation": "(1) fixes x = 8. (2) allows many even integers.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-D-02",
@@ -969,7 +994,8 @@
         "explanation": "(1) does not fix a unique value; (2) fixes x = 8.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-D-03",
@@ -999,7 +1025,8 @@
         "explanation": "Each statement alone leaves x undetermined; together x = 6.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-D-04",
@@ -1029,7 +1056,8 @@
         "explanation": "(1) and x > 0 fix x = 5; (2) also fixes x = 5.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-D-05",
@@ -1059,7 +1087,8 @@
         "explanation": "Together, n can be 5, 6, or 7; parity is not fixed.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-D-06",
@@ -1089,7 +1118,8 @@
         "explanation": "(1) allows many values; (2) fixes x = −2.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-07",
@@ -1119,7 +1149,8 @@
         "explanation": "Positivity fixes x = 7 from (1); (2) also fixes x = 7.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-08",
@@ -1149,7 +1180,8 @@
         "explanation": "(1) implies x > 0; (2) allows either x = 2 or x = −2.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-09",
@@ -1179,7 +1211,8 @@
         "explanation": "Both item count and unit price are necessary: 8 × 5 = 40.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-10",
@@ -1209,7 +1242,8 @@
         "explanation": "(1) allows ±3; (2) alone is not enough; together they fix x = −3.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-11",
@@ -1239,7 +1273,8 @@
         "explanation": "Any multiple of 6 or 9 is divisible by 3.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-12",
@@ -1269,7 +1304,8 @@
         "explanation": "Even together, 0 < x < 2 allows x = 0.5 or x = 1.5, so the answer is unknown.",
         "hint": "Test (1) and (2) separately before combining them."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-13",
@@ -1307,7 +1343,8 @@
         "explanation": "Every listed figure is a regular polygon: all sides and all angles are equal. Only a regular heptagon among the options fits.",
         "hint": "Check equality of both sides and angles."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-14",
@@ -1345,7 +1382,8 @@
         "explanation": "Each number is the square of a prime and has exactly three positive integer divisors. 289 = 17²; the other choices do not satisfy this property.",
         "hint": "Count positive divisors and think of squares of prime numbers."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-15",
@@ -1383,7 +1421,8 @@
         "explanation": "For each given number, the two digits add up to 11. The same is true of 83: 8 + 3 = 11.",
         "hint": "Add the two digits of each number."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-16",
@@ -1421,7 +1460,8 @@
         "explanation": "Each number is prime and remains prime when its two digits are reversed. Both 79 and 97 are prime; the reversals of the other choices are composite.",
         "hint": "Reverse the digits and check primality in both directions."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-17",
@@ -1459,7 +1499,8 @@
         "explanation": "All listed figures have a center of symmetry: a 180° rotation maps them onto themselves. An oblique parallelogram has this property; the other choices do not.",
         "hint": "Picture rotating each figure 180° about its center."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "T-L-18",
@@ -1497,7 +1538,8 @@
         "explanation": "All listed numbers have the form 6n + 1, leaving a remainder of 1 when divided by 6. Among the options, only 43 fits.",
         "hint": "Find the remainder when each number is divided by 6."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-13",
@@ -1527,7 +1569,8 @@
         "explanation": "(1) is sufficient: if at least three amounts exceed €100, the middle amount exceeds €100. (2) is not sufficient: one very large amount can raise the mean while the median stays low.",
         "hint": "Sort five values and identify the third one."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-14",
@@ -1557,7 +1600,8 @@
         "explanation": "Neither statement alone gives both conversion rates. Together, April's rate is 120/2,400 = 5%, versus 100/1,000 = 10% in March: yes.",
         "hint": "A conversion rate is orders divided by visits."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-15",
@@ -1587,7 +1631,8 @@
         "explanation": "Renewals equal subscriptions due times the renewal rate. Each statement alone is insufficient, but if both nonnegative factors increase strictly, their product increases.",
         "hint": "Express the number of renewals as a count multiplied by a rate."
       }
-    }
+    },
+    "alignment": "skill-practice"
   },
   {
     "id": "G-D-16",
@@ -1617,6 +1662,7 @@
         "explanation": "Each statement alone establishes that not all observations are identical. The standard deviation must therefore be positive; either statement is sufficient.",
         "hint": "Standard deviation is zero only if all observations are identical."
       }
-    }
+    },
+    "alignment": "skill-practice"
   }
 ]

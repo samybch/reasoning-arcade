@@ -29,3 +29,8 @@
 - [ ] Separate **explicit final public-launch authorization**
 
 Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex` directive in the preview and describe the exercises as **pilot learning content**.
+
+## Coverage disclosure
+- [x] User-facing FR/EN program coverage page shows missing official sections and current pilot totals
+- [x] Links to official FNEGE/GMAC descriptions; no unofficial score equivalence
+- [ ] Recheck official changes periodically and before publicly advertising syllabus alignment

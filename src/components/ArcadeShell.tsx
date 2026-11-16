@@ -10,6 +10,7 @@ export function ArcadeShell({locale,children}:{locale:Locale;children:ReactNode}
       <nav aria-label={locale==='fr'?'Navigation':'Navigation'}>
         <Link href={`/${locale}/`}>{locale==='fr'?'Accueil':'Home'}</Link>
         <Link href={`/${locale}/practice/`}>{locale==='fr'?'Mini-test':'Mini test'}</Link>
+        <Link href={`/${locale}/coverage/`}>{locale==='fr'?'Programme':'Coverage'}</Link>
         <Link className="language" href={locale==='fr'?'/en/':'/fr/'} hrefLang={locale==='fr'?'en':'fr'} lang={locale==='fr'?'en':'fr'}>{locale==='fr'?'EN':'FR'}</Link>
       </nav>
     </div></header>

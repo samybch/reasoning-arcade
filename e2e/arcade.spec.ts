@@ -108,3 +108,21 @@ test('320px mobile viewport supports French and English game navigation without 
     expect(amount, `overflow at ${url}`).toBeLessThanOrEqual(1);
   }
 });
+
+test('coverage pages accurately disclose covered and missing sections in both languages',async({page})=>{
+  await page.goto(PREFIX+'/fr/coverage/');
+  await expect(page.getByRole('heading',{name:'Couverture actuelle des examens'})).toBeVisible();
+  await expect(page.getByText('46 exercices pilotes')).toBeVisible();
+  await expect(page.locator('.coverage-row')).toHaveCount(14);
+  await expect(page.getByText('Non couvert').first()).toBeVisible();
+  await page.goto(PREFIX+'/en/coverage/');
+  await expect(page.getByRole('heading',{name:'Current exam coverage'})).toBeVisible();
+  await expect(page.getByText('46 pilot exercises')).toBeVisible();
+});
+test('new navigation remains usable at 320px without horizontal overflow',async({page})=>{
+  await page.setViewportSize({width:320,height:640});
+  await page.goto(PREFIX+'/fr/');
+  await page.getByRole('link',{name:'Programme'}).click();
+  await expect(page.getByRole('heading',{name:'Couverture actuelle des examens'})).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth)).toBeLessThanOrEqual(1);
+});

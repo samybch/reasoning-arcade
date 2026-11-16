@@ -1,6 +1,7 @@
 import type {Attempt,Exam,Game,Level,Progress,Question,SkillProgress} from './types';
 
-export const EMPTY_PROGRESS:Progress={version:1,skills:{},totalAnswered:0,totalCorrect:0};
+export const EMPTY_PROGRESS:Progress={version:1,skills:{},totalAnswered:0,totalCorrect:0,recentQuestionIds:[]};
+const RECENT_LIMIT=16;
 export const skillKey=(q:Question):string=>`${q.exam}:${q.game}:${q.competency}`;
 export function recordAttempt(progress:Progress,question:Question,correct:boolean):Progress {
   const key=skillKey(question);
@@ -12,12 +13,17 @@ export function recordAttempt(progress:Progress,question:Question,correct:boolea
     level,streakCorrect:wins>=2?0:wins,streakWrong:losses>=2?0:losses,
     attempts:current.attempts+1,correct:current.correct+(correct?1:0)
   };
-  return {version:1,skills:{...progress.skills,[key]:next},totalAnswered:progress.totalAnswered+1,totalCorrect:progress.totalCorrect+(correct?1:0)};
+  const recentQuestionIds=[...(progress.recentQuestionIds??[]).filter(id=>id!==question.id),question.id].slice(-RECENT_LIMIT);
+  return {version:1,skills:{...progress.skills,[key]:next},totalAnswered:progress.totalAnswered+1,totalCorrect:progress.totalCorrect+(correct?1:0),recentQuestionIds};
 }
 export function nextQuestion(bank:Question[],progress:Progress,exam:Exam,game:Game|'mixed',used:string[]):Question|null{
   const unseen=bank.filter(q=>q.exam===exam&&(game==='mixed'||q.game===game)&&!used.includes(q.id));
   if(!unseen.length)return null;
-  return unseen.sort((a,b)=>{
+  const recent=new Set(progress.recentQuestionIds??[]);
+  const fresh=unseen.filter(q=>!recent.has(q.id));
+  // Prefer unseen questions across sessions, but never allow an exhausted pool to dead-end.
+  const pool=fresh.length?fresh:unseen;
+  return pool.sort((a,b)=>{
     const aSkill=progress.skills[skillKey(a)];
     const bSkill=progress.skills[skillKey(b)];
     const aScore=Math.abs(a.difficulty-(aSkill?.level??2))*10+(aSkill?.attempts??0);

@@ -55,3 +55,23 @@ test('repeat mini-tests use fresh deterministic question subsets while preservin
     assert.deepEqual(replay.map(q=>q.id),buildExamQueue(bank,exam,'mixed',6,1).map(q=>q.id));
   }
 });
+
+test('recent successful and incorrect questions are remembered without bloating local progress',()=>{
+  let progress={...EMPTY_PROGRESS,skills:{},recentQuestionIds:[]};
+  const selection=bank.filter(q=>q.exam==='tage'&&q.game==='code-logic');
+  for(const [i,q] of selection.entries())progress=recordAttempt(progress,q,i%2===0);
+  assert.equal(progress.recentQuestionIds.length,16);
+  assert.equal(new Set(progress.recentQuestionIds).size,16);
+  assert.equal(progress.recentQuestionIds[0],selection[2].id);
+  const next=nextQuestion(bank,progress,'tage','code-logic',[]);
+  assert.ok(next);
+  assert.ok(!progress.recentQuestionIds.includes(next.id),'prefers older unpracticed questions');
+});
+test('recent history never repeats the same item within a session or blocks an exhausted pool',()=>{
+  const pool=bank.filter(q=>q.exam==='gmat'&&q.game==='argument-lab');
+  const progress={...EMPTY_PROGRESS,recentQuestionIds:pool.map(q=>q.id)};
+  assert.ok(nextQuestion(pool,progress,'gmat','argument-lab',[]));
+  const excluded=pool.slice(0,-1).map(q=>q.id);
+  assert.equal(nextQuestion(pool,progress,'gmat','argument-lab',excluded).id,pool.at(-1).id);
+  assert.equal(nextQuestion(pool,progress,'gmat','argument-lab',pool.map(q=>q.id)),null);
+});

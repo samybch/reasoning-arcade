@@ -1,9 +1,10 @@
 'use client';
-import {useEffect,useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import {ArcadeShell} from './ArcadeShell';
 import {buildExamQueue,grade,nextQuestion,recordAttempt} from '../engine/adaptive';
 import {loadProgress,saveProgress} from '../engine/storage';
+import {elapsedSeconds,timeExpired} from '../engine/timing';
 import type {Attempt,Exam,Game,Locale,Progress,Question} from '../engine/types';
 
 type Mode='game'|'exam';
@@ -29,6 +30,7 @@ export function PlayScreen({locale,game,bank,forceExam=false}:{locale:Locale;gam
   const [seconds,setSeconds]=useState(0);
   const [finished,setFinished]=useState(false);
   const [expired,setExpired]=useState(false);
+  const sessionStartedMs=useRef<number>(0);
   const sessionSize=game==='mixed'?6:5;
   useEffect(()=>{
     const query=new URLSearchParams(window.location.search);
@@ -38,6 +40,7 @@ export function PlayScreen({locale,game,bank,forceExam=false}:{locale:Locale;gam
   },[forceExam]);
   useEffect(()=>{
     if(!ready)return;
+    sessionStartedMs.current=performance.now();
     const p=loadProgress();
     const fixed=mode==='exam'?buildExamQueue(bank,exam,game,sessionSize,Math.floor(p.totalAnswered/sessionSize)+round):[];
     setProgress(p);setQueue(fixed);setCurrent(mode==='exam'?fixed[0]??null:nextQuestion(bank,p,exam,game,[]));
@@ -45,7 +48,8 @@ export function PlayScreen({locale,game,bank,forceExam=false}:{locale:Locale;gam
   },[ready,round,exam,mode,game,bank,sessionSize]);
   useEffect(()=>{
     if(!ready||finished||!current||(mode==='game'&&revealed))return;
-    const id=window.setInterval(()=>setSeconds(v=>v+1),1000);
+    const tick=()=>setSeconds(v=>mode==='exam'?elapsedSeconds(sessionStartedMs.current,performance.now()):v+1);
+    const id=window.setInterval(tick,mode==='exam'?250:1000);
     return ()=>window.clearInterval(id);
   },[ready,finished,current,mode,revealed]);
   const duration=queue.length*80;
@@ -56,6 +60,11 @@ export function PlayScreen({locale,game,bank,forceExam=false}:{locale:Locale;gam
   },[mode,ready,finished,queue.length,seconds,duration]);
   function submit(){
     if(selected===null||!current||revealed||finished||!progress)return;
+    // Prevent late submissions even if the tab was backgrounded and its interval throttled.
+    if(mode==='exam'&&timeExpired(sessionStartedMs.current,performance.now(),duration)){
+      setSeconds(duration);setExpired(true);setFinished(true);setCurrent(null);
+      return;
+    }
     const correct=selected===current.correctAnswer;
     const updated=recordAttempt(progress,current,correct);
     const nextAttempts=[...attempts,{questionId:current.id,selected,correct,elapsedSeconds:seconds}];
@@ -85,11 +94,17 @@ export function PlayScreen({locale,game,bank,forceExam=false}:{locale:Locale;gam
       {expired&&<p className="warning">{fr?'Temps écoulé !':'Time is up!'}</p>}
       <p className="note">{fr?'Ce résultat n’est pas un score officiel.':'This result is not an official exam score.'}</p>
       <div className="review"><h2>{fr?'Corrections':'Review'}</h2>
+        {expired&&queue.length>attempts.length&&<p className="warning">{fr?'Questions non répondues :':'Unanswered questions:'} {queue.length-attempts.length}</p>}
         {attempts.map((a,i)=>{const q=bank.find(v=>v.id===a.questionId);return q?<article key={q.id} className="review-item"><strong>{a.correct?'✓':'×'} {i+1}. {q.content[locale].prompt}</strong><p>{q.content[locale].explanation}</p></article>:null})}
+        {expired&&queue.slice(attempts.length).map(q=><article key={q.id} className="review-item">
+          <strong>{fr?'Non répondu':'Unanswered'} — {q.content[locale].prompt}</strong>
+          <p>{q.content[locale].explanation}</p>
+        </article>)}
       </div><div className="actions"><button type="button" className="button primary" onClick={()=>setRound(v=>v+1)}>{fr?'Rejouer':'Try again'} ↻</button><Link className="button secondary" href={`/${locale}/`}>{fr?'Accueil':'Home'}</Link></div>
     </section>:!current?<section className="quiz-card"><h1>{fr?'Aucun exercice disponible':'No exercises available'}</h1><Link href={`/${locale}/`}>{fr?'Accueil':'Home'}</Link></section>:
     <section className="quiz-card" aria-labelledby="question-title">
-      <div className="question-top"><div><p className="eyebrow">{name} · {fr?'Question':'Question'} {number}/{max}</p><p className="difficulty">{fr?'Niveau':'Level'} {current.difficulty}/5</p></div>
+      <div className="question-top"><div><p className="eyebrow">{name} · {fr?'Question':'Question'} {number}/{max}</p><p className="difficulty">{fr?'Niveau':'Level'} {current.difficulty}/5</p>
+        {current.alignment==='warmup'&&<p className="note" role="note">{fr?'Échauffement : ce format ne reproduit pas le sous-test Logique officiel.':'Warm-up: this format does not reproduce the official Logic subtest.'}</p>}</div>
         <span className="timer" role="timer" aria-label={fr?'Chronomètre':'Timer'}>{mmss(mode==='exam'?duration-seconds:seconds)}</span></div>
       <div className="progress-bar" role="progressbar" aria-label={fr?'Progression des questions':'Question progress'} aria-valuenow={attempts.length} aria-valuemin={0} aria-valuemax={max}><span style={{width:`${Math.min(100,100*attempts.length/max)}%`}}/></div>
       <h1 id="question-title">{current.content[locale].prompt}</h1>
