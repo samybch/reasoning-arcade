@@ -79,3 +79,9 @@ All **58 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough 
 - Mixed six-question mini-tests sample all question-game categories currently available in the chosen exam track (four for TAGE MAGE; three for GMAT), without implying an official section weighting or scoring method.
 - Browser progress keeps a bounded history for every question ID, including the new `T-C-xx` and `G-Q-xx` Quant Lab identifiers, across page reloads.
 - When the mini-test time limit expires, unanswered question IDs are added to the **local revision queue**, without counting them as attempted answers. The existing progress storage format (`v1`) is unchanged.
+
+## Editorial review and realistic pilot timing (XYZ)
+
+Each of the **58 pilot questions** now has a distinct pending-review record in [the editorial review ledger](docs/editorial-review-ledger.json), with a targeted point for human scrutiny. See [the independent review procedure](docs/EDITORIAL_REVIEW_PROTOCOL.md) for bilingual checks, numerical counterexamples and approval rules. Machine checks do **not** replace independent review.
+
+Timed mini-tests use the sum of the selected questions' **estimated pilot solving times**, rather than imposing the same 80-second allowance for all puzzles. Those estimates have not been calibrated to official TAGE MAGE or GMAT section durations.
