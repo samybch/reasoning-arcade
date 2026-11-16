@@ -47,3 +47,7 @@ The active single source is `src/content/questions.json`. The old standalone des
 ## Bilingual remediation — 2026-11-16
 
 Six GMAT Critical Reasoning exercises (`G-A-07` through `G-A-12`) had English prompts, contexts and answer options under the French locale. These have been fully translated without changing answer indexes, the English originals or core logic. Automated checks now flag obviously untranslated English phrases and duplicate choices. This is a preliminary content improvement, not independent pedagogical certification.
+
+## Traceable answer-key matrix
+
+A 36-item answer-key and reasoning matrix was added in [QUESTION_REVIEW_MATRIX.md](QUESTION_REVIEW_MATRIX.md), with automated reference checks. This is **first-pass internal verification only**, not independent exam-level quality certification.
