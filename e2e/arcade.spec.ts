@@ -512,3 +512,52 @@ test('Table Lab history and missed questions survive browser reload',async({page
   expect(p.recentQuestionIds).toContain('G-T-01');
   expect(p.pendingReviewIds).toContain('G-T-01');
 });
+
+test('GMAT Multi-Source Lab switches three sources using mouse and keyboard',async({page})=>{
+  await page.goto(PREFIX+'/en/');
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Multi-Source Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/en/play/multi-source-lab/?exam=gmat&mode=game');
+  await expect(page.locator('#question-title')).toBeVisible();
+  const tabs=page.getByRole('tab');
+  await expect(tabs).toHaveCount(3);
+  await expect(tabs.nth(0)).toHaveAttribute('aria-selected','true');
+  await tabs.nth(0).focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(tabs.nth(1)).toBeFocused();
+  await expect(tabs.nth(1)).toHaveAttribute('aria-selected','true');
+  await expect(page.getByRole('tabpanel').filter({visible:true})).toContainText('€3,500');
+  await tabs.nth(2).click();
+  await expect(tabs.nth(2)).toHaveAttribute('aria-selected','true');
+  await expect(page.getByRole('tabpanel').filter({visible:true})).toContainText('€200');
+  await page.locator('.answer-list button').nth(2).click();
+  await page.getByRole('button',{name:/Submit/}).click();
+  await expect(page.locator('.feedback.good')).toBeVisible();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+});
+test('Multi-Source Lab is GMAT-only and has no horizontal overflow on narrow mobile',async({page})=>{
+  await page.setViewportSize({width:320,height:700});
+  await page.goto(PREFIX+'/fr/');
+  await expect(page.getByRole('heading',{name:'Multi-Source Lab'})).toHaveCount(0);
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Multi-Source Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/fr/play/multi-source-lab/?exam=gmat&mode=game');
+  await expect(page.getByRole('tab')).toHaveCount(3);
+  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
+  expect(overflow).toBeLessThanOrEqual(1);
+  await page.goto(PREFIX+'/fr/coverage/');
+  await expect(page.locator('.coverage-row').filter({hasText:'Multi-Source Reasoning'})).toContainText('3 pilotes');
+});
+test('Multi-Source Lab pending review survives reload in GMAT track',async({page})=>{
+  await page.goto(PREFIX+'/en/play/multi-source-lab/?exam=gmat&mode=game');
+  await page.evaluate(()=>localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+    version:1,skills:{},totalAnswered:1,totalCorrect:0,
+    recentQuestionIds:['G-M-01'],pendingReviewIds:['G-M-01']
+  })));
+  await page.reload();
+  await page.goto(PREFIX+'/en/review/?exam=gmat');
+  await expect(page.getByRole('tab')).toHaveCount(3);
+  const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+  expect(stored.recentQuestionIds).toContain('G-M-01');
+  expect(stored.pendingReviewIds).toContain('G-M-01');
+});
