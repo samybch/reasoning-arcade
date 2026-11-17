@@ -424,3 +424,52 @@ test('Reading Lab recent attempts and pending review survive reload in both exam
     expect(persisted.pendingReviewIds.filter((v:string)=>v.endsWith('-R-01'))).toEqual([id]);
   }
 });
+
+test('TAGE Expression Lab opens in French, uses five options and reveals worked stages',async({page})=>{
+  await page.goto(PREFIX+'/fr/');
+  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
+  await expect(page.getByRole('heading',{name:'Expression Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/fr/play/expression-lab/?exam=tage&mode=game');
+  await expect(page.locator('#question-title')).toBeVisible();
+  await expect(page.locator('.answer-list button')).toHaveCount(5);
+  await page.locator('.answer-list button').nth(1).click();
+  await page.getByRole('button',{name:/Valider/}).click();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+  await expect(page.getByText('Repérer la contrainte linguistique')).toBeVisible();
+});
+test('GMAT game menu excludes TAGE Expression Lab and coverage names Expression pilots',async({page})=>{
+  await page.goto(PREFIX+'/en/');
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Expression Lab'})).toHaveCount(0);
+  await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/en/coverage/');
+  await expect(page.getByText('82 pilot exercises')).toBeVisible();
+  const expression=page.locator('.coverage-row').filter({hasText:'Written expression'});
+  await expect(expression).toContainText('6 pilot');
+});
+test('Expression Lab progress and mistakes remain on the same device after reload',async({page})=>{
+  await page.goto(PREFIX+'/en/play/expression-lab/?exam=tage&mode=game');
+  await page.evaluate(()=>{
+    localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+      version:1,skills:{},totalAnswered:1,totalCorrect:0,
+      recentQuestionIds:['T-E-01'],pendingReviewIds:['T-E-01']
+    }));
+  });
+  await page.reload();
+  await page.goto(PREFIX+'/en/review/?exam=tage');
+  await expect(page.locator('#question-title')).toBeVisible();
+  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+  expect(saved.recentQuestionIds).toContain('T-E-01');
+  expect(saved.pendingReviewIds).toContain('T-E-01');
+});
+test('TAGE mixed six-question mini-test includes Expression Lab',async({page})=>{
+  await page.goto(PREFIX+'/en/practice/?exam=tage');
+  for(let i=0;i<6;i++){
+    await page.locator('.answer-list button').first().click();
+    await page.getByRole('button',{name:/Submit/}).click();
+  }
+  await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
+  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+  const games=[...new Set(saved.recentQuestionIds.slice(-6).map((id:string)=>id.split('-')[1]))].sort();
+  expect(games).toEqual(['A','C','D','E','L','R']);
+});
