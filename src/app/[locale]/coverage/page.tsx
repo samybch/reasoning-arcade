@@ -27,7 +27,7 @@ export default async function CoveragePage({params}:{params:Promise<{locale:stri
     {fr:'Verbal — Critical Reasoning',en:'Verbal — Critical Reasoning',n:count('gmat','argument-lab')},
     {fr:'Data Insights — Data Sufficiency',en:'Data Insights — Data Sufficiency',n:count('gmat','enough-info')},
     {fr:'Data Insights — Multi-Source Reasoning',en:'Data Insights — Multi-Source Reasoning',n:0},
-    {fr:'Data Insights — Table Analysis',en:'Data Insights — Table Analysis',n:0},
+    {fr:'Data Insights — Table Analysis',en:'Data Insights — Table Analysis',n:count('gmat','table-lab')},
     {fr:'Data Insights — Graphics Interpretation',en:'Data Insights — Graphics Interpretation',n:0},
     {fr:'Data Insights — Two-Part Analysis',en:'Data Insights — Two-Part Analysis',n:0}
   ];
