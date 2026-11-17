@@ -6,12 +6,24 @@
   const cards=Array.from(document.querySelectorAll('article[data-question]'));
   const status=document.getElementById('status');
   const filePicker=document.getElementById('import');
+  const scope=document.getElementById('review-scope');
+  const scopeStatus=document.getElementById('scope-status');
   const allowed=new Set(['unreviewed','no_issue_spotted','needs_changes','uncertain']);
   const byId=new Map(cards.map(card=>[card.getAttribute('data-question'),card]));
   const updateStatus=function(){
-    const done=cards.filter(card=>card.querySelector('[data-decision]').value!=='unreviewed').length;
-    status.textContent=done+' / '+cards.length+' findings recorded (not approvals).';
+    const shown=cards.filter(card=>!card.hidden);
+    const done=shown.filter(card=>card.querySelector('[data-decision]').value!=='unreviewed').length;
+    const totalDone=cards.filter(card=>card.querySelector('[data-decision]').value!=='unreviewed').length;
+    status.textContent=done+' / '+shown.length+' visible findings ('+totalDone+' recorded across full catalog; not approvals).';
   };
+  const updateScope=function(){
+    const first=scope.value==='first';
+    for(const card of cards)card.hidden=first&&card.getAttribute('data-first-batch')!=='true';
+    const visible=cards.filter(card=>!card.hidden).length;
+    scopeStatus.textContent='Showing '+visible+' of '+cards.length+' questions. All saved notes remain available when switching scope.';
+    updateStatus();
+  };
+  scope.addEventListener('change',updateScope);
   for(const card of cards){
     card.querySelector('[data-decision]').addEventListener('change',updateStatus);
     card.querySelector('[data-notes]').addEventListener('input',updateStatus);
@@ -63,5 +75,5 @@
     }catch(error){status.textContent='Import rejected: '+String(error.message||error);}
     filePicker.value='';
   });
-  updateStatus();
+  updateScope();
 })();
