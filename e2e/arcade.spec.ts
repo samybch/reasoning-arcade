@@ -9,6 +9,12 @@ async function chooseWrongQuantAnswer(page:import('@playwright/test').Page){
   await page.locator('.answer-list button').nth((Number(q!.correctAnswer)+1)%5).click();
 }
 
+async function answerMixedQuestion(page:import('@playwright/test').Page){
+  if(await page.locator('.table-claim').count()){
+    for(let i=0;i<3;i++)await page.locator('.table-claim').nth(i).getByRole('radio',{name:'Yes'}).check();
+  }else await page.locator('.answer-list button').first().click();
+}
+
 const PREFIX='/reasoning-arcade';
 
 test('French and English homepages display and language navigation works',async({page})=>{
@@ -44,8 +50,8 @@ test('timed GMAT mini-test gives results after six questions',async({page})=>{
   await page.goto(PREFIX+'/en/practice/?exam=gmat');
   await expect(page.getByText('GMAT',{exact:true})).toBeVisible();
   for(let n=0;n<6;n++){
-    await expect(page.locator('.answer-list button').first()).toBeVisible();
-    await page.locator('.answer-list button').first().click();
+    await expect(page.locator('#question-title')).toBeVisible();
+    await answerMixedQuestion(page);
     await page.getByRole('button',{name:/Submit/}).click();
   }
   await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
@@ -106,7 +112,7 @@ test('localized privacy notice explains local browser progress and reset',async(
 
 test('home displays the current catalog count, including new original pilot exercises',async({page})=>{
   await page.goto(PREFIX+'/fr/');
-  await expect(page.locator('.hero-stats')).toContainText('82');
+  await expect(page.locator('.hero-stats')).toContainText('85');
 });
 test('320px mobile viewport supports French and English game navigation without overflow',async({page})=>{
   await page.setViewportSize({width:320,height:700});
@@ -121,12 +127,12 @@ test('320px mobile viewport supports French and English game navigation without 
 test('coverage pages accurately disclose covered and missing sections in both languages',async({page})=>{
   await page.goto(PREFIX+'/fr/coverage/');
   await expect(page.getByRole('heading',{name:'Couverture actuelle des examens'})).toBeVisible();
-  await expect(page.getByText('82 exercices pilotes')).toBeVisible();
+  await expect(page.getByText('85 exercices pilotes')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
   await expect(page.getByText('Non couvert').first()).toBeVisible();
   await page.goto(PREFIX+'/en/coverage/');
   await expect(page.getByRole('heading',{name:'Current exam coverage'})).toBeVisible();
-  await expect(page.getByText('82 pilot exercises')).toBeVisible();
+  await expect(page.getByText('85 pilot exercises')).toBeVisible();
 });
 test('new navigation remains usable at 320px without horizontal overflow',async({page})=>{
   await page.setViewportSize({width:320,height:640});
@@ -279,7 +285,7 @@ test('timed Code Logic mini-test keeps solution steps hidden until the results',
 test('Quant Lab is offered on both tracks with five answers and detailed feedback',async({page})=>{
   await page.goto(PREFIX+'/fr/');
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
-  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('7 jeux');
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
   await page.goto(PREFIX+'/fr/play/quant-lab/?exam=tage&mode=game');
@@ -310,9 +316,9 @@ test('quantitative exercises remain usable at 320px in French and English',async
 test('coverage now lists six quantitative pilots for each track',async({page})=>{
   await page.goto(PREFIX+'/fr/coverage/');
   await expect(page.getByText('Calcul',{exact:true})).toBeVisible();
-  await expect(page.getByText('82 exercices pilotes')).toBeVisible();
+  await expect(page.getByText('85 exercices pilotes')).toBeVisible();
   await page.goto(PREFIX+'/en/coverage/');
-  await expect(page.getByText('82 pilot exercises')).toBeVisible();
+  await expect(page.getByText('85 pilot exercises')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
 });
 
@@ -338,11 +344,11 @@ test('Quant Lab mistake history survives browser reload for both exams',async({p
   }
 });
 test('mixed mini-tests include all available skills for TAGE and GMAT',async({page})=>{
-  for(const [exam,expected] of [['tage',['A','C','D','E','L','R']],['gmat',['A','D','Q','R']]] as const){
+  for(const [exam,expected] of [['tage',['A','C','D','E','L','R']],['gmat',['A','D','Q','R','T']]] as const){
     await page.goto(PREFIX+`/en/practice/?exam=${exam}`);
     for(let i=0;i<6;i++){
       await expect(page.locator('#question-title')).toBeVisible();
-      await page.locator('.answer-list button').first().click();
+      await answerMixedQuestion(page);
       await page.getByRole('button',{name:/Submit/}).click();
     }
     await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
@@ -364,7 +370,7 @@ test('Quant Lab clock reflects the actual pilot question budget and warns that i
 
 test('Reading Lab appears on both tracks with 5 response choices and explanations',async({page})=>{
   await page.goto(PREFIX+'/fr/');
-  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('7 jeux');
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
@@ -397,10 +403,10 @@ test('long reading passages fit 320px mobile screens in both languages',async({p
 });
 test('syllabus coverage includes nine reading questions for each exam pathway',async({page})=>{
   await page.goto(PREFIX+'/fr/coverage/');
-  await expect(page.getByText('82 exercices pilotes')).toBeVisible();
+  await expect(page.getByText('85 exercices pilotes')).toBeVisible();
   await expect(page.getByText('Compréhension de textes',{exact:true})).toBeVisible();
   await page.goto(PREFIX+'/en/coverage/');
-  await expect(page.getByText('82 pilot exercises')).toBeVisible();
+  await expect(page.getByText('85 pilot exercises')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
 });
 
@@ -456,4 +462,53 @@ test('Expression Lab recent history survives reload and appears in TAGE review',
   await expect(page.locator('#question-title')).toBeVisible();
   const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
   expect(progress.pendingReviewIds).toContain('T-E-01');
+});
+
+test('GMAT Table Lab sorts numerical data and requires all three Yes/No answers',async({page})=>{
+  await page.goto(PREFIX+'/en/');
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Table Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/en/play/table-lab/?exam=gmat&mode=game');
+  await expect(page.locator('#question-title')).toBeVisible();
+  await expect(page.locator('.table-claim')).toHaveCount(3);
+  const submit=page.getByRole('button',{name:/Submit/});
+  await expect(submit).toBeDisabled();
+  const sales=page.getByRole('columnheader',{name:/Sales/}).getByRole('button');
+  await sales.click();
+  await expect(page.locator('.data-table tbody tr').first().locator('td').first()).toHaveText('East');
+  await sales.click();
+  await expect(page.locator('.data-table tbody tr').first().locator('td').first()).toHaveText('West');
+  for(const [i,answer] of ['Yes','No','Yes'].entries()){
+    await page.locator('.table-claim').nth(i).getByRole('radio',{name:answer}).check();
+  }
+  await expect(submit).toBeEnabled();
+  await submit.click();
+  await expect(page.locator('.feedback.good')).toBeVisible();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+});
+test('Table Lab is GMAT-only and remains usable in a 320px viewport',async({page})=>{
+  await page.setViewportSize({width:320,height:700});
+  await page.goto(PREFIX+'/fr/');
+  await expect(page.getByRole('heading',{name:'Table Lab'})).toHaveCount(0);
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Table Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/fr/play/table-lab/?exam=gmat&mode=game');
+  await expect(page.locator('.table-scroll')).toBeVisible();
+  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
+  expect(overflow).toBeLessThanOrEqual(1);
+  await page.goto(PREFIX+'/fr/coverage/');
+  await expect(page.locator('.coverage-row').filter({hasText:'Table Analysis'})).toContainText('3 pilotes');
+});
+test('Table Lab history and missed questions survive browser reload',async({page})=>{
+  await page.goto(PREFIX+'/en/play/table-lab/?exam=gmat&mode=game');
+  await page.evaluate(()=>localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+    version:1,skills:{},totalAnswered:1,totalCorrect:0,
+    recentQuestionIds:['G-T-01'],pendingReviewIds:['G-T-01']
+  })));
+  await page.reload();
+  await page.goto(PREFIX+'/en/review/?exam=gmat');
+  await expect(page.locator('.table-claim')).toHaveCount(3);
+  const p=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+  expect(p.recentQuestionIds).toContain('G-T-01');
+  expect(p.pendingReviewIds).toContain('G-T-01');
 });

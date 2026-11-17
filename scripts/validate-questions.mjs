@@ -1,11 +1,11 @@
 import {readFileSync} from 'node:fs';
 
 export const QUESTIONS=JSON.parse(readFileSync(new URL('../src/content/questions.json',import.meta.url),'utf8'));
-const MINIMUM={'tage:code-logic':12,'tage:argument-lab':6,'gmat:argument-lab':6,'tage:enough-info':6,'gmat:enough-info':6,'tage:quant-lab':6,'gmat:quant-lab':6,'tage:reading-lab':6,'tage:expression-lab':6,'gmat:reading-lab':6};
-const GAMES=new Set(['code-logic','argument-lab','enough-info','quant-lab','reading-lab','expression-lab']);
+const MINIMUM={'tage:code-logic':12,'tage:argument-lab':6,'gmat:argument-lab':6,'tage:enough-info':6,'gmat:enough-info':6,'tage:quant-lab':6,'gmat:quant-lab':6,'tage:reading-lab':6,'tage:expression-lab':6,'gmat:reading-lab':6,'gmat:table-lab':3};
+const GAMES=new Set(['code-logic','argument-lab','enough-info','quant-lab','reading-lab','expression-lab','table-lab']);
 const EXAMS=new Set(['tage','gmat']);
-const ID=/^[TG]-[LADCQRE]-\d{2,4}$/;
-const correctKey=(q)=>q.game==='enough-info'?['A','B','C','D','E']:['0','1','2','3','4'];
+const ID=/^[TG]-[LADCQRET]-\d{2,4}$/;
+const correctKey=(q)=>q.game==='table-lab'?null:q.game==='enough-info'?['A','B','C','D','E']:['0','1','2','3','4'];
 const nonEmpty=x=>typeof x==='string'&&x.trim().length>0;
 
 export function validateQuestions(questions=QUESTIONS){
@@ -23,7 +23,7 @@ export function validateQuestions(questions=QUESTIONS){
     if(!EXAMS.has(q.exam))errors.push(`${id}: invalid exam track`);
     if(!GAMES.has(q.game))errors.push(`${id}: invalid game`);
     const track=id.slice(0,1),letter=id.slice(2,3);
-    const expectedLetter=q.game==='code-logic'?'L':q.game==='argument-lab'?'A':q.game==='quant-lab'?(q.exam==='tage'?'C':'Q'):q.game==='reading-lab'?'R':q.game==='expression-lab'?'E':'D';
+    const expectedLetter=q.game==='code-logic'?'L':q.game==='argument-lab'?'A':q.game==='quant-lab'?(q.exam==='tage'?'C':'Q'):q.game==='reading-lab'?'R':q.game==='expression-lab'?'E':q.game==='table-lab'?'T':'D';
     if(track!==(q.exam==='tage'?'T':'G')||letter!==expectedLetter)errors.push(`${id}: exam or game ID mismatch`);
     if(q.exam==='gmat'&&q.game==='expression-lab')errors.push(`${id}: Expression Lab is not a GMAT category`);
     if(q.exam==='gmat'&&q.game==='code-logic')errors.push(`${id}: Code Logic is not an official GMAT category`);
@@ -34,7 +34,13 @@ export function validateQuestions(questions=QUESTIONS){
     if(!['warmup','skill-practice'].includes(q.alignment))errors.push(`${id}: missing/invalid exam alignment classification`);
     if(q.alignment==='warmup'&&q.game!=='code-logic')errors.push(`${id}: only Code Logic warm-ups are currently supported`);
     const key=`${q.exam}:${q.game}`;groupCounts[key]=(groupCounts[key]||0)+1;
-    if(!correctKey(q).includes(q.correctAnswer))errors.push(`${id}: invalid answer key`);
+    if(q.game==='table-lab'){
+      if(q.exam!=='gmat')errors.push(`${id}: Table Lab is GMAT-only`);
+      if(typeof q.correctAnswer!=='string'||!/^[YN]{3}$/.test(q.correctAnswer))errors.push(`${id}: invalid three-statement table answer key`);
+      const t=q.table;
+      if(!t||!Array.isArray(t.columns)||t.columns.length<3||!Array.isArray(t.rows)||t.rows.length<4||!t.columns.every(c=>typeof c.key==='string'&&nonEmpty(c.fr)&&nonEmpty(c.en)&&['number','text'].includes(c.kind))||!t.rows.every(row=>Array.isArray(row)&&row.length===t.columns.length&&row.every(v=>typeof v==='string'&&v.trim())))errors.push(`${id}: invalid sortable table data`);
+      if(t?.columns?.some(c=>c.kind==='number')&&t.rows?.some(row=>row.some((v,i)=>t.columns[i].kind==='number'&&!Number.isFinite(Number(v)))))errors.push(`${id}: invalid numeric table value`);
+    }else if(!correctKey(q).includes(q.correctAnswer))errors.push(`${id}: invalid answer key`);
     if(q.game==='enough-info'){
       const s=q.sufficiency;
       if(!s||typeof s!=='object'||!['first','second','together'].every(x=>typeof s[x]==='boolean')){
@@ -53,10 +59,11 @@ export function validateQuestions(questions=QUESTIONS){
       if(q.game==='code-logic'&&!nonEmpty(loc.context))errors.push(`${id}: missing ${lang} puzzle data`);
       if(q.game==='reading-lab'&&(!nonEmpty(loc.context)||loc.context.trim().length<350))errors.push(`${id}: ${lang} reading passage must be at least 350 characters`);
       if(!Array.isArray(loc.reviewSteps)||loc.reviewSteps.length!==3||!loc.reviewSteps.every(s=>nonEmpty(s)&&s.trim().length>=40))errors.push(`${id}: ${lang} requires three detailed review steps`);
+      if(q.game==='table-lab'&&(!Array.isArray(loc.tableStatements)||loc.tableStatements.length!==3||!loc.tableStatements.every(nonEmpty)))errors.push(`${id}: ${lang} requires three table claims`);
       if(q.game==='enough-info'){
         if(!Array.isArray(loc.statements)||loc.statements.length!==2||!loc.statements.every(nonEmpty))errors.push(`${id}: ${lang} requires exactly two nonempty statements`);
 
-      } else {
+      } else if(q.game!=='table-lab') {
         if(!Array.isArray(loc.choices)||loc.choices.length!==5||!loc.choices.every(nonEmpty))errors.push(`${id}: ${lang} requires five nonempty choices`);
         else if(new Set(loc.choices.map(c=>c.trim().toLocaleLowerCase(lang))).size!==5)errors.push(`${id}: repeated answer choices in ${lang}`);
       }

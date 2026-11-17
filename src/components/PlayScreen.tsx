@@ -8,14 +8,15 @@ import {elapsedSeconds,practiceDurationSeconds,timeExpired} from '../engine/timi
 import type {Attempt,Exam,Game,Locale,Progress,Question} from '../engine/types';
 import {ReasoningBreakdown} from './ReasoningBreakdown';
 import {QuestionFeedbackLink} from './QuestionFeedbackLink';
+import {TableAnalysisChallenge} from './TableAnalysisChallenge';
 
 type Mode='game'|'exam'|'review';
 const LABELS:{fr:string[];en:string[]}={
   fr:['(1) seule suffit','(2) seule suffit','Les deux ensemble uniquement','Chacune suffit seule','Aucune, même ensemble'],
   en:['Statement (1) alone','Statement (2) alone','Both statements together only','Either statement alone','Neither, even together']
 };
-const titles:Record<Game,string>={'code-logic':'Code Logic','argument-lab':'Argument Lab','enough-info':'Enough Info?','quant-lab':'Quant Lab','reading-lab':'Reading Lab','expression-lab':'Expression Lab'};
-const answerLetter=(q:Question)=>q.game==='enough-info'?q.correctAnswer:String.fromCharCode(65+Number(q.correctAnswer));
+const titles:Record<Game,string>={'code-logic':'Code Logic','argument-lab':'Argument Lab','enough-info':'Enough Info?','quant-lab':'Quant Lab','reading-lab':'Reading Lab','expression-lab':'Expression Lab','table-lab':'Table Lab'};
+const answerLetter=(q:Question,locale:Locale)=>q.game==='table-lab'?q.correctAnswer.split('').map(c=>c==='Y'?(locale==='fr'?'Oui':'Yes'):(locale==='fr'?'Non':'No')).join(' / '):q.game==='enough-info'?q.correctAnswer:String.fromCharCode(65+Number(q.correctAnswer));
 const mmss=(s:number)=>`${String(Math.floor(Math.max(0,s)/60)).padStart(2,'0')}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
 export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{locale:Locale;game:Game|'mixed';bank:Question[];forceExam?:boolean;reviewOnly?:boolean}){
   const fr=locale==='fr';
@@ -111,10 +112,10 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
       <p className="note">{fr?'Ce résultat n’est pas un score officiel.':'This result is not an official exam score.'}</p>
       <div className="review"><h2>{fr?'Corrections':'Review'}</h2>
         {expired&&queue.length>attempts.length&&<p className="warning">{fr?'Questions non répondues :':'Unanswered questions:'} {queue.length-attempts.length}</p>}
-        {attempts.map((a,i)=>{const q=bank.find(v=>v.id===a.questionId);return q?<article key={q.id} className="review-item"><strong>{a.correct?'✓':'×'} {i+1}. {q.content[locale].prompt}</strong><p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q)}</p><p>{q.content[locale].explanation}</p><ReasoningBreakdown text={q.content[locale]} locale={locale} game={q.game}/><QuestionFeedbackLink questionId={q.id} locale={locale}/></article>:null})}
+        {attempts.map((a,i)=>{const q=bank.find(v=>v.id===a.questionId);return q?<article key={q.id} className="review-item"><strong>{a.correct?'✓':'×'} {i+1}. {q.content[locale].prompt}</strong><p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q,locale)}</p><p>{q.content[locale].explanation}</p><ReasoningBreakdown text={q.content[locale]} locale={locale} game={q.game}/><QuestionFeedbackLink questionId={q.id} locale={locale}/></article>:null})}
         {expired&&queue.slice(attempts.length).map(q=><article key={q.id} className="review-item">
           <strong>{fr?'Non répondu':'Unanswered'} — {q.content[locale].prompt}</strong>
-          <p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q)}</p>
+          <p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(q,locale)}</p>
           <p>{q.content[locale].explanation}</p>
           <ReasoningBreakdown text={q.content[locale]} locale={locale} game={q.game}/>
           <QuestionFeedbackLink questionId={q.id} locale={locale}/>
@@ -129,7 +130,8 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
       <h1 id="question-title">{current.content[locale].prompt}</h1>
       {current.content[locale].context&&<p className={current.game==='reading-lab'?'context reading-passage':'context'}>{current.content[locale].context}</p>}
       {current.content[locale].statements?.map((s,i)=><div className="statement" key={i}><span>({i+1})</span> {s}</div>)}
-      <div className="answer-list" role="group" aria-label={fr?'Choix de réponse':'Answer choices'}>
+      {current.game==='table-lab'?<TableAnalysisChallenge key={current.id} question={current} locale={locale} disabled={revealed} onAnswer={setSelected}/>:null}
+      {current.game!=='table-lab'&&<div className="answer-list" role="group" aria-label={fr?'Choix de réponse':'Answer choices'}>
         {(current.game==='enough-info'?['A','B','C','D','E']:current.content[locale].choices??[]).map((choice,i)=>{
           const key=current.game==='enough-info'?String(choice):String(i);
           const label=current.game==='enough-info'?LABELS[locale][i]:choice;
@@ -138,11 +140,11 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
           return <button type="button" key={key} aria-pressed={selected===key} disabled={revealed} onClick={()=>setSelected(key)} className={`answer ${selected===key?'chosen':''} ${right?'correct':''} ${wrong?'incorrect':''}`}>
             <span className="answer-letter">{String.fromCharCode(65+i)}</span><span>{label}</span>{right&&<b aria-label={fr?'Bonne réponse':'Correct'}>✓</b>}</button>
         })}
-      </div>
+      </div>}
       {mode!=='exam'&&!revealed&&<button className="hint-button" type="button" aria-expanded={hint} onClick={()=>setHint(v=>!v)}>{fr?'Afficher un indice':'Show a hint'} ✧</button>}
       {hint&&mode!=='exam'&&!revealed&&<div className="hint" role="note">{current.content[locale].hint}</div>}
       {revealed&&<div role="status" className={selected===current.correctAnswer?'feedback good':'feedback bad'}><strong>{selected===current.correctAnswer?(fr?'Bonne réponse':'Correct'):(fr?'À retravailler':'Keep practicing')}</strong>
-        <p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(current)}</p>
+        <p className="review-answer">{fr?'Réponse attendue':'Correct answer'} : {answerLetter(current,locale)}</p>
         <p>{current.content[locale].explanation}</p>
         <ReasoningBreakdown text={current.content[locale]} locale={locale} game={current.game}/></div>}
       <div className="quiz-footer"><span className="small-muted">{fr?'Les progrès restent sur cet appareil.':'Progress stays on this device.'}</span>

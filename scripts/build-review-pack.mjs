@@ -9,12 +9,15 @@ const choiceLetter=index=>'ABCDE'[index];
 
 function languageView(question,locale){
   const content=question.content[locale];
-  const options=question.game==='enough-info'
+  const options=question.game==='table-lab'
+    ? '<div><strong>Sortable data table (fixed-order offline preview):</strong><table border="1"><thead><tr>'+question.table.columns.map(c=>'<th>'+escapeHtml(c[locale])+'</th>').join('')+'</tr></thead><tbody>'+question.table.rows.map(row=>'<tr>'+row.map(value=>'<td>'+escapeHtml(value)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div><ol>'+content.tableStatements.map((statement,i)=>'<li>'+escapeHtml(statement)+'</li>').join('')+'</ol>'
+    : question.game==='enough-info'
     ? content.statements.map((value,index)=>'<li><strong>('+String(index+1)+')</strong> '+escapeHtml(value)+'</li>').join('')
     : content.choices.map((value,index)=>'<li><strong>'+choiceLetter(index)+'.</strong> '+escapeHtml(value)+'</li>').join('');
   const context=content.context?'<p class="context">'+escapeHtml(content.context)+'</p>':'';
-  const key=question.game==='enough-info'?question.correctAnswer:choiceLetter(Number(question.correctAnswer));
-  const correctLabel=question.game==='enough-info'
+  const key=question.game==='table-lab'?question.correctAnswer:question.game==='enough-info'?question.correctAnswer:choiceLetter(Number(question.correctAnswer));
+  const correctLabel=question.game==='table-lab'?escapeHtml(key.split('').map(v=>v==='Y'?'Yes':'No').join(' / '))
+    : question.game==='enough-info'
     ? escapeHtml(key)
     : escapeHtml(key+' — '+content.choices[Number(question.correctAnswer)]);
   const steps=content.reviewSteps.map(step=>'<li>'+escapeHtml(step)+'</li>').join('');

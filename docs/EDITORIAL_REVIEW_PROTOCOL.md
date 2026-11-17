@@ -1,6 +1,6 @@
 # Independent editorial review — operating procedure
 
-**Current status: 82/82 original questions still require independent educational review.** A passing CI, key-regression test, or assistant first-pass check **is not a review approval**. The source of truth is `src/content/questions.json`; the review queue is `docs/editorial-review-ledger.json`.
+**Current status: 85/85 original questions still require independent educational review.** A passing CI, key-regression test, or assistant first-pass check **is not a review approval**. The source of truth is `src/content/questions.json`; the review queue is `docs/editorial-review-ledger.json`.
 
 ## One-question review
 
@@ -41,3 +41,5 @@ The workbook has **no** backend, cloud account, autosave or network calls. Revie
 - **Reading Lab:** verify each of 12 bilingual keys directly against the four entire original passages, challenge all distractors and check FR/EN interpretation.
 
 - **Expression Lab:** all six French-language items require independent correction of linguistic usage, preservation of modality/quantifiers in reformulations and discourse logic. The EN interface is a translation for learning only; it is not an official English Expression sub-test.
+
+- **Table Lab:** sort all columns as text/numbers and independently calculate each true/false statement. All three binary responses must be correct for the item to count as correct. The offline workbook shows the table without interactive sorting and is a reading/review surface, not gameplay.

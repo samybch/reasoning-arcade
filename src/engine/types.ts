@@ -1,6 +1,6 @@
 export type Locale = 'fr'|'en';
 export type Exam = 'tage'|'gmat';
-export type Game = 'code-logic'|'argument-lab'|'enough-info'|'quant-lab'|'reading-lab'|'expression-lab';
+export type Game = 'code-logic'|'argument-lab'|'enough-info'|'quant-lab'|'reading-lab'|'expression-lab'|'table-lab';
 export type Level = 1|2|3|4|5;
 export interface QuestionText {
   prompt: string;
@@ -9,12 +9,14 @@ export interface QuestionText {
   statements?: string[];
   explanation: string;
   hint: string;
+  tableStatements?: [string,string,string];
   reviewSteps?: [string,string,string]; // Statement (1), statement (2), combined verdict.
 }
 export interface Question {
   id:string; exam:Exam; game:Game; competency:string; difficulty:Level;
   estimatedSeconds:number; correctAnswer:string; status:'pilot'|'reviewed';
   alignment:'warmup'|'skill-practice';
+  table?:{columns:{key:string;fr:string;en:string;kind:'number'|'text'}[];rows:string[][]};
   sufficiency?:{first:boolean;second:boolean;together:boolean}; // Proof flags for Data Sufficiency only.
   content:Record<Locale,QuestionText>;
 }

@@ -150,3 +150,10 @@ The earlier 70-item counts above remain historical checkpoints for traceability,
 - [ ] Public website launch requires separate owner GO
 
 Historical snapshots of the original 70/76 pilot bank above are retained for audit traceability.
+
+## XYZ — GMAT Table Analysis pilot (2026-11-17)
+- [x] Implement first GMAT-only Table Lab with sortable accessible tables and 3 Yes/No assertions
+- [x] Add three original bilingual synthetic datasets and pending editorial records (85 pilots overall)
+- [ ] Independent verification of data and statement truth values; test table accessibility with users
+- [ ] Continue with Multi-Source Reasoning, Graphics Interpretation and Two-Part Analysis when the table interaction is stable
+- [ ] Do not publish Pages without explicit owner authorization
