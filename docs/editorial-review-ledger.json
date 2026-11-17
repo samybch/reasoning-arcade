@@ -771,6 +771,66 @@
       "reviewer": null,
       "reviewedAt": null,
       "reviewFocus": "Check that the anonymity/public-report distinction is genuinely passage-supported."
+    },
+    {
+      "id": "T-E-01",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check French past-participle agreement and that all incorrect options are clearly wrong; check independently localized English agreement."
+    },
+    {
+      "id": "T-E-02",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check subjunctive and conditional usage in French and each English distractor's ungrammaticality."
+    },
+    {
+      "id": "T-E-03",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check preservation of the before-Friday priority and possible later review, without widening or narrowing scope."
+    },
+    {
+      "id": "T-E-04",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that postponing a decision is not confused with approval, rejection or delegation."
+    },
+    {
+      "id": "T-E-05",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the connector expresses consequence rather than illustration, time or contrast in both languages."
+    },
+    {
+      "id": "T-E-06",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check the scope of two agencies and whether premature is the unique appropriate completion in both languages."
     }
   ]
 }
