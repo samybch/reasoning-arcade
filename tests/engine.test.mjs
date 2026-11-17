@@ -100,16 +100,21 @@ test('review queue is bounded, unique and skips deleted question IDs',()=>{
   assert.equal(nextReviewQuestion(bank,stale,'tage',['T-A-01']),null);
 });
 
-test('mixed mini-test samples every available game, including Reading Lab',()=>{
-  const expected={tage:['argument-lab','code-logic','enough-info','expression-lab','quant-lab','reading-lab'],gmat:['argument-lab','enough-info','multi-source-lab','quant-lab','reading-lab','table-lab']};
+test('mixed mini-tests cover six distinct categories, rotating larger GMAT bank',()=>{
+  const available={tage:['argument-lab','code-logic','enough-info','expression-lab','quant-lab','reading-lab'],
+    gmat:['argument-lab','enough-info','graphics-lab','multi-source-lab','quant-lab','reading-lab','table-lab']};
   for(const exam of ['tage','gmat']){
-    for(const variant of [0,1,2,3,8]){
+    const covered=new Set();
+    for(const variant of [0,1,2,3,4,5,6,8]){
       const chosen=buildExamQueue(bank,exam,'mixed',6,variant);
       assert.equal(chosen.length,6,`${exam}/variant${variant}`);
-      assert.equal(new Set(chosen.map(q=>q.id)).size,6,'no duplicates');
-      assert.deepEqual([...new Set(chosen.map(q=>q.game))].sort(),expected[exam],`${exam}/variant${variant} must cover all available games`);
-      assert.deepEqual(buildExamQueue(bank,exam,'mixed',6,variant).map(q=>q.id),chosen.map(q=>q.id),'stable selection');
+      assert.equal(new Set(chosen.map(q=>q.id)).size,6,'no duplicate questions');
+      assert.equal(new Set(chosen.map(q=>q.game)).size,6,'six distinct games');
+      assert.ok(chosen.every(q=>available[exam].includes(q.game)));
+      chosen.forEach(q=>covered.add(q.game));
+      assert.deepEqual(buildExamQueue(bank,exam,'mixed',6,variant).map(q=>q.id),chosen.map(q=>q.id));
     }
+    assert.deepEqual([...covered].sort(),available[exam].sort(),'rotate to reach all available categories');
   }
 });
 test('mixed queue degrades gracefully if the bank has missing or exhausted games',()=>{
