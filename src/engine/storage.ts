@@ -20,11 +20,11 @@ export function loadProgress():Progress {
       Number(x.totalCorrect)>Number(x.totalAnswered)||!x.skills||typeof x.skills!=='object'||Array.isArray(x.skills))return initial();
     const skills=Object.fromEntries(Object.entries(x.skills as Record<string,unknown>).filter(([,s])=>validSkill(s))) as Record<string,SkillProgress>;
     const recentQuestionIds=Array.isArray(x.recentQuestionIds)
-      ? x.recentQuestionIds.filter((id:unknown):id is string=>typeof id==='string'&&/^[TG]-[LADCQR]-\d{2,4}$/.test(id)).slice(-16)
+      ? x.recentQuestionIds.filter((id:unknown):id is string=>typeof id==='string'&&/^[TG]-[LADCQRE]-\d{2,4}$/.test(id)).slice(-16)
       : [];
     const pendingReviewIds=Array.isArray(x.pendingReviewIds)
       ? [...new Set(x.pendingReviewIds.filter((id:unknown):id is string=>
-          typeof id==='string'&&/^[TG]-[LADCQR]-\d{2,4}$/.test(id)))].slice(-24)
+          typeof id==='string'&&/^[TG]-[LADCQRE]-\d{2,4}$/.test(id)))].slice(-24)
       : [];
     return {version:1,totalAnswered:x.totalAnswered as number,totalCorrect:x.totalCorrect as number,skills,recentQuestionIds,pendingReviewIds};
   }catch{return {...EMPTY_PROGRESS,skills:{}}}
