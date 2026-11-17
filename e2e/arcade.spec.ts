@@ -329,7 +329,7 @@ test('Quant Lab mistake history survives browser reload for both exams',async({p
   }
 });
 test('mixed mini-tests include all available skills for TAGE and GMAT',async({page})=>{
-  for(const [exam,expected] of [['tage',['A','C','D','L']],['gmat',['A','D','Q']]] as const){
+  for(const [exam,expected] of [['tage',['A','C','D','L','R']],['gmat',['A','D','Q','R']]] as const){
     await page.goto(PREFIX+`/en/practice/?exam=${exam}`);
     for(let i=0;i<6;i++){
       await expect(page.locator('#question-title')).toBeVisible();
