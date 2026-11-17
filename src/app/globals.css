@@ -86,3 +86,14 @@
 .source-tabs button[aria-selected="true"]{background:var(--primary);color:white;border-color:var(--primary)}
 .source-panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;white-space:pre-line}
 .source-panel p{margin:0;overflow-wrap:anywhere}.source-panel[hidden]{display:none}
+
+
+/* Graphics Interpretation pilot: scalable accessible chart and complete-with-dropdown questions */
+.graphics-challenge{margin:18px 0}.graphics-figure{margin:0 0 20px;border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--surface);overflow-x:auto}
+.graphics-figure figcaption{font-weight:750;margin-bottom:10px}.graphics-svg{display:block;width:100%;height:auto;min-width:0;max-height:310px;color:var(--primary)}
+.graphics-data{width:100%;border-collapse:collapse;margin-top:10px;font-variant-numeric:tabular-nums}.graphics-data caption{text-align:left;font-size:12px;color:var(--muted)}
+.graphics-data th,.graphics-data td{text-align:center;padding:5px;border:1px solid var(--line)}
+.graphic-questions{border:0;padding:0;margin:0;min-width:0}.graphic-questions legend{font-weight:750;margin-bottom:8px}
+.graphic-statement{display:grid;gap:8px;padding:12px 0;border-bottom:1px solid var(--line)}
+.graphic-statement select{max-width:100%;min-height:42px;padding:8px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink)}
+.graphic-statement select:focus-visible{outline:3px solid #e79748;outline-offset:2px}
