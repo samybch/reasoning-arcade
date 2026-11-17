@@ -9,7 +9,9 @@ const choiceLetter=index=>'ABCDE'[index];
 
 function languageView(question,locale){
   const content=question.content[locale];
-  const options=question.game==='graphics-lab'
+  const options=question.game==='two-part-lab'
+    ? '<p><strong>'+content.twoPartHeaders.map(escapeHtml).join(' / ')+'</strong></p><ol>'+content.choices.map((value,index)=>'<li>'+choiceLetter(index)+'. '+escapeHtml(value)+'</li>').join('')+'</ol>'
+    : question.game==='graphics-lab'
     ? '<div><strong>'+escapeHtml(question.graph.title[locale])+' ('+escapeHtml(question.graph.units[locale])+')</strong><table border="1"><thead><tr>'+question.graph.labels.map(label=>'<th>'+escapeHtml(label)+'</th>').join('')+'</tr></thead><tbody><tr>'+question.graph.values.map(v=>'<td>'+escapeHtml(v)+'</td>').join('')+'</tr></tbody></table></div><ol>'+content.graphicStatements.map(statement=>'<li>'+escapeHtml(statement.prompt)+' — '+statement.options.map(escapeHtml).join(' / ')+'</li>').join('')+'</ol>'
     : question.game==='table-lab'
     ? '<div><strong>Sortable data table (fixed-order offline preview):</strong><table border="1"><thead><tr>'+question.table.columns.map(c=>'<th>'+escapeHtml(c[locale])+'</th>').join('')+'</tr></thead><tbody>'+question.table.rows.map(row=>'<tr>'+row.map(value=>'<td>'+escapeHtml(value)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div><ol>'+content.tableStatements.map((statement,i)=>'<li>'+escapeHtml(statement)+'</li>').join('')+'</ol>'
@@ -17,8 +19,9 @@ function languageView(question,locale){
     ? content.statements.map((value,index)=>'<li><strong>('+String(index+1)+')</strong> '+escapeHtml(value)+'</li>').join('')
     : content.choices.map((value,index)=>'<li><strong>'+choiceLetter(index)+'.</strong> '+escapeHtml(value)+'</li>').join('');
   const context=content.context?'<p class="context">'+escapeHtml(content.context)+'</p>':(question.game==='multi-source-lab'?(content.sources??[]).map(source=>'<section class="context"><h4>'+escapeHtml(source.title)+'</h4><p>'+escapeHtml(source.body)+'</p></section>').join(''):'');
-  const key=question.game==='graphics-lab'?question.correctAnswer:question.game==='table-lab'?question.correctAnswer:question.game==='enough-info'?question.correctAnswer:choiceLetter(Number(question.correctAnswer));
-  const correctLabel=question.game==='graphics-lab'?escapeHtml(question.correctAnswer.split('|').map((v,i)=>content.graphicStatements[i].options[Number(v)]).join(' / '))
+  const key=question.game==='two-part-lab'?question.correctAnswer:question.game==='graphics-lab'?question.correctAnswer:question.game==='table-lab'?question.correctAnswer:question.game==='enough-info'?question.correctAnswer:choiceLetter(Number(question.correctAnswer));
+  const correctLabel=question.game==='two-part-lab'?escapeHtml(question.correctAnswer.split('|').map((v,i)=>content.twoPartHeaders[i]+': '+content.choices[Number(v)]).join(' / '))
+    : question.game==='graphics-lab'?escapeHtml(question.correctAnswer.split('|').map((v,i)=>content.graphicStatements[i].options[Number(v)]).join(' / '))
     : question.game==='table-lab'?escapeHtml(key.split('').map(v=>v==='Y'?'Yes':'No').join(' / '))
     : question.game==='enough-info'
     ? escapeHtml(key)
