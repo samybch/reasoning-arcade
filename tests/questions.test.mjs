@@ -161,7 +161,7 @@ test('new Quant Lab questions reject invalid ID or incomplete bilingual correcti
 test('Reading Lab uses nine original, bilingual and long-passage questions per exam',()=>{
   for(const exam of ['tage','gmat']){
     const items=QUESTIONS.filter(q=>q.game==='reading-lab'&&q.exam===exam);
-    assert.equal(items.length,6,exam);
+    assert.equal(items.length,9,exam);
     assert.equal(new Set(items.map(q=>q.content.fr.context)).size,3,exam+' FR passages');
     assert.equal(new Set(items.map(q=>q.content.en.context)).size,3,exam+' EN passages');
     for(const q of items){
