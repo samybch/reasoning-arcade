@@ -10,7 +10,7 @@
 - [ ] Review dependency alerts and pin or update responsibly
 
 ## Y — Pedagogy and claims
-- [x] 88 original FR/EN pilot items with first-pass answer-key matrix
+- [x] 91 original FR/EN pilot items with first-pass answer-key matrix
 - [x] Key-regression tests and a structural validator that allows new contributions
 - [ ] Independent French/English correctness review and approval for every item (issue #3)
 - [ ] Verify official exam taxonomy and current answer conventions in authoritative materials
@@ -84,3 +84,9 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] Integrate in GMAT-only game, local review queue, mixed tests and offline reviewer worksheet
 - [ ] Independent FR/EN verification of facts, all five choices per question and three reference answers
 - [ ] Screen-reader and mobile user validation; pilot is not an official exam simulator
+
+## Graph Lab — GMAT Graphics Interpretation
+- [x] Original FR/EN graphic pilots with two dropdown completions and accessible data tables
+- [x] Add to local practice, review, mixed mini-tests, coverage reporting and offline reviewer worksheet
+- [ ] Independent verification of numerical values, graph accessibility and all dropdown distractors
+- [ ] User testing before release; no claim of official exam interface or verified difficulty
