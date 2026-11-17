@@ -23,7 +23,7 @@ const evidence={
 'G-A-09':['turnover costs','coûts liés au départ','exceed the added training costs','dépasseront le coût supplémentaire'],
 'G-A-10':['laboratory access permit','autorisation','completed safety training','suivi la formation de sécurité'],
 'G-A-11':['bus ridership rose','fréquentation a augmenté','subway line was closed','ligne de métro était fermée'],
-'G-A-12':['one climate','climat','may not generalize','pas forcément généralisables'],
+'G-A-12':['one cool, dry warehouse','climat','may not generalize','pas forcément généralisables'],
 'T-R-01':['campus opened nearby','campus universitaire a ouvert','does not by itself establish','ne suffisent pas à attribuer'],
 'T-R-02':['decline in daytime visits','visites en journée ont légèrement diminué','shifted','auparavant effectuées en journée'],
 'T-R-03':['comparing trends with a nearby library','comparer les évolutions avec celles','comparison','point de comparaison'],
@@ -86,7 +86,7 @@ test('deductive Argument Lab conclusions survive finite logical countermodel sea
     const members=[0,1,2].map(i=>Boolean(bits&(1<<i)));
     const students=[0,1,2].map(i=>Boolean(bits&(1<<(i+3))));
     const spanish=[0,1,2].map(i=>Boolean(bits&(1<<(i+6))));
-    if(!members.every((m,i)=>!m||spanish[i])||!members.some((m,i)=>students[i]))continue;
+    if(!members.every((m,i)=>!m||spanish[i])||!members.some((m,i)=>m&&students[i]))continue;
     tModels++;
     assert.ok(students.some((s,i)=>s&&spanish[i]),'T-A-03 conclusion countermodel');
   }
