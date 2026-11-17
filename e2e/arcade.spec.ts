@@ -9,6 +9,12 @@ async function chooseWrongQuantAnswer(page:import('@playwright/test').Page){
   await page.locator('.answer-list button').nth((Number(q!.correctAnswer)+1)%5).click();
 }
 
+async function answerMixedQuestion(page:import('@playwright/test').Page){
+  if(await page.locator('.table-claim').count()){
+    for(let i=0;i<3;i++)await page.locator('.table-claim').nth(i).getByRole('radio',{name:'Yes'}).check();
+  }else await page.locator('.answer-list button').first().click();
+}
+
 const PREFIX='/reasoning-arcade';
 
 test('French and English homepages display and language navigation works',async({page})=>{
@@ -45,7 +51,7 @@ test('timed GMAT mini-test gives results after six questions',async({page})=>{
   await expect(page.getByText('GMAT',{exact:true})).toBeVisible();
   for(let n=0;n<6;n++){
     await expect(page.locator('.answer-list button').first()).toBeVisible();
-    await page.locator('.answer-list button').first().click();
+    await answerMixedQuestion(page);
     await page.getByRole('button',{name:/Submit/}).click();
   }
   await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
@@ -342,7 +348,7 @@ test('mixed mini-tests include all available skills for TAGE and GMAT',async({pa
     await page.goto(PREFIX+`/en/practice/?exam=${exam}`);
     for(let i=0;i<6;i++){
       await expect(page.locator('#question-title')).toBeVisible();
-      await page.locator('.answer-list button').first().click();
+      await answerMixedQuestion(page);
       await page.getByRole('button',{name:/Submit/}).click();
     }
     await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
