@@ -29,7 +29,7 @@ const evidence={
 'T-R-03':['comparing trends with a nearby library','comparer les évolutions avec celles','comparison','point de comparaison'],
 'T-R-04':['installed simultaneously','mis en place simultanément','runoff fell','baisse du ruissellement'],
 'T-R-05':['retention basin','bassin de rétention','retention basin','bassin de rétention'],
-'T-R-06':['did not prove the planting was useless','ne prouve nullement l'inutilité','does not prove','ne signifie pas prouver'],
+'T-R-06':['did not prove the planting was useless','ne prouve nullement','does not prove','ne signifie pas prouver'],
 'T-R-07':['curators','conservateurs','curator labels','conservateurs'],
 'T-R-08':['additional editorial work','travail éditorial supplémentaire','practical limitation','limite pratique'],
 'T-R-09':['optional space','espace facultatif','Distinguish verifiable information','Séparer clairement les données vérifiables'],
@@ -41,7 +41,7 @@ const evidence={
 'G-R-06':['across several seasons','sur plusieurs saisons','over several seasons','sur plusieurs saisons'],
 'G-R-07':['assessed against its stated aims','selon ses objectifs annoncés','Measured and analytical','Nuancé et analytique'],
 'G-R-08':['does not by itself establish the quality','ne renseigne pas à lui seul sur la solidité','ability to inspect reasoning','possibilité de vérifier un raisonnement'],
-'G-R-09':['publish reports while allowing reviewers to remain anonymous','publient les rapports mais permettent aux évaluateurs de rester anonymes','protect reviewer identities','protection de l'identité des évaluateurs']
+'G-R-09':['publish reports while allowing reviewers to remain anonymous','publient les rapports mais permettent aux évaluateurs de rester anonymes','protect reviewer identities','protection de']
 };
 const contains=(text,phrase)=>text.toLocaleLowerCase().includes(phrase.toLocaleLowerCase());
 test('30 verbal items have explicit bilingual evidence anchors, not automated review approvals',()=>{
