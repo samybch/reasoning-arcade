@@ -526,10 +526,10 @@ test('GMAT Multi-Source Lab switches three sources using mouse and keyboard',asy
   await page.keyboard.press('ArrowRight');
   await expect(tabs.nth(1)).toBeFocused();
   await expect(tabs.nth(1)).toHaveAttribute('aria-selected','true');
-  await expect(page.getByRole('tabpanel').filter({visible:true})).toContainText('€3,500');
+  await expect(page.locator('[role="tabpanel"]:visible')).toContainText('€3,500');
   await tabs.nth(2).click();
   await expect(tabs.nth(2)).toHaveAttribute('aria-selected','true');
-  await expect(page.getByRole('tabpanel').filter({visible:true})).toContainText('€200');
+  await expect(page.locator('[role="tabpanel"]:visible')).toContainText('€200');
   await page.locator('.answer-list button').nth(2).click();
   await page.getByRole('button',{name:/Submit/}).click();
   await expect(page.locator('.feedback.good')).toBeVisible();
