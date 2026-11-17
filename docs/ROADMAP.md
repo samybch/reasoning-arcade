@@ -141,3 +141,11 @@
 - [ ] Obtain explicit owner GO before any user-facing public Pages deployment
 
 The earlier 70-item counts above remain historical checkpoints for traceability, not current totals.
+
+## XYZ — Expression Lab TAGE MAGE pilot (2026-11-17)
+- [x] Create six original French questions with English learning adaptations, split evenly across correction, faithful reformulation and discourse coherence
+- [x] Integrate a TAGE-only Expression Lab into existing gameplay, local progress, mixed practice and coverage map
+- [x] Enroll all six items in the pending editorial ledger and offline workbook (82 pilots overall)
+- [ ] Independently review six Expression answer keys and both language versions
+- [ ] Calibrate 15-question official section feasibility separately; current mini-test format is an unofficial six-question sampler
+- [ ] Obtain a distinct owner GO for any public release; GitHub Pages remains manual-only
