@@ -399,6 +399,7 @@ test('Reading Lab recent attempts and pending review survive reload in both exam
   for(const [exam,id] of [['tage','T-R-01'],['gmat','G-R-01']] as const){
     await page.goto(PREFIX+`/en/play/reading-lab/?exam=${exam}&mode=game`);
     await page.evaluate((questionId)=>{
+      localStorage.removeItem('reasoning-arcade:progress:v1');
       localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
         version:1,skills:{},totalAnswered:1,totalCorrect:0,
         recentQuestionIds:[questionId],pendingReviewIds:[questionId]
