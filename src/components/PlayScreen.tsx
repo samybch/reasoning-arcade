@@ -39,7 +39,9 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
   const [finished,setFinished]=useState(false);
   const [expired,setExpired]=useState(false);
   const sessionStartedMs=useRef<number>(0);
-  const sessionSize=game==='mixed'?6:5;
+  // A focused game session cannot ask more unique questions than its exam-specific bank contains.
+  // Keep the displayed denominator, completion threshold and scoring in sync with actual availability.
+  const sessionSize=game==='mixed'?6:Math.min(5,bank.filter(q=>q.exam===exam&&q.game===game).length);
   useEffect(()=>{
     const query=new URLSearchParams(window.location.search);
     setExam(query.get('exam')==='gmat'?'gmat':'tage');
