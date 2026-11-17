@@ -891,6 +891,36 @@
       "reviewer": null,
       "reviewedAt": null,
       "reviewFocus": "Verify 60/80 observed vs 72/80 forecast; ensure no option implies proven causality. Check all distractors."
+    },
+    {
+      "id": "G-I-01",
+      "exam": "gmat",
+      "game": "graphics-lab",
+      "referenceKey": "3|1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify sales maximum 80 for segment D and D minus B = 20, both FR/EN dropdowns and axis labeling."
+    },
+    {
+      "id": "G-I-02",
+      "exam": "gmat",
+      "game": "graphics-lab",
+      "referenceKey": "2|0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify Q4/Q2=200% not 100% increase, and Q3-Q1=25 thousand; challenge all distractors."
+    },
+    {
+      "id": "G-I-03",
+      "exam": "gmat",
+      "game": "graphics-lab",
+      "referenceKey": "1|2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify N+W=95 and strictly greater than 45 includes only N and E, not W. Check both translations."
     }
   ]
 }
