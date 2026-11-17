@@ -10,7 +10,7 @@
 - [ ] Review dependency alerts and pin or update responsibly
 
 ## Y — Pedagogy and claims
-- [x] 76 original FR/EN pilot items with first-pass answer-key matrix
+- [x] 82 original FR/EN pilot items with first-pass answer-key matrix
 - [x] Key-regression tests and a structural validator that allows new contributions
 - [ ] Independent French/English correctness review and approval for every item (issue #3)
 - [ ] Verify official exam taxonomy and current answer conventions in authoritative materials
@@ -66,3 +66,9 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] Six original reading passages, eighteen pilot questions and bilingual worked stages
 - [x] Eighteen pending ledger records and inclusion in the offline reviewer workbook
 - [ ] Independent external FR/EN correctness review, ambiguity checks and rights signoff
+
+## Expression Lab — TAGE MAGE only (2026-11-17)
+- [x] Add six original French-language expression pilots and EN explanatory translations covering correction, reformulation and discourse coherence (two each)
+- [x] Include pilot items in local review, adaptive game, timed mini-tests and offline workbook
+- [ ] Independently check French normative correctness, scope-preserving paraphrase, alternative connectors and distractor uniqueness
+- [ ] Calibrate timing and confirm no implication that a six-question pilot is the official 15-question sub-test
