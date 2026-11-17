@@ -652,3 +652,27 @@ test('Two-Part remains GMAT-only, readable at 320px and restores mistake review'
   await page.goto(PREFIX+'/fr/coverage/');
   await expect(page.locator('.coverage-row').filter({hasText:'Two-Part Analysis'})).toContainText('3 pilotes');
 });
+
+test('focused three-item GMAT game scores out of three, never five',async({page})=>{
+  const questions=JSON.parse(readFileSync(new URL('../src/content/questions.json',import.meta.url),'utf8')) as Array<{game:string;correctAnswer:string;content:{en:{prompt:string}}}>;
+  await page.goto(PREFIX+'/en/play/table-lab/?exam=gmat&mode=game');
+  const seen=new Set<string>();
+  for(let i=0;i<3;i++){
+    const prompt=await page.locator('#question-title').textContent();
+    const q=questions.find(q=>q.game==='table-lab'&&q.content.en.prompt===prompt);
+    expect(q,'expected table question in a three-item bank').toBeDefined();
+    expect(seen.has(prompt??'')).toBe(false);
+    seen.add(prompt??'');
+    await expect(page.locator('.question-top')).toContainText(`Question ${i+1}/3`);
+    for(const [index,key] of [...q!.correctAnswer].entries()){
+      await page.locator('.table-claim').nth(index).getByRole('radio',{name:key==='Y'?'Yes':'No'}).check();
+    }
+    await page.getByRole('button',{name:/Submit/}).click();
+    await expect(page.locator('.feedback.good')).toBeVisible();
+    await page.getByRole('button',{name:i===2?/Finish/:/Next/}).click();
+  }
+  await expect(page.getByRole('heading',{name:'Your results'})).toBeVisible();
+  await expect(page.locator('.result-card')).toContainText('3/3 correct answers');
+  await expect(page.locator('.score-ring')).toHaveText('100%');
+  expect(seen.size).toBe(3);
+});
