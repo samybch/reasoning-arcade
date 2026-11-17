@@ -85,3 +85,41 @@ test('finite sequence data cannot establish a mathematically unique next term by
     assert.equal(base+adjustment(4),competing,q.id+' another possible continuation');
   }
 });
+
+test('two spatial categorization items agree with independent geometric invariants and bilingual option order',()=>{
+  const polygon=(sides,regular=true)=>({kind:'polygon',sides,regular});
+  const quad=kind=>({kind});
+  const regular=x=>x.kind==='polygon'&&x.regular===true;
+  const hasHalfTurn=x=>x.kind==='ellipse'||x.kind==='parallelogram'||x.kind==='rectangle'||x.kind==='rhombus'
+    ||(x.kind==='polygon'&&x.regular===true&&x.sides%2===0);
+  const cases={
+    'T-L-13':{
+      rule:regular,
+      examples:[polygon(3),polygon(4),polygon(5),polygon(6),polygon(8),polygon(10)],
+      options:[quad('rectangle'),polygon(3,false),polygon(7),quad('trapezoid'),quad('ellipse')],
+      fr:['Rectangle','Triangle','Heptagone régulier','Trapèze','Ellipse'],
+      en:['rectangle','triangle','heptagon','trapezoid','Ellipse']
+    },
+    'T-L-17':{
+      rule:hasHalfTurn,
+      examples:[quad('rectangle'),quad('rhombus'),polygon(6),quad('ellipse'),quad('parallelogram'),polygon(8)],
+      options:[polygon(3,false),polygon(5),polygon(9),quad('parallelogram'),quad('trapezoid')],
+      fr:['Triangle','Pentagone','Nonagone','Parallélogramme','Trapèze'],
+      en:['triangle','pentagon','nonagon','parallelogram','trapezoid']
+    }
+  };
+  for(const [id,fixture] of Object.entries(cases)){
+    const q=logic.find(q=>q.id===id);
+    assert.ok(q,id);
+    assert.ok(fixture.examples.every(fixture.rule),id+' a negative example');
+    const matches=fixture.options.map((shape,i)=>fixture.rule(shape)?i:-1).filter(i=>i>=0);
+    assert.deepEqual(matches,[Number(q.correctAnswer)],id+' has competing geometry answers');
+    for(const locale of ['fr','en']){
+      const options=q.content[locale].choices;
+      assert.equal(options.length,fixture.options.length);
+      for(const [i,keyword] of fixture[locale].entries()){
+        assert.ok(options[i].toLocaleLowerCase().includes(keyword.toLocaleLowerCase()),id+' '+locale+' geometry option order mismatch '+i);
+      }
+    }
+  }
+});
