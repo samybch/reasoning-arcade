@@ -4772,5 +4772,176 @@
         ]
       }
     }
+  },
+  {
+    "id": "G-P-01",
+    "exam": "gmat",
+    "game": "two-part-lab",
+    "competency": "resource-allocation",
+    "difficulty": 2,
+    "estimatedSeconds": 150,
+    "correctAnswer": "4|2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Une équipe doit répartir 120 heures entre les projets A et B. Le projet A reçoit deux fois plus d'heures que B. Choisis le nombre d'heures affectées à chaque projet.",
+        "context": "Les 120 heures doivent être intégralement affectées. Aucun projet ne peut recevoir un nombre négatif d'heures.",
+        "choices": [
+          "20 heures",
+          "30 heures",
+          "40 heures",
+          "60 heures",
+          "80 heures"
+        ],
+        "twoPartHeaders": [
+          "Heures du projet A",
+          "Heures du projet B"
+        ],
+        "explanation": "Si B reçoit x heures, A en reçoit 2x. Alors 3x = 120 : B reçoit 40 heures et A 80 heures. Les deux colonnes doivent être correctes.",
+        "hint": "Écris A = 2B et A + B = 120.",
+        "reviewSteps": [
+          "La contrainte de répartition impose A + B = 120 heures, avec A égal au double de B.",
+          "En remplaçant A par 2B, on obtient 3B = 120, soit B = 40 heures et A = 80 heures.",
+          "Sélectionne 80 heures dans la colonne A et 40 heures dans la colonne B : le couple respecte les deux contraintes."
+        ]
+      },
+      "en": {
+        "prompt": "A team must allocate 120 working hours between projects A and B. Project A receives twice as many hours as B. Choose the hours allocated to each project.",
+        "context": "All 120 hours must be allocated. Neither project may receive a negative number of hours.",
+        "choices": [
+          "20 hours",
+          "30 hours",
+          "40 hours",
+          "60 hours",
+          "80 hours"
+        ],
+        "twoPartHeaders": [
+          "Project A hours",
+          "Project B hours"
+        ],
+        "explanation": "If B gets x hours, A gets 2x. Thus 3x = 120: B gets 40 hours and A gets 80 hours. Both selections must be correct.",
+        "hint": "Write A = 2B and A + B = 120.",
+        "reviewSteps": [
+          "The allocation constraint is A + B = 120 hours, and project A receives twice as many hours as B.",
+          "Substituting A = 2B gives 3B = 120, so B = 40 hours while A = 80 hours.",
+          "Select 80 hours for project A and 40 hours for project B; the pair satisfies both constraints."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-P-02",
+    "exam": "gmat",
+    "game": "two-part-lab",
+    "competency": "profit-targets",
+    "difficulty": 3,
+    "estimatedSeconds": 170,
+    "correctAnswer": "2|4",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Une entreprise vend un produit qui génère 8 € de marge sur coûts variables par unité et supporte 240 € de charges fixes. Combien d'unités faut-il vendre pour atteindre chaque objectif ?",
+        "context": "Les coûts fixes et la marge unitaire restent constants. Le bénéfice est égal à 8 € multiplié par les unités vendues, moins 240 €.",
+        "choices": [
+          "20 unités",
+          "25 unités",
+          "30 unités",
+          "40 unités",
+          "50 unités"
+        ],
+        "twoPartHeaders": [
+          "Seuil de rentabilité (bénéfice nul)",
+          "Bénéfice de 160 €"
+        ],
+        "explanation": "Pour un bénéfice nul : 8n − 240 = 0, donc n = 30. Pour 160 € : 8n − 240 = 160, donc n = 50.",
+        "hint": "Résous l'équation 8n − 240 = bénéfice désiré séparément pour chaque colonne.",
+        "reviewSteps": [
+          "La contribution totale est de 8 € par unité et les charges fixes représentent 240 €.",
+          "Pour atteindre l'équilibre, 8n = 240, d'où 30 unités ; pour 160 € de profit, 8n = 400, d'où 50 unités.",
+          "Les deux objectifs appellent respectivement 30 et 50 unités : toute réponse partielle est incorrecte."
+        ]
+      },
+      "en": {
+        "prompt": "A company earns an €8 contribution margin per unit and has €240 in fixed costs. How many units must it sell to meet each target?",
+        "context": "Fixed costs and the unit contribution remain constant. Profit equals €8 times units sold, minus €240.",
+        "choices": [
+          "20 units",
+          "25 units",
+          "30 units",
+          "40 units",
+          "50 units"
+        ],
+        "twoPartHeaders": [
+          "Break-even (zero profit)",
+          "€160 profit"
+        ],
+        "explanation": "For break-even: 8n − 240 = 0, giving n = 30. For €160 profit: 8n − 240 = 160, giving n = 50.",
+        "hint": "Solve 8n − 240 = target profit separately for each column.",
+        "reviewSteps": [
+          "The company earns €8 per unit before covering €240 in fixed costs.",
+          "At break-even, 8n = 240 and n = 30; at €160 in profit, 8n = 400 and n = 50.",
+          "Select 30 units for the first column and 50 for the second: both targets must be satisfied."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-P-03",
+    "exam": "gmat",
+    "game": "two-part-lab",
+    "competency": "conversion-comparison",
+    "difficulty": 3,
+    "estimatedSeconds": 170,
+    "correctAnswer": "4|1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Deux campagnes génèrent des commandes avec des taux de conversion différents. Détermine le nombre de commandes attribuable à chaque campagne.",
+        "context": "La campagne Alpha reçoit 600 visites et convertit 12 % des visites. La campagne Bêta reçoit 400 visites et convertit 8 % des visites. Une visite ne peut générer qu'une commande dans ce modèle.",
+        "choices": [
+          "24 commandes",
+          "32 commandes",
+          "48 commandes",
+          "60 commandes",
+          "72 commandes"
+        ],
+        "twoPartHeaders": [
+          "Commandes Alpha",
+          "Commandes Bêta"
+        ],
+        "explanation": "Alpha : 600 × 12 % = 72 commandes. Bêta : 400 × 8 % = 32 commandes. Les volumes de visites et les taux ne doivent pas être intervertis.",
+        "hint": "Multiplie les visites par leur propre taux de conversion pour chaque campagne.",
+        "reviewSteps": [
+          "La campagne Alpha possède 600 visites et un taux de conversion de 12 %, soit 600 × 0,12.",
+          "La campagne Bêta possède 400 visites et un taux de 8 %, soit 400 × 0,08.",
+          "Alpha obtient 72 commandes et Bêta 32 ; vérifie les deux colonnes avant de valider."
+        ]
+      },
+      "en": {
+        "prompt": "Two campaigns generate orders at different conversion rates. Determine the number of orders attributable to each campaign.",
+        "context": "Campaign Alpha has 600 visits and converts 12% of visits. Campaign Beta has 400 visits and converts 8% of visits. Each visit can produce at most one order in this model.",
+        "choices": [
+          "24 orders",
+          "32 orders",
+          "48 orders",
+          "60 orders",
+          "72 orders"
+        ],
+        "twoPartHeaders": [
+          "Alpha orders",
+          "Beta orders"
+        ],
+        "explanation": "Alpha: 600 × 12% = 72 orders. Beta: 400 × 8% = 32 orders. Do not swap visit counts or conversion rates.",
+        "hint": "Multiply each campaign's visits by its own conversion rate.",
+        "reviewSteps": [
+          "Campaign Alpha has 600 visits and a 12% conversion rate, yielding 600 × 0.12 orders.",
+          "Campaign Beta has 400 visits and an 8% conversion rate, yielding 400 × 0.08 orders.",
+          "Alpha produces 72 orders and Beta 32; check both selections before submitting the full pair."
+        ]
+      }
+    }
   }
 ]
