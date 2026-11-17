@@ -17,10 +17,16 @@ const answerEvidence={
   'G-R-03':{key:'2',fr:'Comparer des lignes semblables',en:'To compare similar lines'},
   'G-R-04':{key:'0',fr:'Les restrictions pourraient',en:'Fishing restrictions may'},
   'G-R-05':{key:'4',fr:'Des facteurs qui ne sont pas',en:'Factors other than'},
-  'G-R-06':{key:'2',fr:'Des séries comparables',en:'Comparable data'}
+  'G-R-06':{key:'2',fr:'Des séries comparables',en:'Comparable data'},
+  'T-R-07':{key:'1',fr:'La première privilégie',en:'The first favors standardized'},
+  'T-R-08':{key:'3',fr:'Elle reconnaît une limite',en:'It acknowledges a practical'},
+  'T-R-09':{key:'0',fr:'Séparer clairement',en:'Distinguish verifiable'},
+  'G-R-07':{key:'2',fr:'Nuancé et analytique',en:'Measured and analytical'},
+  'G-R-08':{key:'4',fr:'Pour éviter de confondre',en:'To avoid equating'},
+  'G-R-09':{key:'1',fr:'Deux systèmes également',en:'Two equally open'}
 };
-test('twelve Reading Lab pilot keys preserve passage-grounded bilingual answer meaning',()=>{
-  assert.equal(items.length,12);
+test('eighteen Reading Lab pilot keys preserve passage-grounded bilingual answer meaning',()=>{
+  assert.equal(items.length,18);
   for(const q of items){
     const evidence=answerEvidence[q.id];
     assert.ok(evidence,'No reference key for '+q.id);
@@ -37,15 +43,15 @@ test('twelve Reading Lab pilot keys preserve passage-grounded bilingual answer m
     }
   }
 });
-test('four original bilingual passages are reused consistently in three-question groups',()=>{
+test('six original bilingual passages are reused consistently in three-question groups',()=>{
   for(const exam of ['tage','gmat']){
     const group=items.filter(q=>q.exam===exam);
-    assert.equal(group.length,6);
+    assert.equal(group.length,9);
     for(const locale of ['fr','en']){
       const distinct=new Set(group.map(q=>q.content[locale].context));
-      assert.equal(distinct.size,2,exam+': '+locale+' passage count');
+      assert.equal(distinct.size,3,exam+': '+locale+' passage count');
       const counts=[...distinct].map(p=>group.filter(q=>q.content[locale].context===p).length);
-      assert.deepEqual(counts.sort((a,b)=>a-b),[3,3],exam+': '+locale+' grouping');
+      assert.deepEqual(counts.sort((a,b)=>a-b),[3,3,3],exam+': '+locale+' grouping');
     }
   }
 });
@@ -59,4 +65,22 @@ test('reading items with no source text, duplicate options or misclassified IDs 
   assert.ok(errors.some(e=>e.includes('G-R-501')&&e.includes('exam or game ID mismatch')));
   assert.ok(errors.some(e=>e.includes('G-R-501')&&e.includes('reading passage')));
   assert.ok(errors.some(e=>e.includes('G-R-501')&&e.includes('repeated answer')));
+});
+
+test('new Reading Lab passages target distinct interpretation skills without changing existing 12 keys',()=>{
+  const newItems=items.filter(q=>/-(?:07|08|09)$/.test(q.id));
+  assert.equal(newItems.length,6);
+  assert.deepEqual([...new Set(newItems.map(q=>q.competency))].sort(),
+    ['argument-structure','author-tone','supported-inference','synthesis','viewpoint-comparison']);
+  for(const exam of ['tage','gmat']){
+    const three=newItems.filter(q=>q.exam===exam);
+    assert.equal(three.length,3);
+    assert.equal(new Set(three.map(q=>q.content.fr.context)).size,1);
+    assert.equal(new Set(three.map(q=>q.content.en.context)).size,1);
+    for(const q of three){
+      assert.ok(q.content.fr.context.length>=350);
+      assert.ok(q.content.en.context.length>=350);
+      assert.equal(q.status,'pilot');
+    }
+  }
 });
