@@ -92,7 +92,7 @@ export function renderReviewPack(catalogText,ledgerText,cssText,clientJs){
     '<div class="review-filter"><label for="review-scope">Review scope / Périmètre de revue</label>',
     '<select id="review-scope"><option value="first">First private cohort (',String(FIRST_REVIEW_BATCH.length),' pilot items)</option>',
     '<option value="all">Entire catalog (',String(questions.length),' pilot items)</option></select>',
-    '<span id="scope-status" role="status" aria-live="polite"></span></div>',
+    '<span id="scope-status"></span></div>',
     '</header><main id="questions" data-catalog-sha="',sha,'">',
     cards,'</main><footer>Offline pilot-review worksheet · Do not mark questions approved without independent evidence.',
     '</footer><script>',clientJs.replace(/<\/script/gi,'<\\/script'),'</script></body></html>'
