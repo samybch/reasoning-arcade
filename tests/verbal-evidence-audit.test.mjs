@@ -25,7 +25,7 @@ const evidence={
 'G-A-11':['bus ridership rose','fréquentation a augmenté','subway line was closed','ligne de métro était fermée'],
 'G-A-12':['one cool, dry warehouse','climat','may not generalize','pas forcément généralisables'],
 'T-R-01':['campus opened nearby','campus universitaire a ouvert','does not by itself establish','ne suffisent pas à attribuer'],
-'T-R-02':['decline in daytime visits','visites en journée ont légèrement diminué','shifted','auparavant effectuées en journée'],
+'T-R-02':['decline in daytime visits','visites en journée ont légèrement diminué','replaced visits formerly','auparavant effectuées en journée'],
 'T-R-03':['comparing trends with a nearby library','comparer les évolutions avec celles','comparison','point de comparaison'],
 'T-R-04':['installed simultaneously','mis en place simultanément','runoff fell','baisse du ruissellement'],
 'T-R-05':['retention basin','bassin de rétention','retention basin','bassin de rétention'],
