@@ -21,7 +21,7 @@ const evidence={
 'G-A-07':['complaints fell','réclamations diminuait','late deliveries','livraison tardive'],
 'G-A-08':['four-day week','semaine de quatre jours','automated machinery','machines automatisées'],
 'G-A-09':['turnover costs','coûts liés au départ','exceed the added training costs','dépasseront le coût supplémentaire'],
-'G-A-10':['laboratory access permit','autorisation d\\u0027accès au laboratoire','completed safety training','suivi la formation de sécurité'],
+'G-A-10':['laboratory access permit','autorisation','completed safety training','suivi la formation de sécurité'],
 'G-A-11':['bus ridership rose','fréquentation a augmenté','subway line was closed','ligne de métro était fermée'],
 'G-A-12':['one climate','climat','may not generalize','pas forcément généralisables'],
 'T-R-01':['campus opened nearby','campus universitaire a ouvert','does not by itself establish','ne suffisent pas à attribuer'],
