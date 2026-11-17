@@ -18,7 +18,7 @@ export default async function CoveragePage({params}:{params:Promise<{locale:stri
     {fr:'Calcul',en:'Mathematical problem solving',n:count('tage','quant-lab')},
     {fr:'Raisonnement / Argumentation',en:'Reasoning / Argumentation',n:count('tage','argument-lab')},
     {fr:'Conditions minimales',en:'Data sufficiency',n:count('tage','enough-info')},
-    {fr:'Expression',en:'Written expression',n:0},
+    {fr:'Expression',en:'Written expression',n:count('tage','expression-lab')},
     {fr:'Logique',en:'Categorical logic',n:count('tage','code-logic'),detail:fr?`dont ${warmups} échauffements`:`${warmups} warm-ups included`}
   ];
   const gmat:CoverageRow[]=[
