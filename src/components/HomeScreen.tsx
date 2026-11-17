@@ -13,7 +13,8 @@ const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string
   {id:'reading-lab',name:'Reading Lab',symbol:'¶',description:{fr:'Lis un texte et repère l’idée principale, les indices et les conclusions.',en:'Read a passage and analyze its central idea, evidence and inferences.'}},
   {id:'expression-lab',name:'Expression Lab',symbol:'Aa',description:{fr:'Corrige, reformule et complète des messages en français.',en:'Correct, paraphrase and complete written French messages.'}},
   {id:'table-lab',name:'Table Lab',symbol:'▦',description:{fr:'Trie un tableau et évalue trois affirmations à partir des données.',en:'Sort data and evaluate three independent claims.'}},
-  {id:'multi-source-lab',name:'Multi-Source Lab',symbol:'≡',description:{fr:'Croise plusieurs sources pour distinguer chiffres, contraintes et prévisions.',en:'Connect several sources to evaluate evidence, constraints and forecasts.'}}
+  {id:'multi-source-lab',name:'Multi-Source Lab',symbol:'≡',description:{fr:'Croise plusieurs sources pour distinguer chiffres, contraintes et prévisions.',en:'Connect several sources to evaluate evidence, constraints and forecasts.'}},
+  {id:'graphics-lab',name:'Graph Lab',symbol:'▥',description:{fr:'Lis un graphique et complète deux affirmations avec les données.',en:'Interpret a chart and complete two data-driven statements.'}}
 ];
 export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;questionCount:number;questionIds:string[]}){
   const [exam,setExam]=useState<Exam>('tage');
@@ -50,6 +51,9 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
     'cross-source-comparison':{fr:'Comparer les sources',en:'Cross-source comparison'},
     'budget-constraints':{fr:'Contraintes budgétaires',en:'Budget constraints'},
     'forecast-vs-evidence':{fr:'Prévisions et preuves',en:'Forecast versus evidence'},
+    'chart-comparison':{fr:'Comparer les graphiques',en:'Chart comparison'},
+    'chart-growth':{fr:'Évolution et ratios',en:'Growth and ratios'},
+    'chart-aggregation':{fr:'Agrégation graphique',en:'Chart aggregation'},
     'language-correction':{fr:'Correction linguistique',en:'Language correction'},
     'faithful-reformulation':{fr:'Reformulation fidèle',en:'Faithful paraphrasing'},
     'discourse-coherence':{fr:'Cohérence du discours',en:'Discourse coherence'}
@@ -78,7 +82,7 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
       <div className="section-header"><div><p className="eyebrow">02 — {fr?'À TOI DE JOUER':'YOUR CHALLENGE'}</p><h2>{fr?'Choisis ton jeu':'Choose a game'}</h2></div>
         <Link className="text-link" href={`/${locale}/practice/?exam=${exam}`}>{fr?'Mini-test chronométré':'Timed mini-test'} →</Link></div>
       <div className="game-grid">
-        {games.filter(g=>(exam==='tage'&&g.id!=='table-lab'&&g.id!=='multi-source-lab')||(exam==='gmat'&&g.id!=='code-logic'&&g.id!=='expression-lab')).map((g,i)=><article className="game-card" key={g.id}>
+        {games.filter(g=>(exam==='tage'&&g.id!=='table-lab'&&g.id!=='multi-source-lab'&&g.id!=='graphics-lab')||(exam==='gmat'&&g.id!=='code-logic'&&g.id!=='expression-lab')).map((g,i)=><article className="game-card" key={g.id}>
           <div className={`game-illustration illustration-${i}`} aria-hidden>{g.symbol}</div>
           <div className="game-description"><p className="eyebrow">{fr?'RAISONNEMENT':'REASONING'} · {i+1}</p><h3>{g.name}</h3><p>{g.description[locale]}</p>
             <div className="actions"><Link className="button secondary" href={`/${locale}/play/${g.id}/?exam=${exam}&mode=game`}>{fr?'Jouer':'Play'} →</Link>
