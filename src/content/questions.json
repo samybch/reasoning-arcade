@@ -4484,5 +4484,293 @@
         ]
       }
     }
+  },
+  {
+    "id": "G-I-01",
+    "exam": "gmat",
+    "game": "graphics-lab",
+    "competency": "chart-comparison",
+    "difficulty": 2,
+    "estimatedSeconds": 160,
+    "correctAnswer": "3|1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "graph": {
+      "type": "bar",
+      "labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "values": [
+        40,
+        60,
+        50,
+        80
+      ],
+      "title": {
+        "fr": "Ventes par secteur",
+        "en": "Sales by segment"
+      },
+      "units": {
+        "fr": "unités, période fictive",
+        "en": "units, fictional period"
+      }
+    },
+    "content": {
+      "fr": {
+        "prompt": "Observe le graphique et complète les deux propositions.",
+        "graphicStatements": [
+          {
+            "prompt": "Le secteur qui réalise le plus de ventes est",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          {
+            "prompt": "La différence entre D et B vaut",
+            "options": [
+              "10 unités",
+              "20 unités",
+              "30 unités",
+              "40 unités"
+            ]
+          }
+        ],
+        "explanation": "D atteint 80 unités, le maximum ; D − B = 80 − 60 = 20.",
+        "hint": "Repère la barre la plus haute puis soustrais deux valeurs exactes.",
+        "reviewSteps": [
+          "Le tableau des valeurs indique A=40, B=60, C=50 et D=80 : D est maximal.",
+          "L'écart entre D (80) et B (60) se calcule par une soustraction : 20 unités.",
+          "Les menus doivent sélectionner D pour la première proposition et 20 unités pour la seconde."
+        ]
+      },
+      "en": {
+        "prompt": "Study the graphic and complete both statements.",
+        "graphicStatements": [
+          {
+            "prompt": "The segment with the highest sales is",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          {
+            "prompt": "The difference between D and B equals",
+            "options": [
+              "10 units",
+              "20 units",
+              "30 units",
+              "40 units"
+            ]
+          }
+        ],
+        "explanation": "D reaches 80 units, the maximum, while D minus B is 80 − 60 = 20.",
+        "hint": "Identify the tallest bar and subtract the two exact values.",
+        "reviewSteps": [
+          "The displayed data are A=40, B=60, C=50 and D=80, making D the highest.",
+          "Subtract B's 60 from D's 80 to obtain a difference of 20 units.",
+          "Choose D in the first dropdown and 20 units in the second dropdown."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-I-02",
+    "exam": "gmat",
+    "game": "graphics-lab",
+    "competency": "chart-growth",
+    "difficulty": 3,
+    "estimatedSeconds": 160,
+    "correctAnswer": "2|0",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "graph": {
+      "type": "bar",
+      "labels": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "values": [
+        20,
+        30,
+        45,
+        60
+      ],
+      "title": {
+        "fr": "Production trimestrielle",
+        "en": "Quarterly production"
+      },
+      "units": {
+        "fr": "milliers de pièces",
+        "en": "thousands of pieces"
+      }
+    },
+    "content": {
+      "fr": {
+        "prompt": "À partir des quatre trimestres, complète les affirmations.",
+        "graphicStatements": [
+          {
+            "prompt": "La production de Q4 représente, par rapport à Q2,",
+            "options": [
+              "150 %",
+              "175 %",
+              "200 %",
+              "250 %"
+            ]
+          },
+          {
+            "prompt": "La hausse absolue entre Q1 et Q3 est de",
+            "options": [
+              "25 milliers",
+              "20 milliers",
+              "30 milliers",
+              "45 milliers"
+            ]
+          }
+        ],
+        "explanation": "60/30=2, soit 200 % du niveau de Q2. L'augmentation Q1→Q3 est 45−20=25 milliers.",
+        "hint": "Distingue le ratio de niveaux et l'augmentation en valeur absolue.",
+        "reviewSteps": [
+          "Q4 produit 60 et Q2 produit 30 ; le rapport des niveaux vaut 60/30 = 2, soit 200 %.",
+          "Q3 et Q1 affichent respectivement 45 et 20 milliers de pièces, soit un écart de 25 milliers.",
+          "La première sélection est 200 % (position C) et la seconde 25 milliers (position A)."
+        ]
+      },
+      "en": {
+        "prompt": "Using the four quarters, complete both statements.",
+        "graphicStatements": [
+          {
+            "prompt": "Q4 production equals this percentage of Q2 production:",
+            "options": [
+              "150%",
+              "175%",
+              "200%",
+              "250%"
+            ]
+          },
+          {
+            "prompt": "The absolute increase between Q1 and Q3 is",
+            "options": [
+              "25 thousand",
+              "20 thousand",
+              "30 thousand",
+              "45 thousand"
+            ]
+          }
+        ],
+        "explanation": "Q4/Q2=60/30=2, or 200% of Q2. The increase from Q1 to Q3 is 45−20=25 thousand.",
+        "hint": "Distinguish a ratio of levels from an absolute increase.",
+        "reviewSteps": [
+          "Q4 production is 60 and Q2 production is 30, giving a ratio of 2, or 200%.",
+          "Q3 equals 45 thousand and Q1 equals 20 thousand, making the difference 25 thousand.",
+          "Select 200% in the first menu (C) and 25 thousand in the second (A)."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-I-03",
+    "exam": "gmat",
+    "game": "graphics-lab",
+    "competency": "chart-aggregation",
+    "difficulty": 4,
+    "estimatedSeconds": 160,
+    "correctAnswer": "1|2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "graph": {
+      "type": "bar",
+      "labels": [
+        "N",
+        "S",
+        "E",
+        "W"
+      ],
+      "values": [
+        50,
+        35,
+        70,
+        45
+      ],
+      "title": {
+        "fr": "Capacité disponible",
+        "en": "Available capacity"
+      },
+      "units": {
+        "fr": "places disponibles",
+        "en": "available seats"
+      }
+    },
+    "content": {
+      "fr": {
+        "prompt": "Lis les capacités et complète les deux calculs.",
+        "graphicStatements": [
+          {
+            "prompt": "Le total des capacités N et W est",
+            "options": [
+              "85 places",
+              "95 places",
+              "105 places",
+              "115 places"
+            ]
+          },
+          {
+            "prompt": "Le nombre de zones ayant strictement plus de 45 places est",
+            "options": [
+              "1",
+              "3",
+              "2",
+              "4"
+            ]
+          }
+        ],
+        "explanation": "N+W = 50+45=95. Seules N (50) et E (70) dépassent strictement 45, soit deux zones.",
+        "hint": "Additionne N et W, puis traite « strictement » comme une inégalité > et non ≥.",
+        "reviewSteps": [
+          "Le diagramme donne 50 places pour N et 45 pour W : leur somme est 95.",
+          "N=50 et E=70 dépassent strictement 45 ; W=45 n'est pas supérieur à 45.",
+          "Les réponses sont 95 places dans le premier menu et 2 zones dans le deuxième."
+        ]
+      },
+      "en": {
+        "prompt": "Read the capacities and complete both calculations.",
+        "graphicStatements": [
+          {
+            "prompt": "The combined capacity of N and W is",
+            "options": [
+              "85 seats",
+              "95 seats",
+              "105 seats",
+              "115 seats"
+            ]
+          },
+          {
+            "prompt": "The number of areas with strictly more than 45 seats is",
+            "options": [
+              "1",
+              "3",
+              "2",
+              "4"
+            ]
+          }
+        ],
+        "explanation": "N+W=50+45=95. Only N (50) and E (70) are strictly above 45, so two areas qualify.",
+        "hint": "Add N and W, then interpret 'strictly more than' as > rather than ≥.",
+        "reviewSteps": [
+          "The chart gives N a capacity of 50 and W a capacity of 45, totaling 95.",
+          "N=50 and E=70 exceed 45; W=45 is equal to the threshold and does not qualify.",
+          "The first dropdown must show 95 seats, and the second must show 2 areas."
+        ]
+      }
+    }
   }
 ]
