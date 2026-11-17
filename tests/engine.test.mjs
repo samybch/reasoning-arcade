@@ -100,8 +100,8 @@ test('review queue is bounded, unique and skips deleted question IDs',()=>{
   assert.equal(nextReviewQuestion(bank,stale,'tage',['T-A-01']),null);
 });
 
-test('mixed mini-test samples every available game, including Reading Lab',()=>{
-  const expected={tage:['argument-lab','code-logic','enough-info','quant-lab','reading-lab'],gmat:['argument-lab','enough-info','quant-lab','reading-lab']};
+test('mixed mini-test samples every available game, including Reading and Expression Labs',()=>{
+  const expected={tage:['argument-lab','code-logic','enough-info','expression-lab','quant-lab','reading-lab'],gmat:['argument-lab','enough-info','quant-lab','reading-lab']};
   for(const exam of ['tage','gmat']){
     for(const variant of [0,1,2,3,8]){
       const chosen=buildExamQueue(bank,exam,'mixed',6,variant);
@@ -149,5 +149,18 @@ test('mixed queue includes Reading Lab in every six-question practice variant',(
       assert.equal(new Set(questions.map(q=>q.id)).size,6);
       assert.ok(questions.every(q=>q.exam===exam));
     }
+  }
+});
+
+test('Expression Lab is TAGE-only and mixed practice includes every six-game category',()=>{
+  const expression=bank.filter(q=>q.game==='expression-lab');
+  assert.equal(expression.length,6);
+  assert.ok(expression.every(q=>q.exam==='tage'));
+  for(const variant of [0,1,2,3,8,12]){
+    const tage=buildExamQueue(bank,'tage','mixed',6,variant);
+    assert.equal(new Set(tage.map(q=>q.game)).size,6);
+    assert.equal(tage.filter(q=>q.game==='expression-lab').length,1);
+    const gmat=buildExamQueue(bank,'gmat','mixed',6,variant);
+    assert.ok(gmat.every(q=>q.exam==='gmat'&&q.game!=='expression-lab'));
   }
 });
