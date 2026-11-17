@@ -6,16 +6,16 @@ import {pathToFileURL} from 'node:url';
 const file=resolve('review-pack/reasoning-arcade-editorial-review.html');
 const offline=pathToFileURL(file).href;
 
-test('offline reviewer packet renders all 91 original questions and hides keys until requested',async({page})=>{
+test('offline reviewer packet renders all 94 original questions and hides keys until requested',async({page})=>{
   const externalRequests:string[]=[];
   page.on('request',req=>{
     if(/^https?:/i.test(req.url()))externalRequests.push(req.url());
   });
   await page.goto(offline);
   await expect(page.getByRole('heading',{name:'Revue pédagogique / Editorial review'})).toBeVisible();
-  await expect(page.locator('article[data-question]')).toHaveCount(91);
-  await expect(page.locator('section.language[lang="fr"]')).toHaveCount(91);
-  await expect(page.locator('section.language[lang="en"]')).toHaveCount(91);
+  await expect(page.locator('article[data-question]')).toHaveCount(94);
+  await expect(page.locator('section.language[lang="fr"]')).toHaveCount(94);
+  await expect(page.locator('section.language[lang="en"]')).toHaveCount(94);
   await expect(page.locator('.answer').first()).not.toHaveAttribute('open','');
   await page.locator('.answer summary').first().click();
   await expect(page.locator('.answer').first()).toHaveAttribute('open','');

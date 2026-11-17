@@ -97,3 +97,12 @@
 .graphic-statement{display:grid;gap:8px;padding:12px 0;border-bottom:1px solid var(--line)}
 .graphic-statement select{max-width:100%;min-height:42px;padding:8px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink)}
 .graphic-statement select:focus-visible{outline:3px solid #e79748;outline-offset:2px}
+
+/* Two-Part Analysis pilot: keyboard-friendly, responsive all-or-nothing radio matrix */
+.two-part-challenge{min-width:0;margin:18px 0;border:0;padding:0}
+.two-part-challenge legend{font-weight:800;margin-bottom:6px}
+.two-part-matrix{min-width:440px}
+.two-part-matrix th:first-child{white-space:normal;min-width:155px;max-width:300px}
+.two-part-matrix th:not(:first-child),.two-part-matrix td{text-align:center;white-space:normal;min-width:115px}
+.two-part-matrix input{accent-color:var(--primary);width:20px;height:20px;cursor:pointer}
+.two-part-matrix input:focus-visible{outline:3px solid #e79748;outline-offset:3px}

@@ -1,6 +1,6 @@
 export type Locale = 'fr'|'en';
 export type Exam = 'tage'|'gmat';
-export type Game = 'code-logic'|'argument-lab'|'enough-info'|'quant-lab'|'reading-lab'|'expression-lab'|'table-lab'|'multi-source-lab'|'graphics-lab';
+export type Game = 'code-logic'|'argument-lab'|'enough-info'|'quant-lab'|'reading-lab'|'expression-lab'|'table-lab'|'multi-source-lab'|'graphics-lab'|'two-part-lab';
 export type Level = 1|2|3|4|5;
 export interface QuestionText {
   prompt: string;
@@ -10,6 +10,7 @@ export interface QuestionText {
   explanation: string;
   hint: string;
   tableStatements?: [string,string,string];
+  twoPartHeaders?: [string,string];
   sources?: {title:string;body:string}[];
   graphicStatements?: [{prompt:string;options:string[]},{prompt:string;options:string[]}];
   reviewSteps?: [string,string,string]; // Statement (1), statement (2), combined verdict.
