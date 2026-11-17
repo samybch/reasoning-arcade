@@ -2,7 +2,7 @@
 
 ## Goal
 
-Let an independent reviewer examine all **70 original pilot questions** in French and English without installing Node.js, logging into the app, or publishing the website. The packet is one standalone HTML file.
+Let an independent reviewer examine all **94 original pilot questions** in French and English without installing Node.js, logging into the app, or publishing the website. The packet is one standalone HTML file.
 
 ## Obtain the file
 
@@ -11,6 +11,12 @@ Let an independent reviewer examine all **70 original pilot questions** in Frenc
 3. Under **Artifacts**, download **reasoning-arcade-offline-review**. GitHub may require you to sign in to download the artifact; using the HTML afterward does not require GitHub.
 4. Unzip and open **reasoning-arcade-editorial-review.html** in Chrome, Firefox or Safari. You need **no internet** and **no installation** on that computer.
 5. Alternative for developers: `npm run build:review-pack` creates `review-pack/reasoning-arcade-editorial-review.html`. This folder is ignored by Git.
+
+## First private cohort (16 items across all ten games)
+
+The workbook opens in **First private cohort**, showing 16 deliberately selected pilot questions covering the TAGE MAGE and GMAT pathways and all ten game types. Use the **Review scope / Périmètre de revue** dropdown to switch to **Entire catalog** (94 items). No source content is removed; switching views does not clear the choices or notes. The first-cohort IDs are pinned in `scripts/review-batch.mjs` and are not automatically approved.
+
+The suggested sequence is: T-A-02, G-R-09, T-L-01, T-L-17, T-E-02, T-E-03, T-C-06, T-R-02, T-D-05, G-D-13, G-Q-04, G-A-09, G-T-03, G-M-03, G-I-02, G-P-02. It prioritizes the previously documented ambiguity risks and includes every game type. Reviewers may process fewer entries; recording a finding is optional and does not signify approval.
 
 ## Reviewer session (FR and EN side by side)
 
@@ -22,7 +28,7 @@ Add evidence to the observations field: question ID, language, competing answer,
 
 ## Save and resume
 
-Click **Download review notes (JSON)** before leaving the page. The browser downloads your findings and notes as a local file. The workbook deliberately has **no autosave** and no external network requests.
+Click **Download review notes (JSON)** before leaving the page. The browser downloads your findings and notes **across all 94 questions**, including records temporarily hidden by the cohort filter, as a local file. The workbook deliberately has **no autosave** and no external network requests.
 
 To continue, reopen the same HTML, choose **Import previous review notes (JSON)** and select your saved report. Import is accepted **only if its SHA-256 catalog hash matches the exact workbook's original question set**; this prevents mixing findings from different question editions. If there is a mismatch, use the older matching packet or manually reconcile the reports.
 
@@ -30,13 +36,13 @@ The exported report is *not* imported directly into the official approval ledger
 
 ## Distribution and release control
 
-The GitHub Actions artifact is a downloadable **review file**, not a GitHub Pages website. The repository is already public, so its pilot content should not be treated as confidential. GitHub retains the workflow artifact for **14 days**; rerunning CI generates a new copy if required.
+The GitHub Actions artifact is a downloadable **review file**, not a GitHub Pages website. The repository and its pilot material may be publicly accessible on GitHub; the **website itself remains undeployed**. The offline workbook should be shared only with explicitly invited reviewers during this first round; do not describe the entire repository or materials as secret. GitHub retains the workflow artifact for **14 days**; rerunning CI generates a new copy if required.
 
 The live website remains **NO-GO** pending legal, accessibility, data-privacy and independent content review. The workbook's `noindex` flag does not replace those controls.
 
 ## Acceptance checklist
 
-- All 58 IDs appear exactly once, each with French and English.
+- All 94 IDs appear exactly once, each with French and English; the default view contains exactly 16 IDs spanning all ten games.
 - Answer keys are collapsed until explicitly opened.
 - The browser works offline, without external fonts/scripts, accounts or analytics.
 - Export/import works and rejects a mismatched catalog.
