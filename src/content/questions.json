@@ -3650,5 +3650,299 @@
         ]
       }
     }
+  },
+  {
+    "id": "T-E-01",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "language-correction",
+    "difficulty": 2,
+    "estimatedSeconds": 90,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle phrase est grammaticalement correcte ?",
+        "context": "Une équipe présente les résultats d'une collecte d'informations.",
+        "choices": [
+          "Les informations que nous avons recueilli sont fiables.",
+          "Les informations que nous avons recueillies sont fiables.",
+          "Les informations que nous avons recueillies est fiables.",
+          "Les informations que nous avons recueillis sont fiables.",
+          "Les informations que nous avons recueilli est fiables."
+        ],
+        "explanation": "Avec l'auxiliaire avoir, le participe passé s'accorde avec le COD placé avant le verbe : « les informations » est féminin pluriel.",
+        "hint": "Identifie le complément d'objet direct placé avant « avons recueilli ».",
+        "reviewSteps": [
+          "Le groupe « que nous avons recueilli » renvoie à « les informations », complément d'objet direct du verbe.",
+          "Ce COD est placé avant l'auxiliaire avoir : le participe passé prend donc le féminin pluriel « recueillies ».",
+          "Seule la réponse B associe « recueillies » à « les informations » avec le verbe « sont » au pluriel."
+        ]
+      },
+      "en": {
+        "prompt": "Which sentence is grammatically correct?",
+        "context": "A team is describing information gathered for a report.",
+        "choices": [
+          "The information we collected are reliable.",
+          "The information we collected is reliable.",
+          "The information we collect is reliably.",
+          "The information we collected were reliable is.",
+          "The information collected are reliably."
+        ],
+        "explanation": "In this sentence, 'information' is an uncountable singular noun in English, so 'is reliable' is the grammatical choice.",
+        "hint": "Check the grammatical number of the noun 'information' and the verb that follows it.",
+        "reviewSteps": [
+          "The English noun « information » is normally uncountable and therefore takes a singular verb.",
+          "The adjective « reliable » follows the linking verb « is »; « reliably » would be an adverb here.",
+          "Option B alone combines the singular verb with a correctly placed adjective and a complete clause."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-02",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "language-correction",
+    "difficulty": 3,
+    "estimatedSeconds": 95,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Choisis la seule phrase dont la construction est correcte.",
+        "context": "Un compte rendu décrit la poursuite d'une réunion en soirée.",
+        "choices": [
+          "Si j'aurais le temps, je resterais à la réunion.",
+          "Bien qu'il est tard, nous poursuivons la réunion.",
+          "Pour que chacun comprend, nous expliquons la méthode.",
+          "Bien qu'il soit tard, nous poursuivons la réunion.",
+          "Il faut que chacun vient à la réunion."
+        ],
+        "explanation": "« Bien que » appelle le subjonctif dans cette construction : « bien qu'il soit tard ».",
+        "hint": "Vérifie le mode attendu après « bien que », « pour que » et « il faut que ».",
+        "reviewSteps": [
+          "Les locutions « bien que » et « pour que » commandent ici le subjonctif, et non l'indicatif.",
+          "Dans une hypothèse introduite par « si », « si j'aurais » est incorrect dans la construction proposée.",
+          "La seule proposition correctement construite est D : « Bien qu'il soit tard, nous poursuivons la réunion »."
+        ]
+      },
+      "en": {
+        "prompt": "Choose the only sentence that is grammatically well formed.",
+        "context": "A report describes a meeting continuing late into the evening.",
+        "choices": [
+          "If I would have time, I would stay for the meeting.",
+          "Although it late, we continue the meeting.",
+          "So that everyone understands, we explains the method.",
+          "Although it is late, we are continuing the meeting.",
+          "It is necessary that everyone comes to the meeting yesterday."
+        ],
+        "explanation": "Option D has a complete concessive clause followed by a grammatically consistent main clause.",
+        "hint": "Check conditionals, missing verbs, subject–verb agreement and time consistency.",
+        "reviewSteps": [
+          "The first sentence incorrectly places « would » in the conditional if-clause used in this example.",
+          "The other incorrect alternatives omit a verb, break subject–verb agreement or mix incompatible time references.",
+          "Option D has a complete concessive clause and an appropriate progressive main verb, so it is the best answer."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-03",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "faithful-reformulation",
+    "difficulty": 3,
+    "estimatedSeconds": 100,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle proposition reformule l'énoncé sans en modifier la portée ?",
+        "context": "« Seuls les dossiers déposés avant vendredi seront examinés en priorité ; les autres pourront être étudiés ultérieurement. »",
+        "choices": [
+          "Les dossiers déposés avant vendredi sont prioritaires, sans que les autres soient définitivement exclus.",
+          "Tous les dossiers reçus vendredi seront étudiés en premier.",
+          "Les dossiers déposés après vendredi seront automatiquement rejetés.",
+          "Aucun dossier ne pourra être étudié une fois vendredi passé.",
+          "Les dossiers les plus récents seront examinés avant les anciens."
+        ],
+        "explanation": "La priorité est réservée aux dépôts antérieurs à vendredi, mais les autres ne sont pas exclus d'un examen ultérieur.",
+        "hint": "Distingue « priorité » et « exclusivité » : les dossiers tardifs restent possibles.",
+        "reviewSteps": [
+          "L'énoncé réserve la priorité aux dossiers reçus avant vendredi, sans promettre une décision finale.",
+          "La seconde proposition maintient explicitement la possibilité d'étudier les autres dossiers plus tard.",
+          "La réponse A conserve ces deux nuances, contrairement aux exclusions ou aux inversions introduites ailleurs."
+        ]
+      },
+      "en": {
+        "prompt": "Which option accurately restates the original statement?",
+        "context": "“Only applications submitted before Friday will receive priority review; the others may be considered later.”",
+        "choices": [
+          "Applications submitted before Friday take priority, but later applications are not automatically excluded.",
+          "All applications received on Friday will be reviewed first.",
+          "Applications submitted after Friday will automatically be rejected.",
+          "No application can be considered once Friday has passed.",
+          "The newest applications will be reviewed before older ones."
+        ],
+        "explanation": "Priority is limited to applications submitted before Friday, while later applications may still be considered.",
+        "hint": "Distinguish receiving priority from being the only group eligible for consideration.",
+        "reviewSteps": [
+          "The first clause assigns priority to submissions made before Friday rather than promising they are accepted.",
+          "The second clause leaves open the possibility that later submissions will be considered subsequently.",
+          "Only option A preserves both ideas without converting priority into an absolute exclusion rule."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-04",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "faithful-reformulation",
+    "difficulty": 4,
+    "estimatedSeconds": 105,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle reformulation préserve exactement la position du directeur ?",
+        "context": "« Le directeur n'a pas écarté le projet ; il a demandé des données supplémentaires avant de se prononcer. »",
+        "choices": [
+          "Le directeur a approuvé le projet sous condition.",
+          "Le directeur a définitivement rejeté le projet.",
+          "Le directeur pense qu'aucune donnée n'est pertinente.",
+          "Le directeur a confié la décision finale à une autre équipe.",
+          "Le directeur réserve sa décision en attendant des informations complémentaires."
+        ],
+        "explanation": "Ni acceptation ni refus définitif ne sont annoncés : le directeur diffère son avis jusqu'à réception de données supplémentaires.",
+        "hint": "Repère ce qui n'est pas décidé et la raison du report.",
+        "reviewSteps": [
+          "L'énoncé indique expressément que le directeur n'a pas exclu le projet : aucun rejet final n'est établi.",
+          "La demande de données supplémentaires précède une prise de position qui n'a pas encore eu lieu.",
+          "La réponse E conserve la suspension de décision et sa condition, sans inventer une approbation ou une délégation."
+        ]
+      },
+      "en": {
+        "prompt": "Which restatement accurately preserves the director's position?",
+        "context": "“The director has not ruled out the project; additional evidence was requested before a decision.”",
+        "choices": [
+          "The director has approved the project subject to a condition.",
+          "The director has definitively rejected the project.",
+          "The director believes that further evidence is irrelevant.",
+          "The director has handed the final decision to another team.",
+          "The director is withholding a decision pending additional evidence."
+        ],
+        "explanation": "The director has made neither a final approval nor a rejection and wants more evidence first.",
+        "hint": "Identify what remains undecided and why.",
+        "reviewSteps": [
+          "The passage explicitly says the project has not been ruled out, so rejection is not established.",
+          "A request for more evidence before deciding also does not amount to a conditional approval.",
+          "Option E preserves the undecided status and the need for evidence without inventing a separate decision-maker."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-05",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "discourse-coherence",
+    "difficulty": 2,
+    "estimatedSeconds": 90,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quel connecteur complète le texte de la manière la plus cohérente ?",
+        "context": "« L'étude ne porte que sur douze participants. ___, ses conclusions doivent être interprétées avec prudence. »",
+        "choices": [
+          "Auparavant",
+          "En revanche",
+          "Par conséquent",
+          "À titre d'exemple",
+          "De la même manière"
+        ],
+        "explanation": "La petite taille de l'échantillon justifie la prudence : il faut un connecteur de conséquence, « Par conséquent ».",
+        "hint": "Détermine si la deuxième phrase exprime une cause, une conséquence ou une opposition.",
+        "reviewSteps": [
+          "La première phrase présente une limite méthodologique : l'échantillon ne comporte que douze participants.",
+          "La seconde phrase déduit une attitude prudente de cette limite, plutôt que d'introduire un contraste.",
+          "« Par conséquent », réponse C, exprime cette conséquence logique et relie correctement les deux idées."
+        ]
+      },
+      "en": {
+        "prompt": "Which linking phrase best completes the passage?",
+        "context": "“The study includes only twelve participants. ___, its conclusions should be interpreted cautiously.”",
+        "choices": [
+          "Previously",
+          "By contrast",
+          "Consequently",
+          "For example",
+          "Similarly"
+        ],
+        "explanation": "A small sample is the reason for caution; 'Consequently' marks the inference from the first sentence.",
+        "hint": "Identify whether the second sentence gives a result or a contrast.",
+        "reviewSteps": [
+          "The first sentence notes a methodological limitation: only twelve people were included.",
+          "The second sentence draws the practical implication that the findings require cautious interpretation.",
+          "Option C, « Consequently », links the limitation to its logical consequence without implying a contrast."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-06",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "discourse-coherence",
+    "difficulty": 3,
+    "estimatedSeconds": 100,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quel mot complète le raisonnement sans en changer le sens ?",
+        "context": "« Le rapport constate une baisse des délais, mais uniquement dans deux agences du réseau. Il serait donc ___ de généraliser le résultat à toutes les agences. »",
+        "choices": [
+          "obligatoire",
+          "prématuré",
+          "certain",
+          "inévitable",
+          "démontré"
+        ],
+        "explanation": "Une observation limitée à deux agences ne justifie pas encore une généralisation à tout le réseau : celle-ci serait prématurée.",
+        "hint": "La restriction « uniquement dans deux agences » limite la portée de la conclusion.",
+        "reviewSteps": [
+          "La baisse est constatée localement dans deux agences, et non démontrée dans l'ensemble du réseau.",
+          "Généraliser supposerait des données supplémentaires sur les autres agences avant de conclure.",
+          "Le mot « prématuré », réponse B, exprime la réserve justifiée par la portée limitée des observations."
+        ]
+      },
+      "en": {
+        "prompt": "Which word best completes the reasoning?",
+        "context": "“The report found shorter delays, but only at two branches in the network. It would therefore be ___ to extend the finding to every branch.”",
+        "choices": [
+          "mandatory",
+          "premature",
+          "certain",
+          "inevitable",
+          "proven"
+        ],
+        "explanation": "Evidence from just two branches does not justify a network-wide generalization; it would be premature.",
+        "hint": "Pay attention to the limit implied by 'only at two branches'.",
+        "reviewSteps": [
+          "The improvement was observed at two branches, not established across the full network.",
+          "A claim about every branch would need supporting observations beyond the two sampled locations.",
+          "Option B, « premature », captures why the generalization exceeds the evidence currently available."
+        ]
+      }
+    }
   }
 ]
