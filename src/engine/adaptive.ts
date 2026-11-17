@@ -63,7 +63,7 @@ export function buildExamQueue(bank:Question[],exam:Exam,game:Game|'mixed',size=
     return chosen;
   };
   if(game!=='mixed')return select(eligible,normalizedVariant);
-  const order:Game[]=['code-logic','argument-lab','enough-info','quant-lab','reading-lab','expression-lab'];
+  const order:Game[]=['code-logic','argument-lab','enough-info','quant-lab','reading-lab','expression-lab','table-lab'];
   const availableGames=order.filter(g=>eligible.some(q=>q.game===g));
   const offset=((normalizedVariant%availableGames.length)+availableGames.length)%availableGames.length;
   const rotatedGames=[...availableGames.slice(offset),...availableGames.slice(0,offset)];
