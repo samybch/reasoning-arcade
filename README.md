@@ -7,11 +7,11 @@
 ## Features
 
 - TAGE MAGE: Code Logic, Argument Lab, Enough Info?, **Quant Lab (Calcul)**, **Reading Lab (Compréhension de textes)**, **Expression Lab (Expression)**
-- GMAT: Argument Lab, Enough Info?, **Quant Lab (Quantitative Reasoning)**, **Reading Lab (Reading Comprehension)**, **Table Lab (Data Insights — Table Analysis)**, **Multi-Source Lab (Data Insights — Multi-Source Reasoning)**; Code Logic is not presented as a GMAT exam section
+- GMAT: Argument Lab, Enough Info?, **Quant Lab (Quantitative Reasoning)**, **Reading Lab (Reading Comprehension)**, **Table Lab (Data Insights — Table Analysis)**, **Multi-Source Lab (Data Insights — Multi-Source Reasoning)**, **Graph Lab (Data Insights — Graphics Interpretation)**; Code Logic is not presented as a GMAT exam section
 - Game mode with local adaptive per-skill progression, hints and immediate explanation
 - Timed mini-tests with results and deferred correction
 - Static responsive Next.js React interface, with proper French and English routes
-- 88 original pilot questions in both FR and EN, **not editorially approved for release**
+- 91 original pilot questions in both FR and EN, **not editorially approved for release**
 - Community submissions via GitHub issues and PRs, subject to checks and human review
 
 ## Source structure
@@ -70,7 +70,7 @@ Players may revisit mistakes from either exam pathway with **Review my mistakes 
 
 ## Detailed pedagogical corrections
 
-All **88 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough Info?, 12 Quant Lab and 18 Reading Lab, 6 Expression Lab, 3 Table Lab and 3 Multi-Source Lab—include three original, bilingual steps explaining the reasoning. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 88 remain `pilot` content: the presence of steps is not independent editorial approval.
+All **91 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough Info?, 12 Quant Lab and 18 Reading Lab, 6 Expression Lab, 3 Table Lab, 3 Multi-Source Lab and 3 Graph Lab—include three original, bilingual steps explaining the reasoning. Solutions appear only after answering in game/review mode or at the end of a timed mini-test. All 91 remain `pilot` content: the presence of steps is not independent editorial approval.
 
 **Quant Lab** includes 12 original pilot word problems with five choices, bilingual hints and three-stage corrections. This extends skill practice into TAGE MAGE Calcul and current GMAT Quantitative Reasoning but does not constitute a complete exam simulation.
 
@@ -82,13 +82,13 @@ All **88 original pilot exercises**—18 Code Logic, 12 Argument Lab, 16 Enough 
 
 ## Editorial review and realistic pilot timing (XYZ)
 
-Each of the **88 pilot questions** now has a distinct pending-review record in [the editorial review ledger](docs/editorial-review-ledger.json), with a targeted point for human scrutiny. See [the independent review procedure](docs/EDITORIAL_REVIEW_PROTOCOL.md) for bilingual checks, numerical counterexamples and approval rules. Machine checks do **not** replace independent review.
+Each of the **91 pilot questions** now has a distinct pending-review record in [the editorial review ledger](docs/editorial-review-ledger.json), with a targeted point for human scrutiny. See [the independent review procedure](docs/EDITORIAL_REVIEW_PROTOCOL.md) for bilingual checks, numerical counterexamples and approval rules. Machine checks do **not** replace independent review.
 
 Timed mini-tests use the sum of the selected questions' **estimated pilot solving times**, rather than imposing the same 80-second allowance for all puzzles. Those estimates have not been calibrated to official TAGE MAGE or GMAT section durations.
 
 ## Offline bilingual review (no installation or public website)
 
-After the `CI / test` job succeeds, open that GitHub Actions run and download the `reasoning-arcade-offline-review` artifact. Unzip it and open `reasoning-arcade-editorial-review.html` in a browser. This **self-contained HTML file** displays all 88 pilot questions side by side in FR/EN. It hides answer keys until the reviewer expands each solution, records preliminary observations, and exports/imports a local JSON feedback file. **No JavaScript packages, account on the reviewing computer, network connection or hosted site are required to open it.** Alternatively, run `npm run build:review-pack` on a developer machine.
+After the `CI / test` job succeeds, open that GitHub Actions run and download the `reasoning-arcade-offline-review` artifact. Unzip it and open `reasoning-arcade-editorial-review.html` in a browser. This **self-contained HTML file** displays all 91 pilot questions side by side in FR/EN. It hides answer keys until the reviewer expands each solution, records preliminary observations, and exports/imports a local JSON feedback file. **No JavaScript packages, account on the reviewing computer, network connection or hosted site are required to open it.** Alternatively, run `npm run build:review-pack` on a developer machine.
 
 The export contains review findings only, **not** independent approvals. See [the offline review guide](docs/OFFLINE_REVIEW_GUIDE.md) and [the editorial protocol](docs/EDITORIAL_REVIEW_PROTOCOL.md). The original public-source licensing remains unchanged; this is a QA worksheet, not a public release.
 
@@ -96,10 +96,13 @@ The export contains review findings only, **not** independent approvals. See [th
 Six original bilingual pilot items for the French-language TAGE MAGE Expression skill area: two language correction, two faithful reformulation, and two discourse coherence. The EN route translates instructions and explains the French language examples; it is not an English-language version of the official Expression section. Original pilot exercises are not a simulation of the official 15-item exam sub-test.
 
 ## Reading Lab
-Six original FR/EN passages support 18 pilot questions on main idea, evidence, inference, author purpose, viewpoint comparison, synthesis, argument structure and tone. They are included in the 88-question offline editorial workbook; none is independently approved.
+Six original FR/EN passages support 18 pilot questions on main idea, evidence, inference, author purpose, viewpoint comparison, synthesis, argument structure and tone. They are included in the 91-question offline editorial workbook; none is independently approved.
 
 ## Table Lab (pilot, GMAT only)
 Three original sortable datasets support three true/false statements each. Answer all three to submit the pilot question; grading is all-or-nothing. Click each column heading to sort ascending or descending, with numeric comparisons for numerical columns. This practice is inspired by the *skill category* described by GMAC, not a reproduction of official questions or a certified exam simulator. English and French are both learning interfaces; all items remain pending independent review.
 
 ## Multi-Source Lab (GMAT pilot)
 Three original FR/EN pilot questions share a dossier with three distinct labeled information sources. Learners can switch source tabs by click or arrow keys and must combine facts, projected outcomes and temporary financial constraints. The game is original practice for the named GMAT Data Insights skill, not official exam material or official scoring. Source tabs are accessible in review and timed sessions; all three questions remain pending independent pedagogical review.
+
+## Graph Lab — GMAT Graphics Interpretation pilot
+Three original bar charts use two independent dropdown completions, exact values in an accessible data table and bilingual three-step corrections. All-or-nothing grading, local mistake review and non-official session timers apply. These chart exercises are independently authored skill practice, not official GMAT questions or score estimates. All three remain pending human review.
