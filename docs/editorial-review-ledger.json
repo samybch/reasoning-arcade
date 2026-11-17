@@ -831,6 +831,36 @@
       "reviewer": null,
       "reviewedAt": null,
       "reviewFocus": "Check nevertheless as contrastive discourse connector; test all alternatives in French."
+    },
+    {
+      "id": "G-T-01",
+      "exam": "gmat",
+      "game": "table-lab",
+      "referenceKey": "YNY",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Review maximum sales, strict ratio boundary 25%, and sum 210 vs 200; inspect FR/EN statements and sortable numeric columns."
+    },
+    {
+      "id": "G-T-02",
+      "exam": "gmat",
+      "game": "table-lab",
+      "referenceKey": "NYY",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Review smallest budget, five-value median, and at-most-ten-week boundary; check numeric sorting and ambiguity."
+    },
+    {
+      "id": "G-T-03",
+      "exam": "gmat",
+      "game": "table-lab",
+      "referenceKey": "YYN",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Review shipment count comparisons and equality of late rates (4/80 vs 3/60) alongside on-time maximum."
     }
   ]
 }
