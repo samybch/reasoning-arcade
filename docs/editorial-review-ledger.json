@@ -921,6 +921,36 @@
       "reviewer": null,
       "reviewedAt": null,
       "reviewFocus": "Verify N+W=95 and strictly greater than 45 includes only N and E, not W. Check both translations."
+    },
+    {
+      "id": "G-P-01",
+      "exam": "gmat",
+      "game": "two-part-lab",
+      "referenceKey": "4|2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Solve A=2B and A+B=120 independently; check bilingual two-column key and distractor overlap."
+    },
+    {
+      "id": "G-P-02",
+      "exam": "gmat",
+      "game": "two-part-lab",
+      "referenceKey": "2|4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Recompute break-even and €160 target with fixed costs and contribution, including units."
+    },
+    {
+      "id": "G-P-03",
+      "exam": "gmat",
+      "game": "two-part-lab",
+      "referenceKey": "4|1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify 600 × 12% and 400 × 8%, row order, plausible errors, and both locales."
     }
   ]
 }
