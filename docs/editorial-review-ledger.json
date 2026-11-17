@@ -861,6 +861,36 @@
       "reviewer": null,
       "reviewedAt": null,
       "reviewFocus": "Review shipment count comparisons and equality of late rates (4/80 vs 3/60) alongside on-time maximum."
+    },
+    {
+      "id": "G-M-01",
+      "exam": "gmat",
+      "game": "multi-source-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Independently calculate 92/100, 60/80 and 34/40 and confirm North uniquely leads. Check translations."
+    },
+    {
+      "id": "G-M-02",
+      "exam": "gmat",
+      "game": "multi-source-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify 3000+600-200=3400 only months 1–3, then 3600 above 3500 cap. Distinguish forecast and agreement."
+    },
+    {
+      "id": "G-M-03",
+      "exam": "gmat",
+      "game": "multi-source-lab",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify 60/80 observed vs 72/80 forecast; ensure no option implies proven causality. Check all distractors."
     }
   ]
 }
