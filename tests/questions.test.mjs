@@ -130,8 +130,8 @@ test('missing or shortened Code Logic solution steps fail schema validation',()=
   }:q);
   assert.ok(validateQuestions(invalid).some(error=>error.includes('T-L-18')&&error.includes('review steps')));
 });
-test('all 70 bilingual pilots have structured feedback without modifying their review status',()=>{
-  assert.equal(QUESTIONS.length,70);
+test('all 76 bilingual pilots have structured feedback without modifying their review status',()=>{
+  assert.equal(QUESTIONS.length,76);
   assert.ok(QUESTIONS.every(q=>q.status==='pilot'));
   assert.ok(QUESTIONS.every(q=>q.content.fr.reviewSteps?.length===3&&q.content.en.reviewSteps?.length===3));
 });
@@ -139,7 +139,7 @@ test('all 70 bilingual pilots have structured feedback without modifying their r
 test('the new Quant Lab uses six original bilingual pilot items per exam path',()=>{
   for(const exam of ['tage','gmat']){
     const items=QUESTIONS.filter(q=>q.exam===exam&&q.game==='quant-lab');
-    assert.equal(items.length,6,exam);
+    assert.equal(items.length,9,exam);
     assert.ok(items.every(q=>q.alignment==='skill-practice'&&q.status==='pilot'));
     for(const q of items){
       for(const locale of ['fr','en']){
@@ -158,12 +158,12 @@ test('new Quant Lab questions reject invalid ID or incomplete bilingual correcti
   assert.ok(errors.some(e=>e.includes('review steps')));
 });
 
-test('Reading Lab uses six original, bilingual and long-passage questions per exam',()=>{
+test('Reading Lab uses nine original, bilingual and long-passage questions per exam',()=>{
   for(const exam of ['tage','gmat']){
     const items=QUESTIONS.filter(q=>q.game==='reading-lab'&&q.exam===exam);
     assert.equal(items.length,6,exam);
-    assert.equal(new Set(items.map(q=>q.content.fr.context)).size,2,exam+' FR passages');
-    assert.equal(new Set(items.map(q=>q.content.en.context)).size,2,exam+' EN passages');
+    assert.equal(new Set(items.map(q=>q.content.fr.context)).size,3,exam+' FR passages');
+    assert.equal(new Set(items.map(q=>q.content.en.context)).size,3,exam+' EN passages');
     for(const q of items){
       assert.equal(q.status,'pilot');
       for(const lang of ['fr','en']){
