@@ -171,3 +171,12 @@ Historical snapshots of the original 70/76 pilot bank above are retained for aud
 - [ ] Human review of graph mathematics, FR/EN options and screen-reader rendering
 - [ ] Next: Two-Part Analysis in a separate short-lived PR after green CI
 - [ ] No public release without explicit owner GO
+
+## XYZ — GMAT Two-Part Analysis (2026-11-17)
+- [x] Add three original FR/EN Two-Part Analysis pilots and a two-column radio matrix scored as one question
+- [x] Expand the canonical catalogue and pending review ledger to 94 pilots; preserve existing games and local progress
+- [x] Integrate in GMAT-only practice, mixed timed tests, accessibility tests and offline reviewer packet
+- [ ] Independent educational validation of all 94 questions, including all two-part answer combinations
+- [ ] Public deployment remains blocked pending separate explicit owner GO
+
+Earlier 91-question figures above are historical checkpoints, not current totals.
