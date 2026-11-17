@@ -12,7 +12,7 @@ test('offline review packet contains exactly one FR/EN card per pilot and preser
   const html=renderReviewPack(catalog,ledger,css,js);
   const questions=JSON.parse(catalog);
   assert.equal((html.match(/<article class="question" data-question=/g)||[]).length,questions.length);
-  assert.equal(questions.length,91);
+  assert.equal(questions.length,94);
   assert.equal((html.match(/<section class="language" lang="fr">/g)||[]).length,questions.length);
   assert.equal((html.match(/<section class="language" lang="en">/g)||[]).length,questions.length);
   for(const q of questions)assert.ok(html.includes('data-question="'+q.id+'"'),q.id);
