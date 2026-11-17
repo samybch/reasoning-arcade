@@ -564,3 +564,47 @@ test('Multi-Source Lab pending review survives reload in GMAT track',async({page
   expect(stored.recentQuestionIds).toContain('G-M-01');
   expect(stored.pendingReviewIds).toContain('G-M-01');
 });
+
+test('GMAT Graphics Lab shows responsive bar chart and requires two dropdown answers',async({page})=>{
+  await page.goto(PREFIX+'/en/');
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Graph Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/en/play/graphics-lab/?exam=gmat&mode=game');
+  await expect(page.locator('.graphics-svg')).toBeVisible();
+  await expect(page.locator('.graphics-data')).toBeVisible();
+  await expect(page.locator('.graphic-statement')).toHaveCount(2);
+  const submit=page.getByRole('button',{name:/Submit/});
+  await expect(submit).toBeDisabled();
+  await page.locator('.graphic-statement').nth(0).locator('select').selectOption('3');
+  await expect(submit).toBeDisabled();
+  await page.locator('.graphic-statement').nth(1).locator('select').selectOption('1');
+  await expect(submit).toBeEnabled();
+  await submit.click();
+  await expect(page.locator('.feedback.good')).toBeVisible();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+});
+test('Graphics Lab remains GMAT-only and readable at 320px',async({page})=>{
+  await page.setViewportSize({width:320,height:700});
+  await page.goto(PREFIX+'/fr/');
+  await expect(page.getByRole('heading',{name:'Graph Lab'})).toHaveCount(0);
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Graph Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/fr/play/graphics-lab/?exam=gmat&mode=game');
+  await expect(page.locator('.graphic-statement')).toHaveCount(2);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth)).toBeLessThanOrEqual(1);
+  await page.goto(PREFIX+'/fr/coverage/');
+  await expect(page.locator('.coverage-row').filter({hasText:'Graphics Interpretation'})).toContainText('3 pilotes');
+});
+test('Graphics Lab recent history and review items survive reload',async({page})=>{
+  await page.goto(PREFIX+'/en/play/graphics-lab/?exam=gmat&mode=game');
+  await page.evaluate(()=>localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+    version:1,skills:{},totalAnswered:1,totalCorrect:0,
+    recentQuestionIds:['G-I-01'],pendingReviewIds:['G-I-01']
+  })));
+  await page.reload();
+  await page.goto(PREFIX+'/en/review/?exam=gmat');
+  await expect(page.locator('.graphic-statement')).toHaveCount(2);
+  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+  expect(saved.pendingReviewIds).toContain('G-I-01');
+  expect(saved.recentQuestionIds).toContain('G-I-01');
+});
