@@ -3650,5 +3650,299 @@
         ]
       }
     }
+  },
+  {
+    "id": "T-E-01",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "language-correction",
+    "difficulty": 2,
+    "estimatedSeconds": 100,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle formulation corrige l'accord dans le message ?",
+        "context": "Message initial : « Les données que nous avons recueilli hier confirment cette tendance. »",
+        "choices": [
+          "Les données que nous avons recueilli hier confirment cette tendance.",
+          "Les données que nous avons recueillies hier confirme cette tendance.",
+          "Les données que nous avons recueillies hier confirment cette tendance.",
+          "Les données que nous avons recueillis hier confirment cette tendance.",
+          "Les données que nous avons recueillies hier confirmera cette tendance."
+        ],
+        "explanation": "Le participe passé « recueillies » s'accorde avec le COD « données », placé avant « avons » ; « confirment » s'accorde avec le sujet pluriel.",
+        "hint": "Identifie le complément d'objet direct placé avant le participe passé.",
+        "reviewSteps": [
+          "Le verbe « recueillir » est construit avec « avoir », et son COD « les données » précède le participe passé.",
+          "Le COD féminin pluriel impose « recueillies » ; le sujet « les données » impose aussi « confirment ».",
+          "Seule la proposition C conserve ces deux accords et le temps présent de la phrase initiale."
+        ]
+      },
+      "en": {
+        "prompt": "Which French sentence correctly fixes the agreement errors?",
+        "context": "Original message: « Les données que nous avons recueilli hier confirment cette tendance. »",
+        "choices": [
+          "Les données que nous avons recueilli hier confirment cette tendance.",
+          "Les données que nous avons recueillies hier confirme cette tendance.",
+          "Les données que nous avons recueillies hier confirment cette tendance.",
+          "Les données que nous avons recueillis hier confirment cette tendance.",
+          "Les données que nous avons recueillies hier confirmera cette tendance."
+        ],
+        "explanation": "In French, the past participle « recueillies » agrees with the preceding direct object « données »; the plural subject takes « confirment ».",
+        "hint": "Find the direct object appearing before the French past participle.",
+        "reviewSteps": [
+          "The French verb « recueillir » uses « avoir »; its direct object « les données » comes before the past participle.",
+          "That feminine plural object requires « recueillies »; the plural subject also requires « confirment ».",
+          "Only option C preserves both grammatical agreements and the original present-tense meaning."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-02",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "language-correction",
+    "difficulty": 3,
+    "estimatedSeconds": 110,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle phrase évite la maladresse de construction ?",
+        "context": "Une équipe souhaite annoncer le résultat d'une enquête, sans en modifier le sens.",
+        "choices": [
+          "Bien que l'enquête soit limitée, ses résultats méritent d'être examinés.",
+          "Malgré que l'enquête soit limitée, ses résultats méritent d'être examinés.",
+          "Bien que l'enquête est limitée, ses résultats méritent d'être examinés.",
+          "Bien que l'enquête soit limitée, ses résultats mérite d'être examinés.",
+          "Bien que l'enquête soit limitée, ses résultats méritent à être examinés."
+        ],
+        "explanation": "« Bien que » appelle ici le subjonctif « soit », « résultats » exige « méritent », et « mériter » se construit avec « de » suivi de l'infinitif.",
+        "hint": "Vérifie la conjonction, le mode verbal, l'accord sujet-verbe et la préposition.",
+        "reviewSteps": [
+          "La concession s'exprime correctement avec « bien que » suivi du subjonctif « soit ».",
+          "Le sujet pluriel « ses résultats » commande « méritent », suivi de « d'être examinés ».",
+          "La proposition A respecte simultanément la syntaxe concessive et les accords verbaux requis."
+        ]
+      },
+      "en": {
+        "prompt": "Which French sentence avoids grammatical and syntactic errors?",
+        "context": "A team wants to report a limited survey's findings without changing their meaning.",
+        "choices": [
+          "Bien que l'enquête soit limitée, ses résultats méritent d'être examinés.",
+          "Malgré que l'enquête soit limitée, ses résultats méritent d'être examinés.",
+          "Bien que l'enquête est limitée, ses résultats méritent d'être examinés.",
+          "Bien que l'enquête soit limitée, ses résultats mérite d'être examinés.",
+          "Bien que l'enquête soit limitée, ses résultats méritent à être examinés."
+        ],
+        "explanation": "The concessive expression « bien que » takes the subjunctive « soit »; plural « résultats » takes « méritent », followed by « d'être ».",
+        "hint": "Check the concessive conjunction, verb mood, agreement and preposition.",
+        "reviewSteps": [
+          "In standard French, « bien que » introduces a concession and takes the subjunctive form « soit ».",
+          "The plural subject « ses résultats » requires « méritent », followed by the construction « d'être examinés ».",
+          "Option A is the only formulation satisfying all these requirements without changing the message."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-03",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "faithful-reformulation",
+    "difficulty": 3,
+    "estimatedSeconds": 125,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle reformulation respecte exactement la portée de la phrase ?",
+        "context": "Énoncé : « Quelques ateliers ont reporté leur livraison, mais aucun n'a annulé sa commande. »",
+        "choices": [
+          "Tous les ateliers ont reporté leur livraison et leurs commandes ont été annulées.",
+          "La plupart des ateliers ont reporté leur livraison ; certains ont annulé.",
+          "Un seul atelier a reporté sa livraison, et tous ont annulé.",
+          "Aucun atelier n'a modifié sa livraison, et plusieurs ont annulé.",
+          "Certains ateliers ont décalé leur livraison, sans qu'aucun ait annulé sa commande."
+        ],
+        "explanation": "« Quelques » peut être reformulé par « certains » et « aucun n'a annulé » reste une négation universelle.",
+        "hint": "Vérifie séparément la quantité d'ateliers concernés et l'absence d'annulation.",
+        "reviewSteps": [
+          "Le message d'origine affirme seulement qu'une partie des ateliers a changé de date de livraison.",
+          "Il affirme aussi qu'aucun atelier, y compris ceux qui ont décalé leur livraison, n'a annulé sa commande.",
+          "La proposition E préserve les deux informations sans transformer « quelques » en « tous » ou « la plupart »."
+        ]
+      },
+      "en": {
+        "prompt": "Which French paraphrase preserves the exact scope of the statement?",
+        "context": "Original: « Quelques ateliers ont reporté leur livraison, mais aucun n'a annulé sa commande. » (Some workshops delayed delivery, but none cancelled its order.)",
+        "choices": [
+          "Tous les ateliers ont reporté leur livraison et leurs commandes ont été annulées.",
+          "La plupart des ateliers ont reporté leur livraison ; certains ont annulé.",
+          "Un seul atelier a reporté sa livraison, et tous ont annulé.",
+          "Aucun atelier n'a modifié sa livraison, et plusieurs ont annulé.",
+          "Certains ateliers ont décalé leur livraison, sans qu'aucun ait annulé sa commande."
+        ],
+        "explanation": "« Quelques » allows « certains » (some), whereas « aucun » must retain its all-inclusive negative meaning.",
+        "hint": "Check separately how many workshops were affected and whether any order was cancelled.",
+        "reviewSteps": [
+          "The original says only that some workshops changed their expected delivery dates.",
+          "It also says no workshop cancelled its order, including those that postponed delivery.",
+          "Option E preserves both statements without turning « some » into « all » or « most »."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-04",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "faithful-reformulation",
+    "difficulty": 4,
+    "estimatedSeconds": 135,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle phrase reformule fidèlement l'information suivante ?",
+        "context": "« Le comité n'exclut pas de prolonger l'essai si les résultats du trimestre restent encourageants. »",
+        "choices": [
+          "Le comité a décidé de prolonger l'essai quel que soit le résultat.",
+          "Le comité envisage une prolongation éventuelle, sous réserve de résultats trimestriels encourageants.",
+          "Le comité refuse de prolonger l'essai si les résultats sont bons.",
+          "Les résultats du trimestre garantissent que l'essai sera prolongé.",
+          "Le comité attend des résultats décevants pour prolonger l'essai."
+        ],
+        "explanation": "Le texte exprime une possibilité, pas une décision, et la subordonne à une condition concernant les résultats.",
+        "hint": "Préserve le caractère éventuel de la prolongation et sa condition.",
+        "reviewSteps": [
+          "« N'exclut pas » indique que la prolongation est possible, sans être certaine ni déjà décidée.",
+          "La subordonnée introduite par « si » conditionne cette possibilité à des résultats encourageants.",
+          "La réponse B conserve à la fois l'incertitude de la décision et la condition exprimée."
+        ]
+      },
+      "en": {
+        "prompt": "Which French paraphrase faithfully restates the following information?",
+        "context": "« Le comité n'exclut pas de prolonger l'essai si les résultats du trimestre restent encourageants. » (The committee does not rule out extending the trial if quarterly results remain encouraging.)",
+        "choices": [
+          "Le comité a décidé de prolonger l'essai quel que soit le résultat.",
+          "Le comité envisage une prolongation éventuelle, sous réserve de résultats trimestriels encourageants.",
+          "Le comité refuse de prolonger l'essai si les résultats sont bons.",
+          "Les résultats du trimestre garantissent que l'essai sera prolongé.",
+          "Le comité attend des résultats décevants pour prolonger l'essai."
+        ],
+        "explanation": "The source states a conditional possibility, not an adopted decision or a guarantee.",
+        "hint": "Preserve both the uncertainty and the stated condition.",
+        "reviewSteps": [
+          "« N'exclut pas » means an extension remains possible; it has not been decided.",
+          "The « si » clause makes that possibility dependent on encouraging quarterly results.",
+          "Option B preserves both the uncertainty and the conditional requirement."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-05",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "discourse-coherence",
+    "difficulty": 2,
+    "estimatedSeconds": 110,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle proposition complète logiquement le raisonnement ?",
+        "context": "« Les ventes du trimestre ont progressé. Cependant, les dépenses ont augmenté encore plus vite. ____ »",
+        "choices": [
+          "Les coûts ont nécessairement disparu.",
+          "La progression des ventes prouve que les dépenses ont diminué.",
+          "Le chiffre d'affaires a forcément été divisé par deux.",
+          "La hausse des ventes ne suffit donc pas à conclure à une amélioration du résultat.",
+          "Une hausse des dépenses garantit toujours une hausse du bénéfice."
+        ],
+        "explanation": "Lorsque les dépenses croissent plus vite, la progression des ventes ne permet pas, seule, d'inférer un meilleur résultat.",
+        "hint": "Le connecteur « cependant » introduit une information qui limite la portée de la première phrase.",
+        "reviewSteps": [
+          "La première phrase décrit une hausse des ventes, qui paraît d'abord favorable.",
+          "La deuxième ajoute une progression encore plus rapide des dépenses, susceptible de réduire la marge.",
+          "La réponse D est une conclusion prudente cohérente avec ce contraste et n'invente aucun montant."
+        ]
+      },
+      "en": {
+        "prompt": "Which French completion logically follows the argument?",
+        "context": "« Les ventes du trimestre ont progressé. Cependant, les dépenses ont augmenté encore plus vite. ____ » (Quarterly sales rose, but expenses rose even faster.)",
+        "choices": [
+          "Les coûts ont nécessairement disparu.",
+          "La progression des ventes prouve que les dépenses ont diminué.",
+          "Le chiffre d'affaires a forcément été divisé par deux.",
+          "La hausse des ventes ne suffit donc pas à conclure à une amélioration du résultat.",
+          "Une hausse des dépenses garantit toujours une hausse du bénéfice."
+        ],
+        "explanation": "Faster-growing expenses mean higher sales alone cannot establish an improvement in earnings.",
+        "hint": "Notice that « cependant » introduces a qualification of the initial positive result.",
+        "reviewSteps": [
+          "The first statement reports increasing sales, which might initially seem favorable.",
+          "The second adds that expenses grew even faster, potentially reducing the margin.",
+          "Option D is the cautious conclusion supported by both facts without inventing financial figures."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-E-06",
+    "exam": "tage",
+    "game": "expression-lab",
+    "competency": "discourse-coherence",
+    "difficulty": 3,
+    "estimatedSeconds": 115,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quel enchaînement complète le mieux ce court discours ?",
+        "context": "« Le réseau de transports a étendu ses horaires en soirée. Les usagers saluent cette souplesse. ____, l'exploitant rappelle que le coût de fonctionnement devra être surveillé. »",
+        "choices": [
+          "Néanmoins",
+          "Par conséquent, sans réserve",
+          "De la même manière, sans nuance",
+          "Puisque les horaires ont été supprimés",
+          "Autrement dit, les dépenses sont nulles"
+        ],
+        "explanation": "« Néanmoins » exprime la réserve sur les coûts après une appréciation favorable du service.",
+        "hint": "Repère le contraste entre satisfaction des usagers et prudence de l'exploitant.",
+        "reviewSteps": [
+          "Les deux premières propositions soulignent l'avantage d'horaires plus souples pour les usagers.",
+          "La dernière proposition introduit une réserve sur le coût, sans nier l'intérêt de cette souplesse.",
+          "Le connecteur concessif « Néanmoins » exprime précisément cette opposition modérée."
+        ]
+      },
+      "en": {
+        "prompt": "Which French transition best completes the short passage?",
+        "context": "« Le réseau de transports a étendu ses horaires en soirée. Les usagers saluent cette souplesse. ____, l'exploitant rappelle que le coût de fonctionnement devra être surveillé. » (Passengers welcome longer evening service, but the operator cautions about costs.)",
+        "choices": [
+          "Néanmoins",
+          "Par conséquent, sans réserve",
+          "De la même manière, sans nuance",
+          "Puisque les horaires ont été supprimés",
+          "Autrement dit, les dépenses sont nulles"
+        ],
+        "explanation": "« Néanmoins » (nevertheless) qualifies a positive observation by introducing a reservation about operating costs.",
+        "hint": "Identify the contrast between users' satisfaction and the operator's caution.",
+        "reviewSteps": [
+          "The opening sentences emphasize the benefit of more flexible evening service for passengers.",
+          "The final sentence adds a practical caveat about operating costs without denying that benefit.",
+          "The concessive connector « Néanmoins » expresses precisely this measured contrast."
+        ]
+      }
+    }
   }
 ]
