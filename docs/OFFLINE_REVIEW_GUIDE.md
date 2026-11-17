@@ -32,6 +32,8 @@ Click **Download review notes (JSON)** before leaving the page. The browser down
 
 To continue, reopen the same HTML, choose **Import previous review notes (JSON)** and select your saved report. Import is accepted **only if its SHA-256 catalog hash matches the exact workbook's original question set**; this prevents mixing findings from different question editions. If there is a mismatch, use the older matching packet or manually reconcile the reports.
 
+**Safe merge (rather than replacement):** imports populate only untouched questions. Identical existing records remain unchanged. If the import disagrees with an existing finding or note — including a question hidden by the 16-item filter — the imported record is **skipped** and its ID appears in the status message; the local text is preserved. Export your current notes before manually reconciling conflicting files. The worksheet **does not** automatically combine differing notes or overwrite one reviewer's conclusions with another's. Imports validate the entire file before applying any non-conflicting entries; invalid files change nothing.
+
 The exported report is *not* imported directly into the official approval ledger. Share it voluntarily with the maintainer for triage, without including personal data. Nothing gets sent to the project automatically.
 
 ## Distribution and release control

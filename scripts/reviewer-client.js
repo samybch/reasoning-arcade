@@ -61,17 +61,28 @@
         if(!entry||!byId.has(entry.id)||seen.has(entry.id)||!allowed.has(entry.finding)||typeof entry.notes!=='string'||entry.notes.length>3000)throw new Error('Invalid review record for this catalog');
         seen.add(entry.id);
       }
-      for(const card of cards){
-        card.querySelector('[data-decision]').value='unreviewed';
-        card.querySelector('[data-notes]').value='';
-      }
+      // Merge without erasing another reviewer's notes or unsaved local edits.
+      // A matching catalog hash alone does not mean that two reports agree.
+      let imported=0,matching=0;
+      const conflicts=[];
       for(const entry of value.entries){
         const card=byId.get(entry.id);
+        const localFinding=card.querySelector('[data-decision]').value;
+        const localNotes=card.querySelector('[data-notes]').value;
+        if(localFinding===entry.finding&&localNotes===entry.notes){matching++;continue;}
+        if(localFinding!=='unreviewed'||localNotes.length>0){
+          conflicts.push(entry.id);
+          continue;
+        }
+        // Only completely untouched cards can receive a different finding.
         card.querySelector('[data-decision]').value=entry.finding;
         card.querySelector('[data-notes]').value=entry.notes;
+        imported++;
       }
       updateStatus();
-      status.textContent='Imported '+value.entries.length+' saved findings from this matching catalog.';
+      status.textContent='Imported '+imported+' new findings; '+matching+' already matching; '
+        +conflicts.length+' conflicts skipped'+(conflicts.length?' ('+conflicts.join(', ')+')':'')
+        +'. Existing notes were not overwritten. Export before closing.';
     }catch(error){status.textContent='Import rejected: '+String(error.message||error);}
     filePicker.value='';
   });
