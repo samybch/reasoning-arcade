@@ -10,7 +10,7 @@
 - [ ] Review dependency alerts and pin or update responsibly
 
 ## Y — Pedagogy and claims
-- [x] 91 original FR/EN pilot items with first-pass answer-key matrix
+- [x] 94 original FR/EN pilot items with first-pass answer-key matrix
 - [x] Key-regression tests and a structural validator that allows new contributions
 - [ ] Independent French/English correctness review and approval for every item (issue #3)
 - [ ] Verify official exam taxonomy and current answer conventions in authoritative materials
@@ -90,3 +90,9 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] Add to local practice, review, mixed mini-tests, coverage reporting and offline reviewer worksheet
 - [ ] Independent verification of numerical values, graph accessibility and all dropdown distractors
 - [ ] User testing before release; no claim of official exam interface or verified difficulty
+
+## Two-Part Lab — GMAT Data Insights
+- [x] Build three original FR/EN two-column questions and an all-or-nothing answer matrix with keyboard-accessible controls
+- [x] Include the new items in mixed practice, local mistake review, syllabus coverage and the offline editorial review workbook
+- [ ] Independently solve both columns of all three pilots, check alternative answers, translations and mathematical boundaries
+- [ ] Validate usability with keyboard and screen-reader users before any public release
