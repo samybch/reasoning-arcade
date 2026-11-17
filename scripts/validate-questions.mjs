@@ -1,10 +1,10 @@
 import {readFileSync} from 'node:fs';
 
 export const QUESTIONS=JSON.parse(readFileSync(new URL('../src/content/questions.json',import.meta.url),'utf8'));
-const MINIMUM={'tage:code-logic':12,'tage:argument-lab':6,'gmat:argument-lab':6,'tage:enough-info':6,'gmat:enough-info':6,'tage:quant-lab':6,'gmat:quant-lab':6,'tage:reading-lab':6,'gmat:reading-lab':6};
-const GAMES=new Set(['code-logic','argument-lab','enough-info','quant-lab','reading-lab']);
+const MINIMUM={'tage:code-logic':12,'tage:argument-lab':6,'gmat:argument-lab':6,'tage:enough-info':6,'gmat:enough-info':6,'tage:quant-lab':6,'gmat:quant-lab':6,'tage:reading-lab':6,'tage:expression-lab':6,'gmat:reading-lab':6};
+const GAMES=new Set(['code-logic','argument-lab','enough-info','quant-lab','reading-lab','expression-lab']);
 const EXAMS=new Set(['tage','gmat']);
-const ID=/^[TG]-[LADCQR]-\d{2,4}$/;
+const ID=/^[TG]-[LADCQRE]-\d{2,4}$/;
 const correctKey=(q)=>q.game==='enough-info'?['A','B','C','D','E']:['0','1','2','3','4'];
 const nonEmpty=x=>typeof x==='string'&&x.trim().length>0;
 
@@ -23,8 +23,9 @@ export function validateQuestions(questions=QUESTIONS){
     if(!EXAMS.has(q.exam))errors.push(`${id}: invalid exam track`);
     if(!GAMES.has(q.game))errors.push(`${id}: invalid game`);
     const track=id.slice(0,1),letter=id.slice(2,3);
-    const expectedLetter=q.game==='code-logic'?'L':q.game==='argument-lab'?'A':q.game==='quant-lab'?(q.exam==='tage'?'C':'Q'):q.game==='reading-lab'?'R':'D';
+    const expectedLetter=q.game==='code-logic'?'L':q.game==='argument-lab'?'A':q.game==='quant-lab'?(q.exam==='tage'?'C':'Q'):q.game==='reading-lab'?'R':q.game==='expression-lab'?'E':'D';
     if(track!==(q.exam==='tage'?'T':'G')||letter!==expectedLetter)errors.push(`${id}: exam or game ID mismatch`);
+    if(q.exam==='gmat'&&q.game==='expression-lab')errors.push(`${id}: Expression Lab is not a GMAT category`);
     if(q.exam==='gmat'&&q.game==='code-logic')errors.push(`${id}: Code Logic is not an official GMAT category`);
     if(!nonEmpty(q.competency))errors.push(`${id}: missing competency`);
     if(!Number.isInteger(q.difficulty)||q.difficulty<1||q.difficulty>5)errors.push(`${id}: difficulty must be 1–5`);

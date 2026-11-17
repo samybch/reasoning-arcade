@@ -10,7 +10,8 @@ const games:{id:Game;name:string;description:{fr:string;en:string};symbol:string
   {id:'argument-lab',name:'Argument Lab',symbol:'◇',description:{fr:'Identifie hypothèses, conclusions et failles de raisonnement.',en:'Find assumptions, conclusions and flawed arguments.'}},
   {id:'enough-info',name:'Enough Info?',symbol:'∑',description:{fr:'Décide si deux informations suffisent à répondre.',en:'Decide if two statements contain enough information.'}},
   {id:'quant-lab',name:'Quant Lab',symbol:'%',description:{fr:'Résous des problèmes de calcul, de proportion et d’algèbre.',en:'Solve quantitative, rate, algebra and ratio challenges.'}},
-  {id:'reading-lab',name:'Reading Lab',symbol:'¶',description:{fr:'Lis un texte et repère l’idée principale, les indices et les conclusions.',en:'Read a passage and analyze its central idea, evidence and inferences.'}}
+  {id:'reading-lab',name:'Reading Lab',symbol:'¶',description:{fr:'Lis un texte et repère l’idée principale, les indices et les conclusions.',en:'Read a passage and analyze its central idea, evidence and inferences.'}},
+  {id:'expression-lab',name:'Expression Lab',symbol:'Aa',description:{fr:'Corrige, reformule et complète des messages en français.',en:'Correct, paraphrase and complete written French messages.'}}
 ];
 export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;questionCount:number;questionIds:string[]}){
   const [exam,setExam]=useState<Exam>('tage');
@@ -42,7 +43,10 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
     'main-idea':{fr:'Idée principale',en:'Main idea'},
     'inference':{fr:'Inférences',en:'Inference'},
     'evidence':{fr:'Analyse des preuves',en:'Evidence analysis'},
-    'author-purpose':{fr:'Intention de l’auteur',en:'Author’s purpose'}
+    'author-purpose':{fr:'Intention de l’auteur',en:'Author’s purpose'},
+    'language-correction':{fr:'Correction linguistique',en:'Language correction'},
+    'faithful-reformulation':{fr:'Reformulation fidèle',en:'Faithful paraphrasing'},
+    'discourse-coherence':{fr:'Cohérence du discours',en:'Discourse coherence'}
   };
   const knownQuestionIds=new Set(questionIds);
   const reviewCount=pendingReviewIds.filter(id=>knownQuestionIds.has(id)&&id.startsWith(exam==='tage'?'T-':'G-')).length;
@@ -68,7 +72,7 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
       <div className="section-header"><div><p className="eyebrow">02 — {fr?'À TOI DE JOUER':'YOUR CHALLENGE'}</p><h2>{fr?'Choisis ton jeu':'Choose a game'}</h2></div>
         <Link className="text-link" href={`/${locale}/practice/?exam=${exam}`}>{fr?'Mini-test chronométré':'Timed mini-test'} →</Link></div>
       <div className="game-grid">
-        {games.filter(g=>exam==='tage'||g.id!=='code-logic').map((g,i)=><article className="game-card" key={g.id}>
+        {games.filter(g=>exam==='tage'||(g.id!=='code-logic'&&g.id!=='expression-lab')).map((g,i)=><article className="game-card" key={g.id}>
           <div className={`game-illustration illustration-${i}`} aria-hidden>{g.symbol}</div>
           <div className="game-description"><p className="eyebrow">{fr?'RAISONNEMENT':'REASONING'} · {i+1}</p><h3>{g.name}</h3><p>{g.description[locale]}</p>
             <div className="actions"><Link className="button secondary" href={`/${locale}/play/${g.id}/?exam=${exam}&mode=game`}>{fr?'Jouer':'Play'} →</Link>

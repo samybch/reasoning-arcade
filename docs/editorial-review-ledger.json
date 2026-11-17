@@ -771,6 +771,66 @@
       "reviewer": null,
       "reviewedAt": null,
       "reviewFocus": "Check that the anonymity/public-report distinction is genuinely passage-supported."
+    },
+    {
+      "id": "T-E-01",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check French preceding direct-object agreement, subject-verb agreement, and all distractors; English guidance must not alter the French test."
+    },
+    {
+      "id": "T-E-02",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Confirm standard French usage of bien que / subjunctive and mériter de; challenge all near-synonymous distractors."
+    },
+    {
+      "id": "T-E-03",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Confirm quantifier fidelity ('quelques', 'aucun') with no scope change in FR/EN explanations."
+    },
+    {
+      "id": "T-E-04",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check conditional possibility versus a decision or guarantee, including French negation syntax."
+    },
+    {
+      "id": "T-E-05",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify inferential caution: higher sales and faster-rising expenditure do not determine profit without absolute amounts."
+    },
+    {
+      "id": "T-E-06",
+      "exam": "tage",
+      "game": "expression-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check nevertheless as contrastive discourse connector; test all alternatives in French."
     }
   ]
 }
