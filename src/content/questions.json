@@ -3944,5 +3944,320 @@
         ]
       }
     }
+  },
+  {
+    "id": "G-T-01",
+    "exam": "gmat",
+    "game": "table-lab",
+    "competency": "table-interpretation",
+    "difficulty": 2,
+    "estimatedSeconds": 160,
+    "correctAnswer": "YNY",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "table": {
+      "columns": [
+        {
+          "key": "region",
+          "fr": "Région",
+          "en": "Region",
+          "kind": "text"
+        },
+        {
+          "key": "sales",
+          "fr": "Ventes (k€)",
+          "en": "Sales (€k)",
+          "kind": "number"
+        },
+        {
+          "key": "cost",
+          "fr": "Coûts (k€)",
+          "en": "Costs (€k)",
+          "kind": "number"
+        },
+        {
+          "key": "year",
+          "fr": "Année",
+          "en": "Year",
+          "kind": "number"
+        }
+      ],
+      "rows": [
+        [
+          "North",
+          "120",
+          "24",
+          "2025"
+        ],
+        [
+          "South",
+          "150",
+          "30",
+          "2024"
+        ],
+        [
+          "East",
+          "90",
+          "18",
+          "2025"
+        ],
+        [
+          "West",
+          "200",
+          "50",
+          "2023"
+        ],
+        [
+          "Central",
+          "160",
+          "32",
+          "2024"
+        ]
+      ]
+    },
+    "content": {
+      "fr": {
+        "context": "Résultats fictifs de cinq antennes. Chaque ligne représente une antenne distincte ; les montants sont en milliers d'euros.",
+        "prompt": "À partir du tableau, chaque affirmation est-elle vraie ?",
+        "tableStatements": [
+          "L'antenne West réalise le chiffre de ventes le plus élevé.",
+          "Toutes les antennes affichent un ratio coûts/ventes strictement inférieur à 25 %.",
+          "La somme des ventes de North et East est supérieure à celle de West."
+        ],
+        "explanation": "West affiche 200, maximum du tableau ; West a 50/200 = 25 %, donc la condition strictement inférieure est fausse ; North + East = 210 > 200.",
+        "hint": "Trie les ventes, puis vérifie le ratio de West et additionne deux lignes.",
+        "reviewSteps": [
+          "En triant les ventes, on observe que West est à 200 contre 160 au plus pour les autres : affirmation 1 vraie.",
+          "Pour West, 50 ÷ 200 = 25 % exactement ; « strictement inférieur à 25 % » est donc faux : affirmation 2 fausse.",
+          "Les ventes de North et East totalisent 120 + 90 = 210, au-dessus des 200 de West : affirmation 3 vraie."
+        ]
+      },
+      "en": {
+        "context": "Fictional results for five business locations. Each row represents one location; amounts are in thousands of euros.",
+        "prompt": "Based on the table, is each statement true?",
+        "tableStatements": [
+          "West has the highest sales figure.",
+          "Every location has a cost-to-sales ratio strictly below 25%.",
+          "The combined sales of North and East exceed those of West."
+        ],
+        "explanation": "West's 200 is the maximum; its cost-to-sales ratio equals 50/200 = 25%, not below; North plus East equals 210, above 200.",
+        "hint": "Sort by sales, then check West's ratio and the combined totals.",
+        "reviewSteps": [
+          "Sorting the sales column reveals West at 200, higher than every other location: statement 1 is true.",
+          "West's ratio is exactly 50/200 = 25%; strictly below 25% is therefore false: statement 2 is false.",
+          "North and East have combined sales of 120 + 90 = 210, exceeding West's 200: statement 3 is true."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-T-02",
+    "exam": "gmat",
+    "game": "table-lab",
+    "competency": "table-interpretation",
+    "difficulty": 3,
+    "estimatedSeconds": 175,
+    "correctAnswer": "NYY",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "table": {
+      "columns": [
+        {
+          "key": "project",
+          "fr": "Projet",
+          "en": "Project",
+          "kind": "text"
+        },
+        {
+          "key": "budget",
+          "fr": "Budget (k€)",
+          "en": "Budget (€k)",
+          "kind": "number"
+        },
+        {
+          "key": "risk",
+          "fr": "Incidents",
+          "en": "Incidents",
+          "kind": "number"
+        },
+        {
+          "key": "weeks",
+          "fr": "Durée (semaines)",
+          "en": "Duration (weeks)",
+          "kind": "number"
+        }
+      ],
+      "rows": [
+        [
+          "P1",
+          "40",
+          "8",
+          "12"
+        ],
+        [
+          "P2",
+          "55",
+          "11",
+          "10"
+        ],
+        [
+          "P3",
+          "70",
+          "14",
+          "15"
+        ],
+        [
+          "P4",
+          "45",
+          "6",
+          "9"
+        ],
+        [
+          "P5",
+          "60",
+          "12",
+          "12"
+        ]
+      ]
+    },
+    "content": {
+      "fr": {
+        "context": "Cinq projets sont décrits par leur budget, leur nombre d'incidents et leur durée estimée en semaines. Aucun autre projet n'est inclus.",
+        "prompt": "Évalue les trois affirmations à partir des projets fictifs.",
+        "tableStatements": [
+          "P4 dispose du plus petit budget de tous les projets.",
+          "Le nombre médian d'incidents est 11.",
+          "Il existe au moins deux projets dont la durée n'excède pas 10 semaines."
+        ],
+        "explanation": "Le plus petit budget est P1 (40), pas P4 (45). Les incidents triés sont 6, 8, 11, 12, 14, médiane 11. P2 et P4 durent au plus 10 semaines.",
+        "hint": "Trie les budgets, classe les cinq nombres d'incidents et repère les durées ≤ 10.",
+        "reviewSteps": [
+          "Le budget minimum est 40 pour P1, alors que P4 affiche 45 : la première affirmation est fausse.",
+          "Les nombres d'incidents triés sont 6, 8, 11, 12 et 14 ; la troisième valeur, 11, est bien la médiane.",
+          "P2 dure 10 semaines et P4 en dure 9 ; au moins deux projets satisfont la condition, donc la troisième est vraie."
+        ]
+      },
+      "en": {
+        "context": "Five projects are described by budget, incident count and planned duration in weeks. There are no additional projects in this data set.",
+        "prompt": "Evaluate each statement using the fictional project data.",
+        "tableStatements": [
+          "P4 has the smallest budget among all projects.",
+          "The median number of incidents is 11.",
+          "At least two projects have planned durations of no more than 10 weeks."
+        ],
+        "explanation": "P1 has the lowest budget of 40, versus P4's 45. The sorted incident counts are 6, 8, 11, 12, 14, giving a median of 11. P2 and P4 take at most 10 weeks.",
+        "hint": "Sort the budgets, order five incident counts and locate durations at or below 10.",
+        "reviewSteps": [
+          "P1 has the smallest budget, 40, while P4 has 45: statement 1 is false.",
+          "Sorting the incident counts yields 6, 8, 11, 12 and 14; the middle value is 11, so statement 2 is true.",
+          "P2 takes 10 weeks and P4 takes 9, satisfying the duration condition twice: statement 3 is true."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-T-03",
+    "exam": "gmat",
+    "game": "table-lab",
+    "competency": "table-interpretation",
+    "difficulty": 3,
+    "estimatedSeconds": 180,
+    "correctAnswer": "YYN",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "table": {
+      "columns": [
+        {
+          "key": "carrier",
+          "fr": "Transporteur",
+          "en": "Carrier",
+          "kind": "text"
+        },
+        {
+          "key": "parcels",
+          "fr": "Colis",
+          "en": "Parcels",
+          "kind": "number"
+        },
+        {
+          "key": "late",
+          "fr": "Retards",
+          "en": "Late",
+          "kind": "number"
+        },
+        {
+          "key": "ontime",
+          "fr": "À l'heure",
+          "en": "On time",
+          "kind": "number"
+        }
+      ],
+      "rows": [
+        [
+          "A",
+          "80",
+          "4",
+          "60"
+        ],
+        [
+          "B",
+          "120",
+          "6",
+          "90"
+        ],
+        [
+          "C",
+          "100",
+          "10",
+          "85"
+        ],
+        [
+          "D",
+          "140",
+          "7",
+          "110"
+        ],
+        [
+          "E",
+          "60",
+          "3",
+          "45"
+        ]
+      ]
+    },
+    "content": {
+      "fr": {
+        "context": "Échantillon fictif de livraisons. « Colis » désigne tous les colis, « Retards » le nombre livré en retard, et « À l'heure » un sous-ensemble livré dans les délais.",
+        "prompt": "Détermine si les affirmations sont compatibles avec les chiffres fournis.",
+        "tableStatements": [
+          "Le transporteur D a traité davantage de colis que B.",
+          "Les transporteurs A et E ont le même pourcentage de livraisons en retard.",
+          "Le transporteur C a le nombre de colis livrés à l'heure le plus élevé."
+        ],
+        "explanation": "D a 140 colis contre 120 pour B ; A a 4/80 = 5 % et E 3/60 = 5 % ; D compte 110 à l'heure contre 85 pour C.",
+        "hint": "Compare les volumes puis calcule deux taux et trie les livraisons à l'heure.",
+        "reviewSteps": [
+          "D traite 140 colis et B 120 : le premier énoncé est vrai sans hypothèse supplémentaire.",
+          "A présente 4 retards sur 80 colis et E 3 sur 60 ; les deux proportions sont égales à 5 %.",
+          "Le maximum des colis livrés à l'heure est 110 chez D, pas 85 chez C ; la troisième affirmation est fausse."
+        ]
+      },
+      "en": {
+        "context": "Fictional shipping sample. 'Parcels' counts all packages, 'Late' counts delayed deliveries, and 'On time' is a subset delivered by the deadline.",
+        "prompt": "Determine whether the statements are supported by the figures.",
+        "tableStatements": [
+          "Carrier D processed more parcels than B.",
+          "Carriers A and E had the same percentage of late deliveries.",
+          "Carrier C had the highest number of on-time parcels."
+        ],
+        "explanation": "D handled 140 parcels against B's 120. A's late rate is 4/80 = 5% and E's is 3/60 = 5%. D has 110 on-time parcels, more than C's 85.",
+        "hint": "Compare volumes, calculate two rates, then sort the on-time counts.",
+        "reviewSteps": [
+          "D processes 140 parcels compared with B's 120: the first claim is true.",
+          "A's late fraction is 4/80 and E's is 3/60, making both rates exactly 5%.",
+          "D has the highest on-time count, 110, while C has 85: the third claim is false."
+        ]
+      }
+    }
   }
 ]
