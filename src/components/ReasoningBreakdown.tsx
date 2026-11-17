@@ -9,6 +9,8 @@ export function ReasoningBreakdown({text,locale,game}:{text:QuestionText;locale:
       ? (fr?["Analyser l'argument",'Évaluer les preuves','Conclure']:['Analyze the argument','Evaluate the evidence','Draw the conclusion'])
       : game==='quant-lab'
         ? (fr?['Identifier les données','Calculer','Vérifier la réponse']:['Identify the data','Calculate','Verify the answer'])
+        : game==='expression-lab'
+          ? (fr?['Repérer la contrainte linguistique','Écarter les pièges','Justifier le choix']:['Identify the language constraint','Reject the traps','Justify the choice'])
         : game==='reading-lab'
           ? (fr?['Repérer le passage clé','Comparer les choix','Justifier la réponse']:['Locate the key passage','Compare the options','Justify the answer'])
         : (fr?['Observer la règle','Vérifier','Conclure']:['Identify the rule','Verify','Conclude']);
