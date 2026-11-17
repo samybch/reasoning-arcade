@@ -1,4 +1,13 @@
 import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+
+const quantBank=JSON.parse(readFileSync(new URL('../src/content/questions.json',import.meta.url),'utf8')) as Array<{id:string;game:string;correctAnswer:string;content:{en:{prompt:string}}}>;
+async function chooseWrongQuantAnswer(page:import('@playwright/test').Page){
+  const prompt=await page.locator('#question-title').textContent();
+  const q=quantBank.find(x=>x.game==='quant-lab'&&x.content.en.prompt===prompt);
+  expect(q,'expected known quantitative pilot question').toBeDefined();
+  await page.locator('.answer-list button').nth((Number(q!.correctAnswer)+1)%5).click();
+}
 
 const PREFIX='/reasoning-arcade';
 
@@ -311,13 +320,13 @@ test('Quant Lab mistake history survives browser reload for both exams',async({p
   for(const [exam,prefix] of [['tage','T-C'],['gmat','G-Q']] as const){
     await page.goto(PREFIX+`/en/play/quant-lab/?exam=${exam}&mode=game`);
     const firstPrompt=await page.locator('#question-title').textContent();
-    await page.locator('.answer-list button').first().click();
+    await chooseWrongQuantAnswer(page);
     await page.getByRole('button',{name:/Submit/}).click();
     await expect(page.locator('.feedback.bad')).toBeVisible();
     await page.reload();
     const nextPrompt=await page.locator('#question-title').textContent();
     expect(nextPrompt).not.toBe(firstPrompt);
-    await page.locator('.answer-list button').first().click();
+    await chooseWrongQuantAnswer(page);
     await page.getByRole('button',{name:/Submit/}).click();
     await expect(page.locator('.feedback.bad')).toBeVisible();
     const data=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
