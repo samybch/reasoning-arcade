@@ -11,7 +11,7 @@ const numeric=(value)=>{
   return Number(s);
 };
 const indexFor=(items,expected)=>{
-  const hits=items.map((item,i)=>numeric(item)===expected?i:-1).filter(i=>i!==-1);
+  const hits=items.map((item,i)=>(typeof expected==='string'?item===expected:numeric(item)===expected)?i:-1).filter(i=>i!==-1);
   assert.equal(hits.length,1,'expected one numeric answer for '+expected+'; got '+JSON.stringify(items));
   return hits[0];
 };
@@ -60,7 +60,7 @@ test('three Table Lab keys are recomputed from numeric rows, including strict bo
 });
 test('all three Graph Lab paired answers derive uniquely from the chart values in both languages',()=>{
   const calculations={
-    'G-I-01':({A,B,C,D})=>[Math.max(A,B,C,D),D-B],
+    'G-I-01':({A,B,C,D})=>[Object.entries({A,B,C,D}).sort((x,y)=>y[1]-x[1])[0][0],D-B],
     'G-I-02':({Q1,Q2,Q3,Q4})=>[100*Q4/Q2,Q3-Q1],
     'G-I-03':({N,S,E,W})=>[N+W,[N,S,E,W].filter(x=>x>45).length]
   };
