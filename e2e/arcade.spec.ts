@@ -112,7 +112,7 @@ test('localized privacy notice explains local browser progress and reset',async(
 
 test('home displays the current catalog count, including new original pilot exercises',async({page})=>{
   await page.goto(PREFIX+'/fr/');
-  await expect(page.locator('.hero-stats')).toContainText('85');
+  await expect(page.locator('.hero-stats')).toContainText('88');
 });
 test('320px mobile viewport supports French and English game navigation without overflow',async({page})=>{
   await page.setViewportSize({width:320,height:700});
@@ -127,12 +127,12 @@ test('320px mobile viewport supports French and English game navigation without 
 test('coverage pages accurately disclose covered and missing sections in both languages',async({page})=>{
   await page.goto(PREFIX+'/fr/coverage/');
   await expect(page.getByRole('heading',{name:'Couverture actuelle des examens'})).toBeVisible();
-  await expect(page.getByText('85 exercices pilotes')).toBeVisible();
+  await expect(page.getByText('88 exercices pilotes')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
   await expect(page.getByText('Non couvert').first()).toBeVisible();
   await page.goto(PREFIX+'/en/coverage/');
   await expect(page.getByRole('heading',{name:'Current exam coverage'})).toBeVisible();
-  await expect(page.getByText('85 pilot exercises')).toBeVisible();
+  await expect(page.getByText('88 pilot exercises')).toBeVisible();
 });
 test('new navigation remains usable at 320px without horizontal overflow',async({page})=>{
   await page.setViewportSize({width:320,height:640});
@@ -285,7 +285,7 @@ test('timed Code Logic mini-test keeps solution steps hidden until the results',
 test('Quant Lab is offered on both tracks with five answers and detailed feedback',async({page})=>{
   await page.goto(PREFIX+'/fr/');
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
-  await expect(page.locator('.hero-stats')).toContainText('7 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('8 jeux');
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
   await page.goto(PREFIX+'/fr/play/quant-lab/?exam=tage&mode=game');
@@ -316,9 +316,9 @@ test('quantitative exercises remain usable at 320px in French and English',async
 test('coverage now lists six quantitative pilots for each track',async({page})=>{
   await page.goto(PREFIX+'/fr/coverage/');
   await expect(page.getByText('Calcul',{exact:true})).toBeVisible();
-  await expect(page.getByText('85 exercices pilotes')).toBeVisible();
+  await expect(page.getByText('88 exercices pilotes')).toBeVisible();
   await page.goto(PREFIX+'/en/coverage/');
-  await expect(page.getByText('85 pilot exercises')).toBeVisible();
+  await expect(page.getByText('88 pilot exercises')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
 });
 
@@ -344,7 +344,7 @@ test('Quant Lab mistake history survives browser reload for both exams',async({p
   }
 });
 test('mixed mini-tests include all available skills for TAGE and GMAT',async({page})=>{
-  for(const [exam,expected] of [['tage',['A','C','D','E','L','R']],['gmat',['A','D','Q','R','T']]] as const){
+  for(const [exam,expected] of [['tage',['A','C','D','E','L','R']],['gmat',['A','D','M','Q','R','T']]] as const){
     await page.goto(PREFIX+`/en/practice/?exam=${exam}`);
     for(let i=0;i<6;i++){
       await expect(page.locator('#question-title')).toBeVisible();
@@ -370,7 +370,7 @@ test('Quant Lab clock reflects the actual pilot question budget and warns that i
 
 test('Reading Lab appears on both tracks with 5 response choices and explanations',async({page})=>{
   await page.goto(PREFIX+'/fr/');
-  await expect(page.locator('.hero-stats')).toContainText('7 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('8 jeux');
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
@@ -403,10 +403,10 @@ test('long reading passages fit 320px mobile screens in both languages',async({p
 });
 test('syllabus coverage includes nine reading questions for each exam pathway',async({page})=>{
   await page.goto(PREFIX+'/fr/coverage/');
-  await expect(page.getByText('85 exercices pilotes')).toBeVisible();
+  await expect(page.getByText('88 exercices pilotes')).toBeVisible();
   await expect(page.getByText('Compréhension de textes',{exact:true})).toBeVisible();
   await page.goto(PREFIX+'/en/coverage/');
-  await expect(page.getByText('85 pilot exercises')).toBeVisible();
+  await expect(page.getByText('88 pilot exercises')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
 });
 
