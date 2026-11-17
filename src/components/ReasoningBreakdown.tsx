@@ -9,7 +9,9 @@ export function ReasoningBreakdown({text,locale,game}:{text:QuestionText;locale:
       ? (fr?["Analyser l'argument",'Évaluer les preuves','Conclure']:['Analyze the argument','Evaluate the evidence','Draw the conclusion'])
       : game==='quant-lab'
         ? (fr?['Identifier les données','Calculer','Vérifier la réponse']:['Identify the data','Calculate','Verify the answer'])
-         : game==='multi-source-lab'
+          : game==='graphics-lab'
+          ? (fr?['Lire le graphique','Calculer les valeurs','Compléter les propositions']:['Read the chart','Calculate the values','Complete the statements'])
+        : game==='multi-source-lab'
           ? (fr?['Repérer les données','Croiser les sources','Vérifier la conclusion']:['Identify the data','Combine the sources','Verify the conclusion'])
         : game==='table-lab'
           ? (fr?['Examiner les données','Tester les affirmations','Vérifier les trois réponses']:['Inspect the data','Evaluate each statement','Check all three answers'])
