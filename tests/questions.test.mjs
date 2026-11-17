@@ -10,7 +10,11 @@ test('all tracks have expected five-choice / two-statement structure', () => {
   for(const q of QUESTIONS) {
     assert.ok(q.content.fr.prompt && q.content.en.prompt);
     assert.ok(q.content.fr.explanation && q.content.en.explanation);
-    if(q.game==='enough-info') {
+    if(q.game==='table-lab') {
+      assert.equal(q.content.fr.tableStatements.length,3);
+      assert.equal(q.content.en.tableStatements.length,3);
+      assert.ok(q.table.columns.length>=3&&q.table.rows.length>=4);
+    } else if(q.game==='enough-info') {
       assert.equal(q.content.fr.statements.length,2);
       assert.equal(q.content.en.statements.length,2);
     } else {
@@ -41,7 +45,7 @@ test('all original pilot items have an explicit, non-official alignment class',(
   const warmups=QUESTIONS.filter(q=>q.alignment==='warmup');
   assert.equal(warmups.length,6);
   assert.deepEqual(warmups.map(q=>q.id),['T-L-01','T-L-02','T-L-03','T-L-04','T-L-05','T-L-06']);
-  assert.equal(QUESTIONS.filter(q=>q.alignment==='skill-practice').length,76);
+  assert.equal(QUESTIONS.filter(q=>q.alignment==='skill-practice').length,79);
   const invalid={...QUESTIONS[0],alignment:'official'};
   assert.ok(validateQuestions(QUESTIONS.map(q=>q.id===invalid.id?invalid:q)).some(e=>e.includes('alignment')));
 });
@@ -130,8 +134,8 @@ test('missing or shortened Code Logic solution steps fail schema validation',()=
   }:q);
   assert.ok(validateQuestions(invalid).some(error=>error.includes('T-L-18')&&error.includes('review steps')));
 });
-test('all 82 bilingual pilots have structured feedback without modifying their review status',()=>{
-  assert.equal(QUESTIONS.length,82);
+test('all 85 bilingual pilots have structured feedback without modifying their review status',()=>{
+  assert.equal(QUESTIONS.length,85);
   assert.ok(QUESTIONS.every(q=>q.status==='pilot'));
   assert.ok(QUESTIONS.every(q=>q.content.fr.reviewSteps?.length===3&&q.content.en.reviewSteps?.length===3));
 });
