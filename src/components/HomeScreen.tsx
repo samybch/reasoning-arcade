@@ -62,6 +62,7 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
     'faithful-reformulation':{fr:'Reformulation fidèle',en:'Faithful paraphrasing'},
     'discourse-coherence':{fr:'Cohérence du discours',en:'Discourse coherence'}
   };
+  const availableGames=games.filter(g=>(exam==='tage'&&g.id!=='table-lab'&&g.id!=='multi-source-lab'&&g.id!=='graphics-lab'&&g.id!=='two-part-lab')||(exam==='gmat'&&g.id!=='code-logic'&&g.id!=='expression-lab'));
   const knownQuestionIds=new Set(questionIds);
   const reviewCount=pendingReviewIds.filter(id=>knownQuestionIds.has(id)&&id.startsWith(exam==='tage'?'T-':'G-')).length;
   function reset(){if(window.confirm(fr?'Effacer ta progression sur cet appareil ?':'Delete progress stored on this device?')){
@@ -73,7 +74,7 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
         <h1>{fr?'La logique,':'Better thinking,'}<br/><em>{fr?'à ton rythme.':'one puzzle at a time.'}</em></h1>
         <p className="lead">{fr?'Des jeux pour développer ton raisonnement et des mini-tests pour te préparer. Sans compte, gratuitement.':'Grow your reasoning skills with quick games and timed practice. Free, with no login.'}</p>
         <a className="button primary" href="#choose">{fr?'Commencer':'Get started'} →</a>
-        <p className="hero-stats"><strong>{games.length}</strong> {fr?'jeux':'games'} <span>·</span> <strong>{questionCount}</strong> {fr?'questions pilotes':'pilot questions'} <span>·</span> <strong>0 €</strong></p>
+        <p className="hero-stats"><strong>{availableGames.length}</strong> {fr?'jeux':'games'} <span>·</span> <strong>{questionCount}</strong> {fr?'questions pilotes':'pilot questions'} <span>·</span> <strong>0 €</strong></p>
       </div>
       <div className="hero-graphic" aria-hidden><div className="floating f1">3 · 6 · 12 · <b>?</b></div><div className="floating f2">IF → THEN</div><div className="floating f3">A / B / C / D / E</div></div>
     </section>
@@ -86,7 +87,7 @@ export function HomeScreen({locale,questionCount,questionIds}:{locale:Locale;que
       <div className="section-header"><div><p className="eyebrow">02 — {fr?'À TOI DE JOUER':'YOUR CHALLENGE'}</p><h2>{fr?'Choisis ton jeu':'Choose a game'}</h2></div>
         <Link className="text-link" href={`/${locale}/practice/?exam=${exam}`}>{fr?'Mini-test chronométré':'Timed mini-test'} →</Link></div>
       <div className="game-grid">
-        {games.filter(g=>(exam==='tage'&&g.id!=='table-lab'&&g.id!=='multi-source-lab'&&g.id!=='graphics-lab'&&g.id!=='two-part-lab')||(exam==='gmat'&&g.id!=='code-logic'&&g.id!=='expression-lab')).map((g,i)=><article className="game-card" key={g.id}>
+        {availableGames.map((g,i)=><article className="game-card" key={g.id}>
           <div className={`game-illustration illustration-${i}`} aria-hidden>{g.symbol}</div>
           <div className="game-description"><p className="eyebrow">{fr?'RAISONNEMENT':'REASONING'} · {i+1}</p><h3>{g.name}</h3><p>{g.description[locale]}</p>
             <div className="actions"><Link className="button secondary" href={`/${locale}/play/${g.id}/?exam=${exam}&mode=game`}>{fr?'Jouer':'Play'} →</Link>
