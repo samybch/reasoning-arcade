@@ -164,3 +164,10 @@ Historical snapshots of the original 70/76 pilot bank above are retained for aud
 - [ ] Validate all source claims, distractors and keyboard navigation with external reviewers
 - [ ] Design Graphics Interpretation and Two-Part Analysis after current integration is stable
 - [ ] Do not launch GitHub Pages without explicit authorization
+
+## XYZ — Graphics Interpretation pilot (2026-11-17)
+- [x] Add three GMAT-only bar-chart interpretation pilots and six dropdown answer statements
+- [x] Reuse same adaptive engine and local progress; 91 pilot questions overall
+- [ ] Human review of graph mathematics, FR/EN options and screen-reader rendering
+- [ ] Next: Two-Part Analysis in a separate short-lived PR after green CI
+- [ ] No public release without explicit owner GO
