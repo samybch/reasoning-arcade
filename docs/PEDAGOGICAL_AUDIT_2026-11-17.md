@@ -53,3 +53,7 @@ The site should continue to describe itself as *skill practice*, not a full offi
 - [ ] Legal/privacy/trademark release gates and explicit owner's public-launch approval
 
 The code-quality CI must pass before this batch is squash-merged into `main`. The GitHub Pages workflow must not be invoked.
+
+## Reading Lab follow-up — 2026-11-17
+
+Six additional original bilingual pilot items were added on two new passages: museum interpretation and scholarly peer review. This broadens viewpoint comparison, argument structure, synthesis, and author tone beyond the initial causal-inference emphasis. The original audit statistics above are a historical 70-question snapshot and must not be represented as post-expansion totals. All added items remain unreviewed pilots.

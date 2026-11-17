@@ -711,6 +711,66 @@
       "reviewer": null,
       "reviewedAt": null,
       "reviewFocus": "Identify exact evidence supporting the chosen option and challenge alternative options for rival explanations or overclaiming."
+    },
+    {
+      "id": "T-R-07",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Compare both proposals accurately, test all five alternatives and translation of agency and voice."
+    },
+    {
+      "id": "T-R-08",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "3",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Confirm the concession about editorial workload is not confused with rejection of the compromise."
+    },
+    {
+      "id": "T-R-09",
+      "exam": "tage",
+      "game": "reading-lab",
+      "referenceKey": "0",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check the synthesis preserves verifiability, attribution, and optional narratives."
+    },
+    {
+      "id": "G-R-07",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "2",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check author-tone interpretation for neutrality and no unsupported emotional claims."
+    },
+    {
+      "id": "G-R-08",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "4",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Verify public access versus actual soundness of reasoning; challenge all distractors."
+    },
+    {
+      "id": "G-R-09",
+      "exam": "gmat",
+      "game": "reading-lab",
+      "referenceKey": "1",
+      "decision": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "reviewFocus": "Check that the anonymity/public-report distinction is genuinely passage-supported."
     }
   ]
 }

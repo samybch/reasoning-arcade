@@ -1,6 +1,6 @@
 # Reading Lab — internal first-pass review matrix (2026-11-16)
 
-**Scope:** Twelve original `pilot` questions across four original passages, independently composed for this project and translated into French and English. This is a preliminary assistant-led review, **not** certification, independent assessment, licensing advice, or proof that every distractor is indisputably incorrect.
+**Historical first-pass scope:** Twelve original `pilot` questions across four original passages, independently composed for this project and translated into French and English. This is a preliminary assistant-led review, **not** certification, independent assessment, licensing advice, or proof that every distractor is indisputably incorrect.
 
 | Passage | Item | Main skill | Expected option | Why |
 |---|---|---|:---:|---|
@@ -27,3 +27,18 @@
 - [ ] Recheck actual current syllabus before public claims of faithful exam preparation
 
 Official skills described by FNEGE (https://www.tagemage.fr/page/sous-tests) and GMAC (https://www.mba.com/exams/gmat-exam/about/exam-content). No material from official exams was reproduced.
+
+## Expansion checkpoint — 2026-11-17
+
+Six additional FR/EN pilot questions across two original passages cover viewpoint comparison, argument structure, synthesis, author tone and supported inference. The matrix above records the original 12 only; the six new answer keys remain pending independent review in `docs/editorial-review-ledger.json`.
+
+| Item | First-pass key | Editorial focus |
+|---|:---:|---|
+| T-R-07 | B | Compare competing museum-label approaches without distorting either |
+| T-R-08 | D | Identify editorial workload as a qualified practical constraint |
+| T-R-09 | A | Synthesize fact verification, attribution and optional narratives |
+| G-R-07 | C | Assess nuanced author tone and overstrong alternatives |
+| G-R-08 | E | Distinguish public inspection from the logical quality of reports |
+| G-R-09 | B | Identify the difference between public reports and reviewer identities |
+
+All 18 remain `pilot`, not independently approved.

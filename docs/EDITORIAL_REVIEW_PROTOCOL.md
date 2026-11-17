@@ -1,6 +1,6 @@
 # Independent editorial review — operating procedure
 
-**Current status: 70/70 original questions still require independent educational review.** A passing CI, key-regression test, or assistant first-pass check **is not a review approval**. The source of truth is `src/content/questions.json`; the review queue is `docs/editorial-review-ledger.json`.
+**Current status: 76/76 original questions still require independent educational review.** A passing CI, key-regression test, or assistant first-pass check **is not a review approval**. The source of truth is `src/content/questions.json`; the review queue is `docs/editorial-review-ledger.json`.
 
 ## One-question review
 

@@ -10,7 +10,7 @@
 - [ ] Review dependency alerts and pin or update responsibly
 
 ## Y — Pedagogy and claims
-- [x] 70 original FR/EN pilot items with first-pass answer-key matrix
+- [x] 76 original FR/EN pilot items with first-pass answer-key matrix
 - [x] Key-regression tests and a structural validator that allows new contributions
 - [ ] Independent French/English correctness review and approval for every item (issue #3)
 - [ ] Verify official exam taxonomy and current answer conventions in authoritative materials
@@ -63,6 +63,6 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [ ] Collect actual independent reviewer reports, triage genuine ambiguities and record accountable approvals
 
 ## Reading Lab
-- [x] Four original reading passages, twelve pilot questions and bilingual worked stages
-- [x] Twelve pending ledger records and inclusion in the offline reviewer workbook
+- [x] Six original reading passages, eighteen pilot questions and bilingual worked stages
+- [x] Eighteen pending ledger records and inclusion in the offline reviewer workbook
 - [ ] Independent external FR/EN correctness review, ambiguity checks and rights signoff

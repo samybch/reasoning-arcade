@@ -3356,5 +3356,299 @@
         ]
       }
     }
+  },
+  {
+    "id": "T-R-07",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "viewpoint-comparison",
+    "difficulty": 3,
+    "estimatedSeconds": 140,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Un musée régional doit choisir comment présenter des objets issus de plusieurs communautés. Une équipe propose des notices courtes, rédigées par les conservateurs, afin de faciliter une visite rapide et de préserver une terminologie uniforme. D'autres participants préfèrent que les communautés d'origine puissent expliquer elles-mêmes l'usage et le sens des pièces, quitte à faire apparaître des interprétations différentes. La directrice estime qu'aucune des approches ne doit effacer l'autre : les informations sur la datation et la conservation doivent rester vérifiables, tandis que les témoignages doivent être clairement attribués à leurs auteurs. Elle recommande des cartels concis accompagnés d'un espace facultatif de récits contextualisés. Elle reconnaît toutefois que ce dispositif exigera une mise à jour régulière et un travail éditorial supplémentaire. Le débat porte ainsi moins sur la quantité de textes que sur la manière de distinguer les faits établis des interprétations.",
+        "prompt": "En quoi les deux propositions initiales diffèrent-elles principalement ?",
+        "choices": [
+          "La première défend les récits oraux, la seconde veut les interdire.",
+          "La première privilégie une présentation homogène par les conservateurs ; la seconde insiste sur la parole des communautés d'origine.",
+          "La première rejette toute datation, la seconde ne présente que des dates.",
+          "La première impose des textes longs, la seconde interdit tout commentaire.",
+          "Les deux refusent de publier des informations sur la conservation."
+        ],
+        "explanation": "La divergence concerne l'origine et la forme des explications, non l'existence même d'informations sur les objets.",
+        "hint": "Compare qui rédige les notices et ce que chaque proposition cherche à préserver.",
+        "reviewSteps": [
+          "Repère qui rédigerait le premier type de notice : les conservateurs, avec un vocabulaire uniforme.",
+          "Le second modèle ouvre la présentation à des voix issues des communautés d'origine, y compris divergentes.",
+          "La réponse B décrit exactement ce contraste sans attribuer de refus absolu à l'une des parties."
+        ]
+      },
+      "en": {
+        "context": "A regional museum must decide how to present objects originating from several communities. One team proposes short labels written by curators to support quick visits and maintain consistent terminology. Other participants prefer that members of the originating communities explain the objects' uses and meanings themselves, even if their interpretations differ. The director argues that neither approach should erase the other: information about dating and conservation should remain verifiable, while personal accounts should be clearly attributed to their authors. She recommends concise labels supplemented by an optional space for contextualized narratives. She acknowledges, however, that the arrangement would require regular updates and additional editorial work. The dispute is therefore less about how much text to display than about how to distinguish established facts from interpretations.",
+        "prompt": "How do the two initial proposals differ most clearly?",
+        "choices": [
+          "The first favors oral accounts, while the second would prohibit them.",
+          "The first favors standardized curator labels; the second emphasizes voices from originating communities.",
+          "The first rejects all dating information, while the second presents dates only.",
+          "The first demands lengthy texts, while the second prohibits any commentary.",
+          "Both reject publishing information about conservation."
+        ],
+        "explanation": "The disagreement concerns who explains the objects and how, rather than whether information should be provided.",
+        "hint": "Compare who authors the labels and which priority each proposal serves.",
+        "reviewSteps": [
+          "Identify who would write the first labels: museum curators using consistent terminology.",
+          "The alternative would give originating communities a voice, including room for differing interpretations.",
+          "Option B captures that contrast without inventing an absolute rejection by either group."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-R-08",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "argument-structure",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "3",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Un musée régional doit choisir comment présenter des objets issus de plusieurs communautés. Une équipe propose des notices courtes, rédigées par les conservateurs, afin de faciliter une visite rapide et de préserver une terminologie uniforme. D'autres participants préfèrent que les communautés d'origine puissent expliquer elles-mêmes l'usage et le sens des pièces, quitte à faire apparaître des interprétations différentes. La directrice estime qu'aucune des approches ne doit effacer l'autre : les informations sur la datation et la conservation doivent rester vérifiables, tandis que les témoignages doivent être clairement attribués à leurs auteurs. Elle recommande des cartels concis accompagnés d'un espace facultatif de récits contextualisés. Elle reconnaît toutefois que ce dispositif exigera une mise à jour régulière et un travail éditorial supplémentaire. Le débat porte ainsi moins sur la quantité de textes que sur la manière de distinguer les faits établis des interprétations.",
+        "prompt": "Quel rôle joue la mention du travail éditorial supplémentaire ?",
+        "choices": [
+          "Elle démontre que les témoignages ne peuvent jamais être vérifiés.",
+          "Elle prouve que le musée abandonnera ses cartels.",
+          "Elle réfute définitivement la position des conservateurs.",
+          "Elle reconnaît une limite pratique de la solution proposée par la directrice.",
+          "Elle établit que les visiteurs refusent les récits contextualisés."
+        ],
+        "explanation": "La directrice reconnaît un coût opérationnel de son compromis sans pour autant y renoncer.",
+        "hint": "Observe si cette information est présentée comme une preuve, une objection définitive ou une réserve.",
+        "reviewSteps": [
+          "La directrice propose de combiner des cartels synthétiques et des récits facultatifs attribués.",
+          "Le texte précise ensuite que cette coexistence exige des mises à jour et du travail supplémentaire.",
+          "Cette remarque est donc une concession sur la faisabilité pratique : la réponse D."
+        ]
+      },
+      "en": {
+        "context": "A regional museum must decide how to present objects originating from several communities. One team proposes short labels written by curators to support quick visits and maintain consistent terminology. Other participants prefer that members of the originating communities explain the objects' uses and meanings themselves, even if their interpretations differ. The director argues that neither approach should erase the other: information about dating and conservation should remain verifiable, while personal accounts should be clearly attributed to their authors. She recommends concise labels supplemented by an optional space for contextualized narratives. She acknowledges, however, that the arrangement would require regular updates and additional editorial work. The dispute is therefore less about how much text to display than about how to distinguish established facts from interpretations.",
+        "prompt": "What role does the reference to additional editorial work play?",
+        "choices": [
+          "It shows that accounts can never be verified.",
+          "It proves that the museum will eliminate labels.",
+          "It conclusively refutes the curators' position.",
+          "It acknowledges a practical limitation of the director's proposal.",
+          "It establishes that visitors reject contextualized narratives."
+        ],
+        "explanation": "The director recognizes an operational cost of the proposed compromise without withdrawing the recommendation.",
+        "hint": "Decide whether this detail is a decisive objection or a qualification.",
+        "reviewSteps": [
+          "The director proposes combining concise labels with optional, attributed narratives.",
+          "The passage then notes the need for updates and additional editorial work.",
+          "That detail qualifies the practical feasibility of the compromise, making D the best answer."
+        ]
+      }
+    }
+  },
+  {
+    "id": "T-R-09",
+    "exam": "tage",
+    "game": "reading-lab",
+    "competency": "synthesis",
+    "difficulty": 3,
+    "estimatedSeconds": 145,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Un musée régional doit choisir comment présenter des objets issus de plusieurs communautés. Une équipe propose des notices courtes, rédigées par les conservateurs, afin de faciliter une visite rapide et de préserver une terminologie uniforme. D'autres participants préfèrent que les communautés d'origine puissent expliquer elles-mêmes l'usage et le sens des pièces, quitte à faire apparaître des interprétations différentes. La directrice estime qu'aucune des approches ne doit effacer l'autre : les informations sur la datation et la conservation doivent rester vérifiables, tandis que les témoignages doivent être clairement attribués à leurs auteurs. Elle recommande des cartels concis accompagnés d'un espace facultatif de récits contextualisés. Elle reconnaît toutefois que ce dispositif exigera une mise à jour régulière et un travail éditorial supplémentaire. Le débat porte ainsi moins sur la quantité de textes que sur la manière de distinguer les faits établis des interprétations.",
+        "prompt": "Quelle recommandation respecte le mieux la position de la directrice ?",
+        "choices": [
+          "Séparer clairement les données vérifiables et les récits attribués, tout en laissant les visiteurs consulter ces derniers à leur choix.",
+          "Remplacer les dates par des témoignages anonymes sans origine identifiable.",
+          "Confier toute la rédaction à une seule communauté pour supprimer les divergences.",
+          "Supprimer les informations de conservation afin de raccourcir la visite.",
+          "Publier uniquement les textes les plus anciens, sans actualisation possible."
+        ],
+        "explanation": "Cette option associe l'exactitude des faits documentés à la visibilité facultative de récits identifiés.",
+        "hint": "Reconstitue les deux exigences que la directrice cherche à préserver simultanément.",
+        "reviewSteps": [
+          "La directrice exige des informations de conservation et de datation vérifiables.",
+          "Elle souhaite aussi accueillir des interprétations multiples, clairement attribuées et facultatives.",
+          "La réponse A respecte à la fois cette distinction et le choix laissé aux visiteurs."
+        ]
+      },
+      "en": {
+        "context": "A regional museum must decide how to present objects originating from several communities. One team proposes short labels written by curators to support quick visits and maintain consistent terminology. Other participants prefer that members of the originating communities explain the objects' uses and meanings themselves, even if their interpretations differ. The director argues that neither approach should erase the other: information about dating and conservation should remain verifiable, while personal accounts should be clearly attributed to their authors. She recommends concise labels supplemented by an optional space for contextualized narratives. She acknowledges, however, that the arrangement would require regular updates and additional editorial work. The dispute is therefore less about how much text to display than about how to distinguish established facts from interpretations.",
+        "prompt": "Which recommendation best matches the director's position?",
+        "choices": [
+          "Distinguish verifiable information from attributed accounts while letting visitors consult the latter optionally.",
+          "Replace dates with anonymous testimonies of unknown origin.",
+          "Give all writing to one community to eliminate disagreement.",
+          "Remove conservation information to shorten visits.",
+          "Publish only the oldest texts, with no possibility of updating them."
+        ],
+        "explanation": "The proposal combines documentary accuracy with access to optional, clearly attributed narratives.",
+        "hint": "Reconstruct the two requirements the director wants to preserve at once.",
+        "reviewSteps": [
+          "The director wants factual claims about dating and conservation to remain verifiable.",
+          "She also wants multiple interpretations to be available, clearly attributed and optional.",
+          "Option A preserves both distinctions and the visitor's choice of whether to read more."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-07",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "author-tone",
+    "difficulty": 3,
+    "estimatedSeconds": 145,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Dans les revues scientifiques, l'évaluation par les pairs sert souvent à filtrer les articles avant publication. Certains chercheurs souhaitent rendre publics les rapports d'évaluation afin de préciser les raisons des décisions éditoriales. Leurs opposants craignent que cette transparence décourage des critiques franches, surtout lorsque les auteurs sont influents. Des revues expérimentent donc des modèles intermédiaires : elles publient les rapports mais permettent aux évaluateurs de rester anonymes, ou rendent accessibles les échanges seulement après acceptation de l'article. Ces dispositifs ne répondent pas tous au même problème. L'anonymat peut protéger la liberté de jugement, mais ne renseigne pas à lui seul sur la solidité de l'évaluation ; la publication des échanges permet d'en examiner les arguments, sans garantir qu'ils sont pertinents. L'auteur du bilan conclut qu'il faut juger chaque modèle selon ses objectifs annoncés, au lieu de traiter la transparence comme une fin suffisante.",
+        "prompt": "Quelle description caractérise le mieux le ton de l'auteur du bilan ?",
+        "choices": [
+          "Triomphaliste : la transparence a définitivement résolu le problème.",
+          "Hostile : toute évaluation par les pairs devrait disparaître.",
+          "Nuancé et analytique : les avantages sont discutés à la lumière de leurs limites.",
+          "Indifférent : aucune différence entre les modèles n'est pertinente.",
+          "Alarmiste : l'anonymat doit être interdit immédiatement."
+        ],
+        "explanation": "L'auteur compare les mérites et les limites des modèles, sans présenter l'un d'eux comme une solution universelle.",
+        "hint": "Observe les réserves formulées à l'égard de la transparence et de l'anonymat.",
+        "reviewSteps": [
+          "Le passage présente une raison de publier les rapports et une objection à cette publication.",
+          "Il distingue ensuite ce que l'anonymat protège et ce que la transparence permet d'examiner.",
+          "La conclusion conditionnelle correspond à un ton analytique et nuancé : réponse C."
+        ]
+      },
+      "en": {
+        "context": "In scholarly journals, peer review commonly screens papers before publication. Some researchers want review reports to be made public so that readers can understand the reasoning behind editorial decisions. Critics worry that such openness may discourage candid criticism, especially when authors are influential. Journals are therefore experimenting with intermediate systems: some publish reports while allowing reviewers to remain anonymous, whereas others release exchanges only after an article is accepted. These arrangements do not address identical problems. Anonymity may protect reviewers' freedom of judgment, but it does not by itself establish the quality of a review; publishing exchanges lets readers inspect the reasoning without guaranteeing that the reasoning is sound. The author of the survey concludes that each system should be assessed against its stated aims, rather than treating transparency as a sufficient goal in itself.",
+        "prompt": "Which description best captures the survey author's tone?",
+        "choices": [
+          "Triumphant: transparency has conclusively solved the problem.",
+          "Hostile: all peer review should be abolished.",
+          "Measured and analytical: benefits are weighed against limitations.",
+          "Indifferent: differences between systems are irrelevant.",
+          "Alarmist: reviewer anonymity must immediately be banned."
+        ],
+        "explanation": "The author weighs strengths and limitations without presenting any one system as a universal solution.",
+        "hint": "Notice the qualifications attached to both openness and anonymity.",
+        "reviewSteps": [
+          "The passage offers a reason to publish reports and an objection to that approach.",
+          "It then distinguishes what anonymity protects from what readers gain by inspecting reports.",
+          "The conditional conclusion supports a measured, analytical tone, making C correct."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-08",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "argument-structure",
+    "difficulty": 4,
+    "estimatedSeconds": 155,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Dans les revues scientifiques, l'évaluation par les pairs sert souvent à filtrer les articles avant publication. Certains chercheurs souhaitent rendre publics les rapports d'évaluation afin de préciser les raisons des décisions éditoriales. Leurs opposants craignent que cette transparence décourage des critiques franches, surtout lorsque les auteurs sont influents. Des revues expérimentent donc des modèles intermédiaires : elles publient les rapports mais permettent aux évaluateurs de rester anonymes, ou rendent accessibles les échanges seulement après acceptation de l'article. Ces dispositifs ne répondent pas tous au même problème. L'anonymat peut protéger la liberté de jugement, mais ne renseigne pas à lui seul sur la solidité de l'évaluation ; la publication des échanges permet d'en examiner les arguments, sans garantir qu'ils sont pertinents. L'auteur du bilan conclut qu'il faut juger chaque modèle selon ses objectifs annoncés, au lieu de traiter la transparence comme une fin suffisante.",
+        "prompt": "Pourquoi l'auteur distingue-t-il le fait de publier des rapports de leur qualité ?",
+        "choices": [
+          "Pour montrer que tous les rapports rendus publics sont erronés.",
+          "Pour suggérer que seuls les auteurs influents ont besoin d'évaluations.",
+          "Pour soutenir que l'anonymat assure automatiquement une bonne évaluation.",
+          "Pour affirmer que la publication d'un rapport est interdite par les revues.",
+          "Pour éviter de confondre la possibilité de vérifier un raisonnement avec la solidité de ce raisonnement."
+        ],
+        "explanation": "La publicité d'un argument facilite son examen, mais ne garantit pas qu'il soit rigoureux.",
+        "hint": "Compare l'accès à une justification et la justesse de cette justification.",
+        "reviewSteps": [
+          "La publication des rapports permet aux lecteurs d'examiner la justification éditoriale.",
+          "Mais cette possibilité d'inspection ne rend pas nécessairement les objections pertinentes.",
+          "La réponse E distingue correctement visibilité des arguments et validité des arguments."
+        ]
+      },
+      "en": {
+        "context": "In scholarly journals, peer review commonly screens papers before publication. Some researchers want review reports to be made public so that readers can understand the reasoning behind editorial decisions. Critics worry that such openness may discourage candid criticism, especially when authors are influential. Journals are therefore experimenting with intermediate systems: some publish reports while allowing reviewers to remain anonymous, whereas others release exchanges only after an article is accepted. These arrangements do not address identical problems. Anonymity may protect reviewers' freedom of judgment, but it does not by itself establish the quality of a review; publishing exchanges lets readers inspect the reasoning without guaranteeing that the reasoning is sound. The author of the survey concludes that each system should be assessed against its stated aims, rather than treating transparency as a sufficient goal in itself.",
+        "prompt": "Why does the author distinguish making reports public from the quality of those reports?",
+        "choices": [
+          "To show that every public review report is mistaken.",
+          "To imply that only influential authors need reviewers.",
+          "To argue that anonymity automatically ensures good reviews.",
+          "To claim journals prohibit publishing reviewers' comments.",
+          "To avoid equating the ability to inspect reasoning with the soundness of that reasoning."
+        ],
+        "explanation": "Making arguments visible allows scrutiny but does not guarantee that the arguments are rigorous.",
+        "hint": "Compare access to a justification with the strength of that justification.",
+        "reviewSteps": [
+          "Publishing reviews allows readers to examine the reasons given for an editorial decision.",
+          "Yet readers' ability to inspect those reasons does not guarantee that they are sound.",
+          "Option E accurately distinguishes visibility of reasoning from its actual quality."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-R-09",
+    "exam": "gmat",
+    "game": "reading-lab",
+    "competency": "supported-inference",
+    "difficulty": 3,
+    "estimatedSeconds": 145,
+    "correctAnswer": "1",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "context": "Dans les revues scientifiques, l'évaluation par les pairs sert souvent à filtrer les articles avant publication. Certains chercheurs souhaitent rendre publics les rapports d'évaluation afin de préciser les raisons des décisions éditoriales. Leurs opposants craignent que cette transparence décourage des critiques franches, surtout lorsque les auteurs sont influents. Des revues expérimentent donc des modèles intermédiaires : elles publient les rapports mais permettent aux évaluateurs de rester anonymes, ou rendent accessibles les échanges seulement après acceptation de l'article. Ces dispositifs ne répondent pas tous au même problème. L'anonymat peut protéger la liberté de jugement, mais ne renseigne pas à lui seul sur la solidité de l'évaluation ; la publication des échanges permet d'en examiner les arguments, sans garantir qu'ils sont pertinents. L'auteur du bilan conclut qu'il faut juger chaque modèle selon ses objectifs annoncés, au lieu de traiter la transparence comme une fin suffisante.",
+        "prompt": "Quelle conclusion est la mieux étayée par le texte ?",
+        "choices": [
+          "Les revues qui publient les rapports perdent nécessairement tous leurs évaluateurs.",
+          "Deux systèmes également transparents peuvent différer quant à la protection de l'identité des évaluateurs.",
+          "L'anonymat prouve que les critiques sont plus exactes.",
+          "La publication différée des échanges empêche toute analyse par les lecteurs.",
+          "La transparence suffit toujours à garantir la qualité éditoriale."
+        ],
+        "explanation": "La publication des rapports peut coexister avec l'anonymat : ouverture des échanges et identité publique ne sont pas équivalentes.",
+        "hint": "Reviens à la description des systèmes intermédiaires.",
+        "reviewSteps": [
+          "Le texte indique que certaines revues publient les rapports tout en conservant l'anonymat.",
+          "Le degré de publicité des arguments n'impose donc pas le même traitement de l'identité.",
+          "La réponse B est étayée ; les autres introduisent des certitudes absentes du passage."
+        ]
+      },
+      "en": {
+        "context": "In scholarly journals, peer review commonly screens papers before publication. Some researchers want review reports to be made public so that readers can understand the reasoning behind editorial decisions. Critics worry that such openness may discourage candid criticism, especially when authors are influential. Journals are therefore experimenting with intermediate systems: some publish reports while allowing reviewers to remain anonymous, whereas others release exchanges only after an article is accepted. These arrangements do not address identical problems. Anonymity may protect reviewers' freedom of judgment, but it does not by itself establish the quality of a review; publishing exchanges lets readers inspect the reasoning without guaranteeing that the reasoning is sound. The author of the survey concludes that each system should be assessed against its stated aims, rather than treating transparency as a sufficient goal in itself.",
+        "prompt": "Which conclusion is best supported by the passage?",
+        "choices": [
+          "Journals that publish reports inevitably lose all reviewers.",
+          "Two equally open review systems can differ in whether they protect reviewer identities.",
+          "Anonymity proves that criticism is more accurate.",
+          "Delayed publication prevents readers from examining exchanges.",
+          "Transparency alone always guarantees editorial quality."
+        ],
+        "explanation": "Publishing review reports can coexist with reviewer anonymity: openness of exchanges does not imply public identities.",
+        "hint": "Return to the description of intermediate peer-review systems.",
+        "reviewSteps": [
+          "The passage notes that some journals publish reports while retaining reviewer anonymity.",
+          "Making the arguments public therefore need not involve revealing reviewers' identities.",
+          "Option B is supported; the other choices assert unwarranted universal conclusions."
+        ]
+      }
+    }
   }
 ]
