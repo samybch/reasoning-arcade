@@ -7,7 +7,9 @@ permissions:
   contents: read
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # Pin Playwright apt dependencies to a tested Ubuntu LTS image; latest resolved to 26.04
+    # where required font packages are unavailable (CI run 44132435640).
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
