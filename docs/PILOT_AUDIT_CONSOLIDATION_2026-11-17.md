@@ -9,8 +9,8 @@
 | Quant Lab | 12 | Recalculs indépendants, unités, réponses équivalentes, contraintes entières | Nécessité de relire contexte, clarté et distracteurs |
 | Argument Lab + Reading Lab | 30 | Ancrages FR/EN preuve/réponse, cohérence des six textes, deux tests de déduction logique | L'ancrage textuel ne démontre pas à lui seul l'unicité de la meilleure réponse |
 | Table Lab / Multi-Source Lab / Graph Lab / Two-Part Lab | 12 | Recalculs des 3 × 3 assertions/couples, des observations, du budget temporaire et des projections, dans les deux langues | Les ancrages de source des questions Multi-Source et les deux langues nécessitent une lecture indépendante |
-| Expression Lab | 6 | Validation structurelle, trois étapes d'explication et tests existants | **Audit linguistique indépendant spécifique restant à faire** |
-| **TOTAL** | **94** | **88 couverts par un audit thématique ciblé + 6 à auditer spécifiquement** | **Aucun approuvé automatiquement** |
+| Expression Lab | 6 | Tests ciblés d'accords, syntaxe, reformulations, quantificateurs, modalité, connecteurs et contre-exemples de bénéfice | Tests limités aux formulations du catalogue, non équivalents à un arbitrage linguistique externe |
+| **TOTAL** | **94** | **94 couverts par un contrôle thématique ciblé** | **Aucun approuvé automatiquement** |
 
 ## Data Insights — résultats et risques du contrôle ciblé
 
@@ -23,6 +23,10 @@ Les données originales des 12 exercices servent aux calculs des tests dans `tes
 
 Ces contrôles sont des **tests de cohérence sur un jeu de données déterminé**. Ils ne constituent pas une garantie générale que les libellés des cinq options, les raisonnements de tous les distracteurs, la méthode de notation et les traductions ont été évalués de façon indépendante.
 
+## Couverture totale et sens du contrôle
+
+Les **94 exercices** disposent à présent d'au moins un contrôle thématique spécifique. Cette proportion (94/94) est une mesure de **couverture technique**, pas de fiabilité éditoriale démontrée. Les **94 décisions du registre restent en attente** ; il n'existe aucun exercice approuvé par un relecteur indépendant. Les six exercices Expression Lab sont désormais couverts par `tests/expression-linguistic-audit.test.mjs` avec des contrôles ciblés plutôt qu'une grammaire française générale.
+
 ## File prioritaire de revue humaine
 
 1. **G-R-09 :** expliquer « également transparents » / « equally open » à partir du seul passage ; vérifier que l'inférence ne va pas au-delà des prémisses.
@@ -32,7 +36,7 @@ Ces contrôles sont des **tests de cohérence sur un jeu de données déterminé
 5. **G-T-03 :** relire la définition de « livrés à l'heure » comme *sous-ensemble* des colis et éviter de supposer que « late + on time = total » lorsque les valeurs ne l'impliquent pas.
 6. **G-M-02–03 :** vérifier la nuance coûts *prévus*, aide *temporaire*, efficacité *non démontrée* en FR et EN.
 7. **G-I-02 :** ne pas confondre « 200 % **du niveau** de Q2 » et « hausse **de 200 %** ».
-8. **Six questions Expression Lab :** audit séparé du français, des présupposés, de la modalité et des traductions pédagogiques en anglais.
+8. **Six questions Expression Lab :** les tests thématiques sont ajoutés ; faire confirmer les choix linguistiques et l'usage de « malgré que » par un spécialiste externe, et examiner les traductions pédagogiques en anglais.
 9. **Toutes les 94 fiches :** résoudre indépendamment, contredire les distracteurs, vérifier les droits, la difficulté et le niveau de l'examen avant toute approbation.
 
 ## Processus
