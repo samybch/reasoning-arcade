@@ -64,5 +64,5 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 
 ## Reading Lab
 - [x] Six original reading passages, eighteen pilot questions and bilingual worked stages
-- [x] Twelve pending ledger records and inclusion in the offline reviewer workbook
+- [x] Eighteen pending ledger records and inclusion in the offline reviewer workbook
 - [ ] Independent external FR/EN correctness review, ambiguity checks and rights signoff
