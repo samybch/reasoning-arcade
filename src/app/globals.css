@@ -65,3 +65,16 @@
 
 /* Original reading exercises in a legible, responsive passage block */
 .reading-passage{white-space:pre-line;line-height:1.85;font-size:clamp(15px,1.9vw,17px);padding:clamp(16px,3vw,24px);background:#f8f9fc;border:1px solid var(--line);border-left:4px solid var(--primary);border-radius:14px;overflow-wrap:break-word;max-width:100%;color:var(--ink)}
+
+
+/* Responsive, keyboard-sortable Data Insights pilot table */
+.table-analysis{margin:18px 0}.table-scroll{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.table-scroll:focus-visible{outline:3px solid #e79748;outline-offset:2px}
+.data-table{border-collapse:collapse;width:100%;min-width:480px;font-variant-numeric:tabular-nums}
+.data-table th,.data-table td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.data-table thead{background:var(--bg)}.data-table th button{font-weight:750;background:transparent;border:0;padding:4px;color:var(--ink)}
+.data-table th button:hover{text-decoration:underline}
+.table-claims{border:0;padding:0;margin-top:18px;min-width:0}.table-claims legend{font-weight:750;margin-bottom:8px}
+.table-claim{padding:12px;border-bottom:1px solid var(--line)}.table-claim p{margin:0 0 8px}
+.table-radios{display:flex;flex-wrap:wrap;gap:22px}.table-radios label{display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.table-radios input{accent-color:var(--primary);width:17px;height:17px}
