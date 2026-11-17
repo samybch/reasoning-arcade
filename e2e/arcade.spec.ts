@@ -50,7 +50,7 @@ test('timed GMAT mini-test gives results after six questions',async({page})=>{
   await page.goto(PREFIX+'/en/practice/?exam=gmat');
   await expect(page.getByText('GMAT',{exact:true})).toBeVisible();
   for(let n=0;n<6;n++){
-    await expect(page.locator('.answer-list button').first()).toBeVisible();
+    await expect(page.locator('#question-title')).toBeVisible();
     await answerMixedQuestion(page);
     await page.getByRole('button',{name:/Submit/}).click();
   }
@@ -285,7 +285,7 @@ test('timed Code Logic mini-test keeps solution steps hidden until the results',
 test('Quant Lab is offered on both tracks with five answers and detailed feedback',async({page})=>{
   await page.goto(PREFIX+'/fr/');
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
-  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('7 jeux');
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
   await page.goto(PREFIX+'/fr/play/quant-lab/?exam=tage&mode=game');
@@ -370,7 +370,7 @@ test('Quant Lab clock reflects the actual pilot question budget and warns that i
 
 test('Reading Lab appears on both tracks with 5 response choices and explanations',async({page})=>{
   await page.goto(PREFIX+'/fr/');
-  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('7 jeux');
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
