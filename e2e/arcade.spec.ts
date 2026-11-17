@@ -292,7 +292,7 @@ test('timed Code Logic mini-test keeps solution steps hidden until the results',
 test('Quant Lab is offered on both tracks with five answers and detailed feedback',async({page})=>{
   await page.goto(PREFIX+'/fr/');
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
-  await expect(page.locator('.hero-stats')).toContainText('10 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
   await page.goto(PREFIX+'/fr/play/quant-lab/?exam=tage&mode=game');
@@ -378,7 +378,7 @@ test('Quant Lab clock reflects the actual pilot question budget and warns that i
 
 test('Reading Lab appears on both tracks with 5 response choices and explanations',async({page})=>{
   await page.goto(PREFIX+'/fr/');
-  await expect(page.locator('.hero-stats')).toContainText('10 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
@@ -675,4 +675,23 @@ test('focused three-item GMAT game scores out of three, never five',async({page}
   await expect(page.locator('.result-card')).toContainText('3/3 correct answers');
   await expect(page.locator('.score-ring')).toHaveText('100%');
   expect(seen.size).toBe(3);
+});
+
+test('track selector counts only playable games and keeps the pilot question total stable in FR/EN',async({page})=>{
+  for(const locale of ['fr','en']){
+    await page.goto(PREFIX+'/'+locale+'/');
+    const fr=locale==='fr';
+    const stats=page.locator('.hero-stats');
+    await expect(stats).toContainText(fr?'6 jeux':'6 games');
+    await expect(stats).toContainText('94');
+    await expect(page.locator('.game-card')).toHaveCount(6);
+    await page.getByRole('button',{name:/GMAT/}).click();
+    await expect(stats).toContainText(fr?'8 jeux':'8 games');
+    await expect(stats).toContainText('94');
+    await expect(page.locator('.game-card')).toHaveCount(8);
+    await expect(page.getByRole('heading',{name:'Expression Lab'})).toHaveCount(0);
+    await page.getByRole('button',{name:/TAGE MAGE/}).click();
+    await expect(stats).toContainText(fr?'6 jeux':'6 games');
+    await expect(page.locator('.game-card')).toHaveCount(6);
+  }
 });
