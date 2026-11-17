@@ -100,8 +100,8 @@ test('review queue is bounded, unique and skips deleted question IDs',()=>{
   assert.equal(nextReviewQuestion(bank,stale,'tage',['T-A-01']),null);
 });
 
-test('mixed mini-test samples every available game, including Quant Lab',()=>{
-  const expected={tage:['argument-lab','code-logic','enough-info','quant-lab'],gmat:['argument-lab','enough-info','quant-lab']};
+test('mixed mini-test samples every available game, including Reading Lab',()=>{
+  const expected={tage:['argument-lab','code-logic','enough-info','quant-lab','reading-lab'],gmat:['argument-lab','enough-info','quant-lab','reading-lab']};
   for(const exam of ['tage','gmat']){
     for(const variant of [0,1,2,3,8]){
       const chosen=buildExamQueue(bank,exam,'mixed',6,variant);
@@ -137,4 +137,17 @@ test('timed unanswered queue preserves the same size bound as manual mistakes',(
   const updated=queueUnansweredForReview(EMPTY_PROGRESS,full);
   assert.equal(updated.pendingReviewIds.length,24);
   assert.equal(new Set(updated.pendingReviewIds).size,24);
+});
+
+
+test('mixed queue includes Reading Lab in every six-question practice variant',()=>{
+  for(const exam of ['tage','gmat']){
+    for(const variant of [0,1,2,3,4,5,11]){
+      const questions=buildExamQueue(bank,exam,'mixed',6,variant);
+      assert.equal(questions.length,6);
+      assert.ok(questions.some(q=>q.game==='reading-lab'),exam+' variant '+variant);
+      assert.equal(new Set(questions.map(q=>q.id)).size,6);
+      assert.ok(questions.every(q=>q.exam===exam));
+    }
+  }
 });
