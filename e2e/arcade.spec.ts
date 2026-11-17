@@ -128,15 +128,18 @@ test('320px mobile viewport supports French and English game navigation without 
   }
 });
 
-test('coverage pages accurately disclose covered and missing sections in both languages',async({page})=>{
+test('coverage pages report pilot coverage for every listed format without claiming official equivalence',async({page})=>{
   await page.goto(PREFIX+'/fr/coverage/');
   await expect(page.getByRole('heading',{name:'Couverture actuelle des examens'})).toBeVisible();
   await expect(page.getByText('94 exercices pilotes')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
-  await expect(page.getByText('Non couvert').first()).toBeVisible();
+  await expect(page.locator('.coverage-row .covered')).toHaveCount(14);
+  await expect(page.locator('.coverage-row .absent')).toHaveCount(0);
   await page.goto(PREFIX+'/en/coverage/');
   await expect(page.getByRole('heading',{name:'Current exam coverage'})).toBeVisible();
   await expect(page.getByText('94 pilot exercises')).toBeVisible();
+  await expect(page.locator('.coverage-row .covered')).toHaveCount(14);
+  await expect(page.getByText(/not yet cover all|not yet.*official/i)).toBeVisible();
 });
 test('new navigation remains usable at 320px without horizontal overflow',async({page})=>{
   await page.setViewportSize({width:320,height:640});
