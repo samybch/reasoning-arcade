@@ -10,7 +10,7 @@
 - [ ] Review dependency alerts and pin or update responsibly
 
 ## Y — Pedagogy and claims
-- [x] 82 original FR/EN pilot items with first-pass answer-key matrix
+- [x] 85 original FR/EN pilot items with first-pass answer-key matrix
 - [x] Key-regression tests and a structural validator that allows new contributions
 - [ ] Independent French/English correctness review and approval for every item (issue #3)
 - [ ] Verify official exam taxonomy and current answer conventions in authoritative materials
@@ -72,3 +72,9 @@ Until the list is cleared, keep the Pages workflow untriggered, keep a `noindex`
 - [x] Include pilot items in local review, adaptive game, timed mini-tests and offline workbook
 - [ ] Independently check French normative correctness, scope-preserving paraphrase, alternative connectors and distractor uniqueness
 - [ ] Calibrate timing and confirm no implication that a six-question pilot is the official 15-question sub-test
+
+## Table Lab — GMAT Data Insights
+- [x] Three original bilingual dataset pilots with sortable columns and three binary statements each
+- [x] Add GMAT-only Table Lab coverage, local progress, offline review and automated sorting/answer checks
+- [ ] Independent evidence-based review of each statement and all 3×3 keys in both languages
+- [ ] Usability testing on small screens and screen readers; pilot is not an official exam simulator
