@@ -13,6 +13,8 @@ export function ReasoningBreakdown({text,locale,game}:{text:QuestionText;locale:
           ? (fr?['Lire le graphique','Calculer les valeurs','Compléter les propositions']:['Read the chart','Calculate the values','Complete the statements'])
         : game==='multi-source-lab'
           ? (fr?['Repérer les données','Croiser les sources','Vérifier la conclusion']:['Identify the data','Combine the sources','Verify the conclusion'])
+        : game==='two-part-lab'
+          ? (fr?['Modéliser les deux objectifs','Résoudre les deux contraintes','Vérifier chaque colonne']:['Model both targets','Solve both constraints','Check both columns'])
         : game==='table-lab'
           ? (fr?['Examiner les données','Tester les affirmations','Vérifier les trois réponses']:['Inspect the data','Evaluate each statement','Check all three answers'])
         : game==='expression-lab'
