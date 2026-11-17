@@ -141,3 +141,12 @@
 - [ ] Obtain explicit owner GO before any user-facing public Pages deployment
 
 The earlier 70-item counts above remain historical checkpoints for traceability, not current totals.
+
+## XYZ — Expression Lab first pilot (2026-11-17)
+- [x] Create six original TAGE MAGE written-expression pilot items, two per official competence family
+- [x] Integrate Expression Lab within the existing five-game architecture, now six total games for TAGE and four for GMAT
+- [x] Extend offline review, local progress and test coverage to 82 unapproved pilot items
+- [ ] Independent pedagogical review of all six Expression items and all 82 source items
+- [ ] Public website launch requires separate owner GO
+
+Historical snapshots of the original 70/76 pilot bank above are retained for audit traceability.
