@@ -77,3 +77,11 @@ test('batch IDs cannot silently drift outside the current catalog',()=>{
   state.entries=state.entries.filter(entry=>entry.id!==FIRST_REVIEW_BATCH[0]);
   assert.throws(()=>renderReviewPack(JSON.stringify(questions),JSON.stringify(state),css,js),/First review batch must contain unique catalog IDs/);
 });
+
+test('offline importer documents non-destructive merge and reports conflicts by ID',()=>{
+  const html=renderReviewPack(catalog,ledger,css,js);
+  assert.match(html,/Import adds findings to untouched questions/);
+  assert.match(html,/Existing notes were not overwritten/);
+  assert.match(js,/if\(localFinding!=='unreviewed'\|\|localNotes\.length>0\)/);
+  assert.doesNotMatch(js,/for\(const card of cards\)\{\s*card\.querySelector\('\[data-decision\]'\)\.value='unreviewed'/);
+});
