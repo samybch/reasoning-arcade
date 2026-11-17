@@ -14,7 +14,7 @@ function languageView(question,locale){
     : question.game==='enough-info'
     ? content.statements.map((value,index)=>'<li><strong>('+String(index+1)+')</strong> '+escapeHtml(value)+'</li>').join('')
     : content.choices.map((value,index)=>'<li><strong>'+choiceLetter(index)+'.</strong> '+escapeHtml(value)+'</li>').join('');
-  const context=content.context?'<p class="context">'+escapeHtml(content.context)+'</p>':'';
+  const context=content.context?'<p class="context">'+escapeHtml(content.context)+'</p>':(question.game==='multi-source-lab'?(content.sources??[]).map(source=>'<section class="context"><h4>'+escapeHtml(source.title)+'</h4><p>'+escapeHtml(source.body)+'</p></section>').join(''):'');
   const key=question.game==='table-lab'?question.correctAnswer:question.game==='enough-info'?question.correctAnswer:choiceLetter(Number(question.correctAnswer));
   const correctLabel=question.game==='table-lab'?escapeHtml(key.split('').map(v=>v==='Y'?'Yes':'No').join(' / '))
     : question.game==='enough-info'
