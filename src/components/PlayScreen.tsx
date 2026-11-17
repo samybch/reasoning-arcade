@@ -10,14 +10,15 @@ import {ReasoningBreakdown} from './ReasoningBreakdown';
 import {QuestionFeedbackLink} from './QuestionFeedbackLink';
 import {TableAnalysisChallenge} from './TableAnalysisChallenge';
 import {MultiSourcePanel} from './MultiSourcePanel';
+import {GraphicsChallenge} from './GraphicsChallenge';
 
 type Mode='game'|'exam'|'review';
 const LABELS:{fr:string[];en:string[]}={
   fr:['(1) seule suffit','(2) seule suffit','Les deux ensemble uniquement','Chacune suffit seule','Aucune, même ensemble'],
   en:['Statement (1) alone','Statement (2) alone','Both statements together only','Either statement alone','Neither, even together']
 };
-const titles:Record<Game,string>={'code-logic':'Code Logic','argument-lab':'Argument Lab','enough-info':'Enough Info?','quant-lab':'Quant Lab','reading-lab':'Reading Lab','expression-lab':'Expression Lab','table-lab':'Table Lab','multi-source-lab':'Multi-Source Lab'};
-const answerLetter=(q:Question,locale:Locale)=>q.game==='table-lab'?q.correctAnswer.split('').map(c=>c==='Y'?(locale==='fr'?'Oui':'Yes'):(locale==='fr'?'Non':'No')).join(' / '):q.game==='enough-info'?q.correctAnswer:String.fromCharCode(65+Number(q.correctAnswer));
+const titles:Record<Game,string>={'code-logic':'Code Logic','argument-lab':'Argument Lab','enough-info':'Enough Info?','quant-lab':'Quant Lab','reading-lab':'Reading Lab','expression-lab':'Expression Lab','table-lab':'Table Lab','multi-source-lab':'Multi-Source Lab','graphics-lab':'Graph Lab'};
+const answerLetter=(q:Question,locale:Locale)=>q.game==='graphics-lab'?q.correctAnswer.split('|').map((v,i)=>q.content[locale].graphicStatements?.[i].options[Number(v)]??'?').join(' / '):q.game==='table-lab'?q.correctAnswer.split('').map(c=>c==='Y'?(locale==='fr'?'Oui':'Yes'):(locale==='fr'?'Non':'No')).join(' / '):q.game==='enough-info'?q.correctAnswer:String.fromCharCode(65+Number(q.correctAnswer));
 const mmss=(s:number)=>`${String(Math.floor(Math.max(0,s)/60)).padStart(2,'0')}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
 export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{locale:Locale;game:Game|'mixed';bank:Question[];forceExam?:boolean;reviewOnly?:boolean}){
   const fr=locale==='fr';
@@ -131,9 +132,10 @@ export function PlayScreen({locale,game,bank,forceExam=false,reviewOnly=false}:{
       <h1 id="question-title">{current.content[locale].prompt}</h1>
       {current.content[locale].context&&<p className={current.game==='reading-lab'?'context reading-passage':'context'}>{current.content[locale].context}</p>}
       {current.content[locale].statements?.map((s,i)=><div className="statement" key={i}><span>({i+1})</span> {s}</div>)}
+      {current.game==='graphics-lab'?<GraphicsChallenge key={current.id} question={current} locale={locale} disabled={revealed} onAnswer={setSelected}/>:null}
       {current.game==='multi-source-lab'?<MultiSourcePanel key={current.id} question={current} locale={locale}/>:null}
       {current.game==='table-lab'?<TableAnalysisChallenge key={current.id} question={current} locale={locale} disabled={revealed} onAnswer={setSelected}/>:null}
-      {current.game!=='table-lab'&&<div className="answer-list" role="group" aria-label={fr?'Choix de réponse':'Answer choices'}>
+      {current.game!=='table-lab'&&current.game!=='graphics-lab'&&<div className="answer-list" role="group" aria-label={fr?'Choix de réponse':'Answer choices'}>
         {(current.game==='enough-info'?['A','B','C','D','E']:current.content[locale].choices??[]).map((choice,i)=>{
           const key=current.game==='enough-info'?String(choice):String(i);
           const label=current.game==='enough-info'?LABELS[locale][i]:choice;
