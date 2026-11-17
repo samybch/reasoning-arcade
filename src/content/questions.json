@@ -4259,5 +4259,230 @@
         ]
       }
     }
+  },
+  {
+    "id": "G-M-01",
+    "exam": "gmat",
+    "game": "multi-source-lab",
+    "competency": "cross-source-comparison",
+    "difficulty": 2,
+    "estimatedSeconds": 165,
+    "correctAnswer": "2",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle antenne avait le taux de ponctualité le plus élevé avant le projet ?",
+        "sources": [
+          {
+            "title": "1. Exploitation",
+            "body": "Un réseau fictif gère trois antennes. North a traité 100 livraisons, dont 92 à l'heure ; South en a traité 80, dont 60 à l'heure ; Remote en a traité 40, dont 34 à l'heure. Les données portent sur le même mois et chaque livraison est attribuée à une seule antenne."
+          },
+          {
+            "title": "2. Coûts et projet",
+            "body": "Les coûts mensuels actuels sont de 4 000 € pour North, 3 000 € pour South et 2 200 € pour Remote. South envisage un logiciel de planification coûtant 600 € de plus par mois. L'équipe prévoit qu'il ferait passer les livraisons à l'heure de South de 60 à 72, sur un volume toujours égal à 80. Cette amélioration est une projection, pas un résultat mesuré. Le budget maximal de South est de 3 500 € par mois."
+          },
+          {
+            "title": "3. Soutien temporaire",
+            "body": "Un partenaire propose de prendre en charge 200 € par mois du coût supplémentaire du logiciel uniquement pendant ses trois premiers mois. Cette aide n'est pas reconductible dans les conditions annoncées. Les coûts de base et le prix du logiciel restent inchangés dans les prévisions."
+          }
+        ],
+        "choices": [
+          "South, avec 75 %.",
+          "Remote, avec 92 %.",
+          "North, avec 92 %.",
+          "Remote, avec 90 %.",
+          "Les trois antennes avaient le même taux."
+        ],
+        "explanation": "North : 92/100 = 92 %. Remote : 34/40 = 85 %. South : 60/80 = 75 %. North était en tête.",
+        "hint": "Pour comparer les antennes, divise les livraisons ponctuelles par toutes les livraisons de chacune.",
+        "reviewSteps": [
+          "La source 1 donne des volumes de livraison différents : il faut comparer des taux plutôt que des nombres bruts.",
+          "Les ratios sont North 92/100 = 92 %, South 60/80 = 75 % et Remote 34/40 = 85 %.",
+          "Le maximum est 92 % chez North, ce qui correspond uniquement à la proposition C."
+        ]
+      },
+      "en": {
+        "prompt": "Which location had the highest on-time delivery rate before the proposal?",
+        "sources": [
+          {
+            "title": "1. Operations",
+            "body": "A fictional delivery network operates three locations. North handled 100 deliveries, 92 of which were on time; South handled 80, of which 60 were on time; Remote handled 40, of which 34 were on time. All figures cover the same month, and each delivery belongs to exactly one location."
+          },
+          {
+            "title": "2. Costs and proposal",
+            "body": "Current monthly costs are €4,000 for North, €3,000 for South and €2,200 for Remote. South is considering scheduling software costing an additional €600 per month. The team projects that the software would raise South's on-time deliveries from 60 to 72, while its total volume stays at 80. This improvement is a forecast, not a measured result. South's monthly budget ceiling is €3,500."
+          },
+          {
+            "title": "3. Temporary support",
+            "body": "A partner offers to cover €200 per month of the software's additional cost during its first three months only. The support cannot be renewed under the stated terms. The base costs and the software price are otherwise assumed unchanged in these projections."
+          }
+        ],
+        "choices": [
+          "South, at 75%.",
+          "Remote, at 92%.",
+          "North, at 92%.",
+          "Remote, at 90%.",
+          "All three locations had the same rate."
+        ],
+        "explanation": "North: 92/100 = 92%; Remote: 34/40 = 85%; South: 60/80 = 75%. North led.",
+        "hint": "Divide each location's on-time deliveries by its total deliveries before comparing.",
+        "reviewSteps": [
+          "Source 1 reports different delivery volumes, so compare percentages rather than raw on-time counts.",
+          "The rates are North 92/100 = 92%, South 60/80 = 75%, and Remote 34/40 = 85%.",
+          "North has the highest rate at 92%, uniquely supporting option C."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-M-02",
+    "exam": "gmat",
+    "game": "multi-source-lab",
+    "competency": "budget-constraints",
+    "difficulty": 3,
+    "estimatedSeconds": 165,
+    "correctAnswer": "0",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle conclusion sur le budget de South est correcte si le logiciel est adopté ?",
+        "sources": [
+          {
+            "title": "1. Exploitation",
+            "body": "Un réseau fictif gère trois antennes. North a traité 100 livraisons, dont 92 à l'heure ; South en a traité 80, dont 60 à l'heure ; Remote en a traité 40, dont 34 à l'heure. Les données portent sur le même mois et chaque livraison est attribuée à une seule antenne."
+          },
+          {
+            "title": "2. Coûts et projet",
+            "body": "Les coûts mensuels actuels sont de 4 000 € pour North, 3 000 € pour South et 2 200 € pour Remote. South envisage un logiciel de planification coûtant 600 € de plus par mois. L'équipe prévoit qu'il ferait passer les livraisons à l'heure de South de 60 à 72, sur un volume toujours égal à 80. Cette amélioration est une projection, pas un résultat mesuré. Le budget maximal de South est de 3 500 € par mois."
+          },
+          {
+            "title": "3. Soutien temporaire",
+            "body": "Un partenaire propose de prendre en charge 200 € par mois du coût supplémentaire du logiciel uniquement pendant ses trois premiers mois. Cette aide n'est pas reconductible dans les conditions annoncées. Les coûts de base et le prix du logiciel restent inchangés dans les prévisions."
+          }
+        ],
+        "choices": [
+          "Avec l'aide, le coût prévu est de 3 400 € pendant trois mois, puis de 3 600 €, au-dessus du plafond.",
+          "Le coût prévu reste inférieur à 3 500 € pendant toute la durée du projet.",
+          "L'aide réduit définitivement le coût du logiciel à 200 € par mois.",
+          "South peut respecter le plafond sans aide, puisque 3 000 + 600 = 3 400.",
+          "Le coût mensuel prévu dépasse 4 000 € dès le premier mois."
+        ],
+        "explanation": "South : 3 000 + 600 − 200 = 3 400 € durant les trois premiers mois, puis 3 600 € sans aide, soit 100 € au-dessus du plafond de 3 500 €.",
+        "hint": "Combine le coût initial de South, le prix du logiciel, le plafond et la durée précise de l'aide.",
+        "reviewSteps": [
+          "La source 2 indique 3 000 € de coût initial pour South, plus 600 € pour le logiciel : 3 600 € avant aide.",
+          "La source 3 précise une contribution temporaire de 200 € pendant trois mois, donnant 3 400 € sur cette période.",
+          "À partir du quatrième mois, les 3 600 € prévus dépassent le plafond de 3 500 € ; la réponse A respecte les trois sources."
+        ]
+      },
+      "en": {
+        "prompt": "If South adopts the software, which conclusion about its budget is supported?",
+        "sources": [
+          {
+            "title": "1. Operations",
+            "body": "A fictional delivery network operates three locations. North handled 100 deliveries, 92 of which were on time; South handled 80, of which 60 were on time; Remote handled 40, of which 34 were on time. All figures cover the same month, and each delivery belongs to exactly one location."
+          },
+          {
+            "title": "2. Costs and proposal",
+            "body": "Current monthly costs are €4,000 for North, €3,000 for South and €2,200 for Remote. South is considering scheduling software costing an additional €600 per month. The team projects that the software would raise South's on-time deliveries from 60 to 72, while its total volume stays at 80. This improvement is a forecast, not a measured result. South's monthly budget ceiling is €3,500."
+          },
+          {
+            "title": "3. Temporary support",
+            "body": "A partner offers to cover €200 per month of the software's additional cost during its first three months only. The support cannot be renewed under the stated terms. The base costs and the software price are otherwise assumed unchanged in these projections."
+          }
+        ],
+        "choices": [
+          "With support, projected costs are €3,400 for three months, then €3,600, above the cap.",
+          "Projected costs stay under €3,500 throughout the project.",
+          "Support permanently lowers the software's cost to €200 per month.",
+          "South meets its cap without support because 3,000 + 600 = 3,400.",
+          "Projected monthly costs exceed €4,000 from the first month."
+        ],
+        "explanation": "South: €3,000 + €600 − €200 = €3,400 in the first three months, then €3,600 without support, €100 above the €3,500 ceiling.",
+        "hint": "Combine South's base cost, the software's incremental cost, the ceiling and the support period.",
+        "reviewSteps": [
+          "Source 2 gives South's €3,000 base cost plus €600 for software: €3,600 before support.",
+          "Source 3 offers €200 a month for three months, bringing projected costs to €3,400 during that period.",
+          "From month four, the €3,600 total exceeds the €3,500 budget ceiling, exactly as option A states."
+        ]
+      }
+    }
+  },
+  {
+    "id": "G-M-03",
+    "exam": "gmat",
+    "game": "multi-source-lab",
+    "competency": "forecast-vs-evidence",
+    "difficulty": 4,
+    "estimatedSeconds": 190,
+    "correctAnswer": "4",
+    "status": "pilot",
+    "alignment": "skill-practice",
+    "content": {
+      "fr": {
+        "prompt": "Quelle affirmation respecte le mieux la distinction entre données observées et projection ?",
+        "sources": [
+          {
+            "title": "1. Exploitation",
+            "body": "Un réseau fictif gère trois antennes. North a traité 100 livraisons, dont 92 à l'heure ; South en a traité 80, dont 60 à l'heure ; Remote en a traité 40, dont 34 à l'heure. Les données portent sur le même mois et chaque livraison est attribuée à une seule antenne."
+          },
+          {
+            "title": "2. Coûts et projet",
+            "body": "Les coûts mensuels actuels sont de 4 000 € pour North, 3 000 € pour South et 2 200 € pour Remote. South envisage un logiciel de planification coûtant 600 € de plus par mois. L'équipe prévoit qu'il ferait passer les livraisons à l'heure de South de 60 à 72, sur un volume toujours égal à 80. Cette amélioration est une projection, pas un résultat mesuré. Le budget maximal de South est de 3 500 € par mois."
+          },
+          {
+            "title": "3. Soutien temporaire",
+            "body": "Un partenaire propose de prendre en charge 200 € par mois du coût supplémentaire du logiciel uniquement pendant ses trois premiers mois. Cette aide n'est pas reconductible dans les conditions annoncées. Les coûts de base et le prix du logiciel restent inchangés dans les prévisions."
+          }
+        ],
+        "choices": [
+          "Le logiciel a déjà prouvé qu'il améliore la ponctualité de South à 90 %.",
+          "Les chiffres démontrent que Remote bénéficie d'un programme d'aide similaire.",
+          "La ponctualité observée de South est déjà supérieure à celle de North.",
+          "Le partenaire finance intégralement le nouveau logiciel sans limitation de durée.",
+          "Si la projection se réalise, South atteindrait 90 % de livraisons ponctuelles, sans que cette amélioration soit encore démontrée."
+        ],
+        "explanation": "Le taux projeté vaut 72/80 = 90 %, mais la source 2 précise qu'il ne s'agit pas d'un résultat mesuré. L'aide financière est indépendante de la preuve d'efficacité.",
+        "hint": "Distingue le taux observé 60/80 du taux annoncé 72/80, et relève le statut de la prévision.",
+        "reviewSteps": [
+          "La source 1 rapporte le taux observé de South : 60/80 = 75 % avant la modification proposée.",
+          "La source 2 prévoit 72/80 = 90 % après adoption, mais qualifie expressément ce chiffre de projection.",
+          "La proposition E est la seule à retenir le taux de 90 % sans prétendre que l'effet du logiciel a été prouvé."
+        ]
+      },
+      "en": {
+        "prompt": "Which statement best preserves the distinction between observed data and a projection?",
+        "sources": [
+          {
+            "title": "1. Operations",
+            "body": "A fictional delivery network operates three locations. North handled 100 deliveries, 92 of which were on time; South handled 80, of which 60 were on time; Remote handled 40, of which 34 were on time. All figures cover the same month, and each delivery belongs to exactly one location."
+          },
+          {
+            "title": "2. Costs and proposal",
+            "body": "Current monthly costs are €4,000 for North, €3,000 for South and €2,200 for Remote. South is considering scheduling software costing an additional €600 per month. The team projects that the software would raise South's on-time deliveries from 60 to 72, while its total volume stays at 80. This improvement is a forecast, not a measured result. South's monthly budget ceiling is €3,500."
+          },
+          {
+            "title": "3. Temporary support",
+            "body": "A partner offers to cover €200 per month of the software's additional cost during its first three months only. The support cannot be renewed under the stated terms. The base costs and the software price are otherwise assumed unchanged in these projections."
+          }
+        ],
+        "choices": [
+          "The software has already proved that South's on-time rate improves to 90%.",
+          "The figures demonstrate that Remote receives identical financial support.",
+          "South's observed on-time rate is already above North's.",
+          "The partner fully funds the new software with no end date.",
+          "If the forecast holds, South would reach a 90% on-time rate, but the improvement has not yet been demonstrated."
+        ],
+        "explanation": "The projected ratio is 72/80 = 90%, but Source 2 explicitly calls it a forecast rather than measured evidence. The support arrangement does not prove effectiveness.",
+        "hint": "Distinguish South's observed 60/80 from projected 72/80 and note the evidence status.",
+        "reviewSteps": [
+          "Source 1 reports South's observed on-time proportion of 60/80 = 75% before the proposed change.",
+          "Source 2 predicts 72/80 = 90% after adoption while explicitly stating that this is only a forecast.",
+          "Only option E reports the possible 90% rate without incorrectly treating the software's effect as proven."
+        ]
+      }
+    }
   }
 ]
