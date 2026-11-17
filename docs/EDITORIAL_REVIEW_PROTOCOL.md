@@ -1,6 +1,6 @@
 # Independent editorial review — operating procedure
 
-**Current status: 91/91 original questions still require independent educational review.** A passing CI, key-regression test, or assistant first-pass check **is not a review approval**. The source of truth is `src/content/questions.json`; the review queue is `docs/editorial-review-ledger.json`.
+**Current status: 94/94 original questions still require independent educational review.** A passing CI, key-regression test, or assistant first-pass check **is not a review approval**. The source of truth is `src/content/questions.json`; the review queue is `docs/editorial-review-ledger.json`.
 
 ## One-question review
 
@@ -47,3 +47,5 @@ The workbook has **no** backend, cloud account, autosave or network calls. Revie
 - **Multi-Source Lab:** independently check three shared source tabs in each language, arithmetic, temporary versus durable constraints and the distinction between projections and observed results. Confirm that every answer requires evidence and that tab navigation works by keyboard. These three new items remain pending; no automated review means editorial approval.
 
 - **Graph Lab:** independently recompute displayed bar values, ratios and inequalities; review both answer dropdowns, all distractors, the accessible numeric table, and FR/EN equivalence. Both blanks must be correct for a pilot to count as correct.
+
+- **Two-Part Lab:** solve both linked objectives independently, check that both reference options are unique and correctly positioned in both locales, and verify all-or-nothing scoring. Three new questions remain `pilot` and require accountable external editorial review.
