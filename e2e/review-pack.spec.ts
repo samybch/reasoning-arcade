@@ -44,3 +44,34 @@ test('offline export and import recover reviewer notes without transferring data
   await page.locator('#import').setInputFiles({name:'mismatch.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({...saved,catalogSha256:'different'}))});
   await expect(page.getByRole('status')).toContainText('does not match the exact question catalog');
 });
+
+test('first cohort shows sixteen pilot cards, switching scope preserves hidden observations',async({page})=>{
+  await page.goto(offline);
+  const scope=page.locator('#review-scope');
+  await expect(scope).toHaveValue('first');
+  await expect(page.locator('article[data-question]:visible')).toHaveCount(16);
+  await expect(page.locator('article[data-question]')).toHaveCount(94);
+  const chosen=page.locator('article[data-question="T-A-02"]');
+  await expect(chosen).toBeVisible();
+  await chosen.locator('[data-decision]').selectOption('uncertain');
+  await chosen.locator('[data-notes]').fill('Needs independent sampling review');
+  await scope.selectOption('all');
+  await expect(page.locator('article[data-question]:visible')).toHaveCount(94);
+  const outside=page.locator('article[data-question="T-L-02"]');
+  await outside.locator('[data-decision]').selectOption('needs_changes');
+  await outside.locator('[data-notes]').fill('Alternative continuation');
+  await scope.selectOption('first');
+  await expect(outside).toBeHidden();
+  await expect(chosen.locator('[data-notes]')).toHaveValue('Needs independent sampling review');
+  const downloadReady=page.waitForEvent('download');
+  await page.getByRole('button',{name:'Download review notes (JSON)'}).click();
+  const download=await downloadReady;
+  const saved=JSON.parse(readFileSync((await download.path())!,'utf8'));
+  assertNoApprovals(saved);
+  expect(saved.entries.map((entry:{id:string})=>entry.id).sort()).toEqual(['T-A-02','T-L-02']);
+  await scope.selectOption('all');
+  await expect(outside.locator('[data-notes]')).toHaveValue('Alternative continuation');
+});
+function assertNoApprovals(saved:{entries:Array<{finding:string}>}){
+  expect(saved.entries.every(entry=>entry.finding!=='approved')).toBeTruthy();
+}
