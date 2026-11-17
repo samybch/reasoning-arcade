@@ -2,6 +2,7 @@ import {createHash} from 'node:crypto';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {FIRST_REVIEW_BATCH} from './review-batch.mjs';
 
 const root=fileURLToPath(new URL('..',import.meta.url));
 const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -41,7 +42,7 @@ function languageView(question,locale){
 }
 function questionView(question,record){
   return [
-   '<article class="question" data-question="',escapeHtml(question.id),'">',
+   '<article class="question" data-question="',escapeHtml(question.id),'" data-first-batch="',FIRST_REVIEW_BATCH.includes(question.id)?'true':'false','">',
    '<div class="question-top"><h2>',escapeHtml(question.id),'</h2><span>',escapeHtml(question.exam.toUpperCase()),
    ' · ',escapeHtml(question.game),' · ',escapeHtml(question.competency),'</span></div>',
    '<p class="meta">Difficulty (uncalibrated): ',escapeHtml(question.difficulty),'/5 · Pilot estimate: ',escapeHtml(question.estimatedSeconds),' seconds</p>',
@@ -66,6 +67,8 @@ export function renderReviewPack(catalogText,ledgerText,cssText,clientJs){
     if(!entry||entry.referenceKey!==question.correctAnswer||entry.exam!==question.exam||entry.game!==question.game)throw Error('Review ledger mismatch: '+question.id);
   }
   const sha=createHash('sha256').update(catalogText).digest('hex');
+  const ids=new Set(questions.map(q=>q.id));
+  if(new Set(FIRST_REVIEW_BATCH).size!==FIRST_REVIEW_BATCH.length||FIRST_REVIEW_BATCH.some(id=>!ids.has(id)))throw Error('First review batch must contain unique catalog IDs');
   const cards=questions.map(question=>questionView(question,entries.get(question.id))).join('\n');
   return [
     '<!doctype html><html lang="fr"><head><meta charset="utf-8">',
@@ -86,6 +89,10 @@ export function renderReviewPack(catalogText,ledgerText,cssText,clientJs){
     '<div class="toolbar"><button type="button" id="export">Download review notes (JSON)</button>',
     '<label class="import">Import previous review notes (JSON)<input id="import" type="file" accept=".json,application/json"></label>',
     '<span id="status" role="status" aria-live="polite">No reviews recorded yet.</span></div>',
+    '<div class="review-filter"><label for="review-scope">Review scope / Périmètre de revue</label>',
+    '<select id="review-scope"><option value="first">First private cohort (',String(FIRST_REVIEW_BATCH.length),' pilot items)</option>',
+    '<option value="all">Entire catalog (',String(questions.length),' pilot items)</option></select>',
+    '<span id="scope-status" role="status" aria-live="polite"></span></div>',
     '</header><main id="questions" data-catalog-sha="',sha,'">',
     cards,'</main><footer>Offline pilot-review worksheet · Do not mark questions approved without independent evidence.',
     '</footer><script>',clientJs.replace(/<\/script/gi,'<\\/script'),'</script></body></html>'
