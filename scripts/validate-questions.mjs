@@ -39,7 +39,7 @@ export function validateQuestions(questions=QUESTIONS){
     if(q.game==='graphics-lab'){
       const g=q.graph;
       if(!g||g.type!=='bar'||!Array.isArray(g.labels)||!Array.isArray(g.values)||g.labels.length<3||g.labels.length!==g.values.length||!g.labels.every(nonEmpty)||!g.values.every(n=>Number.isFinite(n)&&n>=0)||!nonEmpty(g.title?.fr)||!nonEmpty(g.title?.en)||!nonEmpty(g.units?.fr)||!nonEmpty(g.units?.en))errors.push(`${id}: invalid graph data`);
-      if(typeof q.correctAnswer!=='string'||!/^\\d+\\|\\d+$/.test(q.correctAnswer))errors.push(`${id}: invalid two-blank graphic answer key`);
+      if(typeof q.correctAnswer!=='string'||!/^[0-4]\\|[0-4]$/.test(q.correctAnswer))errors.push(`${id}: invalid two-blank graphic answer key`);
     }
     if(q.game==='table-lab'){
       if(q.exam!=='gmat')errors.push(`${id}: Table Lab is GMAT-only`);
@@ -67,7 +67,7 @@ export function validateQuestions(questions=QUESTIONS){
       if(q.game==='reading-lab'&&(!nonEmpty(loc.context)||loc.context.trim().length<350))errors.push(`${id}: ${lang} reading passage must be at least 350 characters`);
       if(!Array.isArray(loc.reviewSteps)||loc.reviewSteps.length!==3||!loc.reviewSteps.every(s=>nonEmpty(s)&&s.trim().length>=40))errors.push(`${id}: ${lang} requires three detailed review steps`);
       if(q.game==='graphics-lab'&&(!Array.isArray(loc.graphicStatements)||loc.graphicStatements.length!==2||!loc.graphicStatements.every(v=>nonEmpty(v.prompt)&&Array.isArray(v.options)&&v.options.length>=3&&v.options.length<=5&&v.options.every(nonEmpty)&&new Set(v.options).size===v.options.length)))errors.push(`${id}: ${lang} requires two graphic dropdowns`);
-      if(q.game==='graphics-lab'&&Array.isArray(loc.graphicStatements)&&typeof q.correctAnswer==='string'&&/^\\d+\\|\\d+$/.test(q.correctAnswer)){
+      if(q.game==='graphics-lab'&&Array.isArray(loc.graphicStatements)&&typeof q.correctAnswer==='string'&&/^[0-4]\\|[0-4]$/.test(q.correctAnswer)){
         const keys=q.correctAnswer.split('|').map(Number);
         if(keys.some((k,i)=>k>= (loc.graphicStatements[i]?.options?.length??0)))errors.push(`${id}: ${lang} graph key index out of range`);
       }
