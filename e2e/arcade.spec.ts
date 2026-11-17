@@ -457,3 +457,52 @@ test('Expression Lab recent history survives reload and appears in TAGE review',
   const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
   expect(progress.pendingReviewIds).toContain('T-E-01');
 });
+
+test('GMAT Table Lab sorts numerical data and requires all three Yes/No answers',async({page})=>{
+  await page.goto(PREFIX+'/en/');
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Table Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/en/play/table-lab/?exam=gmat&mode=game');
+  await expect(page.locator('#question-title')).toBeVisible();
+  await expect(page.locator('.table-claim')).toHaveCount(3);
+  const submit=page.getByRole('button',{name:/Submit/});
+  await expect(submit).toBeDisabled();
+  const sales=page.getByRole('columnheader',{name:/Sales/}).getByRole('button');
+  await sales.click();
+  await expect(page.locator('.data-table tbody tr').first().locator('td').first()).toHaveText('East');
+  await sales.click();
+  await expect(page.locator('.data-table tbody tr').first().locator('td').first()).toHaveText('West');
+  for(const [i,answer] of ['Yes','No','Yes'].entries()){
+    await page.locator('.table-claim').nth(i).getByRole('radio',{name:answer}).check();
+  }
+  await expect(submit).toBeEnabled();
+  await submit.click();
+  await expect(page.locator('.feedback.good')).toBeVisible();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+});
+test('Table Lab is GMAT-only and remains usable in a 320px viewport',async({page})=>{
+  await page.setViewportSize({width:320,height:700});
+  await page.goto(PREFIX+'/fr/');
+  await expect(page.getByRole('heading',{name:'Table Lab'})).toHaveCount(0);
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Table Lab'})).toBeVisible();
+  await page.goto(PREFIX+'/fr/play/table-lab/?exam=gmat&mode=game');
+  await expect(page.locator('.table-scroll')).toBeVisible();
+  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
+  expect(overflow).toBeLessThanOrEqual(1);
+  await page.goto(PREFIX+'/fr/coverage/');
+  await expect(page.locator('.coverage-row').filter({hasText:'Table Analysis'})).toContainText('3 pilotes');
+});
+test('Table Lab history and missed questions survive browser reload',async({page})=>{
+  await page.goto(PREFIX+'/en/play/table-lab/?exam=gmat&mode=game');
+  await page.evaluate(()=>localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+    version:1,skills:{},totalAnswered:1,totalCorrect:0,
+    recentQuestionIds:['G-T-01'],pendingReviewIds:['G-T-01']
+  })));
+  await page.reload();
+  await page.goto(PREFIX+'/en/review/?exam=gmat');
+  await expect(page.locator('.table-claim')).toHaveCount(3);
+  const p=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+  expect(p.recentQuestionIds).toContain('G-T-01');
+  expect(p.pendingReviewIds).toContain('G-T-01');
+});
