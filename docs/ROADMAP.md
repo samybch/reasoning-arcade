@@ -133,3 +133,11 @@
 - [ ] Request a distinct owner GO before any GitHub Pages website deployment
 
 **Working policy:** `main` is the sole baseline. Run a single short-lived change branch and PR at a time. Green CI + reviewed diff precede squash merge; close and delete the branch once its work is safely integrated. Avoid versioned parallel branches, automatic publishing or rewriting previously approved source material. Historical sections above are retained for traceability; the current checklist is this checkpoint plus `RELEASE_GATES.md`.
+
+## XYZ — Reading Lab diversity expansion (2026-11-17)
+- [x] Add six bilingual original pilot items (T-R-07–09, G-R-07–09) and two new passages
+- [x] Extend the editorial pending ledger and tests to 76 pilot questions across five games
+- [ ] Independent reviewer validates all 18 Reading Lab keys, translations and distractors
+- [ ] Obtain explicit owner GO before any user-facing public Pages deployment
+
+The earlier 70-item counts above remain historical checkpoints for traceability, not current totals.
