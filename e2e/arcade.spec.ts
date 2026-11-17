@@ -279,7 +279,7 @@ test('timed Code Logic mini-test keeps solution steps hidden until the results',
 test('Quant Lab is offered on both tracks with five answers and detailed feedback',async({page})=>{
   await page.goto(PREFIX+'/fr/');
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
-  await expect(page.locator('.hero-stats')).toContainText('5 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Quant Lab'})).toBeVisible();
   await page.goto(PREFIX+'/fr/play/quant-lab/?exam=tage&mode=game');
@@ -364,7 +364,7 @@ test('Quant Lab clock reflects the actual pilot question budget and warns that i
 
 test('Reading Lab appears on both tracks with 5 response choices and explanations',async({page})=>{
   await page.goto(PREFIX+'/fr/');
-  await expect(page.locator('.hero-stats')).toContainText('5 jeux');
+  await expect(page.locator('.hero-stats')).toContainText('6 jeux');
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
   await page.getByRole('button',{name:/GMAT/}).click();
   await expect(page.getByRole('heading',{name:'Reading Lab'})).toBeVisible();
@@ -423,4 +423,37 @@ test('Reading Lab recent attempts and pending review survive reload in both exam
     expect(persisted.pendingReviewIds).toContain(id);
     expect(persisted.pendingReviewIds.filter((v:string)=>v.endsWith('-R-01'))).toEqual([id]);
   }
+});
+
+test('Expression Lab is TAGE-only and offers French grammar, paraphrase and coherence pilots',async({page})=>{
+  await page.goto(PREFIX+'/fr/');
+  await expect(page.getByRole('heading',{name:'Expression Lab'})).toBeVisible();
+  await page.getByRole('button',{name:/GMAT/}).click();
+  await expect(page.getByRole('heading',{name:'Expression Lab'})).toHaveCount(0);
+  await page.goto(PREFIX+'/fr/play/expression-lab/?exam=tage&mode=game');
+  await expect(page.locator('#question-title')).toBeVisible();
+  await expect(page.locator('.answer-list button')).toHaveCount(5);
+  await page.locator('.answer-list button').first().click();
+  await page.getByRole('button',{name:/Valider/}).click();
+  await expect(page.locator('.reasoning-breakdown li')).toHaveCount(3);
+  await page.goto(PREFIX+'/en/play/expression-lab/?exam=tage&mode=game');
+  await expect(page.locator('#question-title')).toBeVisible();
+  await expect(page.locator('.answer-list button')).toHaveCount(5);
+  await page.goto(PREFIX+'/fr/coverage/');
+  await expect(page.getByText('Expression',{exact:true})).toBeVisible();
+  await expect(page.locator('.coverage-row').filter({hasText:'Expression'})).toContainText('6 pilotes');
+});
+test('Expression Lab recent history survives reload and appears in TAGE review',async({page})=>{
+  await page.goto(PREFIX+'/en/play/expression-lab/?exam=tage&mode=game');
+  await page.evaluate(()=>{
+    localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+      version:1,skills:{},totalAnswered:1,totalCorrect:0,
+      recentQuestionIds:['T-E-01'],pendingReviewIds:['T-E-01']
+    }));
+  });
+  await page.reload();
+  await page.goto(PREFIX+'/en/review/?exam=tage');
+  await expect(page.locator('#question-title')).toBeVisible();
+  const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+  expect(progress.pendingReviewIds).toContain('T-E-01');
 });
