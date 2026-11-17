@@ -101,7 +101,7 @@ test('review queue is bounded, unique and skips deleted question IDs',()=>{
 });
 
 test('mixed mini-test samples every available game, including Reading Lab',()=>{
-  const expected={tage:['argument-lab','code-logic','enough-info','quant-lab','reading-lab'],gmat:['argument-lab','enough-info','quant-lab','reading-lab']};
+  const expected={tage:['argument-lab','code-logic','enough-info','expression-lab','quant-lab','reading-lab'],gmat:['argument-lab','enough-info','quant-lab','reading-lab']};
   for(const exam of ['tage','gmat']){
     for(const variant of [0,1,2,3,8]){
       const chosen=buildExamQueue(bank,exam,'mixed',6,variant);
