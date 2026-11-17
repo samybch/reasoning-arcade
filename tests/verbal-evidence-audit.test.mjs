@@ -41,7 +41,7 @@ const evidence={
 'G-R-06':['across several seasons','sur plusieurs saisons','over several seasons','sur plusieurs saisons'],
 'G-R-07':['assessed against its stated aims','selon ses objectifs annoncés','Measured and analytical','Nuancé et analytique'],
 'G-R-08':['does not by itself establish the quality','ne renseigne pas à lui seul sur la solidité','ability to inspect reasoning','possibilité de vérifier un raisonnement'],
-'G-R-09':['publish reports while allowing reviewers to remain anonymous','publient les rapports mais permettent aux évaluateurs de rester anonymes','protect reviewer identities','protection de']
+'G-R-09':['publish reports while allowing reviewers to remain anonymous','publient les rapports mais permettent aux évaluateurs de rester anonymes',"without revealing the reviewers' identities", "sans que l'identité des évaluateurs soit révélée"]
 };
 const contains=(text,phrase)=>text.toLocaleLowerCase().includes(phrase.toLocaleLowerCase());
 test('30 verbal items have explicit bilingual evidence anchors, not automated review approvals',()=>{

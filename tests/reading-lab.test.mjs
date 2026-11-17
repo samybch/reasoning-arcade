@@ -23,7 +23,7 @@ const answerEvidence={
   'T-R-09':{key:'0',fr:'Séparer clairement',en:'Distinguish verifiable'},
   'G-R-07':{key:'2',fr:'Nuancé et analytique',en:'Measured and analytical'},
   'G-R-08':{key:'4',fr:'Pour éviter de confondre',en:'To avoid equating'},
-  'G-R-09':{key:'1',fr:'Deux systèmes également',en:'Two equally open'}
+  'G-R-09':{key:'1',fr:"Des rapports d'évaluation peuvent être rendus publics",en:'Review reports can be made public'}
 };
 test('eighteen Reading Lab pilot keys preserve passage-grounded bilingual answer meaning',()=>{
   assert.equal(items.length,18);

@@ -647,7 +647,7 @@
     "status": "pilot",
     "content": {
       "fr": {
-        "prompt": "Quelle hypothèse est nécessaire à cette généralisation ?",
+        "prompt": "Quel point faut-il vérifier en priorité avant de généraliser les résultats de ce sondage à toute la ville ?",
         "context": "Un sondage réalisé uniquement auprès des abonnés d’une revue conclut que toute la ville souhaite davantage de magazines.",
         "choices": [
           "Les magazines ont des couvertures colorées.",
@@ -656,16 +656,16 @@
           "Les abonnés interrogés représentent raisonnablement les préférences de la ville.",
           "Les abonnés connaissent les journalistes."
         ],
-        "explanation": "La conclusion ne vaut pour la population entière que si l’échantillon n’est pas trop biaisé.",
+        "explanation": "L'échantillon ne comprend que des abonnés : il faut vérifier à quel point leurs préférences reflètent celles de l'ensemble des habitants avant de généraliser.",
         "hint": "Compare la population interrogée à la population visée.",
         "reviewSteps": [
-          "Le sondage interroge uniquement les abonnés d'une revue, mais sa conclusion vise toute la ville.",
-          "Pour tirer cette conclusion à partir du seul sondage, les abonnés doivent refléter raisonnablement les préférences des habitants.",
-          "La représentativité de l'échantillon est l'hypothèse requise pour ce raisonnement : réponse D."
+          "Le sondage porte exclusivement sur les abonnés d'une revue, alors que sa conclusion concerne toute la ville.",
+          "Un tel échantillon peut être biaisé : il faut examiner si les abonnés reflètent raisonnablement les préférences de la population visée.",
+          "La réponse D identifie la vérification méthodologique prioritaire ; elle ne suppose pas que l'échantillon est déjà représentatif."
         ]
       },
       "en": {
-        "prompt": "What assumption is needed for this generalization?",
+        "prompt": "What should be checked first before generalizing this survey's results to the entire city?",
         "context": "A survey of a magazine’s subscribers concludes that the whole city wants more magazines.",
         "choices": [
           "Magazines have colorful covers.",
@@ -674,12 +674,12 @@
           "The surveyed subscribers reasonably represent the city’s preferences.",
           "Subscribers know the reporters."
         ],
-        "explanation": "Generalizing to the whole city requires a sufficiently representative sample.",
+        "explanation": "The sample includes subscribers only. Before generalizing, check how well their preferences reflect those of all city residents.",
         "hint": "Compare the sample with the target population.",
         "reviewSteps": [
-          "The survey samples magazine subscribers only, yet its conclusion concerns the entire city.",
-          "To justify that conclusion using the survey alone, subscribers need to reasonably reflect the preferences of city residents.",
-          "Sample representativeness is the assumption required by this reasoning: answer D."
+          "The survey only covers magazine subscribers, while the conclusion concerns the entire city's preferences.",
+          "Such a sample may be biased. Before generalizing, check whether subscribers reasonably reflect the intended population.",
+          "Option D identifies the key methodological check; it does not assume the sample has already been shown to be representative."
         ]
       }
     },
@@ -3618,17 +3618,17 @@
         "prompt": "Quelle conclusion est la mieux étayée par le texte ?",
         "choices": [
           "Les revues qui publient les rapports perdent nécessairement tous leurs évaluateurs.",
-          "Deux systèmes également transparents peuvent différer quant à la protection de l'identité des évaluateurs.",
+          "Des rapports d'évaluation peuvent être rendus publics sans que l'identité des évaluateurs soit révélée.",
           "L'anonymat prouve que les critiques sont plus exactes.",
           "La publication différée des échanges empêche toute analyse par les lecteurs.",
           "La transparence suffit toujours à garantir la qualité éditoriale."
         ],
-        "explanation": "La publication des rapports peut coexister avec l'anonymat : ouverture des échanges et identité publique ne sont pas équivalentes.",
+        "explanation": "Certaines revues publient les rapports tout en préservant l'anonymat des évaluateurs ; publication des arguments et divulgation des identités sont distinctes.",
         "hint": "Reviens à la description des systèmes intermédiaires.",
         "reviewSteps": [
-          "Le texte indique que certaines revues publient les rapports tout en conservant l'anonymat.",
-          "Le degré de publicité des arguments n'impose donc pas le même traitement de l'identité.",
-          "La réponse B est étayée ; les autres introduisent des certitudes absentes du passage."
+          "Le passage présente des revues qui publient les rapports tout en permettant aux évaluateurs de rester anonymes.",
+          "Il montre ainsi que rendre les justifications accessibles n'implique pas de divulguer les noms des évaluateurs.",
+          "La réponse B reprend cette possibilité directement étayée, sans supposer que deux systèmes possèdent un degré de transparence identique."
         ]
       },
       "en": {
@@ -3636,17 +3636,17 @@
         "prompt": "Which conclusion is best supported by the passage?",
         "choices": [
           "Journals that publish reports inevitably lose all reviewers.",
-          "Two equally open review systems can differ in whether they protect reviewer identities.",
+          "Review reports can be made public without revealing the reviewers' identities.",
           "Anonymity proves that criticism is more accurate.",
           "Delayed publication prevents readers from examining exchanges.",
           "Transparency alone always guarantees editorial quality."
         ],
-        "explanation": "Publishing review reports can coexist with reviewer anonymity: openness of exchanges does not imply public identities.",
+        "explanation": "Some journals publish review reports while preserving reviewer anonymity: disclosure of arguments and disclosure of identities are different.",
         "hint": "Return to the description of intermediate peer-review systems.",
         "reviewSteps": [
-          "The passage notes that some journals publish reports while retaining reviewer anonymity.",
-          "Making the arguments public therefore need not involve revealing reviewers' identities.",
-          "Option B is supported; the other choices assert unwarranted universal conclusions."
+          "The passage describes journals publishing reports while still allowing reviewers to remain anonymous.",
+          "Therefore public access to the reasoning does not require disclosing the reviewers' names.",
+          "Option B restates this directly supported possibility without claiming that two systems have equal degrees of openness."
         ]
       }
     }

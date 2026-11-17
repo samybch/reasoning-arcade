@@ -1,5 +1,8 @@
 # Audit Argument Lab + Reading Lab — 17 novembre 2026
 
+
+> **Suivi de correction du 17 novembre 2026 (PR #37)** : les libellés de T-A-02 et G-R-09 ont été clarifiés en FR et EN. Leurs clés demeurent inchangées et leur revue humaine reste en attente. Les observations initiales ci-dessous sont conservées comme historique des risques identifiés ; se reporter à `docs/VERBAL_CLARITY_RESOLUTION_2026-11-17.md` pour les modifications précises.
+
 ## Périmètre
 
 **30 exercices pilotes** : 12 Argument Lab (6 TAGE MAGE + 6 GMAT) et 18 Reading Lab (9 + 9), répartis sur **six passages originaux bilingues**, avec trois questions par passage. Les 94 éléments du catalogue restent `pilot` et leurs décisions éditoriales `pending`.

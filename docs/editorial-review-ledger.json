@@ -150,7 +150,7 @@
       "decision": "pending",
       "reviewer": null,
       "reviewedAt": null,
-      "reviewFocus": "Check that the selected argument response uniquely addresses the conclusion, assumption or alternative cause without overstatement."
+      "reviewFocus": "After wording clarification, verify the question asks for a methodological check (not a logically necessary assumption). Check that subscriber representativeness is the best of five choices in FR/EN and that no answer is presented as already proven."
     },
     {
       "id": "T-A-03",
@@ -770,7 +770,7 @@
       "decision": "pending",
       "reviewer": null,
       "reviewedAt": null,
-      "reviewFocus": "Check that the anonymity/public-report distinction is genuinely passage-supported."
+      "reviewFocus": "After wording clarification, check the new option B directly follows from the passage's explicit public-reports-plus-anonymity example, in FR/EN. Confirm distractors and the absence of the previously unsupported 'equally open' comparison."
     },
     {
       "id": "T-E-01",
