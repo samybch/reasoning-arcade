@@ -394,3 +394,24 @@ test('syllabus coverage includes six reading questions for each exam pathway',as
   await expect(page.getByText('70 pilot exercises')).toBeVisible();
   await expect(page.locator('.coverage-row')).toHaveCount(14);
 });
+
+test('Reading Lab recent attempts and pending review survive reload in both exam tracks',async({page})=>{
+  for(const [exam,id] of [['tage','T-R-01'],['gmat','G-R-01']] as const){
+    await page.goto(PREFIX+`/en/play/reading-lab/?exam=${exam}&mode=game`);
+    await page.evaluate((questionId)=>{
+      localStorage.removeItem('reasoning-arcade:progress:v1');
+      localStorage.setItem('reasoning-arcade:progress:v1',JSON.stringify({
+        version:1,skills:{},totalAnswered:1,totalCorrect:0,
+        recentQuestionIds:[questionId],pendingReviewIds:[questionId]
+      }));
+    },id);
+    await page.reload();
+    await expect(page.locator('#question-title')).toBeVisible();
+    await page.goto(PREFIX+`/en/review/?exam=${exam}`);
+    await expect(page.locator('#question-title')).toBeVisible();
+    const persisted=await page.evaluate(()=>JSON.parse(localStorage.getItem('reasoning-arcade:progress:v1')||'{}'));
+    expect(persisted.recentQuestionIds).toContain(id);
+    expect(persisted.pendingReviewIds).toContain(id);
+    expect(persisted.pendingReviewIds.filter((v:string)=>v.endsWith('-R-01'))).toEqual([id]);
+  }
+});
