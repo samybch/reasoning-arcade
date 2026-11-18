@@ -10,7 +10,7 @@
     "status": "pilot",
     "content": {
       "fr": {
-        "prompt": "Quel nombre complète cette série ?",
+        "prompt": "Si chaque terme est obtenu en multipliant le précédent par un même nombre, quel nombre complète cette série ?",
         "context": "2 · 4 · 8 · 16 · ?",
         "choices": [
           "24",
@@ -28,7 +28,7 @@
         ]
       },
       "en": {
-        "prompt": "Which number completes the sequence?",
+        "prompt": "If each term is obtained by multiplying the previous term by the same number, which number completes the sequence?",
         "context": "2 · 4 · 8 · 16 · ?",
         "choices": [
           "24",
@@ -991,7 +991,7 @@
     "content": {
       "fr": {
         "prompt": "Quelle hypothèse est nécessaire pour que ce projet réduise les coûts totaux ?",
-        "context": "Une entreprise envisage une formation obligatoire pour réduire les coûts liés au départ des salariés, car les salariés formés restent plus longtemps.",
+        "context": "Une entreprise envisage une formation obligatoire pour réduire les coûts liés au départ des salariés, car les salariés formés restent plus longtemps. On suppose que les autres postes de coûts restent inchangés.",
         "choices": [
           "La formation a lieu le mardi.",
           "L'entreprise possède un site Internet.",
@@ -1009,7 +1009,7 @@
       },
       "en": {
         "prompt": "Which assumption is necessary for the plan to reduce total costs?",
-        "context": "A firm proposes mandatory training to reduce turnover costs, arguing that trained staff stay longer.",
+        "context": "A firm proposes mandatory training to reduce turnover costs, arguing that trained staff stay longer. Assume all other cost categories remain unchanged.",
         "choices": [
           "Training takes place on Tuesdays.",
           "The company has a website.",
@@ -3716,7 +3716,7 @@
         "context": "Une équipe souhaite annoncer le résultat d'une enquête, sans en modifier le sens.",
         "choices": [
           "Bien que l'enquête soit limitée, ses résultats méritent d'être examinés.",
-          "Malgré que l'enquête soit limitée, ses résultats méritent d'être examinés.",
+          "Malgré l'enquête soit limitée, ses résultats méritent d'être examinés.",
           "Bien que l'enquête est limitée, ses résultats méritent d'être examinés.",
           "Bien que l'enquête soit limitée, ses résultats mérite d'être examinés.",
           "Bien que l'enquête soit limitée, ses résultats méritent à être examinés."
@@ -3734,7 +3734,7 @@
         "context": "A team wants to report a limited survey's findings without changing their meaning.",
         "choices": [
           "Bien que l'enquête soit limitée, ses résultats méritent d'être examinés.",
-          "Malgré que l'enquête soit limitée, ses résultats méritent d'être examinés.",
+          "Malgré l'enquête soit limitée, ses résultats méritent d'être examinés.",
           "Bien que l'enquête est limitée, ses résultats méritent d'être examinés.",
           "Bien que l'enquête soit limitée, ses résultats mérite d'être examinés.",
           "Bien que l'enquête soit limitée, ses résultats méritent à être examinés."
@@ -4227,11 +4227,11 @@
     },
     "content": {
       "fr": {
-        "context": "Échantillon fictif de livraisons. « Colis » désigne tous les colis, « Retards » le nombre livré en retard, et « À l'heure » un sous-ensemble livré dans les délais.",
+        "context": "Échantillon fictif de colis expédiés, à la date du relevé. « Colis » compte tous les colis expédiés, « Retards » ceux déjà livrés en retard et « À l'heure » ceux déjà livrés dans les délais. Les autres colis sont encore en transit.",
         "prompt": "Détermine si les affirmations sont compatibles avec les chiffres fournis.",
         "tableStatements": [
           "Le transporteur D a traité davantage de colis que B.",
-          "Les transporteurs A et E ont le même pourcentage de livraisons en retard.",
+          "Les transporteurs A et E ont la même proportion de colis expédiés déjà livrés en retard.",
           "Le transporteur C a le nombre de colis livrés à l'heure le plus élevé."
         ],
         "explanation": "D a 140 colis contre 120 pour B ; A a 4/80 = 5 % et E 3/60 = 5 % ; D compte 110 à l'heure contre 85 pour C.",
@@ -4243,11 +4243,11 @@
         ]
       },
       "en": {
-        "context": "Fictional shipping sample. 'Parcels' counts all packages, 'Late' counts delayed deliveries, and 'On time' is a subset delivered by the deadline.",
+        "context": "Fictional sample of dispatched parcels at a snapshot date. 'Parcels' counts all dispatched packages, 'Late' those already delivered after the deadline, and 'On time' those already delivered by the deadline. All other parcels are still in transit.",
         "prompt": "Determine whether the statements are supported by the figures.",
         "tableStatements": [
           "Carrier D processed more parcels than B.",
-          "Carriers A and E had the same percentage of late deliveries.",
+          "Carriers A and E have the same share of dispatched parcels already delivered late.",
           "Carrier C had the highest number of on-time parcels."
         ],
         "explanation": "D handled 140 parcels against B's 120. A's late rate is 4/80 = 5% and E's is 3/60 = 5%. D has 110 on-time parcels, more than C's 85.",
