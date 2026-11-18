@@ -25,3 +25,7 @@ The regression test explicitly constructs an alternative fifth term from the dis
 Geometric invariants rely on a curated interpretation of French and English shape labels, so independent pedagogical reviewers must inspect the precise wording. Numeric classifiers test the *intended rule* and only the given distractors, not the absence of every imaginable alternative classification of six examples. Reviewers must still challenge ambiguity, suitability for TAGE MAGE, difficulty, originality, rights, and translation quality.
 
 All **94 catalogue items remain pilot** and all ledger decisions remain pending. There is no public deployment or user-data collection.
+
+## Suivi ciblé du 18 novembre 2026 — T-L-01
+
+Le premier échauffement numérique T-L-01 précise désormais **la famille de règles permise** : un multiplicateur constant entre deux termes successifs. La conclusion 32 est alors déterminée parmi les choix affichés. La preuve d'ambiguïté ci-dessus reste pertinente pour des **termes pris seuls**, ainsi que pour les cinq autres échauffements dont l'énoncé ne précise pas le modèle de continuation. L'exercice reste `pilot` et nécessite une validation externe sur sa difficulté et sa pertinence.

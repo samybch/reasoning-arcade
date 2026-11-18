@@ -22,3 +22,9 @@ Chaque question possède exactement cinq propositions françaises identiques dan
 ## Bilan catalogue
 
 Après cet audit, **94/94 exercices possèdent un contrôle thématique spécifique** dans le dépôt. C'est une **couverture de tests**, non un nombre de questions approuvées. La publication publique reste interdite sans feu vert distinct et revue humaine effective.
+
+## Suivi ciblé du 18 novembre 2026 — T-E-02
+
+L'exercice T-E-02 a été corrigé après le premier audit. Le distracteur « Malgré que l'enquête soit limitée » n'est plus présenté comme une faute universelle : son usage concessif est déconseillé par l'Académie française, mais décrit comme attesté dans la langue courante par l'OQLF. Pour éviter une clé reposant sur une querelle d'usage, la proposition B comporte désormais une **construction volontairement incorrecte** (« Malgré l'enquête soit limitée »), dans les deux interfaces. La réponse A reste inchangée ; le contenu demeure pilote et le registre éditorial demeure `pending`.
+
+Références : https://www.dictionnaire-academie.fr/article/A9M0342 et https://vitrinelinguistique.oqlf.gouv.qc.ca/22935/la-syntaxe/les-conjonctions/emploi-de-la-conjonction-malgre-que. Voir également `docs/COHORT16_EDITORIAL_PRECHECK_2026-11-18.md`.

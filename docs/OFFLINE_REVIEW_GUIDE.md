@@ -50,3 +50,7 @@ The live website remains **NO-GO** pending legal, accessibility, data-privacy an
 - Export/import works and rejects a mismatched catalog.
 - The reviewer produces concrete findings rather than invented approval metadata.
 - New findings become a tracked GitHub editorial task; the official question status remains `pilot` until independently signed off.
+
+## Pré-audit à communiquer aux relecteurs (18 novembre 2026)
+
+Le contrôle préparatoire des 16 questions de la première cohorte figure dans [COHORT16_EDITORIAL_PRECHECK_2026-11-18.md](COHORT16_EDITORIAL_PRECHECK_2026-11-18.md). Il décrit les calculs, les corrections de formulation et les objections résiduelles. **Le relecteur doit d'abord résoudre chaque question sans consulter ce rapport ni la réponse stockée**, puis confronter ses résultats à la matrice. Cette analyse assistée ne vaut pas validation indépendante ; aucune donnée de relecture n'est envoyée automatiquement.

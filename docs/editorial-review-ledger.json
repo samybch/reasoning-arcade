@@ -20,7 +20,7 @@
       "decision": "pending",
       "reviewer": null,
       "reviewedAt": null,
-      "reviewFocus": "Verify the claimed numerical or spatial rule against every example and all five distractors; probe for competing patterns."
+      "reviewFocus": "The warm-up now states a constant multiplication rule. Verify that the four terms imply ratio 2 and exactly one answer is 32 in FR/EN; still challenge suitability and difficulty."
     },
     {
       "id": "T-L-02",
@@ -220,7 +220,7 @@
       "decision": "pending",
       "reviewer": null,
       "reviewedAt": null,
-      "reviewFocus": "Check that savings strictly exceed, rather than merely equal, added training costs; verify the French and English explanation."
+      "reviewFocus": "Other cost categories are now explicitly assumed constant. Verify that training savings must strictly exceed additional training costs in FR/EN; challenge necessity and all distractors."
     },
     {
       "id": "G-A-10",
@@ -790,7 +790,7 @@
       "decision": "pending",
       "reviewer": null,
       "reviewedAt": null,
-      "reviewFocus": "Confirm standard French usage of bien que / subjunctive and mériter de; challenge all near-synonymous distractors."
+      "reviewFocus": "Independently check bien que + subjunctive, agreement, and mériter de. The former contested malgré que distractor was replaced by an unmistakably malformed malgré + finite-clause construction; assess the five choices and educational level."
     },
     {
       "id": "T-E-03",
@@ -860,7 +860,7 @@
       "decision": "pending",
       "reviewer": null,
       "reviewedAt": null,
-      "reviewFocus": "Review shipment count comparisons and equality of late rates (4/80 vs 3/60) alongside on-time maximum."
+      "reviewFocus": "The data snapshot now distinguishes shipped parcels, delivered late, delivered on time and still in transit. Verify each row's residual is nonnegative, that late shares use shipped parcels as denominator, and the YYN truth values in FR/EN."
     },
     {
       "id": "G-M-01",
